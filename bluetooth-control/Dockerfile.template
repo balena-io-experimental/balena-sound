@@ -1,0 +1,29 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%
+
+# enable udev
+ENV UDEV=1
+
+RUN install_packages \
+  alsa-base \
+  alsa-utils \
+  bluealsa \
+  bluez \
+  python-gobject \
+  python-dbus \
+  vorbis-tools \
+  sound-theme-freedesktop
+
+# Setup udev rules - this lets us play the connect/disconnect sound
+# and also turn off discover/pairing when a client is connected
+COPY bluetooth-udev /usr/src/
+RUN chmod +x /usr/src/bluetooth-udev
+COPY udev-rules/ /etc/udev/rules.d/
+
+# Bluetooth-agent handles the auth of devices
+COPY bluetooth-agent /usr/src/
+RUN chmod +x /usr/src/bluetooth-agent
+
+COPY start.sh /usr/src/
+RUN chmod +x /usr/src/start.sh
+
+CMD /usr/src/start.sh

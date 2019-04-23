@@ -1,0 +1,12 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%
+
+RUN install_packages \
+  alsa-base \
+  alsa-utils \
+  bluealsa \
+  bluez
+
+COPY start.sh /usr/src/
+RUN chmod +x /usr/src/start.sh
+
+CMD /usr/src/start.sh

@@ -1,0 +1,21 @@
+#!/bin/bash
+export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+
+name=$(sed 's/\"//g' <<< $NAME)
+if [[ ! $name =~ ^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$ ]]; then exit 0; fi
+
+action=$(expr "$ACTION" : "\([a-zA-Z]\+\).*")
+
+if [ "$action" = "add" ]; then
+    echo -e 'discoverable off\npairable off\nexit\n' | bluetoothctl
+    ogg123 -q /usr/share/sounds/freedesktop/stereo/device-added.oga
+    # disconnect wifi to prevent dropouts
+    # ifconfig wlan0 down &
+fi
+
+if [ "$action" = "remove" ]; then
+    ogg123 -q /usr/share/sounds/freedesktop/stereo/device-removed.oga
+    # reenable wifi
+    # ifconfig wlan0 up &
+    echo -e 'discoverable on\npairable on\nexit\n' | bluetoothctl
+fi
