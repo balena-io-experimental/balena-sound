@@ -1,16 +1,9 @@
 version: '2'
 services:
-  bluetooth-control:
+  bluetooth-audio:
     network_mode: host
     restart: always
-    build: ./bluetooth-control
-    privileged: true
-    labels:
-      io.balena.features.dbus: 1
-  a2dp-sink:
-    network_mode: host
-    restart: always
-    build: ./a2dp-sink
+    build: ./bluetooth-audio
     privileged: true
     labels:
       io.balena.features.dbus: 1
