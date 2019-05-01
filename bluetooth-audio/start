@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "Setting hostname: "
+curl -X PATCH --header "Content-Type:application/json" \
+    --data '{"network": {"hostname": "balenaSound"}}' \
+    "$BALENA_SUPERVISOR_ADDRESS/v1/device/host-config?apikey=$BALENA_SUPERVISOR_API_KEY"
+
+# set the discoverable timeout here
+
+
+echo -e "\nSetting volume to 100%\n"
+amixer sset PCM,0 100% > /dev/null &
+
+service bluetooth restart
+# sleep 2
+# echo -e 'discoverable on\npairable on\nexit\n' | bluetoothctl
+
+/usr/src/bluetooth-agent &
+
+sleep 2
+rm -rf /var/run/bluealsa/
+/usr/bin/bluealsa -i hci0 -p a2dp-sink &
+
+sleep 2
+/usr/bin/bluealsa-aplay --pcm-buffer-time=250000 00:00:00:00:00:00
