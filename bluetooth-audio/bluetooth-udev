@@ -8,14 +8,12 @@ action=$(expr "$ACTION" : "\([a-zA-Z]\+\).*")
 
 if [ "$action" = "add" ]; then
     echo -e 'discoverable off\npairable off\nexit\n' | bluetoothctl
-    ogg123 -q /usr/share/sounds/freedesktop/stereo/device-added.oga
-    # disconnect wifi to prevent dropouts
-    # ifconfig wlan0 down &
+    mplayer -volume 75 /usr/src/sounds/connect.mp3 -really-quiet > /dev/null 2>&1
+    amixer sset PCM,0 100% > /dev/null &
 fi
 
 if [ "$action" = "remove" ]; then
-    ogg123 -q /usr/share/sounds/freedesktop/stereo/device-removed.oga
-    # reenable wifi
-    # ifconfig wlan0 up &
+    mplayer -volume 75 /usr/src/sounds/disconnect.mp3 -really-quiet > /dev/null 2>&1
     echo -e 'discoverable on\npairable on\nexit\n' | bluetoothctl
+    amixer sset PCM,0 100% > /dev/null &
 fi

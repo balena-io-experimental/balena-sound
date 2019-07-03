@@ -11,8 +11,11 @@ RUN install_packages \
   bluez \
   python-gobject \
   python-dbus \
-  vorbis-tools \
-  sound-theme-freedesktop
+  mplayer
+
+
+# Copy sounds
+COPY sounds /usr/src/sounds
 
 # Setup udev rules - this lets us play the connect/disconnect sound
 # and also turn off discover/pairing when a client is connected
