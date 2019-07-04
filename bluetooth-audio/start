@@ -1,15 +1,16 @@
-#!/bin/bash
-BSHOSTNAME=$(echo "balenaSound $(hostname | cut -c -4)")
+#!/usr/bin/env bash
+
+BSHOSTNAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
 
 # set the discoverable timeout here
 dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:'org.bluez.Adapter1' string:'DiscoverableTimeout' variant:uint32:0
 
-echo -e "\nSetting volume to 100%\n"
+printf "\nSetting volume to 100%%\n"
 amixer sset PCM,0 100% > /dev/null &
 
 service bluetooth restart
 sleep 2
-echo -e 'discoverable on\npairable on\nexit\n' | bluetoothctl
+printf "discoverable on\npairable on\nexit\n" | bluetoothctl
 
 /usr/src/bluetooth-agent &
 
