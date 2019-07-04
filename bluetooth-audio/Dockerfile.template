@@ -27,7 +27,7 @@ COPY udev-rules/ /etc/udev/rules.d/
 COPY bluetooth-agent /usr/src/
 RUN chmod +x /usr/src/bluetooth-agent
 
-COPY start /usr/src/
-RUN chmod +x /usr/src/start
+COPY start.sh /usr/src/
+RUN chmod +x /usr/src/start.sh
 
-CMD /usr/src/start
+CMD /usr/src/start.sh
