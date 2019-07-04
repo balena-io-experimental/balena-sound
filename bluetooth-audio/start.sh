@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-BSHOSTNAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
+  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+fi
 
 # set the discoverable timeout here
 dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:'org.bluez.Adapter1' string:'DiscoverableTimeout' variant:uint32:0
@@ -19,7 +21,7 @@ rm -rf /var/run/bluealsa/
 /usr/bin/bluealsa -i hci0 -p a2dp-sink &
 
 hciconfig hci0 up
-hciconfig hci0 name "$BSHOSTNAME"
+hciconfig hci0 name "$BLUETOOTH_DEVICE_NAME"
 
 sleep 2
 /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00
