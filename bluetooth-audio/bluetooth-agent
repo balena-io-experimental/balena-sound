@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+# Modified from https://github.com/nicokaiser/rpi-audio-receiver/blob/master/install-bluetooth.sh
 # Automatically authenticating bluez agent.
 
 from __future__ import absolute_import, print_function, unicode_literals

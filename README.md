@@ -1,4 +1,6 @@
-# balenaSound - BT audio streaming
+![](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/images/balenaSound-logo.png)
+
+# balenaSound - Bluetooth audio streaming for any audio device
 
 **Starter project enabling you to add bluetooth audio streaming to any old speakers or Hi-Fi using just a Raspberry Pi.**
 
