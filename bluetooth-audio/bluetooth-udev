@@ -6,14 +6,15 @@ if [[ ! $name =~ ^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$ ]]; then exit 0; fi
 
 action=$(expr "$ACTION" : "\([a-zA-Z]\+\).*")
 
-if [ "$action" = "add" ]; then
-    echo -e 'discoverable off\npairable off\nexit\n' | bluetoothctl
+case "$action" in
+add)
+    printf "discoverable off\npairable off\nexit\n" | bluetoothctl
     mplayer -volume 75 /usr/src/sounds/connect.mp3 -really-quiet > /dev/null 2>&1
     amixer sset PCM,0 100% > /dev/null &
-fi
-
-if [ "$action" = "remove" ]; then
+    ;;
+remove)
     mplayer -volume 75 /usr/src/sounds/disconnect.mp3 -really-quiet > /dev/null 2>&1
-    echo -e 'discoverable on\npairable on\nexit\n' | bluetoothctl
+    printf "discoverable on\npairable on\nexit\n" | bluetoothctl
     amixer sset PCM,0 100% > /dev/null &
-fi
+    ;;
+esac
