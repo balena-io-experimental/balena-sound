@@ -34,6 +34,16 @@ To run this project is as simple as deploying it to a balenaCloud application; n
 * Flash the downloaded OS to your SD card with [balenaEtcher](https://balena.io/etcher)
 * Power up the Pi and check it's online in the dashboard
 
+### Customize device name
+
+By default, your device will be displayed as `balenaSound xxxx` when you search for Bluetooth devices.
+You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can be set in balena dashboard
+(navigate to dashboard -> app -> device -> device variables).
+![Setting the device name](images/device-name-config.png)
+
+If you modify the Bluetooth device name after deploying the application, you should restart `bluetooth-audio` service
+to apply the changes.
+
 ### Deploy this application
 
 * Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
@@ -44,7 +54,7 @@ To run this project is as simple as deploying it to a balenaCloud application; n
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
 * Connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers
-* Search for the `balenaSound xxxx` device on your phone or laptop and pair. `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+* Search for your device (`balenaSound xxxx` name is used by default) on your phone or laptop and pair. `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
 * Let the music play!
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
