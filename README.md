@@ -42,9 +42,6 @@ You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can 
 
 ![Setting the device name](images/device-name-config.png)
 
-If you modify the Bluetooth device name after deploying the application, you should restart `bluetooth-audio` service
-to apply the changes.
-
 ### Deploy this application
 
 * Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
