@@ -98,7 +98,7 @@ if __name__ == '__main__':
     manager = dbus.Interface(obj, "org.bluez.AgentManager1")
     manager.RegisterAgent(path, capability)
 
-    print("Agent registered")
+    print("Bluetooth agent registered")
 
     manager.RequestDefaultAgent(path)
 
