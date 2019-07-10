@@ -61,10 +61,11 @@ This project is in active development so if you have any feature requests or iss
 If you plan to use Balena Sound as part of a multiple container app (for example, having an app with PiHole & Balena sound), don't forget to add the following label to your `docker-compose.yml` (source: https://www.balena.io/docs/learn/develop/multicontainer/#labels)
 
 Example:
-`bluetooth:
+```
+bluetooth:
   build: ./bluetooth-audio
   privileged: true
   network_mode: host
   labels:
     io.balena.features.dbus: '1'
-  `
+```
