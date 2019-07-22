@@ -6,6 +6,7 @@ ENV UDEV=1
 
 RUN install_packages \
   alsa-utils \
+  bluealsa \
   bluez \
   python-gobject \
   python-dbus \
