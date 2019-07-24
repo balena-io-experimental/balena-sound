@@ -5,7 +5,7 @@ if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
 fi
 
 # Set the discoverable timeout here
-dbus-send --system --dest=org.bluez /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:'org.bluez.Adapter1' string:'DiscoverableTimeout' variant:uint32:0
+dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:'org.bluez.Adapter1' string:'DiscoverableTimeout' variant:uint32:0 > /dev/null
 
 printf "Setting volume to 100%%\n"
 amixer sset PCM,0 100% > /dev/null &
