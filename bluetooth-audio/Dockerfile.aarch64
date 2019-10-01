@@ -1,0 +1,32 @@
+FROM balenalib/raspberrypi3:stretch
+
+ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+
+ENV UDEV=1
+
+RUN install_packages \
+  alsa-utils \
+  bluealsa \
+  bluez \
+  python-gobject \
+  python-dbus \
+  mplayer
+
+
+# Copy sounds
+COPY sounds /usr/src/sounds
+
+# Setup udev rules - this lets us play the connect/disconnect sound
+# and also turn off discover/pairing when a client is connected
+COPY bluetooth-udev /usr/src/
+RUN chmod +x /usr/src/bluetooth-udev
+COPY udev-rules/ /etc/udev/rules.d/
+
+# Bluetooth-agent handles the auth of devices
+COPY bluetooth-agent /usr/src/
+RUN chmod +x /usr/src/bluetooth-agent
+
+COPY start.sh /usr/src/
+RUN chmod +x /usr/src/start.sh
+
+CMD /usr/src/start.sh
