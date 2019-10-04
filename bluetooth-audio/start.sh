@@ -4,11 +4,18 @@ if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
   BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
 fi
 
+# Set the system volume here
+SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
+printf "Setting output volume to %s%%\n" "$SYSTEM_OUTPUT_VOLUME"
+amixer sset PCM,0 $SYSTEM_OUTPUT_VOLUME > /dev/null &
+
+# Set the volume of the connection notification sounds here
+CONNECTION_NOTIFY_VOLUME="${CONNECTION_NOTIFY_VOLUME:-75}"
+echo $CONNECTION_NOTIFY_VOLUME > /usr/src/connection_notify_volume
+printf "Connection notify volume is %s%%\n" "$CONNECTION_NOTIFY_VOLUME"
+
 # Set the discoverable timeout here
 dbus-send --system --dest=org.bluez --print-reply /org/bluez/hci0 org.freedesktop.DBus.Properties.Set string:'org.bluez.Adapter1' string:'DiscoverableTimeout' variant:uint32:0 > /dev/null
-
-printf "Setting volume to 100%%\n"
-amixer sset PCM,0 100% > /dev/null &
 
 printf "Restarting bluetooth service\n"
 service bluetooth restart > /dev/null
