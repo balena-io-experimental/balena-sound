@@ -13,4 +13,6 @@ RUN curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -v - \
   
 CMD /bin/mkdir -m 0755 -p /var/cache/raspotify ; /bin/chown raspotify:raspotify /var/cache/raspotify
 
-CMD
+COPY start.sh /usr/src/
+
+CMD /usr/src/start.sh
