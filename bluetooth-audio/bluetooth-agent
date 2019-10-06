@@ -6,6 +6,7 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 from gi.repository import GObject
 
+import os
 import sys
 import dbus
 import dbus.service
@@ -48,13 +49,13 @@ class Agent(dbus.service.Object):
     def RequestPinCode(self, device):
         print("RequestPinCode (%s)" % (device))
         set_trusted(device)
-        return "0000"
+        return os.getenv("BLUETOOTH_PIN_CODE", "0000")
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="u")
     def RequestPasskey(self, device):
         print("RequestPasskey (%s)" % (device))
         set_trusted(device)
-        return dbus.UInt32("0000")
+        return dbus.UInt32(os.getenv("BLUETOOTH_PIN_CODE", "0000"))
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="ouq", out_signature="")
     def DisplayPasskey(self, device, passkey, entered):
