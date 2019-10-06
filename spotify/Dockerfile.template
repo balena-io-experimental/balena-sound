@@ -15,4 +15,4 @@ CMD /bin/mkdir -m 0755 -p /var/cache/raspotify ; /bin/chown raspotify:raspotify 
 
 COPY start.sh /usr/src/
 
-CMD /usr/src/start.sh
+CMD bash /usr/src/start.sh
