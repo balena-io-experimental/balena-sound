@@ -13,4 +13,4 @@ RUN curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -v - \
   
 CMD /bin/mkdir -m 0755 -p /var/cache/raspotify ; /bin/chown raspotify:raspotify /var/cache/raspotify
 
-CMD /usr/bin/librespot --name ${DEVICE_NAME} $BACKEND_ARGS --bitrate ${BITRATE} $CACHE_ARGS $VOLUME_ARGS
+CMD
