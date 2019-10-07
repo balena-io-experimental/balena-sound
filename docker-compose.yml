@@ -15,4 +15,10 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
-
+  spotify:
+    build: ./spotify
+    restart: always
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: 1
