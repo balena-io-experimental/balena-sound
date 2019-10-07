@@ -48,6 +48,8 @@ By default, balenaSound will set the output volume of your Raspberry Pi to 100% 
 
 Secondly, balenaSound will play connection/disconnection notification sounds at a volume of 75%. If this unsuitable, you can override this with the `CONNECTION_NOTIFY_VOLUME` environment variable.
 
+**Note:** these variables should be defined as integer values without the `%` symbol.
+
 ### Deploy this application
 
 * Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
