@@ -15,7 +15,8 @@ services:
 
 
 
-  spotify:
+
+spotify:
     build: ./spotify
     restart: always
     network_mode: host
