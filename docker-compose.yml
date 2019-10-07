@@ -8,15 +8,14 @@ services:
     labels:
       io.balena.features.dbus: 1
       io.balena.features.supervisor-api: 1
-
-
-
-
-
-
-
-
-spotify:
+      
+      
+      
+      
+      
+      
+      
+  spotify:
     build: ./spotify
     restart: always
     network_mode: host
