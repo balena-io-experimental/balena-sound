@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
     bus = dbus.SystemBus()
 
-    capability = "NoInputNoOutput"
+    capability = "DisplayOnly"
 
     path = "/test/agent"
     agent = Agent(bus, path)
