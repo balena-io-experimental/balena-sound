@@ -44,7 +44,7 @@ You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can 
 
 ### Set PIN code
 
-By default, balenaSound's PIN code will be set to `0000`. You'll be asked this code while you're trying to pair a Bluetooth device with your balenaSound. You can choose another PIN code to make your device more secure by setting the `BLUETOOTH_PIN_CODE` environment variable to a 4-digit decimal.
+By default, balenaSound does NOT perform any authentication. You can choose a PIN code to make your device more secure by setting the `BLUETOOTH_PIN_CODE` environment variable to a 4/6-digit decimal.
 
 ### Set output volumes
 
