@@ -8,6 +8,8 @@ RUN install_packages \
   alsa-utils \
   bluealsa \
   bluez \
+  lshw \
+  bluez-tools \
   python-gobject \
   python-dbus \
   mplayer
@@ -21,10 +23,6 @@ COPY sounds /usr/src/sounds
 COPY bluetooth-udev /usr/src/
 RUN chmod +x /usr/src/bluetooth-udev
 COPY udev-rules/ /etc/udev/rules.d/
-
-# Bluetooth-agent handles the auth of devices
-COPY bluetooth-agent /usr/src/
-RUN chmod +x /usr/src/bluetooth-agent
 
 COPY start.sh /usr/src/
 RUN chmod +x /usr/src/start.sh

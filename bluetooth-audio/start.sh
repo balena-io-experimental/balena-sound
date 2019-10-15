@@ -26,7 +26,26 @@ sleep 2
 # can be confusing and it also hides those commands from the logs as well.
 printf "discoverable on\npairable on\nexit\n" | bluetoothctl > /dev/null
 
-/usr/src/bluetooth-agent &
+hciconfig hci0 sspmode 0
+
+if [[ -n $(lshw | grep "Pi 2" -m 1) ]]; then
+if [[ -z "$BLUETOOTH_PIN_CODE" ]]; then
+BLUETOOTH_PIN_CODE=0000
+fi
+cat <<EOF > /usr/src/bluetooth.cfg
+* $BLUETOOTH_PIN_CODE
+EOF
+bt-agent -p /usr/src/bluetooth.cfg &
+else
+if [[ -z "$BLUETOOTH_PIN_CODE" ]]; then
+bt-agent -c NoInputNoOutput &
+else
+cat <<EOF > /usr/src/bluetooth.cfg
+* $BLUETOOTH_PIN_CODE
+EOF
+bt-agent -p /usr/src/bluetooth.cfg &
+fi
+fi
 
 sleep 2
 rm -rf /var/run/bluealsa/
