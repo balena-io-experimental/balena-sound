@@ -42,6 +42,14 @@ You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can 
 
 ![Setting the device name](images/device-name-config.png)
 
+### Set bluetooth pin code.
+
+By default, balenaSound will not ask for a pin code. On devices without built-in bluetooth which use a bluetooth dongle will be the pin code by default `0000`. You can add or override the pin code by defining the `BLUETOOTH_PIN_CODE` enviroment variable.
+
+**Note:** You can use up to 16 character as the pin code. They can be alphanumeric (A-Z, a-z, 1-9, !%§, etc.). It can look like this:
+
+![Setting the bluetooth pin code](images/pin-code-config.png)
+
 ### Set output volumes
 
 By default, balenaSound will set the output volume of your Raspberry Pi to 100% on the basis you can then control the volume upto the maximum from the connected bluetooth device. If you would like to override this, define the `SYSTEM_OUTPUT_VOLUME` environment variable.

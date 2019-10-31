@@ -26,7 +26,19 @@ sleep 2
 # can be confusing and it also hides those commands from the logs as well.
 printf "discoverable on\npairable on\nexit\n" | bluetoothctl > /dev/null
 
-/usr/src/bluetooth-agent &
+hciconfig hci0 sspmode 0
+
+if [ -z "$(lsusb | grep -i bluetooth)" -a -z "$BLUETOOTH_PIN_CODE" ]; then
+bt-agent -c NoInputNoOutput &
+else
+if [ "$(echo -n "$BLUETOOTH_PIN_CODE" | wc -m)" -gt 16 ]; then
+printf "%s\n" "You used more than 16 characters. Resetting to 0000. "
+BLUETOOTH_PIN_CODE=0000
+fi
+echo "* ${BLUETOOTH_PIN_CODE:-0000}" > /usr/src/bluetooth.cfg
+chmod -v o-r /usr/src/bluetooth.cfg >/dev/null
+bt-agent -p /usr/src/bluetooth.cfg &
+fi
 
 sleep 2
 rm -rf /var/run/bluealsa/
