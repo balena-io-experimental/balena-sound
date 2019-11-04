@@ -34,6 +34,12 @@ To run this project is as simple as deploying it to a balenaCloud application; n
 * Flash the downloaded OS to your SD card with [balenaEtcher](https://balena.io/etcher)
 * Power up the Pi and check it's online in the dashboard
 
+### Deploy this application
+
+* Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
+* Login with `balena login`
+* Download this project and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
+
 ### Customize device name
 
 By default, your device will be displayed as `balenaSound xxxx` when you search for Bluetooth devices.
@@ -50,13 +56,12 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 **Note:** these variables should be defined as integer values without the `%` symbol.
 
-### Deploy this application
+### Set bluetooth pin code
 
-* Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
-* Login with `balena login`
-* Download this project and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
+By default, balenaSound bluetooth will connect using Secure Simple Pairing mode with no pin code required. If you would like to override this, you can define the `BLUETOOTH_PIN_CODE` environment variable with the pin code you desire.
 
-### Connect
+
+## Connect
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
 * Connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers
@@ -65,7 +70,7 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
 
-### Multiple container use
+## Multiple container use
 If you plan to use Balena Sound as part of a multiple container app (for example, having an app with PiHole & Balena sound), don't forget to add the following label to your `docker-compose.yml` file. (source: https://www.balena.io/docs/learn/develop/multicontainer/#labels)
 
 Example:
