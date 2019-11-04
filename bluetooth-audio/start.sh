@@ -26,6 +26,7 @@ sleep 2
 # can be confusing and it also hides those commands from the logs as well.
 printf "discoverable on\npairable on\nexit\n" | bluetoothctl > /dev/null
 
+# Start bluetooth and audio agent
 /usr/src/bluetooth-agent &
 
 sleep 2
@@ -34,6 +35,13 @@ rm -rf /var/run/bluealsa/
 
 hciconfig hci0 up
 hciconfig hci0 name "$BLUETOOTH_DEVICE_NAME"
+if [ -z "$BLUETOOTH_PIN_CODE" ]; then
+  hciconfig hci0 sspmode 1  # Secure Simple Pairing
+  printf "Starting bluetooth agent in Secure Simple Pairing Mode (SSPM) - No PIN CODE"
+else
+  hciconfig hci0 sspmode 0  # Legacy pairing (PIN CODE)
+  printf "Starting bluetooth agent in Legacy Pairing Mode - PIN CODE is " "$BLUETOOTH_PIN_CODE"
+fi
 
 sleep 2
 printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"

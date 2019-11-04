@@ -6,6 +6,7 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 from gi.repository import GObject
 
+import os
 import sys
 import dbus
 import dbus.service
@@ -14,6 +15,7 @@ import dbus.mainloop.glib
 BUS_NAME = 'org.bluez'
 AGENT_INTERFACE = 'org.bluez.Agent1'
 AGENT_PATH = "/test/agent"
+BLUETOOTH_PIN_CODE = os.getenv('BLUETOOTH_PIN_CODE', None)
 
 bus = None
 device_obj = None
@@ -48,7 +50,7 @@ class Agent(dbus.service.Object):
     def RequestPinCode(self, device):
         print("RequestPinCode (%s)" % (device))
         set_trusted(device)
-        return "0000"
+        return BLUETOOTH_PIN_CODE
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="o", out_signature="u")
     def RequestPasskey(self, device):
@@ -87,7 +89,10 @@ if __name__ == '__main__':
 
     bus = dbus.SystemBus()
 
-    capability = "NoInputNoOutput"
+    if BLUETOOTH_PIN_CODE is None:
+        capability = "NoInputNoOutput"
+    else:
+        capability = "KeyboardDisplay"
 
     path = "/test/agent"
     agent = Agent(bus, path)
