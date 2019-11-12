@@ -15,7 +15,7 @@ import dbus.mainloop.glib
 BUS_NAME = 'org.bluez'
 AGENT_INTERFACE = 'org.bluez.Agent1'
 AGENT_PATH = "/test/agent"
-PIN_CODE_SET = os.getenv('BLUETOOTH_PIN_CODE', None)
+LEGACY_MODE = os.getenv('BLUETOOTH_PIN_CODE', None)
 PIN_CODE = os.getenv('BLUETOOTH_PIN_CODE', "0000")
 
 bus = None
@@ -61,8 +61,7 @@ class Agent(dbus.service.Object):
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="ouq", out_signature="")
     def DisplayPasskey(self, device, passkey, entered):
-        print("DisplayPasskey (%s, %06u entered %u)" %
-              (device, passkey, entered))
+        print("DisplayPasskey (%s, %06u entered %u)" % (device, passkey, entered))
 
     @dbus.service.method(AGENT_INTERFACE, in_signature="os", out_signature="")
     def DisplayPinCode(self, device, pincode):
@@ -90,7 +89,7 @@ if __name__ == '__main__':
 
     bus = dbus.SystemBus()
 
-    if PIN_CODE_SET is None:
+    if LEGACY_MODE is None:
         capability = "NoInputNoOutput"
     else:
         capability = "KeyboardDisplay"
