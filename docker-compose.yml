@@ -20,5 +20,7 @@ services:
     restart: always
     network_mode: host
     privileged: true
-    labels:
-      io.balena.features.dbus: 1
+    volumes:
+      - spotifycache:/var/cache/raspotify
+volumes:
+  spotifycache:
