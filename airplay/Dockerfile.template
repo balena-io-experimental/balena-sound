@@ -5,4 +5,4 @@ RUN install_packages shairport-sync
 
 COPY start.sh /usr/src/
 
-CMD bash /usr/src/start.sh
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
