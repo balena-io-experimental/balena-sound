@@ -44,6 +44,14 @@ else
   printf "Starting bluetooth agent in Secure Simple Pairing Mode (SSPM) - No PIN code provided or invalid\n"
 fi
 
+# Reconnect if there is a known device
+sleep 2
+if [ -f "/var/cache/bluetooth/reconnect_device" ]; then
+  TRUSTED_MAC_ADDRESS=$(cat /var/cache/bluetooth/reconnect_device)
+  printf "Attempting to reconnect to previous bluetooth device: %s\n" "$TRUSTED_MAC_ADDRESS"
+  printf "connect %s\nexit\n" "$TRUSTED_MAC_ADDRESS" | bluetoothctl > /dev/null
+fi
+
 sleep 2
 printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"
 /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00
