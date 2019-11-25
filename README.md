@@ -70,16 +70,3 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 * Let the music play!
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
-
-## Multiple container use
-If you plan to use Balena Sound as part of a multiple container app (for example, having an app with PiHole & Balena sound), don't forget to add the following label to your `docker-compose.yml` file. (source: https://www.balena.io/docs/learn/develop/multicontainer/#labels)
-
-Example:
-```
-bluetooth:
-  build: ./bluetooth-audio
-  privileged: true
-  network_mode: host
-  labels:
-    io.balena.features.dbus: '1'
-```

@@ -6,4 +6,4 @@ RUN curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -v - \
 
 COPY start.sh /usr/src/
 
-CMD bash /usr/src/start.sh
+CMD [ "/bin/bash", "/usr/src/start.sh" ]

@@ -29,4 +29,4 @@ RUN chmod +x /usr/src/bluetooth-agent
 COPY start.sh /usr/src/
 RUN chmod +x /usr/src/start.sh
 
-CMD /usr/src/start.sh
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
