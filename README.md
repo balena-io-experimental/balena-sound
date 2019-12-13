@@ -1,8 +1,8 @@
 ![](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/images/balenaSound-logo.png)
 
-# Bluetooth audio streaming for any audio device
+# Bluetooth, Airplay and Spotify audio streaming for any audio device
 
-**Starter project enabling you to add bluetooth audio streaming to any old speakers or Hi-Fi using just a Raspberry Pi.**
+**Starter project enabling you to add audio streaming via Bluetooth, Airplay or Spotify Coonect to any old speakers or Hi-Fi using just a Raspberry Pi.**
 
 This project has been tested on Raspberry Pi 3B/3B+ and Raspberry Pi Zero W. If you're using a Raspberry Pi 3 or above you don't need any additional hardware but if you'd like to use a Pi Zero W this will require an additional HAT as this model has no audio output.
 
@@ -42,9 +42,9 @@ To run this project is as simple as deploying it to a balenaCloud application; n
 
 ### Customize device name
 
-By default, your device will be displayed as `balenaSound xxxx` when you search for Bluetooth devices.
+By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect and when searching for devices using Bluetooth.
 You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can be set in balena dashboard
-(navigate to dashboard -> app -> device -> device variables).
+(navigate to dashboard -> app -> device -> device variables). This environment variable sets the name for all 3 services.
 
 ![Setting the device name](images/device-name-config.png)
 
@@ -56,7 +56,7 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 **Note:** these variables should be defined as integer values without the `%` symbol.
 
-### Set bluetooth PIN code
+### Set bluetooth PIN code (optional)
 
 By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999). 
 
@@ -66,7 +66,10 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
 * Connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers
-* Search for your device (`balenaSound xxxx` name is used by default) on your phone or laptop and pair. `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+* The `balenaSound xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+* If using Bluetooth: search for your device on your phone or laptop and pair.
+* If using Airplay: select the balenaSound device from your audio output options.
+* If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.
 * Let the music play!
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
