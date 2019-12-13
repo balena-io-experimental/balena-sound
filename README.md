@@ -2,7 +2,7 @@
 
 # Bluetooth, Airplay and Spotify audio streaming for any audio device
 
-**Starter project enabling you to add audio streaming via Bluetooth, Airplay or Spotify Coonect to any old speakers or Hi-Fi using just a Raspberry Pi.**
+**Starter project enabling you to add audio streaming via Bluetooth, Airplay or Spotify Connect to any old speakers or Hi-Fi using just a Raspberry Pi.**
 
 This project has been tested on Raspberry Pi 3B/3B+ and Raspberry Pi Zero W. If you're using a Raspberry Pi 3 or above you don't need any additional hardware but if you'd like to use a Pi Zero W this will require an additional HAT as this model has no audio output.
 
