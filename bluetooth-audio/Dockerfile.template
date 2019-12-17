@@ -2,6 +2,8 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%:stretch
 
 ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 
+ENV DISPLAY=:0.0
+
 ENV UDEV=1
 
 RUN install_packages \
