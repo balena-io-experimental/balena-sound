@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
+rm /tmp/.X0-lock &>/dev/null || true
+
 export DISPLAY=:0.0
 
 if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
   BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
-fi
-
-if [[ ! -z "$ROTATE_DISPLAY" ]]; then
-  echo "YES"
-  (sleep 3 && DISPLAY=:0 xrandr -o $ROTATE_DISPLAY) & 
 fi
 
 # Set the system volume here
