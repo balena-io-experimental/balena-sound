@@ -16,6 +16,13 @@ RUN install_packages xserver-xorg-core \
   python-dbus \
   mplayer
 
+# disable lxpolkit popup warning
+RUN mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
+
+RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
+  && echo "" >> /etc/X11/xinit/xserverrc \
+  && echo 'exec /usr/bin/X -s 0 dpms -nolisten tcp "$@"' >> /etc/X11/xinit/xserverrc
+
 # Copy sounds
 COPY sounds /usr/src/sounds
 
@@ -31,6 +38,9 @@ RUN chmod +x /usr/src/bluetooth-agent
 
 COPY start.sh /usr/src/
 RUN chmod +x /usr/src/start.sh
+
+# Adding things to autostart will cause them to be launchd automatically on starup
+# COPY autostart /etc/xdg/lxsession/LXDE-pi/autostart
 
 ENV XFCE_PANEL_MIGRATE_DEFAULT=1
 
