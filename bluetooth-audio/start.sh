@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
+export DISPLAY=:0.0
+
 if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
   BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+fi
+
+if [[ ! -z "$ROTATE_DISPLAY" ]]; then
+  echo "YES"
+  (sleep 3 && DISPLAY=:0 xrandr -o $ROTATE_DISPLAY) & 
 fi
 
 # Set the system volume here
@@ -55,3 +62,5 @@ fi
 sleep 2
 printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"
 exec /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00
+
+startx
