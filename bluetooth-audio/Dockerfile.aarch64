@@ -31,5 +31,6 @@ RUN chmod +x /usr/src/bluetooth-agent
 COPY start.sh /usr/src/
 RUN chmod +x /usr/src/start.sh
 
-CMD [ "/bin/bash", "/usr/src/start.sh" ]
+ENV XFCE_PANEL_MIGRATE_DEFAULT=1
 
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
