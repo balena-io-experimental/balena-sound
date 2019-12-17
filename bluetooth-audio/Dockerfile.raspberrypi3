@@ -24,4 +24,6 @@ COPY start.sh start.sh
 
 ENV UDEV=1
 
+ENV XFCE_PANEL_MIGRATE_DEFAULT=1
+
 CMD ["bash", "start.sh"]
