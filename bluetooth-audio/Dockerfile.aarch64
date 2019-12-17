@@ -16,7 +16,6 @@ RUN install_packages xserver-xorg-core \
   python-dbus \
   mplayer
 
-
 # Copy sounds
 COPY sounds /usr/src/sounds
 
