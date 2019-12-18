@@ -23,6 +23,11 @@ services:
     privileged: true
     volumes:
       - spotifycache:/var/cache/raspotify
+  audio-visualizer:
+    build: ./audio-visualizer
+    network_mode: host
+    restart: always
+    privileged: true
 volumes:
   spotifycache:
   bluetoothcache:
