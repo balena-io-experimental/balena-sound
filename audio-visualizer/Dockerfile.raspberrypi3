@@ -5,7 +5,22 @@ RUN install_packages xserver-xorg-core \
     xinit lxsession desktop-file-utils \
     raspberrypi-ui-mods rpd-icons \
     gtk2-engines-clearlookspix \
-    matchbox-keyboard
+    matchbox-keyboard \
+    libgl1-mesa-dev \
+    libpulse0 \
+    libpulse-dev \
+    libxext6 \
+    libxext-dev \
+    libxrender-dev \
+    libxcomposite-dev \
+    liblua5.3-dev \
+    liblua5.3 \
+    lua-lgi \
+    lua-filesystem \
+    meson \
+    build-essential \
+    gcc \
+    git
 
 RUN cd /usr/src/ \
     && git clone https://github.com/jarcode-foss/glava \

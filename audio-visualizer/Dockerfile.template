@@ -9,7 +9,22 @@ RUN install_packages xserver-xorg=1:7.7+19 \
   x11-xserver-utils \
   dbus-x11 \
   matchbox-keyboard \
-  xterm
+  xterm \
+  libgl1-mesa-dev \
+  libpulse0 \
+  libpulse-dev \
+  libxext6 \
+  libxext-dev \
+  libxrender-dev \
+  libxcomposite-dev \
+  liblua5.3-dev \
+  liblua5.3 \
+  lua-lgi \
+  lua-filesystem \
+  meson \
+  build-essential \
+  gcc \
+  git
 
 RUN cd /usr/src/ \
     && git clone https://github.com/jarcode-foss/glava \
