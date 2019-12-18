@@ -7,6 +7,13 @@ RUN install_packages xserver-xorg-core \
     gtk2-engines-clearlookspix \
     matchbox-keyboard
 
+RUN cd /usr/src/ \
+    && git clone https://github.com/jarcode-foss/glava \
+	&& cd glava \
+	&& meson build --prefix /usr \
+	&& ninja -C build \
+	&& ninja -C build install
+
 # disable lxpolkit popup warning
 RUN mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 
