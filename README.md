@@ -62,6 +62,11 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 
 **Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
 
+### Bluetooth Scripts (optional)
+
+balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
+Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
+
 ## Connect
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
