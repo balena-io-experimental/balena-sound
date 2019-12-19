@@ -23,6 +23,14 @@ services:
     privileged: true
     volumes:
       - spotifycache:/var/cache/raspotify
+  wifi-connect:
+    build: ./wifi-connect
+    restart: always
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: '1'
+      io.balena.features.firmware: '1'
 volumes:
   spotifycache:
   bluetoothcache:
