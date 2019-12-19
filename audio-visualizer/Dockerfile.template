@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:stretch-run
+FROM balenalib/%%BALENA_MACHINE_NAME%%:buster
 
 # Install XORG
 RUN install_packages xserver-xorg=1:7.7+19 \
@@ -28,10 +28,10 @@ RUN install_packages xserver-xorg=1:7.7+19 \
 
 RUN cd /usr/src/ \
     && git clone https://github.com/jarcode-foss/glava \
-	&& cd glava \
-	&& meson build --prefix /usr \
-	&& ninja -C build \
-	&& ninja -C build install
+    && cd glava \
+    && meson build --prefix /usr \
+    && ninja -C build \
+    && ninja -C build install
 
 # Disable screen from turning it off
 RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
