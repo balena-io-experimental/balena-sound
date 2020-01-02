@@ -67,6 +67,12 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
 Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
 
+### Spotify login (optional)
+
+By default, balenaSound Spotify Connect won´t login to your Spotify account.
+To make your device visible on Spotify Connect across the Internet can you add your
+username/e-mail and password, which can be set with these two enviroment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`
+
 ## Connect
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
