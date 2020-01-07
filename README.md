@@ -69,9 +69,9 @@ Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directo
 
 ### Spotify login (optional)
 
-By default, balenaSound Spotify Connect won´t login to your Spotify account.
-To make your device visible on Spotify Connect across the Internet can you add your
-username/e-mail and password, which can be set with these two enviroment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`
+By default, balenaSound Spotify Connect works with free accounts and won't login to your Spotify account, this means that it will work via your local network only.
+To make your device visible on Spotify Connect via the Internet requires a premium account. To enable the login you can add your
+username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.
 
 ## Connect
 
