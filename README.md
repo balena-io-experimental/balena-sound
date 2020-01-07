@@ -58,7 +58,7 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 ### Set bluetooth PIN code (optional)
 
-By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999). 
+By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999).
 
 **Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
 
@@ -69,9 +69,8 @@ Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directo
 
 ### Spotify login (optional)
 
-By default, balenaSound Spotify Connect works with free accounts and won't login to your Spotify account, this means that it will work via your local network only.
-To make your device visible on Spotify Connect via the Internet requires a premium account. To enable the login you can add your
-username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.
+balenaSound Spotify Connect works with only Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
+To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.  **Note:** this is only required if you want to use Spotify Connect via the internet, the login is not required on local networks.
 
 ## Connect
 
