@@ -72,6 +72,15 @@ Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directo
 balenaSound Spotify Connect works with only Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
 To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.  **Note:** this is only required if you want to use Spotify Connect via the internet, the login is not required on local networks.
 
+### DAC Configuration
+
+If you are using a DAC board, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard.
+
+* Disable the on-board audio by editing the existing `RESIN_HOST_CONFIG_dtparam` variable to set `”audio=off”`.
+* Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board. A table of values is available [here](DAC_configuration.md)
+
+![DAC Configuration](images/dac-vars.png)
+
 ## Connect
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
