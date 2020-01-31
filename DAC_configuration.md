@@ -12,11 +12,12 @@ If you are using a DAC board, you will need to make a couple of changes to the d
 
 Please add the configuration values that work for your DAC to the table below.
 
-| DAC Name             | BALENA_HOST_CONFIG_dtoverlay          |
-|----------------------|---------------------------------------|
-| [Suptronics X400][1] | "iqaudio-dacplus, 24db_digital_gain " |
-|                      | hifiberry-dac                         |
-|                      |                                       |
+| DAC Name               | BALENA_HOST_CONFIG_dtoverlay          |
+|------------------------|---------------------------------------|
+| [Suptronics X400][1]   | "iqaudio-dacplus, 24db_digital_gain"  |
+| [Pimoroni pHAT DAC][2] | hifiberry-dac                         |
+
 
 
 [1]: http://www.suptronics.com/Xseries/x400.html
+[2]: https://shop.pimoroni.com/products/phat-dac
