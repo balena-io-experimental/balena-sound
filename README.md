@@ -42,7 +42,7 @@ To run this project is as simple as deploying it to a balenaCloud application; n
 
 ### Customize device name
 
-By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect and when searching for devices using Bluetooth.
+By default, your device will be named `balenaSound bluetooth/airplay/spotify xxxx`. This name will show within Airplay device lists, for Spotify Connect and when searching for devices using Bluetooth.
 You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can be set in balena dashboard
 (navigate to dashboard -> app -> device -> device variables). This environment variable sets the name for all 3 services.
 
@@ -85,7 +85,7 @@ If you are using a DAC board, you will need to make a couple of changes to the d
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
 * Connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers
-* The `balenaSound xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+* The `balenaSound bluetooth/airplay/spotify xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
 * If using Bluetooth: search for your device on your phone or laptop and pair.
 * If using Airplay: select the balenaSound device from your audio output options.
 * If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.
