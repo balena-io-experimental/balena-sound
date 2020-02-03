@@ -9,7 +9,7 @@ SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
 
 # Set the raspotify username and password
 if [ ! -z "$SPOTIFY_LOGIN" ] && [ ! -z "$SPOTIFY_PASSWORD" ]; then
-  SPOTIFY_CREDENTIALS="--username $SPOTIFY_LOGIN --password $SPOTIFY_PASSWORD"
+  SPOTIFY_CREDENTIALS="--username \"$SPOTIFY_LOGIN\" --password \"$SPOTIFY_PASSWORD\""
   printf "%s\n" "Using Spotify login."
 fi
 
