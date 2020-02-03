@@ -5,7 +5,7 @@ if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
 fi
 
 # Set the system volume here
-SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
+SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
 
 # Set the raspotify username and password
 if [ ! -z "$SPOTIFY_LOGIN" ] && [ ! -z "$SPOTIFY_PASSWORD" ]; then
