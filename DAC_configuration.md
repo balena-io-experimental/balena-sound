@@ -14,10 +14,12 @@ Please add the configuration values that work for your DAC to the table below.
 
 | DAC Name               | BALENA_HOST_CONFIG_dtoverlay          |
 |------------------------|---------------------------------------|
-| [Suptronics X400][1]   | "iqaudio-dacplus, 24db_digital_gain"  |
+| [Suptronics X400][1]   | iqaudio-dacplus                       |
 | [Pimoroni pHAT DAC][2] | hifiberry-dac                         |
+| [Justboom DAC HAT][3]  | justboom-dac                          |
 
 
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
+[3]: https://uk.pi-supply.com/products/justboom-dac-hat
