@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
-  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound bluetooth %s" $(hostname | cut -c -4))
+  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
 fi
 
 # Set the system volume here
-SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
+SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
 echo $SYSTEM_OUTPUT_VOLUME > /usr/src/system_output_volume
 printf "Setting output volume to %s%%\n" "$SYSTEM_OUTPUT_VOLUME"
 amixer sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
+amixer sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
 
 # Set the volume of the connection notification sounds here
 CONNECTION_NOTIFY_VOLUME="${CONNECTION_NOTIFY_VOLUME:-75}"
