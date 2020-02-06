@@ -18,6 +18,7 @@ Please add the configuration values that work for your DAC to the table below.
 | [Pimoroni pHAT DAC][2] | hifiberry-dac                         |
 | [Justboom DAC HAT][3]  | justboom-dac                          |
 | [Pisound][4]           | pisound                               |
+| [InnoMaker][5]         | allo-boss-dac-pcm512x-audio           |
 
 
 
@@ -25,3 +26,4 @@ Please add the configuration values that work for your DAC to the table below.
 [2]: https://shop.pimoroni.com/products/phat-dac
 [3]: https://uk.pi-supply.com/products/justboom-dac-hat
 [4]: https://blokas.io/pisound/
+[5]: http://www.inno-maker.com/product/hifi-dac-hat/
