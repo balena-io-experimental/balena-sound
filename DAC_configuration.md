@@ -12,6 +12,7 @@ If you are using a DAC board, you will need to make a couple of changes to the d
 
 Please add the configuration values that work for your DAC to the table below.
 
+
 | DAC Name               | BALENA_HOST_CONFIG_dtoverlay          | Working
 |------------------------|---------------------------------------|----------
 | [Suptronics X400][1]   | iqaudio-dacplus                       | [With issues][5]
@@ -19,6 +20,7 @@ Please add the configuration values that work for your DAC to the table below.
 | [Justboom DAC HAT][3]  | justboom-dac                          | Yes
 | [Pisound][4]           | pisound                               | Yes
 | [Hifiberry DAC+][6]    | hifiberry-dacplus                     | [Yes][7]
+| [InnoMaker][8]         | allo-boss-dac-pcm512x-audio           | [Yes][9]
 
 
 [1]: http://www.suptronics.com/Xseries/x400.html
@@ -28,3 +30,5 @@ Please add the configuration values that work for your DAC to the table below.
 [5]: https://forums.balena.io/t/regarding-dac-installation-on-balenasound-project/45568/27
 [6]: https://www.hifiberry.com/products/dacplus/
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
+[8]: http://www.inno-maker.com/product/hifi-dac-hat/
+[9]: https://github.com/balenalabs/balena-sound/pull/98
