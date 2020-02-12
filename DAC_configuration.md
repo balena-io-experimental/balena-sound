@@ -21,7 +21,10 @@ Please add the configuration values that work for your DAC to the table below.
 | [Pisound][4]           | pisound                               | Yes
 | [Hifiberry DAC+][6]    | hifiberry-dacplus                     | [Yes][7]
 | [InnoMaker][8]         | allo-boss-dac-pcm512x-audio           | [Yes][9]
-
+| [miniBoss DAC][10]      | allo-boss-dac-pcm512x-audio           | Yes
+| [PiFi Digi+][11]       | hifiberry-digi                        | Yes
+| [Pimoroni Pirate Audio][12] | hifiberry-dac                         | Yes
+| [IQaudIO Pi-DAC+][13]  | iqaudio-dacplus                       | Yes
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
@@ -32,3 +35,7 @@ Please add the configuration values that work for your DAC to the table below.
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
 [8]: http://www.inno-maker.com/product/hifi-dac-hat/
 [9]: https://github.com/balenalabs/balena-sound/pull/98
+[10]: https://allo.com/sparky/miniboss-rpi-zero.html
+[11]: http://www.kumantech.com/kuman-sc07-raspberry-pi-hifi-digi-digital-sound-card-i2s-spdif-optical-fiber-for-raspberry-pi-3-2-model-b-b-sc07_p0041.html
+[12]: https://shop.pimoroni.com/collections/pirate-audio
+[13]: http://iqaudio.co.uk/hats/8-pi-dac.html

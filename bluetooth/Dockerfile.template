@@ -7,13 +7,16 @@ RUN install_packages \
   alsa-utils \
   bluealsa \
   bluez \
-  mplayer \
   python-dbus \
   python-gobject \
   python-gpiozero
 
 # Copy sounds
 COPY sounds /usr/src/sounds
+
+# Copy bluetooth-control script
+COPY bluetooth-control /usr/src/
+RUN chmod +x /usr/src/bluetooth-control
 
 # Setup udev rules - this lets us play the connect/disconnect sound,
 # turn off discover/pairing when a client is connected

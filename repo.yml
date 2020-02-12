@@ -1,1 +1,4 @@
 type: generic
+upstream:
+  - repo: balena-sound
+    url: https://github.com/balenalabs/balena-sound
