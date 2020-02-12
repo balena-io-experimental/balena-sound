@@ -38,10 +38,12 @@ fi
 
 sleep 2
 rm -rf /var/run/bluealsa/
-/usr/bin/bluealsa -i hci0 -p a2dp-sink &
+/usr/bin/bluealsa -i hci0 -p a2dp-sink --a2dp-volume &
 
 hciconfig hci1 down > /dev/null 2>&1 # Disable onboard bluetooth if using a bluetooth dongle (onboard interface gets remapped to hci1) 
+
 hciconfig hci0 up
+
 hciconfig hci0 name "$BLUETOOTH_DEVICE_NAME"
 
 if ! [ -z "$BLUETOOTH_PIN_CODE" ] && [[ $BLUETOOTH_PIN_CODE -gt 1 ]] && [[ $BLUETOOTH_PIN_CODE -lt 1000000 ]]; then
@@ -52,6 +54,10 @@ else
   printf "Starting bluetooth agent in Secure Simple Pairing Mode (SSPM) - No PIN code provided or invalid\n"
 fi
 
+if [[ ! -z "$DISABLE_AUTO_DISCOVERY" ]]; then
+  hciconfig hci0 down
+fi
+
 # Reconnect if there is a known device
 sleep 2
 if [ -f "/var/cache/bluetooth/reconnect_device" ]; then
@@ -60,6 +66,23 @@ if [ -f "/var/cache/bluetooth/reconnect_device" ]; then
   printf "connect %s\nexit\n" "$TRUSTED_MAC_ADDRESS" | bluetoothctl > /dev/null
 fi
 
+# Start gpio bluetooth control service
+if [[ -z "$DISABLE_BLUETOOTH_CONTROL" ]]; then
+  VOLUME_UP_GPIO="${VOLUME_UP_GPIO:-17}"
+  echo $VOLUME_UP_GPIO > /usr/src/volume_up_gpio
+  printf "Volume up button input is on GPIO$VOLUME_UP_GPIO \n"
+
+  BLUETOOTH_GPIO="${BLUETOOTH_GPIO:-27}"
+  echo $BLUETOOTH_GPIO > /usr/src/bluetooth_gpio
+  printf "Bluetooth button input is on GPIO$BLUETOOTH_GPIO \n"
+
+  VOLUME_DOWN_GPIO="${VOLUME_DOWN_GPIO:-22}"
+  echo $VOLUME_DOWN_GPIO > /usr/src/volume_down_gpio
+  printf "Volume down button input is on GPIO$VOLUME_DOWN_GPIO \n"
+  
+  bash /usr/src/bluetooth-control &
+fi
+
 sleep 2
 printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"
-exec /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00
+exec /usr/bin/bluealsa-aplay --profile-a2dp 00:00:00:00:00:00

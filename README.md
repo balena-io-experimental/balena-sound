@@ -90,7 +90,21 @@ If you don't want to use multi-room or you only have one device, you can disable
 
 By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999).
 
-**Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
+**Note:** Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
+
+### GPIO bluetooth control
+
+balenaSound allows you to control your mobile over bluetooth (Volume up/down and play/resume/stop) and enable bluetooth discovery. This feature is at default enabled, you can disable it by creating the `DISABLE_BLUETOOTH_CONTROL` variable (with any value, for example: `1`). You will have to connect some buttons to your GPIO pins to make use of this feature. We are using these pins:
+
+![GPIO Pins](images/gpio-pins.png)
+
+* GPIO17= Volume up
+* GPIO27= Bluetooth discovery
+* GPIO22= Volume down
+
+If you don´t like these gpio pins you can set others manually with `VOLUME_UP_GPIO` `VOLUME_DOWN_GPIO` or/and `BLUETOOTH_GPIO` to another gpio. The value should be something like `17` or `27`(The number should be the one of the gpio and not of the pin!).
+
+**Note:** Deactivating the automatic discovery of the device is recommended. This can be done by creating the `DISABLE_AUTO_DISCOVERY` variable (with any value, for example: `1`)
 
 ### Bluetooth scripts
 
