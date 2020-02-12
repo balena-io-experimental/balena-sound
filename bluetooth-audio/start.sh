@@ -30,10 +30,17 @@ printf "discoverable on\npairable on\nexit\n" | bluetoothctl > /dev/null
 # Start bluetooth and audio agent
 /usr/src/bluetooth-agent &
 
+# If multi room is disabled remove audio redirect to fifo pipe
+# Also remove if device is from Pi 1 family, since snapcast server is disabled by default
+if [[ -n $DISABLE_MULTI_ROOM ]] || [[ $BALENA_DEVICE_TYPE == "raspberry-pi" ]]; then
+  rm /root/.asoundrc
+fi
+
 sleep 2
 rm -rf /var/run/bluealsa/
 /usr/bin/bluealsa -i hci0 -p a2dp-sink &
 
+hciconfig hci1 down > /dev/null 2>&1 # Disable onboard bluetooth if using a bluetooth dongle (onboard interface gets remapped to hci1) 
 hciconfig hci0 up
 hciconfig hci0 name "$BLUETOOTH_DEVICE_NAME"
 
