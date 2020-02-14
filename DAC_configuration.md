@@ -21,6 +21,7 @@ Please add the configuration values that work for your DAC to the table below.
 | [Pisound][4]           | pisound                               | Yes
 | [Hifiberry DAC+][6]    | hifiberry-dacplus                     | [Yes][7]
 | [InnoMaker][8]         | allo-boss-dac-pcm512x-audio           | [Yes][9]
+| [miniBoss DAC][10]      | allo-boss-dac-pcm512x-audio           | Yes
 
 
 [1]: http://www.suptronics.com/Xseries/x400.html
@@ -32,3 +33,4 @@ Please add the configuration values that work for your DAC to the table below.
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
 [8]: http://www.inno-maker.com/product/hifi-dac-hat/
 [9]: https://github.com/balenalabs/balena-sound/pull/98
+[10]: https://allo.com/sparky/miniboss-rpi-zero.html
