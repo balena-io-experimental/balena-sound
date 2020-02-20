@@ -20,8 +20,11 @@ add)
     if [[ -z "$BLUETOOTH_SCRIPTS" ]]; then
       python /usr/src/bluetooth-scripts/bluetooth-connect
     fi
-    if [[ -a /usr/src/is_discoverable ]]; then
-      hciconfig hci0 down
+    if [[ -a /usr/src/close_discovery ]]; then
+      if [[ -a /usr/src/is_discoverable ]]; then
+        printf "Closing bluetooth discovery. \n"
+        hciconfig hci0 down
+      fi
     fi
     ;;
 remove)
