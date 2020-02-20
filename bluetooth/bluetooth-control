@@ -86,7 +86,6 @@ if [[ "$TIMER" == 2 ]]; then
   fi
 fi
 
-
 # Volume down
 if [[ "$(cat /sys/class/gpio/gpio$VOLUME_DOWN_GPIO/value)" == 1 ]]; then
   printf "Setting volume lower. \n"
