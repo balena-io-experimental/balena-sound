@@ -51,7 +51,7 @@ if [[ "$TIMER" == 3 ]]; then
     printf "Making the device for 3 min discoverable. \n"
     hciconfig hci0 up
     touch /usr/src/is_discoverable
-    (sleep 180 ; hciconfig hci0 down ; rm /usr/src/is_discoverable) &
+    (sleep 180 ; printf "Closing bluetooth discovery. \n" ; hciconfig hci0 down ; rm /usr/src/is_discoverable) &
   else
     printf "The device is already discoverable. \n"
   fi
