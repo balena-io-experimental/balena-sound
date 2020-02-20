@@ -80,6 +80,11 @@ if [[ -z "$DISABLE_BLUETOOTH_CONTROL" ]]; then
   echo $VOLUME_DOWN_GPIO > /usr/src/volume_down_gpio
   printf "Volume down button input is on GPIO$VOLUME_DOWN_GPIO \n"
   
+  if [[ ! -z "CLOSE_DISCOVERY" ]]; then
+    touch /usr/src/close_discovery
+    printf "Bluetooth discovery is will be deactivated if the device connects and bluetooth discovery got activated via gpio. \n"
+  fi
+  
   bash /usr/src/bluetooth-control &
 fi
 
