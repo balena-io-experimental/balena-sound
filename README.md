@@ -64,11 +64,15 @@ You can configure some features of balenaSound by using environment variables. T
 
 ![Setting the device name](images/device-name-config.png)
 
-
 ### Change device name
 
 By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect and when searching for devices using Bluetooth.
 You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can be set in balena dashboard.
+
+**Note:** 
+
+* If you set this variable it is set for every service. That means you would see that value also in spotify and airplay. If you want custom names for every service you can use service variables. This can be done in the balena dashboard: navigate to dashboard -> your app -> Service variables
+* You can also add this code to the value of your enviroment variable and it will give you the shorten UUID: `$(hostname | cut -c -4)` (That is the xxxx part we use as an example.) So lets say you have fleet and want to give individual names to all of your devices, you can use something like this: `yourcompanyname device series $(hostname | cut -c -4)`
 
 ### Set output volumes
 
