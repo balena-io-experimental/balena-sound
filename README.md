@@ -112,9 +112,9 @@ If you don´t like these gpio pins you can set others manually with `VOLUME_UP_G
 
 If you press the volume up/down button the balenaSound device will send (If a phone is connected.) a command to the connected device device, which turns the output volume of the phone higher/lower. The bluetooth button is a little bit more complex. You can press or hold it. There is a integrated timer which counts how long the bluetooth button is pressed. If it is pressed the timer is set to `1`. It waits one secound and if it you keep holding it it is set to `2`. Then it waits again one secound and if it is until then keeped pressed the value is set to `3`. `3` is the maximum and it waits until you release the button. Here is what happens:
 
-* **1:** The music gets played/paused/resumed (You can modify it if you want: [Click me!](https://github.com/AlexProgrammerDE/balena-sound/blob/master/bluetooth/bluetooth-control#L69))
-* **2:** The music gets played/paused/resumed (You can modify it if you want: [Click me!](https://github.com/AlexProgrammerDE/balena-sound/blob/master/bluetooth/bluetooth-control#L79))
-* **3:** The device is for 3 min available for pairing. (You can modify it if you want: [Click me!](https://github.com/AlexProgrammerDE/balena-sound/blob/master/bluetooth/bluetooth-control#L49))
+* **1:** The music gets played/paused/resumed
+* **2:** The music gets played/paused/resumed
+* **3:** The device is for 3 min available for pairing.
 
 **Note:** 
 * Deactivating the automatic discovery of the device, when it boots is recommended. This can be done by creating the `DISABLE_AUTO_DISCOVERY` variable (with any value, for example: `1`)
