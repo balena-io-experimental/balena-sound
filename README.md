@@ -142,7 +142,7 @@ If you are using a DAC board, you will need to make a couple of changes to the d
 
 * After the application has pushed and the device has downloaded the latest changes you're ready to go!
 * Connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers
-* The `balenaSound bluetooth/airplay/spotify xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+* The `balenaSound xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
 * If using Bluetooth: search for your device on your phone or laptop and pair.
 * If using Airplay: select the balenaSound device from your audio output options.
 * If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.
