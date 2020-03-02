@@ -34,6 +34,8 @@ echo "in" > /sys/class/gpio/gpio$VOLUME_DOWN_GPIO/direction
 
 while : ; do
 
+if [ -a /var/cache/bluetooth/reconnect_device ]; then
+
 DEVICE="$(echo "$(amixer -D bluealsa scontrols)" | sed -n " s,[^']*'\([^']*\).*,\1,p ")"
 MAC="$(cat /var/cache/bluetooth/reconnect_device)"
 MAC_PARSED="$(echo ${MAC//:/_})"
@@ -96,5 +98,7 @@ fi
 fi
 
 TIMER="0"
+
+fi
 
 done
