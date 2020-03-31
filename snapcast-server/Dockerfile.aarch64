@@ -1,6 +1,6 @@
 FROM balenalib/raspberrypi3-debian:buster
 
-ARG SNAPCAST_VERSION=0.17.1
+ARG SNAPCAST_VERSION
 
 WORKDIR /usr/src
 

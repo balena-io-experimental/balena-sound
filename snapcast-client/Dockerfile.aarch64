@@ -1,6 +1,6 @@
 FROM balenalib/raspberrypi3-debian:buster
 
-ARG SNAPCAST_VERSION=0.17.1
+ARG SNAPCAST_VERSION
 
 WORKDIR /usr/src
 
@@ -11,6 +11,7 @@ RUN install_packages \
   libflac8 \
   libogg0 \
   libopus0 \
+  libsoxr0 \
   libvorbis0a \
   wget
 
