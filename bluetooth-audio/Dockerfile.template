@@ -7,7 +7,6 @@ RUN install_packages \
   alsa-utils \
   bluealsa \
   bluez \
-  mplayer \
   python-dbus \
   python-gobject \
   python-gpiozero
