@@ -33,7 +33,7 @@ remove)
     amixer sset Digital,0 $CONNECTION_NOTIFY_VOLUME% > /dev/null &
 
     aplay -D hw:0,0 /usr/src/sounds/disconnect.wav > /dev/null 2>&1
-
+	
     amixer sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
     amixer sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
     if [[ -z "$BLUETOOTH_SCRIPTS" ]]; then
