@@ -68,7 +68,7 @@ You can configure some features of balenaSound by using environment variables. T
 ### Change device name
 
 By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect and when searching for devices using Bluetooth.
-You can change this using `BLUETOOTH_DEVICE_NAME` environment variable that can be set in balena dashboard.
+You can change this using `DEVICE_NAME` environment variable that can be set in balena dashboard.
 
 ### Set output volumes
 

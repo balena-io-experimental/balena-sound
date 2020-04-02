@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Set the device broadcast name for Spotify
-if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
-  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
+if [[ -z "$DEVICE_NAME" ]]; then
+  DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
 fi
 
 # Set the system volume here
@@ -22,4 +22,4 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $BALENA_DEVICE_TYPE != "raspberry-pi" ]]; 
 fi
 
 # Start raspotify
-exec /usr/bin/librespot --name "$BLUETOOTH_DEVICE_NAME" $SPOTIFY_BACKEND --bitrate 320 --cache /var/cache/raspotify --enable-volume-normalisation --linear-volume --initial-volume=$SYSTEM_OUTPUT_VOLUME $SPOTIFY_CREDENTIALS $SPOTIFY_DEVICE
+exec /usr/bin/librespot --name "$DEVICE_NAME" $SPOTIFY_BACKEND --bitrate 320 --cache /var/cache/raspotify --enable-volume-normalisation --linear-volume --initial-volume=$SYSTEM_OUTPUT_VOLUME $SPOTIFY_CREDENTIALS $SPOTIFY_DEVICE
