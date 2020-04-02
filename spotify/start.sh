@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+ 
+#Check for incompatible multi room and client-only setting
+if [[ -n $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
+  echo “DISABLE_MULTI_ROOM and CLIENT_ONLY_MULTI_ROOM cannot be set simultaneously. Ignoring client-only mode.”
+fi
+ 
+#Exit service if client-only mode is enabled 
+if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
+  exit 0
+fi
 
 # Set the device broadcast name for Spotify
 if [[ -z "$DEVICE_NAME" ]]; then
