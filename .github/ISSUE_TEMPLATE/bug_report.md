@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Describe the problem**
+A clear and concise description of what the problem is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
@@ -23,9 +23,10 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
+**Device information**
+ - Board (hardware info): [e.g. Raspberry Pi 3B+]
+ - Device type (as seen in balenaCloud): [e.g. Raspberry Pi 3 (using 64bit OS)]
+ - balenaOS version: [e.g. balenaOS v2.47.0+rev1]
 
 **Additional context**
 Add any other context about the problem here.
