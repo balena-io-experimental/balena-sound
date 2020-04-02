@@ -28,7 +28,7 @@
 
 # Setup and use
 
-Running this project is as simple as deploying it to a balenaCloud application; no additional configuration is required (unless you're using a DAC HAT).
+Running this project is as simple as deploying it to a balenaCloud application; no additional configuration is required (unless you're using a DAC HAT). All the setup steps below are done from your MacOS, Windows or Linux computer, not the Raspberry Pi.
 
 ### Setup the Raspberry Pi
 
