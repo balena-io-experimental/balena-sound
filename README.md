@@ -8,6 +8,11 @@
 - **Bluetooth, Airplay and Spotify Connect support**: Stream audio from your favourite music services or directly from your smartphone/computer using bluetooth.
 - **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
 
+
+# Motivation
+
+It's just a cool project!
+
 ### Hardware required
 
 * Raspberry Pi 3A+/3B/3B+/4B/Zero W
