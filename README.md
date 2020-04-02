@@ -86,6 +86,16 @@ If you don't want to use multi-room or you only have one device, you can disable
 
 **Note:** Multi-room requires a network router that supports IP multicast/broadcast (most modern routers do).
 
+### Client Only Multi-room
+
+By default, balenaSound lets you connect and stream audio from every device on the fleet. If you prefer to have one or more devices "hidden" in the network but still capable of playing multi-room audio you can set the device to Client Only mode.
+
+Client Only mode only runs the services needed to synchronize and play the audio that is being streamed from the multi-room master server; all other services will be disabled. This makes for less clutter in the devices overview when connecting from Spotify, Airplay or Bluetooth and lowers the load on the devices running Client Only mode.
+
+If you want to set a device in Client Only mode, create a `CLIENT_ONLY_MULTI_ROOM` variable with value `1`.
+
+**Note**: Client Only mode only works if multi-room mode is enabled. When you disable multi-room mode, the `CLIENT_ONLY_MULTI_ROOM` variable is ignored to prevent all services being down.
+
 ### Set bluetooth PIN code
 
 By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999).
