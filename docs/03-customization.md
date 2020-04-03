@@ -1,8 +1,13 @@
-# Customize your balenaSound experience
+# Customizations
 
-You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard: navigate to dashboard -> your app -> Environment variables. Read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
+You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard: 
+````
+navigate to dashboard -> your app -> Environment variables. 
+````
 
-![Setting the device name](images/device-name-config.png)
+![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/device-name-config.png)
+
+You can read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
 
 
 ## Change device name
@@ -18,7 +23,7 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 **Note:** these variables should be defined as integer values without the `%` symbol.
 
-## Multi-room
+## Disable multi-room
 
 By default, balenaSound will start in multi-room mode. When running multi-room you can stream audio into a fleet of devices and have it play perfectly synchronized. It does not matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
 
@@ -32,20 +37,13 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 
 **Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
 
-## Bluetooth scripts
+## Add bluetooth scripts
 
 balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
 Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
 
-## Spotify Connect over the internet
+## Spotify Connect
 
 Spotify Connect only works with Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
-
-## DAC Configuration
-
-If you are using a DAC board, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard.
-
-* Disable the on-board audio by editing the existing `RESIN_HOST_CONFIG_dtparam` variable to set `”audio=off”`.
-* Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board. A table of values is available [here](DAC_configuration.md)
-
-![DAC Configuration](images/dac-vars.png)
+If you have a Spotify Premium account you can stream locally without any configuration, but if you want to use Spotify Connect over the internet you will need to provide your Spotify credentials.
+To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.

@@ -1,16 +1,20 @@
 # DAC Configuration
 
-If you are using a DAC board, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard.
+While most Raspberry Pi boards come with an onboard sound card it is well known that the audio quality you get from them is not the greatest. If you want to upgrade the sound quality of your balenaSound devices (or if you are using a board that does not have onboard sound card such as the Raspberry Pi Zero) you will need to add a DAC board (Digital Audio Converter) to your project.
 
-* Disable the on-board audio by editing the existing `RESIN_HOST_CONFIG_dtparam` variable to set `”audio=off”`.
-* Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board.
+To get a DAC board to work with balenaSound, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard:
+
+* Disable the on-board audio by editing the existing ```RESIN_HOST_CONFIG_dtparam``` variable to set `”audio=off”`.
+* Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see table below).
 * Cycle the power by unplugging your pi.
 
-![DAC Configuration](images/dac-vars.png)
+![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/dac-vars.png)
 
-## BALENA_HOST_CONFIG_dtoverlay Values
+### BALENA_HOST_CONFIG_dtoverlay Values
 
-Please add the configuration values that work for your DAC to the table below.
+These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR]() or [issue]() on our repository.
+
+
 
 
 | DAC Name               | BALENA_HOST_CONFIG_dtoverlay          | Working

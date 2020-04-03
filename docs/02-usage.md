@@ -1,8 +1,9 @@
 # Usage
 
-After the application has pushed and the device has downloaded the latest changes you're ready to go! Before starting, connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers. You can also use the HDMI port for digital audio output.
+After the application has pushed and the device has downloaded the latest changes you're ready to go! 
+Before starting, connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers. You can also use the HDMI port for digital audio output.
 
-Connect to your balenaSound device:
+To connect to your balenaSound device:
 * If using Bluetooth: search for your device on your phone or laptop and pair.
 * If using Airplay: select the balenaSound device from your audio output options.
 * If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.

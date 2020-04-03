@@ -1,6 +1,7 @@
-# How this thing works
+# Architecture
 
-## In depth explanation
+## Explanation
 balenaSound is pure magic
 
-## subtitle
+## Containers
+this is interesting stuff. oh such a nice diagram.
