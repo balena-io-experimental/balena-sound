@@ -2,7 +2,7 @@ version: '2'
 services:
   bluetooth:
     build: ./bluetooth
-    restart: always
+    restart: on-failure
     network_mode: host
     privileged: true
     labels:
@@ -12,7 +12,7 @@ services:
       - snapcast:/var/cache/snapcast
   airplay:
     build: ./airplay
-    restart: always
+    restart: on-failure
     network_mode: host
     privileged: true
     labels:
@@ -21,7 +21,7 @@ services:
       - snapcast:/var/cache/snapcast
   spotify:
     build: ./spotify
-    restart: always
+    restart: on-failure
     network_mode: host
     privileged: true
     volumes:
