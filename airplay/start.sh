@@ -12,8 +12,8 @@ fi
 
 
 # Set the device broadcast name for AirPlay
-if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
-  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound Airplay %s" $(hostname | cut -c -4))
+if [[ -z "$DEVICE_NAME" ]]; then
+  DEVICE_NAME=$(printf "balenaSound Airplay %s" $(hostname | cut -c -4))
 fi
 
 # Use pipe output if multi room is enabled
@@ -23,5 +23,4 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $BALENA_DEVICE_TYPE != "raspberry-pi" ]]; 
 fi
 
 # Start AirPlay
-exec shairport-sync -a "$BLUETOOTH_DEVICE_NAME" $SHAIRPORT_BACKEND | printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"
-
+exec shairport-sync -a "$DEVICE_NAME" $SHAIRPORT_BACKEND | printf "Device is discoverable as \"%s\"\n" "$DEVICE_NAME"

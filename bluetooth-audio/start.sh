@@ -10,16 +10,16 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
   exit 0
 fi
 
-if [[ -z "$BLUETOOTH_DEVICE_NAME" ]]; then
-  BLUETOOTH_DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+if [[ -z "$DEVICE_NAME" ]]; then
+  DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
 fi
 
 # Set the system volume here
 SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
 echo $SYSTEM_OUTPUT_VOLUME > /usr/src/system_output_volume
 printf "Setting output volume to %s%%\n" "$SYSTEM_OUTPUT_VOLUME"
-amixer sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
-amixer sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
+amixer -M sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
+amixer -M sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
 
 # Set the volume of the connection notification sounds here
 CONNECTION_NOTIFY_VOLUME="${CONNECTION_NOTIFY_VOLUME:-75}"
@@ -52,7 +52,7 @@ rm -rf /var/run/bluealsa/
 
 hciconfig hci1 down > /dev/null 2>&1 # Disable onboard bluetooth if using a bluetooth dongle (onboard interface gets remapped to hci1) 
 hciconfig hci0 up
-hciconfig hci0 name "$BLUETOOTH_DEVICE_NAME"
+hciconfig hci0 name "$DEVICE_NAME"
 
 if ! [ -z "$BLUETOOTH_PIN_CODE" ] && [[ $BLUETOOTH_PIN_CODE -gt 1 ]] && [[ $BLUETOOTH_PIN_CODE -lt 1000000 ]]; then
   hciconfig hci0 sspmode 0  # Legacy pairing (PIN CODE)
@@ -71,6 +71,6 @@ if [ -f "/var/cache/bluetooth/reconnect_device" ]; then
 fi
 
 sleep 2
-printf "Device is discoverable as \"%s\"\n" "$BLUETOOTH_DEVICE_NAME"
+printf "Device is discoverable as \"%s\"\n" "$DEVICE_NAME"
 exec /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00
 
