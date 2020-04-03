@@ -4,7 +4,7 @@ Getting started with balenaSound is as simple as deploying it to a [balenaCloud]
 
 ## Hardware required
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/hardware.jpeg)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/hardware.jpeg)
 
 * Raspberry Pi 3A+/3B/3B+/4B/Zero W
 * SD Card (we recommend 8GB Sandisk Extreme Pro)
@@ -26,7 +26,7 @@ Getting started with balenaSound is as simple as deploying it to a [balenaCloud]
 
 ## Provision your device
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sdcard.gif)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sdcard.gif)
 
 * Sign up for or login to the [balenaCloud dashboard](https://dashboard.balena-cloud.com)
 * Create an application, selecting the correct device type for your Raspberry Pi (we recommend setting the type as Raspberry Pi 1/Zero as your application will then be compatible with the Pi 1/Zero as well as all devices that were released afterward).
