@@ -169,7 +169,7 @@
           "img",
           {
             "alt": "",
-            "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sound.png"
+            "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sound.png"
           }
         ]
       ],
@@ -231,7 +231,7 @@
             "mime": "text/markdown",
             "title": "Getting started",
             "data": {
-              "markdown": "# Getting started\n\nGetting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) application; no additional configuration is required (unless you're using a DAC HAT).\n\n## Hardware required\n\n![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/hardware.jpeg)\n\n* Raspberry Pi 3A+/3B/3B+/4B/Zero W\n* SD Card (we recommend 8GB Sandisk Extreme Pro)\n* Power supply\n* 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.\n\n**Notes** \n- The Raspberry Pi Zero cannot be used on it's own as it has no audio output. To use the Pi Zero you'll need to add something like the [Pimoroni pHAT DAC](https://shop.pimoroni.com/products/phat-dac) (out of stock and going to be replaced, see [#111](https://github.com/balenalabs/balena-sound/issues/111)) to go with it.\n- For an extended list of device types supported please check this [link](DeviceSupport.md).\n\n\n## Software required\n\n* A download of this project (of course)\n* Software to flash an SD card ([balenaEtcher](https://balena.io/etcher))\n* A free [balenaCloud](https://balena.io/cloud) account\n* The [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)\n\n\n## Provision your device\n\n![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sdcard.gif)\n\n* Sign up for or login to the [balenaCloud dashboard](https://dashboard.balena-cloud.com)\n* Create an application, selecting the correct device type for your Raspberry Pi (we recommend setting the type as Raspberry Pi 1/Zero as your application will then be compatible with the Pi 1/Zero as well as all devices that were released afterward).\n* Add a device to the application, enabling you to download the OS\n* Flash the downloaded OS to your SD card with [balenaEtcher](https://balena.io/etcher)\n* Power up the Pi and check it's online in the dashboard\n\n## Deploy the application\n\n* Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)\n* Login with `balena login`\n* Download this project and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.",
+              "markdown": "# Getting started\n\nGetting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) application; no additional configuration is required (unless you're using a DAC HAT).\n\n## Hardware required\n\n![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/hardware.jpeg)\n\n* Raspberry Pi 3A+/3B/3B+/4B/Zero W\n* SD Card (we recommend 8GB Sandisk Extreme Pro)\n* Power supply\n* 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.\n\n**Notes** \n- The Raspberry Pi Zero cannot be used on it's own as it has no audio output. To use the Pi Zero you'll need to add something like the [Pimoroni pHAT DAC](https://shop.pimoroni.com/products/phat-dac) (out of stock and going to be replaced, see [#111](https://github.com/balenalabs/balena-sound/issues/111)) to go with it.\n- For an extended list of device types supported please check this [link](DeviceSupport.md).\n\n\n## Software required\n\n* A download of this project (of course)\n* Software to flash an SD card ([balenaEtcher](https://balena.io/etcher))\n* A free [balenaCloud](https://balena.io/cloud) account\n* The [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)\n\n\n## Provision your device\n\n![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sdcard.gif)\n\n* Sign up for or login to the [balenaCloud dashboard](https://dashboard.balena-cloud.com)\n* Create an application, selecting the correct device type for your Raspberry Pi (we recommend setting the type as Raspberry Pi 1/Zero as your application will then be compatible with the Pi 1/Zero as well as all devices that were released afterward).\n* Add a device to the application, enabling you to download the OS\n* Flash the downloaded OS to your SD card with [balenaEtcher](https://balena.io/etcher)\n* Power up the Pi and check it's online in the dashboard\n\n## Deploy the application\n\n* Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)\n* Login with `balena login`\n* Download this project and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.",
               "jsonml": [
                 [
                   "header",
@@ -265,7 +265,7 @@
                     "img",
                     {
                       "alt": "",
-                      "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/hardware.jpeg"
+                      "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/hardware.jpeg"
                     }
                   ]
                 ],
@@ -382,7 +382,7 @@
                     "img",
                     {
                       "alt": "",
-                      "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sdcard.gif"
+                      "href": "https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sdcard.gif"
                     }
                   ]
                 ],
