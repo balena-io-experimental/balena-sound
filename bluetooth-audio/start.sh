@@ -11,7 +11,11 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
 fi
 
 if [[ -z "$DEVICE_NAME" ]]; then
-  DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+   if [[ "$BLUETOOTH_DEVICE_NAME" ]]; then
+     DEVICE_NAME="$BLUETOOTH_DEVICE_NAME"
+   else
+     DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+   fi
 fi
 
 # Set the system volume here
