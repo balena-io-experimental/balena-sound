@@ -133,6 +133,10 @@ If you have a Spotify Premium account you can stream locally without any configu
 
 To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.  
 
+## Acknowledgements
+
+This project is made possible by the awesome work of various open source projects, including [Shairport Sync](https://github.com/mikebrady/shairport-sync), [Raspotify](https://github.com/dtcooper/raspotify) and [Snapcast](https://github.com/badaix/snapcast).
+
 ---
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
