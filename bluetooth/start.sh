@@ -11,15 +11,19 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
 fi
 
 if [[ -z "$DEVICE_NAME" ]]; then
-  DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+   if [[ "$BLUETOOTH_DEVICE_NAME" ]]; then
+     DEVICE_NAME="$BLUETOOTH_DEVICE_NAME"
+   else
+     DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+   fi
 fi
 
 # Set the system volume here
 SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
 echo $SYSTEM_OUTPUT_VOLUME > /usr/src/system_output_volume
 printf "Setting output volume to %s%%\n" "$SYSTEM_OUTPUT_VOLUME"
-amixer sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
-amixer sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
+amixer -M sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
+amixer -M sset Digital,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
 
 # Set the volume of the connection notification sounds here
 CONNECTION_NOTIFY_VOLUME="${CONNECTION_NOTIFY_VOLUME:-75}"
