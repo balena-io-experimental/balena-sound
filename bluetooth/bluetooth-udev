@@ -12,7 +12,7 @@ SYSTEM_OUTPUT_VOLUME=$(</usr/src/system_output_volume)
 
 case "$action" in
 add)
-    printf "discoverable off\npairable off\nexit\n" | bluetoothctl > /dev/null
+    printf "discoverable off\npairable off\nexit\n" | bluetoothctl
     echo $NAME | tr -d '"' > /var/cache/bluetooth/reconnect_device  # Save the mac address of the last connected device (for reconnect after reboot)
 
     amixer -M sset PCM,0 $CONNECTION_NOTIFY_VOLUME% > /dev/null &
