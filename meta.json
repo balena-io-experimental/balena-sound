@@ -19,7 +19,7 @@
     "links": {
       "issueTracker": null,
       "homepage": "",
-      "repository": "https://github.com/balenalabs/balena-sound.git"
+      "repository": "https://github.com/balenalabs/balena-sound"
     },
     "maintainers": [
       "@balenalabs/hardware-hackers",
