@@ -25,10 +25,13 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Pisound][4]           | pisound                               | Yes
 | [Hifiberry DAC+][6]    | hifiberry-dacplus                     | [Yes][7]
 | [InnoMaker][8]         | allo-boss-dac-pcm512x-audio           | [Yes][9]
-| [miniBoss DAC][10]      | allo-boss-dac-pcm512x-audio           | Yes
+| [miniBoss DAC][10]     | allo-boss-dac-pcm512x-audio           | Yes
 | [PiFi Digi+][11]       | hifiberry-digi                        | Yes
-| [Pimoroni Pirate Audio][12] | hifiberry-dac                         | Yes
+| [Pimoroni Pirate Audio][12] | hifiberry-dac                    | Yes
 | [IQaudIO Pi-DAC+][13]  | iqaudio-dacplus                       | Yes
+| [Hifiberry AMP2][14]   | hifiberry-dacplus                     | Yes
+| [Hifiberry DAC+ Light][15] | hifiberry-dac                     | Yes
+| [Hifiberry DAC Zero][16]   | hifiberry-dac                     | Yes
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
@@ -43,3 +46,6 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [11]: http://www.kumantech.com/kuman-sc07-raspberry-pi-hifi-digi-digital-sound-card-i2s-spdif-optical-fiber-for-raspberry-pi-3-2-model-b-b-sc07_p0041.html
 [12]: https://shop.pimoroni.com/collections/pirate-audio
 [13]: http://iqaudio.co.uk/hats/8-pi-dac.html
+[14]: https://www.hifiberry.com/shop/boards/hifiberry-amp2/
+[15]: https://www.hifiberry.com/shop/boards/hifiberry-dac-light/
+[16]: https://www.hifiberry.com/shop/boards/hifiberry-dac-zero/
