@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/images/balenaSound-logo.png)
 
-**Bluetooth, Airplay and Spotify audio streaming for any audio device**
-
 **Starter project enabling you to add multi-room audio streaming via Bluetooth, Airplay or Spotify Connect to any old speakers or Hi-Fi using just a Raspberry Pi.**
 
 # Highlights
@@ -30,7 +28,9 @@
     balena push my-balena-sound
     ```
 
-[Head over to our docs!](https://github.com/balena-io/landr/tree/master/docs)
+# Documentation 
+
+Head over to our [docs](https://landr-balenalabs-repo-balena-sound.netlify.com/docs) for detailed usage instructions, customization options and more!
 
 # Motivation
 
@@ -47,7 +47,7 @@ If you're having any problem, please [raise an issue](https://github.com/balenal
 
 # Contributing
 
-Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://github.com/balenalabs/balena-sound/blob/master/docs/CONTRIBUTING.md). Hope to
+Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://landr-balenalabs-repo-balena-sound.netlify.com/contributing). Hope to
 see you around!
 
 # License
