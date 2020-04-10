@@ -1,12 +1,7 @@
-How can I theme/configure my Landr website?
+Does balenaSound support WIFI?
 -------------------------------------------
 
-The Landr team believes in a zero configuration approach. We think Landr should
-be able to determine what you have and how to present it in the best possible
-way. We know this is a very ambitious goal, and if you think something is off,
-[reach out to us](https://github.com/balena-io/landr/issues/new)! Whatever you
-have in mind, we can try to teach Landr about it, which benefits the community
-more than adding a configuration flag.
+Yes. We balenaOS supports most Wifi modules(integrated and external). Including all of the Raspberry Pi series. Before downloading the image you are able to enter the SSID and the password of your WLAN. The Pi will then automaticly connect to the specified WIFI on boot.
 
 Can I extend my Landr website with a page I fully control?
 ----------------------------------------------------------
