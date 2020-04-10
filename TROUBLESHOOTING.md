@@ -22,6 +22,8 @@ We always recommend using the original Raspberry Pi power supply.
 ##### Unset DEVICE_NAME
 It did work out for hifipi in the forums to just unset the DEVICE_NAME variable: https://forums.balena.io/t/balenasound-blueooth-audio-on-raspberry-pi-3-sound-skipping-dropping/40894/37?u=alexprogrammerde
 **Note:** `BLUETOOTH_DEVICE_NAME` was renamed to `DEVICE_NAME`
+##### Two devices are playing music at the same time
+@AlexProgrammerDE recognised that if two connected devices play at the same time music it will cause this errors: https://github.com/balenalabs/balena-sound/issues/24#issuecomment-611963953
 
 ### USB Soundcard
 Not every Soundcard is the same, so you must do other things depending on your card. Here are some guides:
