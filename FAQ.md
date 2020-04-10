@@ -1,7 +1,7 @@
 Does balenaSound support WIFI?
 -------------------------------------------
 
-Yes. We balenaOS supports most Wifi modules(integrated and external). Including all of the Raspberry Pi series. Before downloading the image you are able to enter the SSID and the password of your WLAN. The Pi will then automaticly connect to the specified WIFI on boot.
+Yes. balenaOS supports most Wifi modules (integrated and external). Including all Raspberry Pis. Before downloading the image you are able to enter the SSID and the password of your WLAN. The Pi will then automaticly connect to the specified WIFI on boot.
 
 Can I extend my Landr website with a page I fully control?
 ----------------------------------------------------------
