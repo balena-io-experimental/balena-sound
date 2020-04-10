@@ -16,7 +16,7 @@
     git clone https://github.com/balenalabs/balena-sound.git
     ```
 
-2. Go into the code directory
+2. Go into the code directory:
 
     ```
     cd balena-sound
