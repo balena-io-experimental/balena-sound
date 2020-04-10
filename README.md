@@ -24,7 +24,7 @@
     cd balena-sound
     ```
 
-3. Push code to your fleet of audio streamers with one command:
+3. Push code to your fleet of audio streamers:
 
     ```
     balena push my-balena-sound
