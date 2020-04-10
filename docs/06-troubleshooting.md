@@ -1,12 +1,12 @@
 # Troubleshooting
 
-## My DAC works not with balena
+## My DAC isn't working
 
 If you want to use your DAC with balena you have to follow this guide: [Click Me!](https://github.com/balenalabs/balena-sound/blob/master/DAC_configuration.md#dac-configuration)
 
 If your DAC is not in the list can you ask us [in a issue](https://github.com/balenalabs/balena-sound/issues). We will then try to find the correct config for your DAC and add it to the list.
 
-### Missing RTP Packet / Sound cuts out 
+## Missing RTP Packet error
 In some cases does the Pi give you errors saying there are RTP Packets missing.
 There are many reasons for this. And many possible solutions:
 ### Bluetooth Dongle
@@ -30,7 +30,7 @@ Not every Soundcard is the same, so you must do other things depending on your c
 * https://github.com/balenalabs/balena-sound/issues/9#issuecomment-513283993 
 * https://github.com/balenalabs/balena-sound/issues/9#issuecomment-544730189
 
-## On my device is multiroom not running
+## Multiroom is not running
 We deactivate the multiroom service on some devices. You can see the list here: [Click Me!](https://github.com/balenalabs/balena-sound/blob/master/DeviceSupport.md)
 ## I have no HDMI output on RPI 4
 @zchbndcc9 resolved this issue with setting `RESIN_HOST_CONFIG_hdmi_mode` to `2`: https://github.com/balenalabs/balena-sound/issues/79#issuecomment-583712988
