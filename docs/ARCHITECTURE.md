@@ -1,7 +1,7 @@
 # Architecture
 
 ## Explanation
-balenaSound is pure magic
+balenaSound bases on balenaCloud and its features. balenaCloud gives the devices updates and a API for interacting out of the container.
 
 ## Containers
-this is interesting stuff. oh such a nice diagram.
+Every service runs in a seperate container.
