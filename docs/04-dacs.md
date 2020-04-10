@@ -4,6 +4,7 @@ While most Raspberry Pi boards come with an onboard sound card it is well known 
 
 If you want to upgrade the sound quality of your balenaSound devices (or if you are using a board that does not have onboard sound card such as the Raspberry Pi Zero) you will need to add a DAC board (Digital Audio Converter) to your project.
 
+## Configure your device for the DAC
 To get a DAC board to work with balenaSound, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard:
 
 * Disable the on-board audio by editing the existing ```RESIN_HOST_CONFIG_dtparam``` variable to set `”audio=off”`.
@@ -12,7 +13,7 @@ To get a DAC board to work with balenaSound, you will need to make a couple of c
 
 ![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/dac-vars.png)
 
-### BALENA_HOST_CONFIG_dtoverlay Values
+## BALENA_HOST_CONFIG_dtoverlay Values
 
 These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR]() or [issue]() on our repository.
 
