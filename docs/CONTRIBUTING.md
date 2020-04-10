@@ -43,7 +43,7 @@ Note that:
 - `Signed-off-by`: Sign your commits by providing your full name and email address in the format: `Name Surname <email@something.com>`. *This is an optional tag.*
 
 
-### Commit examples
+### Commit examples
 
 Here are some examples of valid commits:
 
@@ -93,7 +93,7 @@ The PR will only be able to be merged only after:
 - All the checks and tests carried out by our CI are passed
 
 
-### Commit squashing
+### Commit squashing
 If your PR contains multiple commits you might be asked to rebase your PR branch on top of the latest `master` and squash your commits before merging. This can be achieved with the following steps, assuming that the current branch is that to be merged to master in your local file system:
 
 ```
