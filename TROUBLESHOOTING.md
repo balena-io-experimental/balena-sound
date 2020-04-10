@@ -31,3 +31,5 @@ Not every Soundcard is the same, so you must do other things depending on your c
 
 ### On my device is multiroom not running
 We deactivate the multiroom service on some devices. You can see the list here: [Click Me!](https://github.com/balenalabs/balena-sound/blob/master/DeviceSupport.md)
+### I have no HDMI output on RPI 4
+@zchbndcc9 resolved this issue with setting `RESIN_HOST_CONFIG_hdmi_mode` to `2`: https://github.com/balenalabs/balena-sound/issues/79#issuecomment-583712988
