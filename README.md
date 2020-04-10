@@ -12,7 +12,19 @@
 
 # Installation
 
-1. Push code to your fleet of audio streamers with one command:
+1. Clone the code from github:
+
+    ```
+    git clone https://github.com/balenalabs/balena-sound.git
+    ```
+
+2. Go into the code directory
+
+    ```
+    cd balena-sound
+    ```
+
+3. Push code to your fleet of audio streamers with one command:
 
     ```
     balena push my-balena-sound
