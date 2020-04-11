@@ -17,21 +17,29 @@ To get a DAC board to work with balenaSound, you will need to make a couple of c
 
 These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR]() or [issue]() on our repository.
 
-| DAC Name                    | BALENA_HOST_CONFIG_dtoverlay          | Working
-|-----------------------------|---------------------------------------|----------
-| [Suptronics X400][1]        | iqaudio-dacplus                       | [With issues][5]
-| [Pimoroni pHAT DAC][2]      | hifiberry-dac                         | Yes
-| [Justboom DAC HAT][3]       | justboom-dac                          | Yes
-| [Pisound][4]                | pisound                               | Yes
-| [Hifiberry DAC+][6]         | hifiberry-dacplus                     | [Yes][7]
-| [InnoMaker][8]              | allo-boss-dac-pcm512x-audio           | [Yes][9]
-| [miniBoss DAC][10]          | allo-boss-dac-pcm512x-audio           | Yes
-| [PiFi Digi+][11]            | hifiberry-digi                        | Yes
-| [Pimoroni Pirate Audio][12] | hifiberry-dac                         | Yes
-| [IQaudIO Pi-DAC+][13]       | iqaudio-dacplus                       | Yes
-| [Hifiberry AMP2][14]        | hifiberry-dacplus                     | Yes
-| [Hifiberry DAC+ Light][15]  | hifiberry-dac                         | Yes
-| [Hifiberry DAC Zero][16]    | hifiberry-dac                         | Yes
+| DAC Name                      | BALENA_HOST_CONFIG_dtoverlay          | Working
+|-------------------------------|---------------------------------------|----------
+| [Suptronics X400][1]          | iqaudio-dacplus                       | [With issues][5]
+| [Pimoroni pHAT DAC][2]        | hifiberry-dac                         | Yes
+| [Justboom DAC HAT][3]         | justboom-dac                          | Yes
+| [Pisound][4]                  | pisound                               | Yes
+| [Hifiberry DAC+][6]           | hifiberry-dacplus                     | [Yes][7]
+| [InnoMaker][8]                | allo-boss-dac-pcm512x-audio           | [Yes][9]
+| [miniBoss DAC][10]            | allo-boss-dac-pcm512x-audio           | Yes
+| [PiFi Digi+][11]              | hifiberry-digi                        | Yes
+| [Pimoroni Pirate Audio][12]   | hifiberry-dac                         | Yes
+| [IQaudIO Pi-DAC+][13]         | iqaudio-dacplus                       | Yes
+| [Hifiberry Amp2][14]          | hifiberry-dacplus                     | Yes
+| [Hifiberry DAC+ Light][15]    | hifiberry-dac                         | Yes
+| [Hifiberry DAC+ Standard][16] | hifiberry-dacplus                     | Yes
+| [Hifiberry DAC+ Pro][17]      | hifiberry-dacplus                     | Yes
+| [Hifiberry DAC Zero][18]      | hifiberry-dac                         | Yes
+| [Hifiberry Amp+][19]          | hifiberry-amp                         | Yes
+| [Hifiberry Digi][20]          | hifiberry-digi                        | Yes
+| [Hifiberry Digi+][21]         | hifiberry-digi                        | Yes
+| [Hifiberry Beocreate][22]     | hifiberry-dac                         | Yes
+| [Hifiberry DAC+ DSP][23]      | hifiberry-dac                         | Yes
+| [Hifiberry MiniAmp][24]       | hifiberry-dac                         | Yes
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
@@ -48,4 +56,12 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [13]: http://iqaudio.co.uk/hats/8-pi-dac.html
 [14]: https://www.hifiberry.com/shop/boards/hifiberry-amp2/
 [15]: https://www.hifiberry.com/shop/boards/hifiberry-dac-light/
-[16]: https://www.hifiberry.com/shop/boards/hifiberry-dac-zero/
+[16]: https://www.hifiberry.com/shop/boards/hifiberry-dacplus-rca-version/
+[17]: https://www.hifiberry.com/shop/boards/hifiberry-dac-pro/
+[18]: https://www.hifiberry.com/shop/boards/hifiberry-dac-zero/
+[19]: https://www.hifiberry.com/products/ampplus/
+[20]: https://www.hifiberry.com/products/digi/
+[21]: https://www.hifiberry.com/products/digiplus/
+[22]: https://www.hifiberry.com/beocreate/
+[23]: https://www.hifiberry.com/shop/boards/hifiberry-dac-dsp/
+[24]: https://www.hifiberry.com/shop/boards/miniamp/
