@@ -15,7 +15,7 @@ To get a DAC board to work with balenaSound, you will need to make a couple of c
 
 ## dtoverlay Values
 
-These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR]() or [issue]() on our repository.
+These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR](https://github.com/balenalabs/balena-sound/compare/) or [issue](https://github.com/balenalabs/balena-sound/issues/new) on our repository.
 
 | DAC Name                      | BALENA_HOST_CONFIG_dtoverlay          | Working
 |-------------------------------|---------------------------------------|----------
