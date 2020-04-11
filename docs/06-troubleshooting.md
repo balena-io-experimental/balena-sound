@@ -2,9 +2,9 @@
 
 ## My DAC isn't working
 
-If you want to use your DAC with balena you have to follow this guide: [Click Me!](https://github.com/balenalabs/balena-sound/blob/master/DAC_configuration.md#dac-configuration)
+If you want to use your DAC with balena you have to follow this guide: [Click Me!](https://landr-balenalabs-repo-balena-sound-preview-landr.netlify.com/docs/dac-configuration/#configure-your-device-for-the-dac)
 
-If your DAC is not in the list can you ask us [in a issue](https://github.com/balenalabs/balena-sound/issues). We will then try to find the correct config for your DAC and add it to the list.
+If your DAC is not in the list can you ask us [in a issue](https://github.com/balenalabs/balena-sound/issues/new). We will then try to find the correct config for your DAC and add it to the list.
 
 ## Missing RTP Packet error
 In some cases does the Pi give you errors saying there are RTP Packets missing.
@@ -44,4 +44,4 @@ We **deactivate the multiroom service on some devices**. You can see the list he
 @zchbndcc9 resolved this issue with setting `RESIN_HOST_CONFIG_hdmi_mode` to `2`: https://github.com/balenalabs/balena-sound/issues/79#issuecomment-583712988
 
 ## Your issue is not here?
-We have always a ear for you. You can report your [issue on github](https://github.com/balenalabs/balena-sound/issues)
+We have always a ear for you. You can report your [issue on github](https://github.com/balenalabs/balena-sound/issues/new)
