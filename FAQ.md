@@ -3,11 +3,10 @@ Does balenaSound support WIFI?
 
 Yes. balenaOS supports most Wifi modules (integrated and external). Including all Raspberry Pis. Before downloading the image you are able to enter the SSID and the password of your WLAN. The Pi will then automaticly connect to the specified WIFI on boot.
 
-Can I extend my Landr website with a page I fully control?
+Does it support the Raspberry Pi 4? 
 ----------------------------------------------------------
 
-Sure! Landr generates static HTML, CSS, and JS. You can add more files to the
-bundle as you wish before pushing them to Netlify.
+Yes. We support all Raspberry Pis. And we are expanding our supported device list. 
 
 Why is Landr using Netlify instead of GitHub Pages?
 ---------------------------------------------------
