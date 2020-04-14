@@ -18,6 +18,7 @@ Please add the configuration values that work for your DAC to the table below.
 | [Suptronics X400][1]   | iqaudio-dacplus                       | [With issues][5]
 | [Pimoroni pHAT DAC][2] | hifiberry-dac                         | Yes
 | [Justboom DAC HAT][3]  | justboom-dac                          | Yes
+| [Justboom Digi HAT][17]  | justboom-digi                          | Yes
 | [Pisound][4]           | pisound                               | Yes
 | [Hifiberry DAC+][6]    | hifiberry-dacplus                     | [Yes][7]
 | [InnoMaker][8]         | allo-boss-dac-pcm512x-audio           | [Yes][9]
@@ -45,3 +46,4 @@ Please add the configuration values that work for your DAC to the table below.
 [14]: https://www.hifiberry.com/shop/boards/hifiberry-amp2/
 [15]: https://www.hifiberry.com/shop/boards/hifiberry-dac-light/
 [16]: https://www.hifiberry.com/shop/boards/hifiberry-dac-zero/
+[17]: https://uk.pi-supply.com/products/justboom-digi-hat
