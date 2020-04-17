@@ -45,7 +45,7 @@ This project is in active development so if you have any feature requests or iss
 
 * Raspberry Pi 3A+/3B/3B+/4B/Zero W
 * SD Card (we recommend 8GB Sandisk Extreme Pro)
-* Power supply
+* Power supply (We recommend the official ones of the Raspberry Pi Foundation)
 * 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.
 
 # Software required
