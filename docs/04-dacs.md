@@ -4,7 +4,7 @@ While most Raspberry Pi boards come with an onboard sound card it is well known 
 
 If you want to upgrade the sound quality of your balenaSound devices (or if you are using a board that does not have onboard sound card such as the Raspberry Pi Zero) you will need to add a DAC board (Digital Audio Converter) to your project.
 
-## Configure your device for the DAC
+### Configure your device
 To get a DAC board to work with balenaSound, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard:
 
 * Disable the on-board audio by editing the existing ```RESIN_HOST_CONFIG_dtparam``` variable to set `”audio=off”`.
@@ -13,23 +13,24 @@ To get a DAC board to work with balenaSound, you will need to make a couple of c
 
 ![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/dac-vars.png)
 
-## dtoverlay Values
+### dtoverlay Values
 
 These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR](https://github.com/balenalabs/balena-sound/compare/) or [issue](https://github.com/balenalabs/balena-sound/issues/new) on our repository.
 
 | DAC Name                      | BALENA_HOST_CONFIG_dtoverlay          | Working
 |-------------------------------|---------------------------------------|----------
 | [Suptronics X400][1]          | iqaudio-dacplus                       | [With issues][5]
+| [Pimoroni Pirate Audio][12]   | hifiberry-dac                         | Yes
 | [Pimoroni pHAT DAC][2]        | hifiberry-dac                         | Yes
 | [Justboom DAC HAT][3]         | justboom-dac                          | Yes
+| [Justboom Digi HAT][25]       | justboom-digi                         | Yes
 | [Pisound][4]                  | pisound                               | Yes
-| [Hifiberry DAC+][6]           | hifiberry-dacplus                     | [Yes][7]
 | [InnoMaker][8]                | allo-boss-dac-pcm512x-audio           | [Yes][9]
 | [miniBoss DAC][10]            | allo-boss-dac-pcm512x-audio           | Yes
 | [PiFi Digi+][11]              | hifiberry-digi                        | Yes
-| [Pimoroni Pirate Audio][12]   | hifiberry-dac                         | Yes
 | [IQaudIO Pi-DAC+][13]         | iqaudio-dacplus                       | Yes
 | [Hifiberry Amp2][14]          | hifiberry-dacplus                     | Yes
+| [Hifiberry DAC+][6]           | hifiberry-dacplus                     | [Yes][7]
 | [Hifiberry DAC+ Light][15]    | hifiberry-dac                         | Yes
 | [Hifiberry DAC+ Standard][16] | hifiberry-dacplus                     | Yes
 | [Hifiberry DAC+ Pro][17]      | hifiberry-dacplus                     | Yes
@@ -65,3 +66,4 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [22]: https://www.hifiberry.com/beocreate/
 [23]: https://www.hifiberry.com/shop/boards/hifiberry-dac-dsp/
 [24]: https://www.hifiberry.com/shop/boards/miniamp/
+[25]: https://uk.pi-supply.com/products/justboom-digi-hat

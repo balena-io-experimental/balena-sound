@@ -41,20 +41,6 @@ Most of them though come with a premium price tag and are riddled with privacy c
 
 This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
 
-# Hardware required
-
-* Raspberry Pi 3A+/3B/3B+/4B/Zero W
-* SD Card (we recommend 8GB Sandisk Extreme Pro)
-* Power supply (We recommend the official ones of the Raspberry Pi Foundation)
-* 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.
-
-# Software required
-
-* A download of this project (of course)
-* Software to flash an SD card ([balenaEtcher](https://balena.io/etcher))
-* A free [balenaCloud](https://balena.io/cloud) account
-* The [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
-
 # Getting Help
 
 If you're having any problem, please [raise an issue](https://github.com/balenalabs/balena-sound/issues/new) on GitHub and we will be happy to help.

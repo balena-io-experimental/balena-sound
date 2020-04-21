@@ -3,7 +3,7 @@
 balenaSound was created as a [hack friday](https://www.balena.io/blog/hack-friday-september/) project and has since grown to be a fully featured product with multiple community contributions. If you are interested in contributing to balenaSound this document will help you get started.
 
 
-## High-level overview
+## Overview
 
 Make sure you checkout our [architecture][ARCHITECTURE] guide, which aims to explain how all pieces fit together. It's a good starting point for understanding how we designed and built balenaSound.
 
