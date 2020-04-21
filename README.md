@@ -8,33 +8,13 @@
 - **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
 - **Extended DAC support**: Upgrade your audio quality with one of our supported DACs
 
-# Installation
-
-1. Clone the code from github:
-
-    ```
-    git clone https://github.com/balenalabs/balena-sound.git
-    ```
-
-2. Go into the code directory:
-
-    ```
-    cd balena-sound
-    ```
-
-3. Push code to your fleet of audio streamers:
-
-    ```
-    balena push my-balena-sound
-    ```
-
 # Documentation 
 
 Head over to our [docs](https://landr-balenalabs-repo-balena-sound.netlify.com/docs) for detailed usage instructions, customization options and more!
 
 # Motivation
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sound.png)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr-v2-poc/images/sound.png)
 
 There are many commercial solutions out there that provide functionality similar to balenaSound. 
 Most of them though come with a premium price tag and are riddled with privacy concerns. balenaSound is an open source project that allows you to build your own DIY audio streaming platform without compromises. Why spend big money on hardware that might be deemed obsolete by the vendor as they see fit? With balenaSound you are in control, bring your old speakers back to life!

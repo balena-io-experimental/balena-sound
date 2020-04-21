@@ -1,10 +1,12 @@
 # Getting started
 
 Getting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) application; no additional configuration is required (unless you're using a DAC HAT).
+We've outlined the installation steps below, if you want an in depth step by step tutorial on how to get balenaSound up and running feel free to check this blog posts:
+- [Turn your old speakers or Hi-Fi into Bluetooth, Airplay and Spotify receivers with a Raspberry Pi and this step-by-step guide](https://www.balena.io/blog/turn-your-old-speakers-or-hi-fi-into-bluetooth-receivers-using-only-a-raspberry-pi/)
+- [Build your own multi-room audio system with Bluetooth, Airplay, and Spotify using Raspberry Pis](https://www.balena.io/blog/diy-raspberry-pi-multi-room-audio-system/)
 
 ## Hardware required
-
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/hardware.jpeg)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr-v2-poc/images/hardware.jpeg)
 
 * Raspberry Pi 3A+/3B/3B+/4B/Zero W
 * SD Card (we recommend 8GB Sandisk Extreme Pro)
@@ -26,7 +28,7 @@ Getting started with balenaSound is as simple as deploying it to a [balenaCloud]
 
 ## Provision your device
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr/images/sdcard.gif)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/landr-v2-poc/images/sdcard.gif)
 
 * Sign up for or login to the [balenaCloud dashboard](https://dashboard.balena-cloud.com)
 * Create an application, selecting the correct device type for your Raspberry Pi (we recommend setting the type as Raspberry Pi 1/Zero as your application will then be compatible with the Pi 1/Zero as well as all devices that were released afterward).

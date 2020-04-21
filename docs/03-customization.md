@@ -1,9 +1,9 @@
 # Customizations
 
 You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard: 
-````
+```
 navigate to dashboard -> your app -> Environment variables. 
-````
+```
 
 ![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/device-name-config.png)
 
