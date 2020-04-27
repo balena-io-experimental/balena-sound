@@ -30,6 +30,13 @@
 
 Running this project is as simple as deploying it to a balenaCloud application; no additional configuration is required (unless you're using a DAC HAT). All the setup steps below are done from your MacOS, Windows or Linux computer, not the Raspberry Pi.
 
+
+One-click deploy to balenaCloud:
+
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+
+**or**
+
 ### Setup the Raspberry Pi
 
 * Sign up for or login to the [balenaCloud dashboard](https://dashboard.balena-cloud.com)
