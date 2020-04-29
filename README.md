@@ -115,7 +115,8 @@ balenaSound has configurable scripts you can run on connect and disconnect bluet
 Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
 
 ### Disable bluetooth
-You can, if you don't need/wan't bluetooth, disable it by creating the `DISABLE_MULTI_ROOM` variable (with any value, for example: `1`).
+
+You can, if you don't need/wan't bluetooth, disable it by creating the `DISABLE_BLUETOOTH` variable (with any value, for example: `1`).
 
 ### Spotify Connect over the internet
 
