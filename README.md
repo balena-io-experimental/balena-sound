@@ -107,6 +107,9 @@ By default, balenaSound bluetooth will connect using Secure Simple Pairing mode.
 balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
 Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
 
+### Disable bluetooth
+You can, if you don't need/wan't bluetooth, disable it by creating the `DISABLE_MULTI_ROOM` variable (with any value, for example: `1`).
+
 ### Spotify Connect over the internet
 
 Spotify Connect only works with Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
