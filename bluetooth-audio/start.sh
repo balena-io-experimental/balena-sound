@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$DISABLE_BLUETOOTH" ]]; then
+if [[ -n $DISABLE_BLUETOOTH ]]; then
   echo "Disabling bluetooth."
   exit 0
 fi
