@@ -1,0 +1,893 @@
+- commits:
+    - subject: Add parsable CHANGELOG
+      hash: 1c4202eb891275109edb1365bd6fae14ac28f8ee
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Giovanni Garufi <giovanni@balena.io>
+        signed-off-by: Giovanni Garufi <giovanni@balena.io>
+      author: Giovanni Garufi
+  version: 2.2.2
+  date: 2020-04-29T19:20:14.518Z
+- version: 2.2.1
+  date: 2020-04-29T18:46:45.000Z
+  commits:
+    - hash: f0e21706be1fc34910a1e52b9790b6598068518b
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Add .versionbot folder for YAML formated changelogs
+      body: null
+- version: 2.2.0
+  date: 2020-04-29T08:40:39.000Z
+  commits:
+    - hash: b6be29e2acfd018da271a978df3967aff7528740
+      author: Stevche Radevski
+      footers:
+        change-type: minor
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      subject: Add sample "deploy to balena" button
+      body: |-
+        This is just for demonstration, we need to decide on how
+        we should format the instructions and stick to the format
+        on all projects
+- version: 2.1.9
+  date: 2020-04-21T18:52:36.000Z
+  commits:
+    - hash: cf27b1d477d08331c3e277b039f1df073d52fc53
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Add images in preparation for Landr update.
+      body: null
+- version: 2.1.8
+  date: 2020-04-14T19:22:44.000Z
+  commits:
+    - hash: 7d7c6cae2d728cf86d1172aa33d96f1213e65099
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Added Justboom Digi HAT dtoverlay config info.
+      body: null
+- version: 2.1.7
+  date: 2020-04-10T14:02:08.000Z
+  commits:
+    - hash: 8990f0bdb5d25766b89c2e632d6ef26d1c4c3c9c
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Add more DACs
+      body: null
+- version: 2.1.6
+  date: 2020-04-09T15:40:48.000Z
+  commits:
+    - hash: dcad119c5652161c7a54779e23efdfef949b3ba2
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Change to balena project to enable builds in CI
+      body: null
+- version: 2.1.5
+  date: 2020-04-08T16:56:43.000Z
+  commits:
+    - hash: 848463e74d9a461bc01fea7b87cfde332a782a82
+      author: AlexProgrammerDE
+      footers:
+        change-type: patch
+      subject: Support old variables
+      body: null
+    - hash: b5a8f4a3293449bb82bbde2208118cc4fa0b9cfe
+      author: Alex
+      subject: Merge branch 'master' into support-old-variables
+      body: null
+    - hash: 876219fad8755db0aa3b38fea7994e43d8ef3925
+      author: Alex
+      subject: Merge branch 'master' into support-old-variables
+      body: null
+- version: 2.1.4
+  date: 2020-04-08T15:36:40.000Z
+  commits:
+    - hash: 48ae1844976e69240c6659c8c37962df5fcfbeb6
+      author: matthewcroughan
+      footers:
+        change-type: patch
+      subject: 'add -M to amixer to fix volume mapping issues #117'
+      body: null
+- version: 2.1.3
+  date: 2020-04-08T10:55:33.000Z
+  commits:
+    - hash: ee9e469fb7d5edc8c674fc86b9fd9c24086d306f
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add acks for projects we're using
+      body: null
+- version: 2.1.2
+  date: 2020-04-05T08:22:01.000Z
+  commits:
+    - hash: 5f27436dbca79865e590e1fb3306413c0dc8a8ff
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Update var picture
+      body: null
+- version: 2.1.1
+  date: 2020-04-03T10:47:06.000Z
+  commits:
+    - hash: 09208af5a6b51f9117656fe3de6f0e3d0eefb96b
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Change device name variable
+      body: null
+    - hash: 4c2579fe097ccd786af89988cd479a095a64802b
+      author: Alex
+      subject: Merge branch 'master' into change-device-name-var
+      body: null
+- version: 2.1.0
+  date: 2020-04-02T19:21:41.000Z
+  commits:
+    - hash: 8e635d6f6d20e5928d05e682bb1fee0509f9fd29
+      author: Balena CI
+      footers:
+        change-type: minor
+      subject: Add CLIENT_ONLY to multi room audio
+      body: null
+    - hash: 0c9652efb84a5bdd52fe066ecf91c3c772655892
+      author: Alex
+      subject: Merge branch 'master' into master
+      body: null
+- version: 2.0.10
+  date: 2020-04-02T14:05:24.000Z
+  commits:
+    - hash: 45791d94814aefd0e1e969878d514b727a1a00f5
+      author: Stef Kors
+      footers:
+        change-type: patch
+        signed-off-by: Stef Kors <stef@balena.io>
+      subject: Readme should show where setup commands are run
+      body: "Users are often confused when steps happen on the device and which steps should be run from their personal computer. This edit should make that distinction more clear.\r\n\r"
+- version: 2.0.9
+  date: 2020-04-01T18:11:30.000Z
+  commits:
+    - hash: 36f04e0df8a7ec54966c41aefd42bb9611014671
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Add issue templates
+      body: null
+- version: 2.0.8
+  date: 2020-04-01T14:48:40.000Z
+  commits:
+    - hash: d07a7817c73461547828a772d70c135fddfc2cc3
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add AlexProgrammerDE as codeowner
+      body: null
+- version: 2.0.7
+  date: 2020-03-31T17:26:37.000Z
+  commits:
+    - hash: b2ce7c8b53fb1fc4170b5f0e76eb4b9664ff95d0
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Delete mplayer in aarch64
+      body: null
+- version: 2.0.6
+  date: 2020-03-31T16:25:48.000Z
+  commits:
+    - hash: 5ca224291b9ca4efab1d1db419045027b5da9a80
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: 'Remove mplayer, use WAV notification sounds'
+      body: null
+    - hash: a7861c7a9e2211b20ccdcf0ed2adc5a5c8bf50c7
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into mplayer-delete
+      body: null
+- version: 2.0.5
+  date: 2020-03-31T14:40:22.000Z
+  commits:
+    - hash: d339bb96dc3492fa3b2f26520eb5a85cd8721037
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Bump Snapcast to 0.19.0
+      body: null
+- version: 2.0.4
+  date: 2020-03-27T18:52:53.000Z
+  commits:
+    - hash: eb0d79d7962d687487608b3b02c7972708f72b4f
+      author: michaellwilks
+      footers:
+        change-type: patch
+      subject: Add IQaudIO Pi-DAC+ to table
+      body: IQaudIO Pi-DAC+ works using dtoverlay iqaudio-dacplus
+    - hash: 1af6c422b449ab492518a97b3d11cdddd16a3e8a
+      author: Tomás Migone
+      subject: Merge branch 'master' into michaellwilks-patch-1
+      body: null
+- version: 2.0.3
+  date: 2020-03-27T12:58:50.000Z
+  commits:
+    - hash: 130ec2b062f56f81b978e242dcdb638f97f9ae11
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Add Pimoroni Pirate Audio to list
+      body: null
+- version: 2.0.2
+  date: 2020-03-25T11:11:45.000Z
+  commits:
+    - hash: 19a4c0b2a780f4a2cc0c33c3f01ee75d63a65b38
+      author: Wikinaut
+      footers:
+        change-type: patch
+      subject: upd information re. pHAT DAC
+      body: null
+    - hash: 069134ecd9a54e4354653f9db8a1ebc4628bb9d0
+      author: armin-haghi
+      footers:
+        change-type: patch
+      subject: Update DAC_configuration.md
+      body: >-
+        Works fine using the optical cable with the Hifiberry Digi clone PiFi
+        Digi+ using the hifiberry-digi overlay.
+- version: 2.0.1
+  date: 2020-02-14T16:07:51.000Z
+  commits:
+    - hash: c6ff18b3142e888233db6b0673ed0404ec407a86
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: 'dac: Add dtoverlay for miniBoss DAC'
+      body: null
+- version: 2.0.0
+  date: 2020-02-12T15:04:19.000Z
+  commits:
+    - hash: 3e3a65eeb91abf0cd730e7899978a86eaec23d87
+      author: Tomás Migone
+      footers:
+        change-type: major
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: 'multi-room: Add multi-room feature'
+      body: >-
+        This feature adds multi-room audio streaming to balenaSound.
+
+        No breaking changes were made, but considering this a major version bump
+        since it's a big feature and all services were affected.
+
+        New services added:
+
+        - snapcast-server
+
+        - snapcast-client
+
+        - fleet-supervisor
+
+        - By default, all audio services now stream to a fifo pipe file instead
+        of alsa backend.
+
+        - Multi-room can be disabled via env var DISABLE_MULTI_ROOM.
+- version: 1.3.10
+  date: 2020-02-10T11:39:24.000Z
+  commits:
+    - hash: 3ce38682d976cf78b5a0ebc0b1b652cc955a2544
+      author: Stevche Radevski
+      footers:
+        change-type: patch
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      subject: Fix default volume value in README
+      body: null
+- version: 1.3.9
+  date: 2020-02-06T13:20:57.000Z
+  commits:
+    - hash: df407876740b826de9601e4944e472106355c94f
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add another supported DAC
+      body: null
+    - hash: ab336fb6a33e99932eb305bfc4536d0a80d6e489
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into update-dacs
+      body: null
+- version: 1.3.8
+  date: 2020-02-06T12:47:49.000Z
+  commits:
+    - hash: 14d890edd2dc2b07706df134430e4966711949b5
+      author: Jack Brown
+      footers:
+        change-type: patch
+      subject: Add InnoMaker DAC to DAC configuration docs
+      body: null
+- version: 1.3.7
+  date: 2020-02-04T13:13:58.000Z
+  commits:
+    - hash: 80417f10c49c28ea55348898bb19f16cb7403e4e
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add digital volume setting and lower default
+      body: null
+    - hash: 1a96836f9d8d47b8e66553cd892fc0e8a246b9ab
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add dtoverlay for Justboom DAC HAT
+      body: null
+    - hash: 3bc50d15199fcd472a7fb697f800cb4594be19bf
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add pisound dtoverlay
+      body: null
+    - hash: c95f21263d0d149d496669c575b73b5e32d9da55
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Tweak service names
+      body: null
+- version: 1.3.6
+  date: 2020-02-03T19:55:59.000Z
+  commits:
+    - hash: fd3b1aae586bf85fc100f5088c17730c20e85066
+      author: Alex
+      footers:
+        change-type: patch
+        connects-to: '#58'
+      subject: Add name differentiation
+      body: null
+    - hash: 8b5bf05afe29993e4c1a9c4fe34544da309f2b05
+      author: AlexProgrammerDE
+      subject: >-
+        Merge branch 'master' of https://github.com/balenalabs/balena-sound into
+        patch-2
+      body: null
+    - hash: 6ea5d724e4d3c07112aaa4d878df4299f2296fe4
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into patch-2
+      body: null
+- version: 1.3.5
+  date: 2020-02-03T19:50:21.000Z
+  commits:
+    - hash: 0d35e65202d2c352fd94ed4a13a3f2f0b41fea47
+      author: Alex
+      footers:
+        change-type: patch
+        connects-to: '#90'
+      subject: Fix spotify password error if it has spaces
+      body: null
+    - hash: ea5e9e9d415d007134d3ec81419e81d68c3e6676
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into patch-1
+      body: null
+- version: 1.3.4
+  date: 2020-01-31T15:44:19.000Z
+  commits:
+    - hash: df17f3a550e74af548e1bfa4d66f225bb2daa807
+      author: Peter Armstrong
+      footers:
+        change-type: patch
+      subject: Add DAC configuration docs
+      body: null
+    - hash: b43ec16f371e26d7103a0b8c11115ff75c11674e
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add pHAT DAC config
+      body: null
+- version: 1.3.3
+  date: 2020-01-30T17:19:10.000Z
+  commits:
+    - hash: 5b7a2c6cf1166a61e8d023f38b36e0ffb0300770
+      author: Matthew McGinn
+      footers:
+        change-type: patch
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+      subject: 'meta: Update codeowners to HHR team'
+      body: null
+- version: 1.3.2
+  date: 2020-01-07T17:15:00.000Z
+  commits:
+    - hash: 765d06091f5ae60cedf3f54af40fa4249c7278a2
+      author: Heds Simons
+      footers:
+        change-type: patch
+        signed-off-by: Heds Simons <heds@balena.io>
+      subject: 'readme: Clarify Spotify only works with Premium account'
+      body: null
+- version: 1.3.1
+  date: 2020-01-07T11:59:28.000Z
+  commits:
+    - hash: 3b22187f29d50f53063fb70a9eda19ce5948e460
+      author: Chris Crocker-White
+      footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+        change-type: patch
+      subject: Clarify Spotify connect usage
+      body: null
+- version: 1.3.0
+  date: 2020-01-02T12:51:14.000Z
+  commits:
+    - hash: 22b6e74b8d91bcc5439e7938e95b8d02fc6d627c
+      author: Alex
+      footers:
+        change-type: minor
+        connects-to: '#73'
+      subject: Add Spotify login
+      body: null
+- version: 1.2.0
+  date: 2019-12-13T20:29:02.000Z
+  commits:
+    - hash: b17c0b167cd843fa9da10cab0f7f6ed6ef883be8
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Correct typo
+      body: null
+    - hash: e81701bd028cf6eddd52206fa418a367d39b6dd7
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into readme-update
+      body: null
+    - hash: a15dfdab9bc262b4cc45ae4332ccc1158312030b
+      author: Alex
+      footers:
+        connects-to: '#22'
+        change-type: minor
+      subject: Add code for gpio control with udev and some other things
+      body: null
+- version: 1.1.3
+  date: 2019-12-13T20:17:49.000Z
+  commits:
+    - hash: fd08cfd868cd114f076522c7b364322f87deac6b
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add other supported streaming methods to README
+      body: null
+- version: 1.1.2
+  date: 2019-11-25T13:36:06.000Z
+  commits:
+    - hash: 7ae155b950443d3171ef44def46c107681bb35db
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Update Dockerfiles to use exec form of CMD.
+      body: null
+    - hash: ad0c633267fa5f9407ef5b23f51f46c7c439c651
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: >-
+        Remove multicontainer instructions from readme since MC is now default
+        for this project.
+      body: null
+    - hash: 9e802486d0be6cbdc4d66559a68feaef81240d41
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: >-
+        blueetooth-audio: Remove supervisor api label since it's no longer
+        needed.
+      body: null
+- version: 1.1.1
+  date: 2019-11-20T18:28:06.000Z
+  commits:
+    - hash: aad798391d6600a38bce7472d30df2a6590de510
+      author: Alex
+      footers:
+        change-type: patch
+      subject: Fix typo in README
+      body: null
+- version: 1.1.0
+  date: 2019-11-20T15:25:35.000Z
+  commits:
+    - hash: 78a727a9f406c05946028f69458849ad1c4eaa45
+      author: Tomás Migone
+      footers:
+        change-type: minor
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: 'bluetooth: Reconnect automatically to last known device'
+      body: >-
+        At boot time, bluetooth-audio will attempt to reconnect to the last
+        known device
+    - hash: 19da93acc969a438e65146b73fc92d7a90fce454
+      author: Tomás Migone
+      subject: Merge branch 'master' into 21-add-bluetooth-reconnection
+      body: null
+- version: 1.0.0
+  date: 2019-11-20T14:53:40.000Z
+  commits:
+    - hash: ad823c2181446653a19d916f77a760b90e061740
+      author: Tomás Migone
+      footers:
+        connects-to: '#20'
+        change-type: major
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Add pin code support (Legacy pairing mode)
+      body: Added optional connection method via pin code pairing.
+    - hash: 5a0cb2261116b3f21d48e9f5adbfbe4c4288045c
+      author: Tomás Migone
+      footers:
+        change-type: minor
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Add pin code instructions to README
+      body: null
+    - hash: 6af766764718d42f90f20b47d71edab526877ce9
+      author: Tomás Migone
+      footers:
+        change-type: patch
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: Fix console debug messages on startup.
+      body: null
+    - hash: 2466ffa7f723952b67ab64c4b49140292144994a
+      author: Tomás Migone
+      subject: Merge branch 'master' into 20-add-pin-code
+      body: null
+    - hash: 8a8e8a49f37a8a677bbc52aeaa798b5bba988cae
+      author: Tomás Migone
+      subject: Merge branch 'master' into 20-add-pin-code
+      body: null
+    - hash: 01519e6ca14f41332815e7ccb9440d1cea456459
+      author: Tomás Migone
+      footers:
+        change-type: minor
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      subject: 'PIN code, only allow numeric and 6 digits. Updated README.md.'
+      body: null
+    - hash: 2a1afe3ee9f0ba087f48f95b1f876e7c448b897f
+      author: Tomás Migone
+      subject: >-
+        Merge branch '20-add-pin-code' of
+        github.com:balena-io-projects/balena-sound into 20-add-pin-code
+      body: null
+    - hash: 74ffce4e0da815aabce9685ad9d13358041862ad
+      author: Tomás Migone
+      subject: Merge branch 'master' into 20-add-pin-code
+      body: null
+- version: 0.5.0
+  date: 2019-11-15T17:54:16.000Z
+  commits:
+    - hash: 0d7cf1fc871fe8daeb36a2eb1348d23023f2403f
+      author: AlexProgrammerDE
+      footers:
+        change-type: minor
+      subject: 'Make raspotify start more clear, add default output volume and add cache'
+      body: null
+- version: 0.4.5
+  date: 2019-11-04T17:49:57.000Z
+  commits:
+    - hash: 830d52c65b672a5282c1ff1993a52040cf14e58b
+      author: Matthew McGinn
+      footers:
+        change-type: patch
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+      subject: 'meta: add tmigone as a codeowner'
+      body: null
+- version: 0.4.4
+  date: 2019-10-11T09:56:30.000Z
+  commits:
+    - hash: 7d3b95eb9ef822c5e349e7db668fc91554dd1637
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Fix to make spotify container build for a Pi 4 app
+      body: null
+- version: 0.4.3
+  date: 2019-10-10T17:43:50.000Z
+  commits:
+    - hash: b557d1bf6f63d64aa4807fb09f8ed84bcd821d68
+      author: Burhan Del Rey
+      footers:
+        change-type: patch
+      subject: Set the system volume to provided value in bluetooth-udev
+      body: null
+    - hash: 10437b5a01e941536e92fa4ae5daa3827b080903
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into bluetooth-udev-volume
+      body: null
+- version: 0.4.2
+  date: 2019-10-08T12:49:48.000Z
+  commits:
+    - hash: 74c8ec8fcea24d4543e7bba151ba8e6c99a505d7
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Update CODEOWNERS (add @shaunmulligan)
+      body: null
+- version: 0.4.1
+  date: 2019-10-07T17:18:01.000Z
+  commits:
+    - hash: 14410800eab8db01d8e54566a89e54a9a4699694
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Update codeowners and add PR template
+      body: null
+    - hash: 78f81affd3aa5cb75c22be801b96c49f028a98e0
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into housekeeping
+      body: null
+- version: 0.4.0
+  date: 2019-10-07T16:30:06.000Z
+  commits:
+    - hash: fa3cd1b94d793e0596ff55a7eb5070267ba52999
+      author: Alex
+      footers:
+        change-type: minor
+      subject: Add Spotify Support
+      body: null
+- version: 0.3.0
+  date: 2019-10-07T11:49:25.000Z
+  commits:
+    - hash: 65c7d072700e68df1be88f96434ddad400520c34
+      author: Chris Crocker-White
+      footers:
+        change-type: minor
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add support for Airplay streaming
+      body: null
+    - hash: 13cc042e6d099989c336fd3da222e93dba0a745c
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into add-airplay
+      body: null
+- version: 0.2.1
+  date: 2019-10-07T11:21:25.000Z
+  commits:
+    - hash: 1c448d418eaed32e725a64a459be4058d6b1a8e7
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add contribution guidelines
+      body: null
+    - hash: 011bf526cd188bfefbf7d2bb034e1edf8c13c161
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into add-contributing
+      body: null
+- version: 0.2.0
+  date: 2019-10-04T17:18:06.000Z
+  commits:
+    - hash: 885125b714d6cca7f80fafacc15622fd9f9cc163
+      author: Chris Crocker-White
+      footers:
+        change-type: minor
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: 'Add volume configuration options, fixes #28'
+      body: null
+- version: 0.1.0
+  date: 2019-10-02T10:40:27.000Z
+  commits:
+    - hash: f29c1b3036ad075caa22a358b436493c54cb6102
+      author: Chris Crocker-White
+      footers:
+        change-type: minor
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: 'Add support for Pi 4 fixes #25'
+      body: null
+- version: 0.0.11
+  date: 2019-08-01T20:20:53.000Z
+  commits:
+    - hash: ffcf7ddfbe9f0a14d75e8110a3890903e30ee10e
+      author: pwt
+      subject: Change base image to Debian Stretch instead of Buster
+      body: "Fixes https://github.com/balena-io-projects/balena-sound/issues/15\r\nThe use of Buster instead of Stretch breaks balena-sound. This reverts back to Stretch until the Buster issues can be worked out."
+    - hash: 441e91aaad83a8a0222bec75766ce8ba372b32c4
+      author: pwt
+      footers:
+        change-type: patch
+      subject: Change base image to Debian Stretch instead of Buster
+      body: >-
+        Fixes https://github.com/balena-io-projects/balena-sound/issues/15
+
+        The use of Buster instead of Stretch breaks balena-sound. This reverts
+        back to Stretch until the Buster issues can be worked out.
+    - hash: 808a7e01ac44bdc349a2339dfa133e5def3fd03a
+      author: pwt
+      subject: 'Merge branch ''master'' of https://github.com/pwt/balena-sound'
+      body: null
+- version: 0.0.10
+  date: 2019-07-24T16:59:38.000Z
+  commits:
+    - hash: 0145b61b49cb82f98df228abb2ff6abb4fb0f109
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Restore disabling timeout functionality
+      body: |-
+        Using dbus-send in this manner without --print-reply causes it to
+        silently fail.
+    - hash: 597849d17aef7292c37e6d7414d85d7f33d7ea2e
+      author: Chris Crocker-White
+      subject: Revert "Remove redundant bluealsa package"
+      body: null
+- version: 0.0.9
+  date: 2019-07-22T17:35:04.000Z
+  commits:
+    - hash: 0e61b525a42acacbc85194ee51728d855570efe2
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Remove redundant bluealsa package
+      body: null
+- version: 0.0.8
+  date: 2019-07-22T16:33:54.000Z
+  commits:
+    - hash: 7dee3e7b3b8179dde00b0434f354462de2fde147
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Remove redundant alsa-base package
+      body: null
+- version: 0.0.7
+  date: 2019-07-11T19:55:57.000Z
+  commits:
+    - hash: 940ea9c6ab9c7607c025c4f74215ba687dc39db4
+      author: Tim
+      subject: Update for Multi Container use
+      body: >-
+        Suggestion additional info for people who might want to combine this in
+        an app with other playground apps.
+
+        Labels is something that's not always clear for beginners.
+    - hash: eefcca025309f2b53651b57fb76fb41a0a2221ed
+      author: Tim
+      subject: adjusting some visuals
+      body: null
+    - hash: b2e91327253f8095f69b7c5a9fc6742ee5304d6d
+      author: Tim
+      footers:
+        change-type: patch
+        signed-off-by: Timothee Xyala Pineau <timothee.pineau@gmail.com>
+      subject: fix.
+      body: null
+- version: 0.0.6
+  date: 2019-07-05T14:12:20.000Z
+  commits:
+    - hash: a258823d9aa180f5c50fd99851c407b56c706781
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Cleaner log output
+      body: null
+    - hash: 500ed98ad355d670936ae8d94454ddcf6cd1286c
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Space before the screenshot
+      body: null
+    - hash: a1567338c4b31249d9cdc79bef00230f6af9d7c3
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Remove unnecessary action
+      body: >-
+        Services are auto restarted on the device by the supervisor when
+        variables are modified on the balenaCloud dashboard.
+- version: 0.0.5
+  date: 2019-07-05T12:40:45.000Z
+  commits:
+    - hash: 63f79c53e2fe112eee341ec19d2bbe11a10c41d4
+      author: Roman Mazur
+      footers:
+        change-type: patch
+        signed-off-by: Roman Mazur <roman@balena.io>
+      subject: Allow setting custom name
+      body: null
+- version: 0.0.4
+  date: 2019-07-05T11:03:37.000Z
+  commits:
+    - hash: 1c241c6f662efcc722d7e6e40de72a1da51a80ca
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Remove name from the header
+      body: null
+- version: 0.0.3
+  date: 2019-07-04T19:21:02.000Z
+  commits:
+    - hash: 37bfd71dcadf4c5649de1e861e177a2b18e177c1
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add logo
+      body: null
+    - hash: ee6ec6332880f9fd4fd4e37c1601efc616b9e32c
+      author: Chris Crocker-White
+      footers:
+        change-type: patch
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      subject: Add credit for original bluetooth-agent starting point
+      body: null
+- version: 0.0.2
+  date: 2019-07-04T15:06:41.000Z
+  commits:
+    - hash: 989b717d8724f9774ed332ab1c7a44d0966fa34d
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Reformat README
+      body: Make it a bit nicer and to make MD linter happy.
+    - hash: 38009c331be15b5a27c803136e22da73dc67dfe4
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Use printf instead of echo
+      body: >-
+        printf is recommended for new applications. /bin/bash doesn’t work on
+        all systems.
+    - hash: e8c8c962c9b5c10dfed711fa752a8ca57d51f4ec
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Use printf & case instead of multiple ifs
+      body: null
+    - hash: 26598ebd9154747fd26fd2247b6eec96308e17cc
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Remove unnecessary semicolon
+      body: null
+    - hash: 4b95fbaf4739da715e34b3516b449f495e896860
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Reformat Python code
+      body: null
+    - hash: 90390e0cc1d29dc25dd47a0442eba7b8ef55818a
+      author: Robert Vojta
+      footers:
+        change-type: patch
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Rename start to start.sh
+      body: null
+    - hash: 3556bba5f0273a6a7fa513ffc1d1430a7b521240
+      author: Robert Vojta
+      footers:
+        signed-off-by: Robert Vojta <robert@balena.io>
+      subject: Add Apache License
+      body: null
+    - hash: 1a6114e5a59f5efac4ee5183a351860d9ec8a83d
+      author: Chris Crocker-White
+      subject: Merge branch 'master' into nitpicks
+      body: null
