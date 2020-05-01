@@ -1,4 +1,18 @@
 - commits:
+    - subject: Refactor documentation to adapt repo to Landr
+      hash: c2d1a2b4be6cf424c2ae7ceb1416a35499614b5a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Co-authored-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        co-authored-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.3
+  date: 2020-05-01T19:09:57.620Z
+- commits:
     - subject: Add parsable CHANGELOG
       hash: 1c4202eb891275109edb1365bd6fae14ac28f8ee
       body: ''
