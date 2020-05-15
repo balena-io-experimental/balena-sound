@@ -1,4 +1,16 @@
 - commits:
+    - subject: Put back one-click deploy button on main README file.
+      hash: d4f5ff1e038b670505d9d969cad7890fd7c74433
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.4
+  date: 2020-05-12T13:43:41.644Z
+- commits:
     - subject: Refactor documentation to adapt repo to Landr
       hash: c2d1a2b4be6cf424c2ae7ceb1416a35499614b5a
       body: ''
