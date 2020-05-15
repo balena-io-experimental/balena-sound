@@ -15,6 +15,22 @@ if [[ -z "$DEVICE_NAME" ]]; then
   DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
 fi
 
+# Select the soundcard here
+if [[ ${SOUNDCARD_SELECT:-0} -gt 0 ]]; then
+  cat > /etc/asound.conf << EOF
+pcm.!default {
+  type hw
+  card ${SOUNDCARD_SELECT}
+}
+
+ctl.!default {
+  type hw           
+  card ${SOUNDCARD_SELECT}
+}
+EOF
+fi
+echo "Selected soundcard ${SOUNDCARD_SELECT}"
+
 # Set the system volume here
 SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
 
