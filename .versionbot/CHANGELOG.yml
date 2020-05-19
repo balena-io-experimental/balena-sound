@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add config.yml
+      hash: b65bc482c3b36fcf35f642ff728e168a18317b3a
+      body: |
+        People should follow our templates.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.5
+  date: 2020-05-19T15:44:24.938Z
+- commits:
     - subject: Put back one-click deploy button on main README file.
       hash: d4f5ff1e038b670505d9d969cad7890fd7c74433
       body: ''
