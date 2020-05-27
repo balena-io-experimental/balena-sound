@@ -1,4 +1,14 @@
 - commits:
+    - subject: Contribution link patch
+      hash: 138fbfbcfff085cf6aa5e6af9a13912dcb51f94e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.7
+  date: 2020-05-27T12:57:26.607Z
+- commits:
     - subject: Minor documentation updates
       hash: f02f032d9d8c603f2fcc9376b15a3e325b0974e0
       body: ''
