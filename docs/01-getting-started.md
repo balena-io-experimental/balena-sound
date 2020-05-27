@@ -15,7 +15,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 **Notes** 
 - The Raspberry Pi Zero cannot be used on it's own as it has no audio output. To use the Pi Zero, you'll need to add something like the [Pimoroni pHAT DAC](https://shop.pimoroni.com/products/phat-dac) (out of stock and going to be replaced, see [#111](https://github.com/balenalabs/balena-sound/issues/111)) to go with it.
-- For an extended list of device types supported please check this [link](DeviceSupport.md).
+- For an extended list of device types supported please check this [link](https://sound.balenalabs.io/docs/supported-devices).
 
 
 ## Software required
