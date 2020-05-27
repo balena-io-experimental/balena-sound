@@ -1,4 +1,16 @@
 - commits:
+    - subject: Minor documentation updates
+      hash: f02f032d9d8c603f2fcc9376b15a3e325b0974e0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+  version: 2.2.6
+  date: 2020-05-27T12:40:07.485Z
+- commits:
     - subject: Add config.yml
       hash: b65bc482c3b36fcf35f642ff728e168a18317b3a
       body: |
