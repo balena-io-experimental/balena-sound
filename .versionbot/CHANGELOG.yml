@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
+      hash: b584534e0ae08de098324a080c50d179d2999390
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.8
+  date: 2020-05-27T15:24:04.742Z
+- commits:
     - subject: Contribution link patch
       hash: 138fbfbcfff085cf6aa5e6af9a13912dcb51f94e
       body: ''
