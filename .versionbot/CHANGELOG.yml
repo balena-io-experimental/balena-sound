@@ -1,4 +1,61 @@
 - commits:
+    - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
+      hash: b584534e0ae08de098324a080c50d179d2999390
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.8
+  date: 2020-05-27T15:24:04.742Z
+- commits:
+    - subject: Contribution link patch
+      hash: 138fbfbcfff085cf6aa5e6af9a13912dcb51f94e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.7
+  date: 2020-05-27T12:57:26.607Z
+- commits:
+    - subject: Minor documentation updates
+      hash: f02f032d9d8c603f2fcc9376b15a3e325b0974e0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+  version: 2.2.6
+  date: 2020-05-27T12:40:07.485Z
+- commits:
+    - subject: Add config.yml
+      hash: b65bc482c3b36fcf35f642ff728e168a18317b3a
+      body: |
+        People should follow our templates.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.5
+  date: 2020-05-19T15:44:24.938Z
+- commits:
+    - subject: Put back one-click deploy button on main README file.
+      hash: d4f5ff1e038b670505d9d969cad7890fd7c74433
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.4
+  date: 2020-05-12T13:43:41.644Z
+- commits:
     - subject: Refactor documentation to adapt repo to Landr
       hash: c2d1a2b4be6cf424c2ae7ceb1416a35499614b5a
       body: ''

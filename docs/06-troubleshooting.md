@@ -97,6 +97,7 @@ balenaSound uses many technologies to provide audio streaming capabilities. All 
 There are however workarounds that you might want to take if you are willing to sacrifice some features:
 
 - Airplay streaming has a built-in two-second delay. Using a different audio source will obviously yield better results. 
+- For bluetooth streaming, you can reduce the delay at the expense of stability. You can do so by editing `bluetooth-audio/start.sh` file, you'll need to edit the `--pcm-buffer-time` value in the last line that reads: `exec /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00`. You can try decresing the value and see what works best for you.
 - If you are *not* using the multi-room feature you can disable it; multi-room adds the most of the perceived delay as it needs it to sync audio across devices. Check our [docs](../customizations/#disable-multi-room) to find out how to disable it. 
 
 

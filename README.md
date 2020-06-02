@@ -8,9 +8,15 @@
 - **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
 - **Extended DAC support**: Upgrade your audio quality with one of our supported DACs
 
+# Setup and configuration
+
+Running this project is as simple as deploying it to a balenaCloud application. You can do it in just one click by using the button below:
+
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+
 # Documentation 
 
-Head over to our [docs](https://landr-balenalabs-repo-balena-sound.netlify.com/docs) for detailed usage instructions, customization options and more!
+Head over to our [docs](https://sound.balenalabs.io) for detailed installation and usage instructions, customization options and more!
 
 # Motivation
 
@@ -28,7 +34,7 @@ If you're having any problem, please [raise an issue](https://github.com/balenal
 
 # Contributing
 
-Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://landr-balenalabs-repo-balena-sound.netlify.com/contributing). Hope to
+Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://sound.balenalabs.io/contributing). Hope to
 see you around!
 
 # License
