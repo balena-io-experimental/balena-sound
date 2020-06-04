@@ -57,6 +57,14 @@ services:
     privileged: true
     volumes:
       - snapcast:/var/cache/snapcast
+  upnp:
+    build: ./upnp
+    restart: on-failure 
+    network_mode: host 
+    ports:
+      - 49494:49494
+    volumes:
+      - snapcast:/var/cache/snapcast
 volumes:
   spotifycache:
   bluetoothcache:
