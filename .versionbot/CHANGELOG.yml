@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add UPnP
+      hash: 55983b0e844aead4bc09efa4dc758ae1c821921c
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Co-authored-by: Tomás Migone <tomas@balena.io>
+        co-authored-by: Tomás Migone <tomas@balena.io>
+      author: Alex
+  version: 2.3.0
+  date: 2020-06-03T11:11:51.987Z
+- commits:
     - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
       hash: b584534e0ae08de098324a080c50d179d2999390
       body: ''
