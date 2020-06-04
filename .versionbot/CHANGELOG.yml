@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'multi-room: add latency optional parameter to snapclient'
+      hash: 0f4dddb0fd480ed47385c7552dc852df948def29
+      body: |
+        Used to compensate for different hardware processing times in speakers.
+        Handled via $DEVICE_LATENCY
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.0
+  date: 2020-06-04T15:21:06.387Z
+- commits:
     - subject: Add UPnP
       hash: 55983b0e844aead4bc09efa4dc758ae1c821921c
       body: ''
