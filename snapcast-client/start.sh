@@ -7,7 +7,7 @@ if [[ -z $DISABLE_MULTI_ROOM ]]; then
   while ! curl -s "http://localhost:3000"; do sleep 1; done
 
   # Add latency if defined to compensate for speaker hardware sync issues
-  if [[ -z $DEVICE_LATENCY ]]; then
+  if [[ -n $DEVICE_LATENCY ]]; then
     LATENCY="--latency $DEVICE_LATENCY"
   fi
 
