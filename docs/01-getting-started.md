@@ -1,7 +1,7 @@
 # Getting started
 
 Getting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) application; no additional configuration is required (unless you're using a DAC HAT).
-We've outlined the installation steps below. If you want a step-by-step tutorial on how to get balenaSound up and running, feel free to check this blog posts:
+We've outlined the installation steps below. If you want a step-by-step tutorial on how to get balenaSound up and running, feel free to check these blog posts:
 - [Turn your old speakers or Hi-Fi into Bluetooth, Airplay and Spotify receivers with a Raspberry Pi and this step-by-step guide](https://www.balena.io/blog/turn-your-old-speakers-or-hi-fi-into-bluetooth-receivers-using-only-a-raspberry-pi/)
 - [Build your own multi-room audio system with Bluetooth, Airplay, and Spotify using Raspberry Pis](https://www.balena.io/blog/diy-raspberry-pi-multi-room-audio-system/)
 
@@ -15,7 +15,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 **Notes** 
 - The Raspberry Pi Zero cannot be used on it's own as it has no audio output. To use the Pi Zero, you'll need to add something like the [Pimoroni pHAT DAC](https://shop.pimoroni.com/products/phat-dac) (out of stock and going to be replaced, see [#111](https://github.com/balenalabs/balena-sound/issues/111)) to go with it.
-- For an extended list of device types supported please check this [link](DeviceSupport.md).
+- For an extended list of device types supported please check this [link](../supported-devices).
 
 
 ## Software required
