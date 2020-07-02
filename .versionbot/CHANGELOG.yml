@@ -1,4 +1,68 @@
 - commits:
+    - subject: 'docs: add troubleshooting case'
+      hash: d56f2a8c37cb6e1f707329c34c2e1035c975e351
+      body: |
+        No audio on Pi3 with balenaOS 64bits.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+    - subject: 'docs: Update device support citations so they don''t look as links'
+      hash: b6ae9c7792b733dfa5eec9f0fdb4500bd34e902f
+      body: ''
+      footer:
+        Connects-to: '#209'
+        connects-to: '#209'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.2
+  date: 2020-06-23T18:23:06.274Z
+- commits:
+    - subject: 'snapcast-client: Fix bug where snapcast client is not starting'
+      hash: 43d58e3194b8bab560aea81bb3cb3fb18e43faba
+      body: ''
+      footer:
+        Connects-to: '#211'
+        connects-to: '#211'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.1
+  date: 2020-06-08T13:12:16.325Z
+- commits:
+    - subject: 'multi-room: add latency optional parameter to snapclient'
+      hash: 0f4dddb0fd480ed47385c7552dc852df948def29
+      body: |
+        Used to compensate for different hardware processing times in speakers.
+        Handled via $DEVICE_LATENCY
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.0
+  date: 2020-06-04T15:21:06.387Z
+- commits:
+    - subject: Add UPnP
+      hash: 55983b0e844aead4bc09efa4dc758ae1c821921c
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Co-authored-by: Tomás Migone <tomas@balena.io>
+        co-authored-by: Tomás Migone <tomas@balena.io>
+      author: Alex
+  version: 2.3.0
+  date: 2020-06-03T11:11:51.987Z
+- commits:
     - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
       hash: b584534e0ae08de098324a080c50d179d2999390
       body: ''
