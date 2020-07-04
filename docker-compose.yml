@@ -68,7 +68,13 @@ services:
   roon-bridge:
     build: ./roon-bridge
     network_mode: host
+    ports:
+      - 9003:9003
+      - 9100-9200:9100-9200
+    volumes:
+      - roon-bridge:/opt/RoonBridge
 volumes:
   spotifycache:
   bluetoothcache:
   snapcast:
+  roon-bridge:
