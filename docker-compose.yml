@@ -69,6 +69,7 @@ services:
     build: ./roon-bridge
     restart: on-failure
     network-mode: host
+    privileged: true
 volumes:
   spotifycache:
   bluetoothcache:
