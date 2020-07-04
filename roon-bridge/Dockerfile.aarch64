@@ -1,3 +1,3 @@
 FROM balenalib/raspberrypi4-64-ubuntu:latest
 COPY roonbridge-installer-linuxarmv8.sh /usr/src/roon-bridge
-CMD [ "/bin/bash", "/usr/src/roonbridge-installer-linuxarmv8.sh" ]
+CMD [ "/bin/bash", "/usr/src/roon-bridge/roonbridge-installer-linuxarmv8.sh" ]
