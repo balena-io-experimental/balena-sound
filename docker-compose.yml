@@ -65,6 +65,10 @@ services:
       - 49494:49494
     volumes:
       - snapcast:/var/cache/snapcast
+  roon-bridge:
+    build: ./roon-bridge
+    restart: on-failure
+    network-mode: host
 volumes:
   spotifycache:
   bluetoothcache:
