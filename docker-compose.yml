@@ -67,9 +67,7 @@ services:
       - snapcast:/var/cache/snapcast
   roon-bridge:
     build: ./roon-bridge
-    restart: on-failure
-    network-mode: host
-    privileged: true
+    network_mode: host
 volumes:
   spotifycache:
   bluetoothcache:
