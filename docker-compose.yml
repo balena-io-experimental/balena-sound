@@ -71,6 +71,7 @@ services:
     ports:
       - 9003:9003
       - 9100-9200:9100-9200
+    privileged: true
     volumes:
       - roon-bridge:/opt/RoonBridge
 volumes:
