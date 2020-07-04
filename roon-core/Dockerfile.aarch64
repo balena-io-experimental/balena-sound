@@ -1,0 +1,4 @@
+FROM balenalib/raspberrypi4-64-ubuntu:latest
+
+COPY roonbridge-installer-linuxarmv7hf.sh /usr/src/roon-core
+CMD [ "/bin/bash", "/usr/src/roonbridge-installer-linuxarmv7hf.sh" ]
