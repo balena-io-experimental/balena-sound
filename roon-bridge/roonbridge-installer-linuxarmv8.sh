@@ -128,60 +128,6 @@ function install {
         exit 3
     fi
 
-    function confirm_n {
-        while true; do
-            read -p "$1 [y/N] " yn
-            case $yn in
-                [Yy]* ) 
-                    break 
-                    ;;
-                "") 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                [Nn]* ) 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-    }
-
-    function confirm {
-        while true; do
-            read -p "$1 [Y/n] " yn
-            case $yn in
-                "") 
-                    break 
-                    ;;
-                [Yy]* ) 
-                    break 
-                    ;;
-                [Nn]* ) 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-    }
-
-    #
-    # Double-check with user that this is what they want
-    #
-    confirm "Do you want to install $PACKAGE_NAME on this machine?"
-
-    echo ""
     echo "Downloading $PACKAGE_FILE to $TMPDIR/$PACKAGE_FILE"
     echo ""
     curl -# -o "$TMPDIR/$PACKAGE_FILE" "$PACKAGE_URL"
@@ -213,10 +159,6 @@ function install {
         echo "installation must be deleted before the installation can proceed."
         echo ""
         echo "Under normal circumstances, this directory does not contain any user data, so it should be safe to delete it."
-        echo ""
-        hr
-        echo ""
-        confirm "Delete /opt/$PACKAGE_NAME and re-install?"
         rm -Rf /opt/$PACKAGE_NAME
     fi
 
@@ -505,59 +447,6 @@ function uninstall {
         echo ""
         exit 3
     fi
-
-    function confirm_n {
-        while true; do
-            read -p "$1 [y/N] " yn
-            case $yn in
-                [Yy]* ) 
-                    break 
-                    ;;
-                "") 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                [Nn]* ) 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-    }
-
-    function confirm {
-        while true; do
-            read -p "$1 [Y/n] " yn
-            case $yn in
-                "") 
-                    break 
-                    ;;
-                [Yy]* ) 
-                    break 
-                    ;;
-                [Nn]* ) 
-                    CLEAN_EXIT=1
-                    echo ""
-                    echo "Ok. Exiting."
-                    echo ""
-                    exit 4 
-                    ;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-    }
-
-    #
-    # Double-check with user that this is what they want
-    #
-    confirm_n "Are you sure that you want to uninstall $PACKAGE_NAME on this machine?"
 
     # set up systemd 
     HAS_SYSTEMCTL=1; which systemctl >/dev/null || HAS_SYSTEMCTL=0
