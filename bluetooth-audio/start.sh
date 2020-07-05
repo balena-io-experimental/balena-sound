@@ -19,7 +19,7 @@ if [[ -z "$DEVICE_NAME" ]]; then
 fi
 
 # Set the system volume here
-SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-75}"
+SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
 echo $SYSTEM_OUTPUT_VOLUME > /usr/src/system_output_volume
 printf "Setting output volume to %s%%\n" "$SYSTEM_OUTPUT_VOLUME"
 amixer -M sset PCM,0 $SYSTEM_OUTPUT_VOLUME% > /dev/null &
