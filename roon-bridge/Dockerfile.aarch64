@@ -1,7 +1,7 @@
 FROM balenalib/raspberrypi4-64-ubuntu:latest
 ENV ROON_DATAROOT /var/RoonBridge
 ENV ROON_ID_DIR /var/RoonBridge
-RUN install_packages curl ffmpeg cifs-utils
+RUN install_packages curl ffmpeg
 WORKDIR /opt/RoonBridge
 ADD roonbridge-installer-linuxarmv8.sh /opt/RoonBridge
 RUN chmod +x roonbridge-installer-linuxarmv8.sh && ./roonbridge-installer-linuxarmv8.sh

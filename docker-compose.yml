@@ -67,6 +67,7 @@ services:
       - snapcast:/var/cache/snapcast
   roon-bridge:
     build: ./roon-bridge
+    restart: on-failure
     network_mode: host
     ports:
       - 9003:9003
@@ -74,6 +75,7 @@ services:
     privileged: true
     volumes:
       - roon-bridge:/opt/RoonBridge
+      - snapcast:/var/cache/snapcast
 volumes:
   spotifycache:
   bluetoothcache:
