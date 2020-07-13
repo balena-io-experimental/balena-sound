@@ -1,4 +1,19 @@
 - commits:
+    - subject: Adding masterclass reference to balenaSound troubleshooting
+      hash: db5c34fffd837b2cf5ef600e2f1b3e7832e01769
+      body: >
+        Added section to /troubleshooting to reference and recommend taking
+        masterclasses.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.3
+  date: 2020-07-13T17:54:02.882Z
+- commits:
     - subject: 'docs: add troubleshooting case'
       hash: d56f2a8c37cb6e1f707329c34c2e1035c975e351
       body: |
