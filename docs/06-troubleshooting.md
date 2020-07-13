@@ -127,3 +127,9 @@ For details see:
 
 ### Workaround
 Remove the `vc4-kms-v3d` dtoverlay setting from the `Device Configuration` section of your device.
+
+## Become a balena poweruser
+
+One way to improve how you use and contribute to balenaSound is to take our [masterclasses](https://www.balena.io/docs/learn/more/masterclasses/overview/). Each lesson is a self-contained, deep walkthrough on core skills to be successful with your next edge project.
+
+Check them out at our [docs](https://www.balena.io/docs/learn/more/masterclasses/overview/). Also, reach out to us on the [Forums](https://forums.balena.io/) if you need help.
