@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'multi-room: disable feature for raspberrypi2 fam'
+      hash: 6eebb0b756588d5c260d28ade9851c85e6c219e3
+      body: ''
+      footer:
+        Connects-to: '#220'
+        connects-to: '#220'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.4
+  date: 2020-07-17T20:07:26.332Z
+- commits:
     - subject: Adding masterclass reference to balenaSound troubleshooting
       hash: db5c34fffd837b2cf5ef600e2f1b3e7832e01769
       body: >
