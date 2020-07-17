@@ -45,8 +45,8 @@ printf "discoverable on\npairable on\nexit\n" | bluetoothctl > /dev/null
 /usr/src/bluetooth-agent &
 
 # If multi room is disabled remove audio redirect to fifo pipe
-# Also remove if device is from Pi 1 family, since snapcast server is disabled by default
-if [[ -n $DISABLE_MULTI_ROOM ]] || [[ $BALENA_DEVICE_TYPE == "raspberry-pi" ]]; then
+# Also remove if device is from Pi 1/2 family, since snapcast server is disabled by default
+if [[ -n $DISABLE_MULTI_ROOM ]] || [[ $BALENA_DEVICE_TYPE == "raspberry-pi" || $BALENA_DEVICE_TYPE == "raspberry-pi2" ]]; then
   rm /root/.asoundrc
 fi
 
