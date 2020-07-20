@@ -20,7 +20,7 @@ Head over to our [docs](https://sound.balenalabs.io) for detailed installation a
 
 # Motivation
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sound.png)
+![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/sound.png)
 
 There are many commercial solutions out there that provide functionality similar to balenaSound. Most of them though come with a premium price tag and are riddled with privacy concerns. 
 

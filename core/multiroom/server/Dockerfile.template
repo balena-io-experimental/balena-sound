@@ -1,0 +1,9 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
+
+WORKDIR /usr/src
+
+RUN install_packages snapcast-server
+COPY snapserver.conf /etc/snapserver.conf
+COPY start.sh .
+
+CMD [ "/bin/bash", "/usr/src/start.sh" ]

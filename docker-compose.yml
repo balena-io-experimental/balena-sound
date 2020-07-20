@@ -1,67 +1,68 @@
 version: '2'
+
+volumes:
+  spotifycache:
+  snapcast:
+
 services:
-  bluetooth-audio:
-    build: ./bluetooth-audio
-    restart: on-failure
-    network_mode: host
+
+  # Core services
+  audio:
+    build: ./core/audio
     privileged: true
     labels:
       io.balena.features.dbus: 1
-    volumes:
-      - bluetoothcache:/var/cache/bluetooth
-      - snapcast:/var/cache/snapcast
-  airplay:
-    build: ./airplay
-    restart: on-failure
-    network_mode: host
-    privileged: true
-    labels:
-      io.balena.features.dbus: 1
+    ports:
+      - 4317:4317
     volumes:
       - snapcast:/var/cache/snapcast
-  spotify:
-    build: ./spotify
-    restart: on-failure
+
+  sound-supervisor:
+    build: ./core/sound-supervisor
     network_mode: host
-    privileged: true
-    volumes:
-      - spotifycache:/var/cache/raspotify
-      - snapcast:/var/cache/snapcast
-  fleet-supervisor:
-    build: ./fleet-supervisor
-    restart: on-failure
-    network_mode: host
-    privileged: true
     ports:
       - 3000:3000
     labels:
       io.balena.features.supervisor-api: 1
-  snapcast-server:
-    build: 
-      context: ./snapcast-server
+
+  multiroom-server:
+    build: ./core/multiroom/server
     restart: on-failure
     ports:
       - 1704:1704
-      - 1705:1705
     volumes:
       - snapcast:/var/cache/snapcast
-  snapcast-client:
-    build: 
-      context: ./snapcast-client
-    restart: on-failure 
-    network_mode: host 
+
+  multiroom-client:
+    build: ./core/multiroom/client
+    restart: on-failure
+
+  # Plugins
+  bluetooth:
+    build: ./plugins/bluetooth
+    restart: on-failure
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    labels:
+      io.balena.features.dbus: 1
+
+  airplay:
+    build: ./plugins/airplay
+    network_mode: host
     privileged: true
+    labels:
+      io.balena.features.dbus: 1
+
+  spotify:
+    build: ./plugins/spotify
+    privileged: true
+    network_mode: host
     volumes:
-      - snapcast:/var/cache/snapcast
+      - spotifycache:/var/cache/raspotify
+
   upnp:
-    build: ./upnp
-    restart: on-failure 
-    network_mode: host 
+    build: ./plugins/upnp
+    network_mode: host
     ports:
       - 49494:49494
-    volumes:
-      - snapcast:/var/cache/snapcast
-volumes:
-  spotifycache:
-  bluetoothcache:
-  snapcast:

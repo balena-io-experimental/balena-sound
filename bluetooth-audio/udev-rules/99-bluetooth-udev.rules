@@ -1,1 +1,0 @@
-SUBSYSTEM=="input", KERNEL=="input[0-9]*", RUN+="/usr/src/bluetooth-udev"

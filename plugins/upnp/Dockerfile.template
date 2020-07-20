@@ -1,0 +1,10 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
+WORKDIR /usr/src
+
+ENV PULSE_SERVER=tcp:localhost:4317
+
+RUN install_packages gmediarender gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-pulseaudio
+
+COPY start.sh /usr/src/
+
+CMD [ "/bin/bash", "/usr/src/start.sh" ]

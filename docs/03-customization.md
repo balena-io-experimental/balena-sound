@@ -1,52 +1,49 @@
-# Customizations
+# Customization
 
-You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard within your app: 
-```
-navigate to dashboard -> your app -> Environment variables. 
-```
+Some features of balenaSound can be configured by using environment variables. Depending on how you set them they will apply to all your devices, a specific device or a specific service. Regardless of what you want, they can be set using the balena dashboard:
 
-![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/device-name-config.png)
+| Environment variable type | Scope | Instructions | 
+| ------ | ------ | ------ | 
+| Fleet-wide environment variable | all devices, all services | navigate to dashboard -> your app -> Environment variables |
+| Fleet-wide service variable | all devices, specific service | navigate to dashboard -> your app -> Service variables |
+| Device environment variable | specific device, all services | navigate to dashboard -> your app -> your device -> Device variables |
+| Device service variable | specific device, specific service | navigate to dashboard -> your app -> your device -> Device service variables |
 
-### Learn more about changing environment variables
+![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/env-vars.png)
 
 You can read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
 
-**NOTE:** The [environment and device service variables](https://www.balena.io/docs/learn/manage/serv-vars/) are different than [configuration variables](https://www.balena.io/docs/learn/manage/configuration/) that make changes to the host OS and supervisor. For various balenaSound customizations, please apply or change [*environment or specific device variables*](https://www.balena.io/docs/learn/manage/serv-vars/).
+## General
 
-## Change device name
+The following environment variables apply to balenaSound in general, modifying it's behaviour across the board:
 
-By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect, and when searching for devices using Bluetooth.
-You can change this using `DEVICE_NAME` environment variable that can be set in balena dashboard.
+| Environment variable | Description | Options | Default | 
+| ------ | ------ | ------ | ------ |
+| SOUND_MODE | Select which mode of operation a device should use. For a detailed explanation see [here](../docs/usage#modes-of-operation).| `MULTI_ROOM`, `MULTI_ROOM`, `STANDALONE` | `MULTI_ROOM`, except for cases listed [here](../docs/device-support). |
+| SOUND_VOLUME | Output volume level at startup. | 0 - 100, integer value without the `%` symbol. | 75 |
+| SOUND_DEVICE_NAME | Device name to be advertized by plugins (AirPlay device list, Spotify Connect, bluetooth search list, etc). | Any valid string. | `balenaSound <plugin> <xxxx>`, where:<br>- `<plugin>` is `Spotify, AirPlay, UPnP`<br>- `<xxxx>` the first 4 chars of the device UUID. |
+| SOUND_OUTPUT | Select the default audio output interface. This environment variable is directly mapped as `AUDIO_OUTPUT` for the balena [audio block](https://github.com/balenablocks/audio/blob/master/README.md#environment-variables). | For all device types: <br>- `AUTO`: Automatic detection. Priority is `USB > DAC > HEADPHONES > HDMI`<br>- `DAC`: Force default output to be an attached GPIO based DAC<br><br> For Raspberry Pi devices: <br>- `RPI_AUTO`: Official BCM2835 automatic audio switching as described [here](https://www.raspberrypi.org/documentation/configuration/audio-config.md) <br>- `RPI_HEADPHONES`: 3.5mm audio jack <br>- `RPI_HDMI0`: Main HDMI port <br>- `RPI_HDMI1`: Secondary HDMI port (only Raspberry Pi 4) <br><br> For Intel NUC: <br>- NUCs have automatic output detection and switching. If you plug both the HDMI and the 3.5mm audio jack it will use the latter. | `AUTO` |
 
-## Set output volumes
 
-By default, balenaSound will set the output volume of your Raspberry Pi to 75% on the basis you can then control the volume upto the maximum from the connected bluetooth device. If you would like to override this, define the `SYSTEM_OUTPUT_VOLUME` environment variable.
+## Multi-room
 
-Secondly, balenaSound will play connection/disconnection notification sounds at a volume of 75%. If this unsuitable, you can override this with the `CONNECTION_NOTIFY_VOLUME` environment variable.
+These options only have an effect on multi-room behaviour:
 
-**Note:** these variables should be defined as integer values without the `%` symbol.
+| Environment variable | Description | Options | Default | 
+| --- | --- | --- | --- |
+| SOUND_MULTIROOM_MASTER | Force multi-room to use the specified IP address as the multi-room `master` device. This can't be changed unless the variable is removed. | An IPv4 formated IP address. Example: `192.168.1.10` | --- |
+| SOUND_MULTIROOM_LATENCY | Set multi-room client latency. Usually used to compensate for latency that speaker hardware might introduce (some Hi-Fi systems add a noticeable latency). | Time in milliseconds. Example: `300` | --- |
 
-## Disable multi-room
+## Plugins
 
-By default, balenaSound will start in multi-room mode. When running multi-room you can stream audio into a fleet of devices and have it play perfectly synchronized. It does not matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
+The following environment variables control various aspects of each plugin behaviour:
 
-If you don't want to use multi-room or you only have one device, you can disable it by creating the `DISABLE_MULTI_ROOM` variable (with any value, for example: `1`).
+| Environment variable | Description | Options | Defaults | 
+| --- | --- | --- | --- |
+| SOUND_DISABLE_(PLUGIN) | Disable the selected plugin. Useful when you don't want to use a particular plugin. There is one variable per plugin: <br>- `SOUND_DISABLE_SPOTIFY`<br>- `SOUND_DISABLE_AIRPLAY`<br>- `SOUND_DISABLE_BLUETOOTH`<br>- `SOUND_DISABLE_UPNP` | Plugin will be disabled if the variable exists regardless of it's value. | --- |
+| SOUND_ENABLE_SOUNDCARD_INPUT | If your soundcard has inputs you can enable soundcard input by setting this variable. Sound coming in through the audio card will be treated as a new plugin/audio source.<br><br>This feature is still experimental! | Plugin will be enabled if the variable exists regardless of it's value. | --- |
+| SOUND_SPOTIFY_USERNAME | Your Spotify login username. Required to use Spotify Connect over the internet. | --- | --- |
+| SOUND_SPOTIFY_PASSWORD | Your Spotify login passsword. Required to use Spotify Connect over the internet. | --- | --- |
+| SOUND_SPOTIFY_DISABLE_NORMALISATION | Disable volume normalisation in Spotify. | Disabled if the variable exists regardless of it's value. | --- |
+| SOUND_SPOTIFY_BITRATE | Spotify playback bitrate. | Bitrate in kbps: `90`, `160` or `320` | 160 |
 
-**Note:** Multi-room requires a network router that supports IP multicast/broadcast (most modern routers do).
-
-## Set bluetooth PIN code
-
-By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999).
-
-**Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
-
-## Add bluetooth event scripts
-
-balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
-Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
-
-## Spotify Connect Credentials
-
-Spotify Connect only works with Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
-If you have a Spotify Premium account, you can stream locally without any configuration. If you want to use Spotify Connect over the internet, you'll need to provide your Spotify credentials.
-To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.
