@@ -1,0 +1,1 @@
+FROM balenaplayground/balenalabs-bluetooth:%%BALENA_MACHINE_NAME%%
