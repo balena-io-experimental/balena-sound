@@ -1,13 +1,17 @@
 # Customizations
 
-You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard: 
+You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard within your app: 
 ```
 navigate to dashboard -> your app -> Environment variables. 
 ```
 
 ![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/device-name-config.png)
 
+### Learn more about changing environment variables
+
 You can read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
+
+**NOTE:** The [environment and device service variables](https://www.balena.io/docs/learn/manage/serv-vars/) are different than [configuration variables](https://www.balena.io/docs/learn/manage/configuration/) that make changes to the host OS and supervisor. For various balenaSound customizations, please apply or change [*environment or specific device variables*](https://www.balena.io/docs/learn/manage/serv-vars/).
 
 ## Change device name
 
