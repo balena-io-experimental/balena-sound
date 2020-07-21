@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix rpi1/rpi2 bug with multiroom server
+      hash: b9356e7af85e4ee1c7ecbdf97eaa60da9b122123
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.5
+  date: 2020-07-21T17:51:29.530Z
+- commits:
     - subject: 'multi-room: disable feature for raspberrypi2 fam'
       hash: 6eebb0b756588d5c260d28ade9851c85e6c219e3
       body: ''
