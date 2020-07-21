@@ -1,4 +1,58 @@
 - commits:
+    - subject: 'multi-room: disable feature for raspberrypi2 fam'
+      hash: 6eebb0b756588d5c260d28ade9851c85e6c219e3
+      body: ''
+      footer:
+        Connects-to: '#220'
+        connects-to: '#220'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.4
+  date: 2020-07-17T20:07:26.332Z
+- commits:
+    - subject: Adding masterclass reference to balenaSound troubleshooting
+      hash: db5c34fffd837b2cf5ef600e2f1b3e7832e01769
+      body: >
+        Added section to /troubleshooting to reference and recommend taking
+        masterclasses.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.3
+  date: 2020-07-13T17:54:02.882Z
+- commits:
+    - subject: 'docs: add troubleshooting case'
+      hash: d56f2a8c37cb6e1f707329c34c2e1035c975e351
+      body: |
+        No audio on Pi3 with balenaOS 64bits.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+    - subject: 'docs: Update device support citations so they don''t look as links'
+      hash: b6ae9c7792b733dfa5eec9f0fdb4500bd34e902f
+      body: ''
+      footer:
+        Connects-to: '#209'
+        connects-to: '#209'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.2
+  date: 2020-06-23T18:23:06.274Z
+- commits:
     - subject: 'snapcast-client: Fix bug where snapcast client is not starting'
       hash: 43d58e3194b8bab560aea81bb3cb3fb18e43faba
       body: ''
