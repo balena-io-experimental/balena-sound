@@ -1,4 +1,21 @@
 - commits:
+    - subject: Adding clarification between config vars and env vars for users
+      hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
+      body: >
+        Clarifying and citing resources for env var usage in balenaSound so
+        users
+
+        don't try to add env vars to config vars.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.6
+  date: 2020-07-21T18:25:21.874Z
+- commits:
     - subject: Fix rpi1/rpi2 bug with multiroom server
       hash: b9356e7af85e4ee1c7ecbdf97eaa60da9b122123
       body: ''
