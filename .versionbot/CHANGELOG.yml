@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'multiroom: use alpine based containers'
+      hash: a81f6f7d75d0d37b14927ea7b23bc29e80231d7c
+      body: |
+        - Reduce container size to 81MB (~60% smaller)
+        - Use edge repository for latest package versions
+        - Remove aarch64 dockerfiles, not needed anymore
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.8
+  date: 2020-07-22T16:21:19.622Z
+- commits:
     - subject: Adding clarity to DAC section
       hash: 9c3797940695bfa2bee2e66b2f453e195d5e7977
       body: >
