@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+balena-idle
 # Start snapclient if multi room is enabled
 if [[ -z $DISABLE_MULTI_ROOM ]]; then
   # Wait for fleet-supervisor to start up

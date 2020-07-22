@@ -1,0 +1,7 @@
+load-module module-null-sink sink_name=balena-sound.input
+load-module module-null-sink sink_name=balena-sound.output
+load-module module-pipe-sink file=/var/cache/snapcast/snapfifo sink_name=snapcast format=s16le rate=44100
+
+#load-module module-loopback source="snapcast.monitor" sink="balena-sound.output"
+#load-module module-loopback source="balena-sound.output.monitor" sink="alsa_output.bcm2835.stereo-fallback"
+#load-module module-loopback source="balena-sound.input.monitor" sink="snapcast"

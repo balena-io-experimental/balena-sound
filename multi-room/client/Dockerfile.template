@@ -2,6 +2,8 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
 
 ARG SNAPCAST_VERSION
 RUN install_packages snapcast-client
+RUN install_packages alsa-plugins-pulse
+ENV PULSE_SERVER=tcp:audio:4317
 
 WORKDIR /usr/src
 COPY start.sh /usr/src/
