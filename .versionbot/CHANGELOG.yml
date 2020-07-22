@@ -1,4 +1,19 @@
 - commits:
+    - subject: Adding clarity to DAC section
+      hash: 9c3797940695bfa2bee2e66b2f453e195d5e7977
+      body: >
+        Specifying that DAC instructions need to be device-specific to device
+        using DAC and not fleet wide.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.7
+  date: 2020-07-21T23:50:45.118Z
+- commits:
     - subject: Adding clarification between config vars and env vars for users
       hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
       body: >
