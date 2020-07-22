@@ -14,7 +14,7 @@ if [[ -z $DISABLE_MULTI_ROOM ]]; then
   # Start snapclient
   SNAPCAST_SERVER=$(curl --silent http://localhost:3000)
   echo -e "Starting snapclient...\nTarget snapcast server: $SNAPCAST_SERVER"
-  snapclient -h $SNAPCAST_SERVER $LATENCY
+  /usr/bin/snapclient -h $SNAPCAST_SERVER $LATENCY
 else
   echo "Multi-room audio is disabled, not starting snapclient."
   exit 0
