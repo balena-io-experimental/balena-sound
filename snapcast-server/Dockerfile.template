@@ -1,7 +1,7 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.11
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
 
 ARG SNAPCAST_VERSION
-RUN install_packages snapcast-server=$SNAPCAST_VERSION --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN install_packages snapcast-server
 
 WORKDIR /usr/src
 COPY snapserver.conf /etc/snapserver.conf
