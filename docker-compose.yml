@@ -39,8 +39,6 @@ services:
   snapcast-server:
     build: 
       context: ./snapcast-server
-      args:
-        SNAPCAST_VERSION: 0.20.0-r0
     restart: on-failure
     ports:
       - 1704:1704
@@ -50,8 +48,6 @@ services:
   snapcast-client:
     build: 
       context: ./snapcast-client
-      args:
-        SNAPCAST_VERSION: 0.20.0-r0
     restart: on-failure 
     network_mode: host 
     privileged: true
