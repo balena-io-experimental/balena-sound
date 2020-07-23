@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix snapcast bad signature error in rpi0 devices
+      hash: 3a6000498db555adc1e6c174674ffe503ca70fbd
+      body: ''
+      footer:
+        Connects-to: '#255'
+        connects-to: '#255'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.9
+  date: 2020-07-23T15:59:49.647Z
+- commits:
     - subject: 'multiroom: use alpine based containers'
       hash: a81f6f7d75d0d37b14927ea7b23bc29e80231d7c
       body: |
