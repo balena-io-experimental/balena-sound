@@ -4,7 +4,7 @@ class SnapcastServer {
   constructor (config = {}) {
     const options = Object.assign({
       port: 1705,
-      hostname: 'localhost'
+      hostname: 'multiroom-server'
     }, config)
 
     this.options = options

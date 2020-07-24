@@ -1,4 +1,0 @@
-load-module module-null-sink sink_name=balena-sound
-load-module module-pipe-sink file=/var/cache/snapcast/snapfifo sink_name=snapcast format=s16le rate=44100
-
-load-module module-loopback source="balena-sound.monitor" sink="snapcast"

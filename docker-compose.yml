@@ -21,8 +21,6 @@ services:
   sound-supervisor:
     build: ./core/sound-supervisor
     restart: on-failure
-    network_mode: host
-    privileged: true
     ports:
       - 3000:3000
     labels:
@@ -30,20 +28,17 @@ services:
 
   # Multi-room feature
   multiroom-server:
-    build: 
-      context: ./snapcast-server
+    build: ./multiroom/server
     restart: on-failure
     ports:
       - 1704:1704
       - 1705:1705
     volumes:
       - snapcast:/var/cache/snapcast
+
   multiroom-client:
-    build: 
-      context: ./snapcast-client
-    restart: on-failure 
-    network_mode: host 
-    privileged: true
+    build: ./multiroom/client
+    restart: on-failure
     volumes:
       - snapcast:/var/cache/snapcast
 

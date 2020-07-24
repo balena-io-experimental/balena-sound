@@ -3,4 +3,4 @@ FROM balenaplayground/balenalabs-audio:%%BALENA_MACHINE_NAME%%
 WORKDIR /usr/src
 COPY . .
 
-CMD [ "--file", "balena-sound.pa"]
+CMD [ "/bin/bash", "/usr/src/start.sh" ]

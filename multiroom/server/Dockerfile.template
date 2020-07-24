@@ -1,11 +1,9 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
 
-ARG SNAPCAST_VERSION
-RUN install_packages snapcast-server
-
 WORKDIR /usr/src
+
+RUN install_packages snapcast-server
 COPY snapserver.conf /etc/snapserver.conf
-COPY start.sh /usr/src/
-RUN chmod +x /usr/src/start.sh
+COPY start.sh .
 
 CMD [ "/bin/bash", "/usr/src/start.sh" ]

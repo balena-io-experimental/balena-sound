@@ -1,0 +1,13 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
+
+RUN install_packages snapcast-client
+
+# Audio block setup
+RUN curl --silent https://raw.githubusercontent.com/balena-io-playground/audio-primitive/master/scripts/alsa-bridge/alpine-setup.sh | sh
+ENV PULSE_SERVER=tcp:audio:4317
+ENV PULSE_SINK=balena-sound.output
+
+WORKDIR /usr/src
+COPY start.sh .
+
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
