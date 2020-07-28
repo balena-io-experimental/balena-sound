@@ -58,17 +58,12 @@ services:
   #   privileged: true
   #   labels:
   #     io.balena.features.dbus: 1
-  #   volumes:
-  #     - snapcast:/var/cache/snapcast
 
-  # spotify:
-  #   build: ./plugins/spotify
-  #   restart: on-failure
-  #   network_mode: host
-  #   privileged: true
-  #   volumes:
-  #     - spotifycache:/var/cache/raspotify
-  #     - snapcast:/var/cache/snapcast
+  spotify:
+    build: ./plugins/spotify
+    privileged: true
+    volumes:
+      - spotifycache:/var/cache/raspotify
 
   # upnp:
   #   build: ./plugins/upnp
@@ -76,5 +71,3 @@ services:
   #   network_mode: host 
   #   ports:
   #     - 49494:49494
-  #   volumes:
-  #     - snapcast:/var/cache/snapcast
