@@ -65,9 +65,9 @@ services:
     volumes:
       - spotifycache:/var/cache/raspotify
 
-  # upnp:
-  #   build: ./plugins/upnp
-  #   restart: on-failure 
-  #   network_mode: host 
-  #   ports:
-  #     - 49494:49494
+  upnp:
+    build: ./plugins/upnp
+    restart: on-failure 
+    network_mode: host 
+    ports:
+      - 49494:49494
