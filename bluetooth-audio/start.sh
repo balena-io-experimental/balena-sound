@@ -10,11 +10,12 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
   exit 0
 fi
 
+# Set the device broadcast name for Bluetooth
 if [[ -z "$DEVICE_NAME" ]]; then
    if [[ "$BLUETOOTH_DEVICE_NAME" ]]; then
      DEVICE_NAME="$BLUETOOTH_DEVICE_NAME"
    else
-     DEVICE_NAME=$(printf "balenaSound %s" $(hostname | cut -c -4))
+     DEVICE_NAME=$(printf "balenaSound Bluetooth %s" $(hostname | cut -c -4))
    fi
 fi
 

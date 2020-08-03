@@ -10,10 +10,13 @@ if [[ -z $DISABLE_MULTI_ROOM ]] && [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
   exit 0
 fi
 
-
 # Set the device broadcast name for AirPlay
 if [[ -z "$DEVICE_NAME" ]]; then
-  DEVICE_NAME=$(printf "balenaSound Airplay %s" $(hostname | cut -c -4))
+   if [[ "$AIRPLAY_DEVICE_NAME" ]]; then
+     DEVICE_NAME="$AIRPLAY_DEVICE_NAME"
+   else
+     DEVICE_NAME=$(printf "balenaSound Airplay %s" $(hostname | cut -c -4))
+   fi
 fi
 
 # Use pipe output if multi room is enabled

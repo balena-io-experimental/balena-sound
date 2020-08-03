@@ -12,7 +12,11 @@ fi
 
 # Set the device broadcast name for Spotify
 if [[ -z "$DEVICE_NAME" ]]; then
-  DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
+   if [[ "$SPOTIFY_DEVICE_NAME" ]]; then
+     DEVICE_NAME="$SPOTIFY_DEVICE_NAME"
+   else
+     DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
+   fi
 fi
 
 # Set the system volume here
