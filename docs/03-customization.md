@@ -28,7 +28,7 @@ Secondly, balenaSound will play connection/disconnection notification sounds at 
 
 ## Disable multi-room
 
-By default, balenaSound will start in multi-room mode. When running multi-room you can stream audio into a fleet of devices and have it play perfectly synchronized. It does not matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
+By default, balenaSound will start in multi-room mode. When running multi-room you can stream audio into a fleet of devices and have it play perfectly synchronized. It does not matter whether you have 2 or 100 devices, you only need them to be part of the same local network.
 
 If you don't want to use multi-room or you only have one device, you can disable it by creating the `DISABLE_MULTI_ROOM` variable (with any value, for example: `1`).
 
