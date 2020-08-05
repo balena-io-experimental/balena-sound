@@ -19,8 +19,5 @@ if [[ ! -z "$SOUND_SPOTIFY_LOGIN" ]] && [[ ! -z "$SOUND_SPOTIFY_PASSWORD" ]]; th
   printf "%s\n" "Using Spotify login."
 fi
 
-# Start pulseaudio for librespot to use
-pulseaudio --start --system=true
-
 # Start librespot
 exec /usr/src/librespot/target/release/librespot --name "$DEVICE_NAME" --bitrate 320 --cache /var/cache/raspotify --enable-volume-normalisation --volume-ctrl linear --initial-volume=$SYSTEM_OUTPUT_VOLUME $SOUND_SPOTIFY_CREDENTIALS --backend pulseaudio

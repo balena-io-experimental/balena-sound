@@ -60,12 +60,12 @@ services:
   #   labels:
   #     io.balena.features.dbus: 1
 
-  # spotify:
-  #   build: ./plugins/spotify
-  #   privileged: true
-  #   network_mode: host
-  #   volumes:
-  #     - spotifycache:/var/cache/raspotify
+  spotify:
+    build: ./plugins/spotify
+    privileged: true
+    network_mode: host
+    volumes:
+      - spotifycache:/var/cache/raspotify
 
   # upnp:
   #   build: ./plugins/upnp

@@ -1,7 +1,7 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
 WORKDIR /usr/src
 
-ENV PULSE_SERVER=tcp:audio:4317
+ENV PULSE_SERVER=tcp:localhost:4317
 
 RUN install_packages git build-essential libasound2-dev libpulse-dev libpulse0
 
