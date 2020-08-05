@@ -1,7 +1,7 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
 WORKDIR /usr/src
 
-ENV PULSE_SERVER=tcp:audio:4317
+ENV PULSE_SERVER=tcp:localhost:4317
 
 RUN install_packages gmediarender gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-pulseaudio
 
