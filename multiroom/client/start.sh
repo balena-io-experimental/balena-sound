@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
+set -e
+
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
+SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/master")
+
+# MULTI_ROOM_LATENCY: compensate for speaker hardware sync issues
+LATENCY=${MULTI_ROOM_LATENCY:+"--latency $MULTI_ROOM_LATENCY"}
+
+echo "Starting snapclient..."
+echo "Mode: $MODE"
+echo "Target snapcast server: $SNAPSERVER"
 
 # Start snapclient if multi room is enabled
-# if [[ -z $DISABLE_MULTI_ROOM ]]; then
-  # Wait for fleet-supervisor to start up
-  # We need this because fleet-supervisor depends on resin_supervisor, which has no support for depends_on
-  while ! curl -s "http://sound-supervisor:3000"; do sleep 1; done
-
-  # Add latency if defined to compensate for speaker hardware sync issues
-  if [[ -n $DEVICE_LATENCY ]]; then
-    LATENCY="--latency $DEVICE_LATENCY"
-  fi
-
-  # Start snapclient
-  SNAPCAST_SERVER=$(curl --silent http://sound-supervisor:3000)
-  echo -e "Starting snapclient...\nTarget snapcast server: $SNAPCAST_SERVER"
-  /usr/bin/snapclient -h $SNAPCAST_SERVER $LATENCY
-# else
-#   echo "Multi-room audio is disabled, not starting snapclient."
-#   exit 0
-# fi
+if [[ $MODE == "MULTI_ROOM" || $MODE == "MULTI_ROOM_CLIENT" ]]; then
+  /usr/bin/snapclient --host $SNAPSERVER $LATENCY
+else
+  echo "Multi-room client disabled. Exiting..."
+  exit 0
+fi

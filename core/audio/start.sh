@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+CONFIG_TEMPLATE=/usr/src/balena-sound.pa.template
+CONFIG_FILE=/etc/pulse/balena-sound.pa
+SINK_FILE=/run/pulse/pulseaudio.sink
+
 function set_input_sink() {
   local MODE="$1"
 
@@ -16,14 +20,14 @@ function set_input_sink() {
       ;;
 
     ${options["MULTI_ROOM"]} | *)
-      sed -i "s/%INPUT_SINK%/sink='snapcast'/" "$CONFIG_FILE"
+      sed -i "s/%INPUT_SINK%/sink=\"snapcast\"/" "$CONFIG_FILE"
       ;;
   esac
 }
 
 function set_output_sink() {
-  local OUTPUT="${2:+sink='$2'}"
-  sed -i "s/%OUTPUT_SINK%/$OUTPUT/" "$CONFIG_FILE"
+  local OUTPUT="${1:-0}"
+  sed -i "s/%OUTPUT_SINK%/sink=\"$OUTPUT\"/" "$CONFIG_FILE"
 }
 
 function reset_sound_config() {
@@ -33,19 +37,18 @@ function reset_sound_config() {
   cp "$CONFIG_TEMPLATE" "$CONFIG_FILE"
 }
 
-# TODO: balenaSound core environment variables - probably getting them from sound-supervisor later on
-CONFIG_TEMPLATE=/usr/src/balena-sound.pa.template
-CONFIG_FILE=/etc/pulse/balena-sound.pa
-MODE="${SOUND_MODE:-MULTI_ROOM}"
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
 OUTPUT=""
 
-if [[ -f /run/pulse/init-sink.pulse ]]; then
-  OUTPUT=$(cat /run/pulse/init-sink.pulse)
+if [[ -f "$SINK_FILE" ]]; then
+  OUTPUT=$(cat "$SINK_FILE")
 fi
 
 echo "- Mode: $MODE"
-echo "- Init sink: $OUTPUT"
+echo "- Default sink: $OUTPUT"
 
+# Audio routing: route intermediate balena-sound input/output sinks
 reset_sound_config
 set_input_sink "$MODE"
 set_output_sink "$OUTPUT"

@@ -21,6 +21,7 @@ services:
   sound-supervisor:
     build: ./core/sound-supervisor
     restart: on-failure
+    network_mode: host
     ports:
       - 3000:3000
     labels:
@@ -59,15 +60,16 @@ services:
   #   labels:
   #     io.balena.features.dbus: 1
 
-  spotify:
-    build: ./plugins/spotify
-    privileged: true
-    volumes:
-      - spotifycache:/var/cache/raspotify
+  # spotify:
+  #   build: ./plugins/spotify
+  #   privileged: true
+  #   network_mode: host
+  #   volumes:
+  #     - spotifycache:/var/cache/raspotify
 
-  upnp:
-    build: ./plugins/upnp
-    restart: on-failure 
-    network_mode: host 
-    ports:
-      - 49494:49494
+  # upnp:
+  #   build: ./plugins/upnp
+  #   restart: on-failure 
+  #   network_mode: host 
+  #   ports:
+  #     - 49494:49494

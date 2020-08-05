@@ -1,10 +1,14 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node
+FROM balenalib/%%BALENA_MACHINE_NAME%%-node:12
+
 WORKDIR /usr/src
 
-COPY . .
-RUN JOBS=MAX npm install --only=production
+COPY package*.json ./
+RUN npm install
 
-COPY start.sh /usr/src/
-RUN chmod +x /usr/src/start.sh
+#dev-cmd-live=npm run livepush
 
-CMD [ "/bin/bash", "/usr/src/start.sh" ]
+COPY ./src src
+COPY tsconfig.json .
+RUN npm run build
+
+CMD [ "node", "/usr/src/build/index.js" ]
