@@ -3,7 +3,7 @@ set -e
 
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
-SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/master")
+SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master")
 
 # MULTI_ROOM_LATENCY: compensate for speaker hardware sync issues
 LATENCY=${MULTI_ROOM_LATENCY:+"--latency $MULTI_ROOM_LATENCY"}

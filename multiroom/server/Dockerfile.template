@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:edge
 
 WORKDIR /usr/src
 

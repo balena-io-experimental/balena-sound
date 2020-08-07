@@ -1,6 +1,7 @@
 version: '2'
 
 volumes:
+  pulse:
   spotifycache:
   snapcast:
 
@@ -16,6 +17,7 @@ services:
       - 4317:4317
     volumes:
       - snapcast:/var/cache/snapcast
+      - pulse:/run/pulse
 
   sound-supervisor:
     build: ./core/sound-supervisor
@@ -25,6 +27,8 @@ services:
       - 3000:3000
     labels:
       io.balena.features.supervisor-api: 1
+    volumes:
+      - pulse:/run/pulse
 
   # Multi-room feature
   multiroom-server:
