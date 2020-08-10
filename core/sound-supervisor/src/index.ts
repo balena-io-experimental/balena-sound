@@ -7,8 +7,8 @@ import { SoundModes } from './types'
 
 // balenaSound core
 const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE)
-const soundAPI: SoundAPI = new SoundAPI(config)
 const audioBlock: BalenaAudio = new BalenaAudio('tcp:localhost:4317', '/run/pulse/pulseaudio.cookie')
+const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
 
 // Fleet communication
 const fleetPublisher: cote.Publisher = new cote.Publisher({ name: 'balenaSound publisher' })
@@ -17,7 +17,7 @@ const fleetSubscriber: cote.Subscriber = new cote.Subscriber({ name: 'balenaSoun
 init()
 async function init() {
   await soundAPI.listen(3000)
-  await audioBlock.listen()
+  console.log(await audioBlock.listen())
 
   // Allow cote to establish connections before sending fleet-sync
   setTimeout(() => {
