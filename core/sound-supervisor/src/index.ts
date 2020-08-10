@@ -28,22 +28,16 @@ async function init() {
 // Event: "play"
 // On audio playback, set this server as the multiroom-master
 audioBlock.on('play', () => {
-  console.log('play');
-  
   if (config.mode === SoundModes.MULTI_ROOM) {
     console.log(`Playback started, announcing ${config.device.ip} as multi-room master!`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.device.ip })
   }
 })
 
-audioBlock.on('stop', () => {
-  console.log('stop');
-})
-
 // Event: "fleet-update"
 // If the master server changed, reset multiroom-client service
 fleetSubscriber.on('fleet-update', async (data: any) => {
-  if (config.multiroom.master !== data.master) {
+  if (config.mode === SoundModes.MULTI_ROOM && config.multiroom.master !== data.master) {
     console.log(`Multi-room master has changed to ${data.master}, restarting snapcast-client...`)
     await restartBalenaService('multiroom-client')
     config.multiroom.master = data.master
@@ -54,7 +48,7 @@ fleetSubscriber.on('fleet-update', async (data: any) => {
 // Whenever a device joins the network, re-announce current master
 fleetSubscriber.on('fleet-sync', (data: any) => {
   let ip: string | null = getIPAddress()
-  if (config.multiroom.master === ip && data.origin !== ip) {
+  if (config.mode === SoundModes.MULTI_ROOM && config.multiroom.master === ip && data.origin !== ip) {
     console.log(`New multi-room device joined, syncing fleet...`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.multiroom.master })
   }
