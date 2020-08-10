@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-#Exit service if client-only mode is enabled 
-if [[ $CLIENT_ONLY_MULTI_ROOM == "1" ]]; then
+#Exit service if client-only mode is enabled
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
+if [[ $MODE == "MULTI_ROOM_CLIENT" ]]; then
   exit 0
 fi
 
@@ -20,4 +22,11 @@ if [[ ! -z "$SOUND_SPOTIFY_LOGIN" ]] && [[ ! -z "$SOUND_SPOTIFY_PASSWORD" ]]; th
 fi
 
 # Start librespot
-exec /usr/src/librespot/target/release/librespot --name "$DEVICE_NAME" --bitrate 320 --cache /var/cache/raspotify --enable-volume-normalisation --volume-ctrl linear --initial-volume=$SYSTEM_OUTPUT_VOLUME $SOUND_SPOTIFY_CREDENTIALS --backend pulseaudio
+exec "/usr/src/bin/librespot.$BALENA_DEVICE_ARCH" \
+  --name "$DEVICE_NAME" \
+  --bitrate 320 \
+  --cache /var/cache/raspotify \
+  --enable-volume-normalisation \
+  --linear-volume \
+  --initial-volume=$SYSTEM_OUTPUT_VOLUME $SOUND_SPOTIFY_CREDENTIALS \
+  --backend pulseaudio

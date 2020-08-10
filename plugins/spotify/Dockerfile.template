@@ -3,18 +3,8 @@ WORKDIR /usr/src
 
 ENV PULSE_SERVER=tcp:localhost:4317
 
-RUN install_packages git build-essential libasound2-dev libpulse-dev libpulse0
+RUN install_packages libpulse-dev
 
-# Install rust and cargo
-ENV PATH=/root/.cargo/bin:$PATH
-
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-# Build librespot
-RUN git clone https://github.com/librespot-org/librespot.git \
-	&& cd librespot \
-	&& cargo build --release --no-default-features --features pulseaudio-backend
-
-COPY start.sh /usr/src/
+COPY . .
 
 CMD [ "/bin/bash", "/usr/src/start.sh" ]
