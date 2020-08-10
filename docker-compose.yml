@@ -21,7 +21,6 @@ services:
 
   sound-supervisor:
     build: ./core/sound-supervisor
-    restart: on-failure
     network_mode: host
     ports:
       - 3000:3000

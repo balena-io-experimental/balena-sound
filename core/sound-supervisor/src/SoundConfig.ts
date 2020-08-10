@@ -7,22 +7,24 @@ interface MultiRoomConfig {
 }
 
 interface DeviceConfig {
-  ip: string
+  ip: string,
+  type: string
 }
 
 export default class SoundConfig {
-  public mode: string = 'MULTI_ROOM'
+  public mode: SoundModes = SoundModes.MULTI_ROOM
   public device: DeviceConfig = {
-    ip: getIPAddress() ?? 'multiroom-server'
+    ip: getIPAddress() ?? 'multiroom-server',
+    type: process.env.BALENA_DEVICE_TYPE || 'unknown'
   }
-  public multiroom: MultiRoomConfig = { master: this.device.ip, disabled: false}
+  public multiroom: MultiRoomConfig = { master: this.device.ip, disabled: false }
 
-  constructor(deviceType: string = '', mode: string = '') {
-    if (Object.values(MultiRoomBlacklist).includes(deviceType)) {
+  constructor(_mode: string | undefined) {
+    if (Object.values(MultiRoomBlacklist).includes(this.device.type)) {
       this.multiroom.disabled = true
     }
-    if (Object.values(SoundModes).includes(mode)) {
-      this.mode = SoundModes[mode]
+    if (_mode && Object.values(SoundModes).includes(<SoundModes>_mode)) {
+      this.mode = SoundModes[_mode]
     }
   }
 

@@ -12,6 +12,9 @@ export default class SoundAPI {
     // Healthcheck endpoint
     this.api.get('/ping', (_req, res) => res.send('OK'))
 
+    // All config
+    this.api.get('/config', (_req, res) => res.send(this.config))
+    
     // Expose all sound config variables
     for (const [key, value] of Object.entries(this.config)) {
       this.api.get(`/${key}`, (_req, res) => res.status(200).send(value))

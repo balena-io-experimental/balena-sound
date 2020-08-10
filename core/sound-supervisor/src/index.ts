@@ -6,7 +6,7 @@ import { restartBalenaService, getIPAddress } from './utils'
 import { SoundModes } from './types'
 
 // balenaSound core
-const config: SoundConfig = new SoundConfig(process.env.BALENA_DEVICE_TYPE, process.env.SOUND_MODE)
+const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE)
 const soundAPI: SoundAPI = new SoundAPI(config)
 const audioBlock: BalenaAudio = new BalenaAudio('tcp:localhost:4317', '/run/pulse/pulseaudio.cookie')
 
