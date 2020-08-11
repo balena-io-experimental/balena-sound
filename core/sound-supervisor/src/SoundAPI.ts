@@ -19,10 +19,10 @@ export default class SoundAPI {
 
     // Expose all sound config variables
     for (const [key, value] of Object.entries(this.config)) {
-      this.api.get(`/${key}`, (_req, res) => res.json(value))
+      this.api.get(`/${key}`, (_req, res) => res.send(value))
       if (typeof value === 'object') {
         for (const [subKey, subValue] of Object.entries(<any>value)) {
-          this.api.get(`/${key}/${subKey}`, (_req, res) => res.json(subValue))
+          this.api.get(`/${key}/${subKey}`, (_req, res) => res.send(subValue))
         }
       }
     }

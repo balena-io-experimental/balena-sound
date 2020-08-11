@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const pulseaudio_1 = require("@tmigone/pulseaudio");
+const ts_retry_promise_1 = require("ts-retry-promise");
 class BalenaAudio extends pulseaudio_1.default {
     constructor(address = 'tcp:audio:4317', cookie = '/run/pulse/pulseaudio.cookie', subToEvents = true, name = 'BalenaAudio') {
         super(address, cookie);
@@ -20,7 +21,7 @@ class BalenaAudio extends pulseaudio_1.default {
     }
     listen() {
         return __awaiter(this, void 0, void 0, function* () {
-            const protocol = yield this.connect();
+            const protocol = yield this.connectWithRetry();
             const client = yield this.setClientName(this.name);
             const server = yield this.getServerInfo();
             this.defaultSink = server.defaultSink;
@@ -42,6 +43,13 @@ class BalenaAudio extends pulseaudio_1.default {
                 }));
             }
             return { client, protocol, server };
+        });
+    }
+    connectWithRetry() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ts_retry_promise_1.retry(() => __awaiter(this, void 0, void 0, function* () {
+                return yield this.connect();
+            }), { retries: 5, delay: 5000 });
         });
     }
     setVolume(volume, sink) {

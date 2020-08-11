@@ -11,18 +11,22 @@ const audioBlock: BalenaAudio = new BalenaAudio('tcp:localhost:4317', '/run/puls
 const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
 
 // Fleet communication
-const fleetPublisher: cote.Publisher = new cote.Publisher({ name: 'balenaSound publisher' })
-const fleetSubscriber: cote.Subscriber = new cote.Subscriber({ name: 'balenaSound subscriber' })
+let discoveryOptions: any = {
+  log: false,
+  helloLogsEnabled: false,
+  statusLogsEnabled: false
+}
+const fleetPublisher: cote.Publisher = new cote.Publisher({ name: 'balenaSound publisher' }, discoveryOptions)
+const fleetSubscriber: cote.Subscriber = new cote.Subscriber({ name: 'balenaSound subscriber' }, discoveryOptions)
 
 init()
 async function init() {
   await soundAPI.listen(3000)
-  console.log(await audioBlock.listen())
+  await audioBlock.listen()
 
   // Allow cote to establish connections before sending fleet-sync
-  setTimeout(() => {
-    fleetPublisher.publish('fleet-sync', { type: 'sync', origin: getIPAddress() })
-  }, 3000)
+  fleetPublisher.publish('fleet-sync', { type: 'sync', origin: getIPAddress() })
+
 }
 
 // Event: "play"

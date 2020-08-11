@@ -56,7 +56,7 @@ SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
 
 # Audio routing: route intermediate balena-sound input/output sinks
-echo "Setting audio routing rules. Not that this can be changed after startup."
+echo "Setting audio routing rules. Note that this can be changed after startup."
 reset_sound_config
 set_input_sink "$MODE"
 set_output_sink

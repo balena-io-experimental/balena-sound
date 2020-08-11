@@ -46,13 +46,13 @@ services:
       - snapcast:/var/cache/snapcast
 
   # Plugins
-  bluetooth:
-    build: ./plugins/bluetooth
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-    labels:
-      io.balena.features.dbus: 1
+  # bluetooth:
+  #   build: ./plugins/bluetooth
+  #   network_mode: host
+  #   cap_add:
+  #     - NET_ADMIN
+  #   labels:
+  #     io.balena.features.dbus: 1
 
   # airplay:
   #   build: ./plugins/airplay
