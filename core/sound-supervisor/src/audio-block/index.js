@@ -12,10 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pulseaudio_1 = require("@tmigone/pulseaudio");
 const ts_retry_promise_1 = require("ts-retry-promise");
 class BalenaAudio extends pulseaudio_1.default {
-    constructor(address = 'tcp:audio:4317', cookie = '/run/pulse/pulseaudio.cookie', subToEvents = true, name = 'BalenaAudio') {
-        super(address, cookie);
+    constructor(address = 'tcp:audio:4317', subToEvents = true, name = 'BalenaAudio') {
+        super(address);
         this.address = address;
-        this.cookie = cookie;
         this.subToEvents = subToEvents;
         this.name = name;
     }
@@ -49,7 +48,7 @@ class BalenaAudio extends pulseaudio_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             return yield ts_retry_promise_1.retry(() => __awaiter(this, void 0, void 0, function* () {
                 return yield this.connect();
-            }), { retries: 5, delay: 5000 });
+            }), { retries: 5, delay: 5000, logger: (msg) => { console.log(msg); } });
         });
     }
     setVolume(volume, sink) {

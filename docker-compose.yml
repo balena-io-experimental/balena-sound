@@ -1,7 +1,6 @@
 version: '2'
 
 volumes:
-  pulse:
   spotifycache:
   snapcast:
 
@@ -17,7 +16,6 @@ services:
       - 4317:4317
     volumes:
       - snapcast:/var/cache/snapcast
-      - pulse:/run/pulse
 
   sound-supervisor:
     build: ./core/sound-supervisor
@@ -26,13 +24,10 @@ services:
       - 3000:3000
     labels:
       io.balena.features.supervisor-api: 1
-    volumes:
-      - pulse:/run/pulse
 
   # Multi-room feature
   multiroom-server:
     build: ./multiroom/server
-    restart: on-failure
     ports:
       - 1704:1704
       - 1705:1705
@@ -41,7 +36,6 @@ services:
 
   multiroom-client:
     build: ./multiroom/client
-    restart: on-failure
     volumes:
       - snapcast:/var/cache/snapcast
 
@@ -56,7 +50,6 @@ services:
 
   # airplay:
   #   build: ./plugins/airplay
-  #   restart: on-failure
   #   network_mode: host
   #   privileged: true
   #   labels:
@@ -71,7 +64,6 @@ services:
 
   upnp:
     build: ./plugins/upnp
-    restart: on-failure
     network_mode: host
     ports:
       - 49494:49494
