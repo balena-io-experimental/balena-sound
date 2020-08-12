@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-#Exit service if client-only mode is enabled
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
-if [[ $MODE == "MULTI_ROOM_CLIENT" ]]; then
+if [[ -n "$SOUND_DISABLE_AIRPLAY" ]]; then
+  echo "Airplay is disabled, exiting..."
   exit 0
 fi
 

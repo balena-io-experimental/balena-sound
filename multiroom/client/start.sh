@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 set -e
 
+# Get mode and snapserver from sound supervisor. 
+# mode: default to MULTI_ROOM
+# snapserver: default to multiroom-server (local)
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode")
-SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master")
+MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
+MODE="${MODE:-MULTI_ROOM}"
+SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
+SNAPSERVER="${SNAPSERVER:-multiroom-server}"
 
-# MULTI_ROOM_LATENCY: compensate for speaker hardware sync issues
-LATENCY=${MULTI_ROOM_LATENCY:+"--latency $MULTI_ROOM_LATENCY"}
+# SOUND_MULTIROOM_LATENCY: compensate for speaker hardware sync issues
+LATENCY=${SOUND_MULTIROOM_LATENCY:+"--latency $SOUND_MULTIROOM_LATENCY"}
 
 echo "Starting multi-room client..."
 echo "Mode: $MODE"
 echo "Target snapcast server: $SNAPSERVER"
 
-# Start snapclient if multi room is enabled
+# Start snapclient
 if [[ "$MODE" == "MULTI_ROOM" || "$MODE" == "MULTI_ROOM_CLIENT" ]]; then
   /usr/bin/snapclient --host $SNAPSERVER $LATENCY
 else
