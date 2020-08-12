@@ -7,10 +7,10 @@ if [[ $MODE == "MULTI_ROOM_CLIENT" ]]; then
   exit 0
 fi
 
-if [[ -z "$DEVICE_NAME" ]]; then
-  DEVICE_NAME=$(printf "balenaSound UPnP %s" $(hostname | cut -c -4))
+if [[ -z "$SOUND_DEVICE_NAME" ]]; then
+  SOUND_DEVICE_NAME=$(printf "balenaSound UPnP %s" $(hostname | cut -c -4))
 fi
 
 exec /usr/bin/gmediarender \
-  --friendly-name "$DEVICE_NAME" \
+  --friendly-name "$SOUND_DEVICE_NAME" \
   --port=49494
