@@ -25,19 +25,15 @@ services:
     labels:
       io.balena.features.supervisor-api: 1
 
-  # Multi-room feature
   multiroom-server:
-    build: ./multiroom/server
+    build: ./core/multiroom/server
     ports:
       - 1704:1704
-      - 1705:1705
     volumes:
       - snapcast:/var/cache/snapcast
 
   multiroom-client:
-    build: ./multiroom/client
-    volumes:
-      - snapcast:/var/cache/snapcast
+    build: ./core/multiroom/client
 
   # Plugins
   # bluetooth:
