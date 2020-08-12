@@ -27,6 +27,7 @@ services:
 
   multiroom-server:
     build: ./core/multiroom/server
+    restart: on-failure
     ports:
       - 1704:1704
     volumes:
@@ -34,6 +35,7 @@ services:
 
   multiroom-client:
     build: ./core/multiroom/client
+    restart: on-failure
 
   # Plugins
   # bluetooth:

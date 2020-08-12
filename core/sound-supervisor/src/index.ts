@@ -41,7 +41,7 @@ fleetSubscriber.on('fleet-update', async (data: any) => {
   if (config.mode === SoundModes.MULTI_ROOM && config.multiroom.master !== data.master) {
     console.log(`Multi-room master has changed to ${data.master}, restarting snapcast-client...`)
     await restartBalenaService('multiroom-client')
-    config.multiroom.master = data.master
+    config.setMultiRoomMaster(data.master)
   }
 })
 
