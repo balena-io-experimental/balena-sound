@@ -39,7 +39,7 @@ export default class SoundAPI {
   public async listen(port: number): Promise<void> {
     return new Promise((resolve) => {
       this.api.listen(port, () => {
-        console.log(`Sound supervisor listening on http://localhost:${port}`)
+        console.log(`Sound supervisor listening on port ${port}`)
         return resolve()
       })
     })

@@ -14,7 +14,7 @@ interface DeviceConfig {
 export default class SoundConfig {
   public mode: SoundModes = SoundModes.MULTI_ROOM
   public device: DeviceConfig = {
-    ip: getIPAddress() ?? 'multiroom-server',
+    ip: getIPAddress() ?? 'localhost',
     type: process.env.BALENA_DEVICE_TYPE ?? 'unknown'
   }
   public multiroom: MultiRoomConfig = { 

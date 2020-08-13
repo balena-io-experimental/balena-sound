@@ -52,11 +52,14 @@ function reset_sound_config() {
   cp "$CONFIG_TEMPLATE" "$CONFIG_FILE"
 }
 
+# Wait for sound supervisor to start
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
+
 # Get mode from sound supervisor. 
 # mode: default to MULTI_ROOM
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
-MODE="${MODE:-MULTI_ROOM}"
 
 # Audio routing: route intermediate balena-sound input/output sinks
 echo "Setting audio routing rules. Note that this can be changed after startup."

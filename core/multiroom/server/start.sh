@@ -1,11 +1,14 @@
 #!/bin/bash
 set -e
 
+# Wait for sound supervisor to start
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
+
 # Get mode from sound supervisor. 
 # mode: default to MULTI_ROOM
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
-MODE="${MODE:-MULTI_ROOM}"
 
 # Multi-room server can't run properly in some platforms because of resource constraints, so we disable them
 declare -A blacklisted=(
