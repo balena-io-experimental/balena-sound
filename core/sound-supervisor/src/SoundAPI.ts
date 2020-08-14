@@ -30,7 +30,7 @@ export default class SoundAPI {
     }
 
     // Change config
-    this.api.post('/mode', async (req, res) => {
+    this.api.post('/mode', (req, res) => {
       let oldMode: SoundModes = this.config.mode
       let newMode: SoundModes = this.config.setMode(req.body.mode)
       let updated: boolean = oldMode !== newMode
@@ -38,16 +38,16 @@ export default class SoundAPI {
       if (updated) {
         switch (newMode) {
           case SoundModes.MULTI_ROOM:
-            await startBalenaService('multiroom-server')
-            await startBalenaService('multiroom-client')
+            startBalenaService('multiroom-server')
+            startBalenaService('multiroom-client')
             break
           case SoundModes.MULTI_ROOM_CLIENT:
-            await stopBalenaService('multiroom-server')
-            await startBalenaService('multiroom-client')
+            stopBalenaService('multiroom-server')
+            startBalenaService('multiroom-client')
             break
           case SoundModes.STANDALONE:
-            await stopBalenaService('multiroom-server')
-            await stopBalenaService('multiroom-client')
+            stopBalenaService('multiroom-server')
+            stopBalenaService('multiroom-client')
             break
           default:
             break

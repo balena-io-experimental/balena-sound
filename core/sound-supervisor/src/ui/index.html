@@ -46,26 +46,47 @@
 
   <h1>balenaSound</h1>
   <p>Congratulations, you found the secret UI!</p>
+  <p>Stuff here is experimental, likely to change and/or be removed.</p>
+  <h2>Mode selection</h2>
+  <p>Choose the desired mode:</p>
+  <select name="mode" id="mode">
+    <option value="MULTI_ROOM">Multiroom (default)</option>
+    <option value="MULTI_ROOM_CLIENT">Multiroom client only</option>
+    <option value="STANDALONE">Standalone</option>
+  </select>
+  <h2>Volume Control</h2>
   <p>Drag the slider to change device volume</p>
 
   <div class="slidecontainer">
-    <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
     <p>Current volume: <span id="demo"></span></p>
+    <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
   </div>
 
   <script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+    // Volume stuff
+    var slider = document.getElementById("myRange")
+    var output = document.getElementById("demo")
+    var modeSelect = document.getElementById("mode")
+    output.innerHTML = slider.value
 
     slider.oninput = async function () {
       output.innerHTML = this.value
-      let response = await fetch('/audio/volume', {
+      await fetch('/audio/volume', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ volume: this.value })
+      })
+    }
+
+    modeSelect.onchange = async function () {
+      await fetch('/mode', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ mode: modeSelect.value })
       })
     }
 
@@ -76,6 +97,12 @@
         let volume = await response.json()
         output.innerHTML = volume
         slider.value = volume
+      }
+
+      response = await fetch('/mode')
+      if (response.ok) {
+        let modeValue = await response.text()
+        modeSelect.value = modeValue
       }
     }
   </script>
