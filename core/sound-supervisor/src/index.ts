@@ -6,7 +6,7 @@ import { restartBalenaService } from './utils'
 import { SoundModes } from './types'
 
 // balenaSound core
-const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE)
+const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE ?? 'MULTI_ROOM')
 const audioBlock: BalenaAudio = new BalenaAudio(`tcp:${config.device.ip}:4317`)
 const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
 

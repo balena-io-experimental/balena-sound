@@ -1,8 +1,10 @@
-import * as path  from 'path'
+import * as path from 'path'
 import * as express from 'express'
 import { Application } from 'express'
 import SoundConfig from './SoundConfig'
 import BalenaAudio from './audio-block'
+import { SoundModes } from './types'
+import { startBalenaService, stopBalenaService } from './utils'
 
 export default class SoundAPI {
   private api: Application
@@ -10,7 +12,7 @@ export default class SoundAPI {
   constructor(public config: SoundConfig, public audioBlock: BalenaAudio) {
     this.api = express()
     this.api.use(express.json())
-    
+
     // Healthcheck endpoint
     this.api.get('/ping', (_req, res) => res.send('OK'))
 
@@ -26,6 +28,33 @@ export default class SoundAPI {
         }
       }
     }
+
+    // Change config
+    this.api.post('/mode', async (req, res) => {
+      let oldMode: SoundModes = this.config.mode
+      let newMode: SoundModes = this.config.setMode(req.body.mode)
+      let updated: boolean = oldMode !== newMode
+
+      if (updated) {
+        switch (newMode) {
+          case SoundModes.MULTI_ROOM:
+            await startBalenaService('multiroom-server')
+            await startBalenaService('multiroom-client')
+            break
+          case SoundModes.MULTI_ROOM_CLIENT:
+            await stopBalenaService('multiroom-server')
+            await startBalenaService('multiroom-client')
+            break
+          case SoundModes.STANDALONE:
+            await stopBalenaService('multiroom-server')
+            await stopBalenaService('multiroom-client')
+            break
+          default:
+            break
+        }
+      }
+      res.json({ mode: newMode, updated })
+    })
 
     // Audio block: use only for debugging, not ready for end user
     this.api.use('/secret', express.static(path.join(__dirname, 'ui')))

@@ -17,3 +17,13 @@ export function restartBalenaService(service: string): Promise<AxiosResponse<any
   let url: string = `${process.env.BALENA_SUPERVISOR_ADDRESS}/v2/applications/${process.env.BALENA_APP_ID}/restart-service?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`
   return axios.post(url, { serviceName: service })
 }
+
+export function startBalenaService(service: string): Promise<AxiosResponse<any>> {
+  let url: string = `${process.env.BALENA_SUPERVISOR_ADDRESS}/v2/applications/${process.env.BALENA_APP_ID}/start-service?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`
+  return axios.post(url, { serviceName: service })
+}
+
+export function stopBalenaService(service: string): Promise<AxiosResponse<any>> {
+  let url: string = `${process.env.BALENA_SUPERVISOR_ADDRESS}/v2/applications/${process.env.BALENA_APP_ID}/stop-service?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`
+  return axios.post(url, { serviceName: service })
+}

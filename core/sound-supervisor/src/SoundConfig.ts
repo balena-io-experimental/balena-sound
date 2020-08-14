@@ -22,16 +22,24 @@ export default class SoundConfig {
     forced: process.env.SOUND_MULTIROOM_MASTER ? true : false
   }
 
-  constructor(_mode: string | undefined) {
-    if (_mode && Object.values(SoundModes).includes(<SoundModes>_mode)) {
-      this.mode = SoundModes[_mode]
-    }
+  constructor(mode: string) {
+    this.setMode(<SoundModes>mode)
   }
 
   setMultiRoomMaster (master: string) {
     if (!this.multiroom.forced) {
       this.multiroom.master = master
     }
+  }
+
+  setMode (mode: SoundModes): SoundModes {
+    if (mode && Object.values(SoundModes).includes(mode)) {
+      this.mode = SoundModes[mode]
+    } else {
+      console.log(`Error setting mode, invalid mode: ${mode}`)
+    }
+
+    return this.mode
   }
 
 }
