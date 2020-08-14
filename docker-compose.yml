@@ -38,30 +38,30 @@ services:
     restart: on-failure
 
   # Plugins
-  # bluetooth:
-  #   build: ./plugins/bluetooth
-  #   network_mode: host
-  #   cap_add:
-  #     - NET_ADMIN
-  #   labels:
-  #     io.balena.features.dbus: 1
+  bluetooth:
+    build: ./plugins/bluetooth
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    labels:
+      io.balena.features.dbus: 1
 
-  # airplay:
-  #   build: ./plugins/airplay
-  #   network_mode: host
-  #   privileged: true
-  #   labels:
-  #     io.balena.features.dbus: 1
+  airplay:
+    build: ./plugins/airplay
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: 1
 
-  # spotify:
-  #   build: ./plugins/spotify
-  #   privileged: true
-  #   network_mode: host
-  #   volumes:
-  #     - spotifycache:/var/cache/raspotify
+  spotify:
+    build: ./plugins/spotify
+    privileged: true
+    network_mode: host
+    volumes:
+      - spotifycache:/var/cache/raspotify
 
-  # upnp:
-  #   build: ./plugins/upnp
-  #   network_mode: host
-  #   ports:
-  #     - 49494:49494
+  upnp:
+    build: ./plugins/upnp
+    network_mode: host
+    ports:
+      - 49494:49494
