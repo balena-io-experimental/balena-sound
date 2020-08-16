@@ -19,8 +19,8 @@ ctl.!default {
   card ${SOUNDCARD_SELECT}
 }
 EOF
-  fi
   echo "Selected soundcard ${SOUNDCARD_SELECT}"
+  fi
 
   # Add latency if defined to compensate for speaker hardware sync issues
   if [[ -n $DEVICE_LATENCY ]]; then
