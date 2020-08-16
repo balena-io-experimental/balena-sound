@@ -97,6 +97,7 @@ balenaSound uses many technologies to provide audio streaming capabilities. All 
 There are however workarounds that you might want to take if you are willing to sacrifice some features:
 
 - Airplay streaming has a built-in two-second delay. Using a different audio source will obviously yield better results. 
+- For bluetooth streaming, you can reduce the delay at the expense of stability. You can do so by editing `bluetooth-audio/start.sh` file, you'll need to edit the `--pcm-buffer-time` value in the last line that reads: `exec /usr/bin/bluealsa-aplay --pcm-buffer-time=1000000 00:00:00:00:00:00`. You can try decresing the value and see what works best for you.
 - If you are *not* using the multi-room feature you can disable it; multi-room adds the most of the perceived delay as it needs it to sync audio across devices. Check our [docs](../customizations/#disable-multi-room) to find out how to disable it. 
 
 
@@ -116,3 +117,19 @@ HDMI audio output is currently not working as intended on Raspberry Pi 4. See th
 ### Workaround
 You can force HDMI audio to work by setting the device environment variable `BALENA_HOST_CONFIG_hdmi_mode` to `2`. Thanks to [@zchbndcc9](https://github.com/zchbndcc9) for finding this workaround.
 
+## No audio when using balenaOS 64 bit on Raspberry Pi 3's
+### Description
+No audio coming out from either the audio jack or HDMI when using balenaOS 64 bit on a Raspberry Pi 3.
+
+For details see:
+- https://github.com/balenalabs/balena-sound/issues/82
+- https://github.com/balena-io/balena-supervisor/issues/1245
+
+### Workaround
+Remove the `vc4-kms-v3d` dtoverlay setting from the `Device Configuration` section of your device.
+
+## Become a balena poweruser
+
+One way to improve how you use and contribute to balenaSound is to take our [masterclasses](https://www.balena.io/docs/learn/more/masterclasses/overview/). Each lesson is a self-contained, deep walkthrough on core skills to be successful with your next edge project.
+
+Check them out at our [docs](https://www.balena.io/docs/learn/more/masterclasses/overview/). Also, reach out to us on the [Forums](https://forums.balena.io/) if you need help.

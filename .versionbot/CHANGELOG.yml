@@ -1,4 +1,219 @@
 - commits:
+    - subject: Fix snapcast bad signature error in rpi0 devices
+      hash: 3a6000498db555adc1e6c174674ffe503ca70fbd
+      body: ''
+      footer:
+        Connects-to: '#255'
+        connects-to: '#255'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.9
+  date: 2020-07-23T15:59:49.647Z
+- commits:
+    - subject: 'multiroom: use alpine based containers'
+      hash: a81f6f7d75d0d37b14927ea7b23bc29e80231d7c
+      body: |
+        - Reduce container size to 81MB (~60% smaller)
+        - Use edge repository for latest package versions
+        - Remove aarch64 dockerfiles, not needed anymore
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.8
+  date: 2020-07-22T16:21:19.622Z
+- commits:
+    - subject: Adding clarity to DAC section
+      hash: 9c3797940695bfa2bee2e66b2f453e195d5e7977
+      body: >
+        Specifying that DAC instructions need to be device-specific to device
+        using DAC and not fleet wide.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.7
+  date: 2020-07-21T23:50:45.118Z
+- commits:
+    - subject: Adding clarification between config vars and env vars for users
+      hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
+      body: >
+        Clarifying and citing resources for env var usage in balenaSound so
+        users
+
+        don't try to add env vars to config vars.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.6
+  date: 2020-07-21T18:25:21.874Z
+- commits:
+    - subject: Fix rpi1/rpi2 bug with multiroom server
+      hash: b9356e7af85e4ee1c7ecbdf97eaa60da9b122123
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.5
+  date: 2020-07-21T17:51:29.530Z
+- commits:
+    - subject: 'multi-room: disable feature for raspberrypi2 fam'
+      hash: 6eebb0b756588d5c260d28ade9851c85e6c219e3
+      body: ''
+      footer:
+        Connects-to: '#220'
+        connects-to: '#220'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 2.4.4
+  date: 2020-07-17T20:07:26.332Z
+- commits:
+    - subject: Adding masterclass reference to balenaSound troubleshooting
+      hash: db5c34fffd837b2cf5ef600e2f1b3e7832e01769
+      body: >
+        Added section to /troubleshooting to reference and recommend taking
+        masterclasses.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Andrew Nhem <andrewn@balena.io>
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+      author: andrewnhem
+      nested: []
+  version: 2.4.3
+  date: 2020-07-13T17:54:02.882Z
+- commits:
+    - subject: 'docs: add troubleshooting case'
+      hash: d56f2a8c37cb6e1f707329c34c2e1035c975e351
+      body: |
+        No audio on Pi3 with balenaOS 64bits.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+    - subject: 'docs: Update device support citations so they don''t look as links'
+      hash: b6ae9c7792b733dfa5eec9f0fdb4500bd34e902f
+      body: ''
+      footer:
+        Connects-to: '#209'
+        connects-to: '#209'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.2
+  date: 2020-06-23T18:23:06.274Z
+- commits:
+    - subject: 'snapcast-client: Fix bug where snapcast client is not starting'
+      hash: 43d58e3194b8bab560aea81bb3cb3fb18e43faba
+      body: ''
+      footer:
+        Connects-to: '#211'
+        connects-to: '#211'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.1
+  date: 2020-06-08T13:12:16.325Z
+- commits:
+    - subject: 'multi-room: add latency optional parameter to snapclient'
+      hash: 0f4dddb0fd480ed47385c7552dc852df948def29
+      body: |
+        Used to compensate for different hardware processing times in speakers.
+        Handled via $DEVICE_LATENCY
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.4.0
+  date: 2020-06-04T15:21:06.387Z
+- commits:
+    - subject: Add UPnP
+      hash: 55983b0e844aead4bc09efa4dc758ae1c821921c
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Co-authored-by: Tomás Migone <tomas@balena.io>
+        co-authored-by: Tomás Migone <tomas@balena.io>
+      author: Alex
+  version: 2.3.0
+  date: 2020-06-03T11:11:51.987Z
+- commits:
+    - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
+      hash: b584534e0ae08de098324a080c50d179d2999390
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+  version: 2.2.8
+  date: 2020-05-27T15:24:04.742Z
+- commits:
+    - subject: Contribution link patch
+      hash: 138fbfbcfff085cf6aa5e6af9a13912dcb51f94e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.7
+  date: 2020-05-27T12:57:26.607Z
+- commits:
+    - subject: Minor documentation updates
+      hash: f02f032d9d8c603f2fcc9376b15a3e325b0974e0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Phil Wilson <phil@balena.io>
+        signed-off-by: Phil Wilson <phil@balena.io>
+      author: Phil Wilson
+  version: 2.2.6
+  date: 2020-05-27T12:40:07.485Z
+- commits:
+    - subject: Add config.yml
+      hash: b65bc482c3b36fcf35f642ff728e168a18317b3a
+      body: |
+        People should follow our templates.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Alex
+  version: 2.2.5
+  date: 2020-05-19T15:44:24.938Z
+- commits:
     - subject: Put back one-click deploy button on main README file.
       hash: d4f5ff1e038b670505d9d969cad7890fd7c74433
       body: ''
