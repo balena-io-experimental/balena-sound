@@ -33,6 +33,8 @@ export default class SoundConfig {
   }
 
   setMode (mode: SoundModes): SoundModes {
+    console.log();
+    
     if (mode && Object.values(SoundModes).includes(mode)) {
       this.mode = SoundModes[mode]
     } else {

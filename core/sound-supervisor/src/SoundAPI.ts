@@ -30,6 +30,10 @@ export default class SoundAPI {
     }
 
     // Change config
+    // This might not always work because it currently relies on hardcoded sink|sinkInput indexes
+    // sinkInput 0 usually refers to the "balena-sound.input to snapcast|balenaSound.output" loopback
+    // sink 2 usually refers to "balenaSound.output" sink
+    // sink 3 usually refers to "snapcast" sink
     this.api.post('/mode', (req, res) => {
       let oldMode: SoundModes = this.config.mode
       let newMode: SoundModes = this.config.setMode(req.body.mode)
@@ -40,6 +44,7 @@ export default class SoundAPI {
           case SoundModes.MULTI_ROOM:
             startBalenaService('multiroom-server')
             startBalenaService('multiroom-client')
+            this.audioBlock.moveSinkInput(0, 3)
             break
           case SoundModes.MULTI_ROOM_CLIENT:
             stopBalenaService('multiroom-server')
@@ -48,6 +53,7 @@ export default class SoundAPI {
           case SoundModes.STANDALONE:
             stopBalenaService('multiroom-server')
             stopBalenaService('multiroom-client')
+            this.audioBlock.moveSinkInput(0, 2)
             break
           default:
             break
@@ -58,7 +64,13 @@ export default class SoundAPI {
 
     // Audio block: use only for debugging, not ready for end user
     this.api.use('/secret', express.static(path.join(__dirname, 'ui')))
-    this.api.get('/audio', async (_req, res) => res.json(await this.audioBlock.getServerInfo()))
+    this.api.get('/audio', async (_req, res) => {
+      try {
+        res.json(await this.audioBlock.getServerInfo())
+      } catch (error) {
+        res.status(500).json({ error: 'Could not reach audioblock' })
+      }
+    })
     this.api.get('/audio/volume', async (_req, res) => res.json(await this.audioBlock.getVolume()))
     this.api.post('/audio/volume', async (req, res) => res.json(await this.audioBlock.setVolume(req.body.volume)))
     this.api.get('/audio/sinks', async (_req, res) => res.json(stringify(await this.audioBlock.getSinks())))
