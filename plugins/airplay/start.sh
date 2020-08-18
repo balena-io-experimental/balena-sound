@@ -13,10 +13,11 @@ fi
 # Wait for audioblock to start. This is a bit hacky, but necessary for the time being as
 # shairport-sync will fail silently if audioblock is not ready when it starts up
 # See: https://github.com/mikebrady/shairport-sync/issues/1054
+# Remove when above issue is addressed
 while [[ "$(curl --silent --head --output /dev/null --write-out '%{http_code}' --max-time 2000 'http://localhost:3000/audio')" != "200" ]]; do sleep 5; echo "Waiting for audioblock to start..."; done
 
 # Start AirPlay
 exec shairport-sync \
   --name "$SOUND_DEVICE_NAME" \
   --output pa \
-  echo "Shairport-sync started. Device is discoverable as \"%s\"\n" "$SOUND_DEVICE_NAME"
+  | echo "Shairport-sync started. Device is discoverable as $SOUND_DEVICE_NAME"

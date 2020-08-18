@@ -51,8 +51,19 @@ class BalenaAudio extends pulseaudio_1.default {
             }), { retries: 'INFINITELY', delay: 5000, backoff: 'LINEAR', logger: (msg) => { console.log(`Error connecting to audio block - ${msg}`); } });
         });
     }
+    getInfo() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!this.connected) {
+                throw new Error('Not connected to audio block.');
+            }
+            return yield this.getServerInfo();
+        });
+    }
     setVolume(volume, sink) {
         return __awaiter(this, void 0, void 0, function* () {
+            if (!this.connected) {
+                throw new Error('Not connected to audio block.');
+            }
             let sinkObject = yield this.getSink(sink !== null && sink !== void 0 ? sink : this.defaultSink);
             let level = Math.round(Math.max(0, Math.min(volume, 100)) / 100 * sinkObject.baseVolume);
             return yield this.setSinkVolume(sinkObject.index, level);
@@ -60,6 +71,9 @@ class BalenaAudio extends pulseaudio_1.default {
     }
     getVolume(sink) {
         return __awaiter(this, void 0, void 0, function* () {
+            if (!this.connected) {
+                throw new Error('Not connected to audio block.');
+            }
             let sinkObject = yield this.getSink(sink !== null && sink !== void 0 ? sink : this.defaultSink);
             return Math.round(sinkObject.channelVolumes.volumes[0] / sinkObject.baseVolume * 100);
         });

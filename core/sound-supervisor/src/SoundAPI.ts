@@ -5,6 +5,7 @@ import SoundConfig from './SoundConfig'
 import BalenaAudio from './audio-block'
 import { SoundModes } from './types'
 import { startBalenaService, stopBalenaService } from './utils'
+import * as asyncHandler from 'express-async-handler'
 
 export default class SoundAPI {
   private api: Application
@@ -21,10 +22,10 @@ export default class SoundAPI {
 
     // Expose all sound config variables
     for (const [key, value] of Object.entries(this.config)) {
-      this.api.get(`/${key}`, (_req, res) => res.send(value))
+      this.api.get(`/${key}`, (_req, res) => res.send(this.config[key]))
       if (typeof value === 'object') {
-        for (const [subKey, subValue] of Object.entries(<any>value)) {
-          this.api.get(`/${key}/${subKey}`, (_req, res) => res.send(subValue))
+        for (const [subKey] of Object.entries(<any>value)) {
+          this.api.get(`/${key}/${subKey}`, (_req, res) => res.send(this.config[key][subKey]))
         }
       }
     }
@@ -64,17 +65,13 @@ export default class SoundAPI {
 
     // Audio block: use only for debugging, not ready for end user
     this.api.use('/secret', express.static(path.join(__dirname, 'ui')))
-    this.api.get('/audio', async (_req, res) => {
-      try {
-        res.json(await this.audioBlock.getServerInfo())
-      } catch (error) {
-        res.status(500).json({ error: 'Could not reach audioblock' })
-      }
+    this.api.get('/audio', asyncHandler(async (_req, res) => res.json(await this.audioBlock.getInfo())))
+    this.api.get('/audio/volume', asyncHandler(async (_req, res) => res.json(await this.audioBlock.getVolume())))
+    this.api.post('/audio/volume', asyncHandler(async (req, res) => res.json(await this.audioBlock.setVolume(req.body.volume))))
+    this.api.get('/audio/sinks', asyncHandler(async (_req, res) => res.json(stringify(await this.audioBlock.getSinks()))))
+    this.api.use((err: Error, _req, res, _next) => {
+      res.status(500).json({ error: err.message })
     })
-    this.api.get('/audio/volume', async (_req, res) => res.json(await this.audioBlock.getVolume()))
-    this.api.post('/audio/volume', async (req, res) => res.json(await this.audioBlock.setVolume(req.body.volume)))
-    this.api.get('/audio/sinks', async (_req, res) => res.json(stringify(await this.audioBlock.getSinks())))
-
   }
 
   public async listen(port: number): Promise<void> {

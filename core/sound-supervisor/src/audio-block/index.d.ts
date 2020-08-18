@@ -12,6 +12,7 @@ export default class BalenaAudio extends PAClient {
     constructor(address?: string, subToEvents?: boolean, name?: string);
     listen(): Promise<BalenaAudioInfo>;
     connectWithRetry(): Promise<AuthInfo>;
+    getInfo(): Promise<ServerInfo>;
     setVolume(volume: number, sink?: string | number): Promise<import("@tmigone/pulseaudio").VolumeInfo>;
     getVolume(sink?: string | number): Promise<number>;
 }
