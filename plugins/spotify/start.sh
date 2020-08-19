@@ -20,12 +20,11 @@ if [[ ! -z "$SOUND_SPOTIFY_USERNAME" ]] && [[ ! -z "$SOUND_SPOTIFY_PASSWORD" ]];
 fi
 
 # Start librespot
-exec "/usr/src/bin/librespot.$BALENA_DEVICE_ARCH" \
+exec /usr/bin/librespot \
   --name "$SOUND_DEVICE_NAME" \
   --bitrate 320 \
   --cache /var/cache/raspotify \
   --enable-volume-normalisation \
   --linear-volume \
   --initial-volume=$SYSTEM_OUTPUT_VOLUME \
-  --backend pulseaudio \
   $SPOTIFY_CREDENTIALS

@@ -16,6 +16,8 @@ services:
       - 4317:4317
     volumes:
       - snapcast:/var/cache/snapcast
+    environment:
+      - SOUND_MODE=STANDALONE
 
   sound-supervisor:
     build: ./core/sound-supervisor
@@ -40,6 +42,7 @@ services:
   # Plugins
   bluetooth:
     build: ./plugins/bluetooth
+    restart: on-failure
     network_mode: host
     cap_add:
       - NET_ADMIN
