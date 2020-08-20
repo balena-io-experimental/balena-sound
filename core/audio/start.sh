@@ -33,9 +33,8 @@ function set_input_sink() {
 function set_output_sink() {
   local OUTPUT=""
 
-  # If a custom selection was made via AUDIO_OUTPUT env var
-  # audio block outputs the sink name to this file
-  # Otherwise, use sink #0 which is always the PulseAudio default
+  # Audio block outputs the default sink name to this file
+  # If file doesn't exist, default to sink #0. This shouldn't happen though
   local SINK_FILE=/run/pulse/pulseaudio.sink
   if [[ -f "$SINK_FILE" ]]; then
     OUTPUT=$(cat "$SINK_FILE")

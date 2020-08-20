@@ -48,7 +48,7 @@ class BalenaAudio extends pulseaudio_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             return yield ts_retry_promise_1.retry(() => __awaiter(this, void 0, void 0, function* () {
                 return yield this.connect();
-            }), { retries: 'INFINITELY', delay: 5000, backoff: 'LINEAR', logger: (msg) => { console.log(`Error connecting to audio block - ${msg}`); } });
+            }), { retries: 'INFINITELY', delay: 5000, backoff: 'LINEAR', timeout: 10 * 60 * 1000, logger: (msg) => { console.log(`Error connecting to audio block - ${msg}`); } });
         });
     }
     getInfo() {

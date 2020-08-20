@@ -28,8 +28,8 @@ async function init() {
 
 // Event: "play"
 // On audio playback, set this server as the multiroom-master
-audioBlock.on('play', () => {
-  if (config.mode === SoundModes.MULTI_ROOM) {
+audioBlock.on('play', (sink: any) => {
+  if (sink.name === 'balena-sound.input' && config.mode === SoundModes.MULTI_ROOM) {
     console.log(`Playback started, announcing ${config.device.ip} as multi-room master!`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.device.ip })
   }
