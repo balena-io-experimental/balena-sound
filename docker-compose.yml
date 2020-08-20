@@ -16,8 +16,6 @@ services:
       - 4317:4317
     volumes:
       - snapcast:/var/cache/snapcast
-    environment:
-      - SOUND_MODE=STANDALONE
 
   sound-supervisor:
     build: ./core/sound-supervisor
