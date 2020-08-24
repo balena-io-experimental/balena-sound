@@ -7,7 +7,7 @@ CONFIG_FILE=/etc/pulse/balena-sound.pa
 
 # Route "balena-sound.input" to the appropriate sink depending on selected mode
 # Either "snapcast" fifo sink or "balena-sound.output"
-function set_input_sink() {
+function route_input_sink() {
   local MODE="$1"
 
   declare -A options=(
@@ -29,8 +29,21 @@ function set_input_sink() {
   esac
 }
 
+# Route any existing source to the input router ("balena-sound.input")
+function route_input_source() {
+  local INPUT_DEVICE=$(arecord -l | awk '/card [0-9]:/ { print $3 }')
+
+  if [[ -n "$INPUT_DEVICE" ]]; then
+    echo "Found an input device, routing audio from '$INPUT_DEVICE' into balena-sound.input sink"
+    local INPUT_DEVICE_FULLNAME="alsa_input.$INPUT_DEVICE.analog-stereo"
+
+    echo -e "\nload-module module-loopback source='$INPUT_DEVICE_FULLNAME' sink='balena-sound.input'" >> "$CONFIG_FILE"
+  fi
+
+}
+
 # Route "balena-sound.output" to the appropriate audio hardware
-function set_output_sink() {
+function route_output_sink() {
   local OUTPUT=""
 
   # Audio block outputs the default sink name to this file
@@ -41,7 +54,7 @@ function set_output_sink() {
   fi
   OUTPUT="${OUTPUT:-0}"
   sed -i "s/%OUTPUT_SINK%/sink=\"$OUTPUT\"/" "$CONFIG_FILE"
-  echo "Routing 'balena-sound.output' to $OUTPUT."
+  echo "Routing 'balena-sound.output' to '$OUTPUT'."
 }
 
 function reset_sound_config() {
@@ -63,7 +76,8 @@ MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 # Audio routing: route intermediate balena-sound input/output sinks
 echo "Setting audio routing rules. Note that this can be changed after startup."
 reset_sound_config
-set_input_sink "$MODE"
-set_output_sink
+route_input_sink "$MODE"
+route_output_sink
+route_input_source
 
 exec pulseaudio --file /etc/pulse/balena-sound.pa
