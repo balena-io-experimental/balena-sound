@@ -3,9 +3,10 @@ import BalenaAudio from './audio-block'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
 import { restartBalenaService } from './utils'
+import { constants } from './constants'
 
 // balenaSound core
-const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE ?? 'MULTI_ROOM')
+const config: SoundConfig = new SoundConfig()
 const audioBlock: BalenaAudio = new BalenaAudio(`tcp:${config.device.ip}:4317`)
 const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
 
@@ -20,15 +21,16 @@ const fleetSubscriber: cote.Subscriber = new cote.Subscriber({ name: 'balenaSoun
 
 init()
 async function init() {
-  await soundAPI.listen(3000)
+  await soundAPI.listen(constants.port)
   await audioBlock.listen()
+  await audioBlock.setVolume(constants.volume)
 
   // For multi room, allow cote to establish connections before sending fleet-sync
   if (config.isMultiRoomEnabled()) {
     setTimeout(() => {
       console.log('Joining the fleet, requesting master info with fleet-sync...')
       fleetPublisher.publish('fleet-sync', { type: 'sync', origin: config.device.ip })
-    }, 3000)
+    }, constants.coteDelay)
   }
 }
 

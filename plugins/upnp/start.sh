@@ -5,10 +5,12 @@ if [[ -n "$SOUND_DISABLE_UPNP" ]]; then
   exit 0
 fi
 
-# Set the device broadcast name for UPnP
-if [[ -z "$SOUND_DEVICE_NAME" ]]; then
-  SOUND_DEVICE_NAME=$(printf "balenaSound UPnP %s" $(hostname | cut -c -4))
-fi
+# --- ENV VARS ---
+# SOUND_DEVICE_NAME: Set the device broadcast name for UPnP
+SOUND_DEVICE_NAME=${SOUND_DEVICE_NAME:-"balenaSound UPnP $(hostname | cut -c -4)"}
+
+echo "Starting UPnP plugin..."
+echo "Device name: $SOUND_DEVICE_NAME"
 
 exec /usr/bin/gmediarender \
   --friendly-name "$SOUND_DEVICE_NAME" \

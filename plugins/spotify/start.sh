@@ -5,19 +5,19 @@ if [[ -n "$SOUND_DISABLE_SPOTIFY" ]]; then
   exit 0
 fi
 
-# Set the device broadcast name for Spotify
-if [[ -z "$SOUND_DEVICE_NAME" ]]; then
-  SOUND_DEVICE_NAME=$(printf "balenaSound Spotify %s" $(hostname | cut -c -4))
-fi
+# --- ENV VARS ---
+# SOUND_DEVICE_NAME: Set the device broadcast name for Spotify
+SOUND_DEVICE_NAME=${SOUND_DEVICE_NAME:-"balenaSound Spotify $(hostname | cut -c -4)"}
 
-# Set the system volume here
-SYSTEM_OUTPUT_VOLUME="${SYSTEM_OUTPUT_VOLUME:-100}"
-
-# Set the Spotify username and password
+# SOUND_SPOTIFY_USERNAME: Login username for Spotify
+# SOUND_SPOTIFY_PASSWORD: Login password for Spotify
 if [[ ! -z "$SOUND_SPOTIFY_USERNAME" ]] && [[ ! -z "$SOUND_SPOTIFY_PASSWORD" ]]; then
   SPOTIFY_CREDENTIALS="--username \"$SOUND_SPOTIFY_USERNAME\" --password \"$SOUND_SPOTIFY_PASSWORD\""
-  printf "%s\n" "Using Spotify login."
 fi
+
+echo "Starting Spotify plugin..."
+echo "Device name: $SOUND_DEVICE_NAME"
+[[ -n ${SPOTIFY_CREDENTIALS} ]] && echo "Using provided credentials for Spotify login."
 
 # Start librespot
 exec /usr/bin/librespot \
@@ -26,5 +26,4 @@ exec /usr/bin/librespot \
   --cache /var/cache/raspotify \
   --enable-volume-normalisation \
   --linear-volume \
-  --initial-volume=$SYSTEM_OUTPUT_VOLUME \
   $SPOTIFY_CREDENTIALS

@@ -5,10 +5,12 @@ if [[ -n "$SOUND_DISABLE_AIRPLAY" ]]; then
   exit 0
 fi
 
-# Set the device broadcast name for AirPlay
-if [[ -z "$SOUND_DEVICE_NAME" ]]; then
-  SOUND_DEVICE_NAME=$(printf "balenaSound Airplay %s" $(hostname | cut -c -4))
-fi
+# --- ENV VARS ---
+# SOUND_DEVICE_NAME: Set the device broadcast name for AirPlay
+SOUND_DEVICE_NAME=${SOUND_DEVICE_NAME:-"balenaSound AirPlay $(hostname | cut -c -4)"}
+
+echo "Starting AirPlay plugin..."
+echo "Device name: $SOUND_DEVICE_NAME"
 
 # Wait for audioblock to start. This is a bit hacky, but necessary for the time being as
 # shairport-sync will fail silently if audioblock is not ready when it starts up

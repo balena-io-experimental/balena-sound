@@ -1,5 +1,6 @@
-import { getIPAddress } from "./utils"
+import { getIPAddress } from './utils'
 import { SoundModes } from "./types"
+import { constants } from './constants'
 
 interface MultiRoomConfig {
   master: String,
@@ -12,18 +13,18 @@ interface DeviceConfig {
 }
 
 export default class SoundConfig {
-  public mode: SoundModes = SoundModes.MULTI_ROOM
+  public mode: SoundModes
   public device: DeviceConfig = {
     ip: getIPAddress() ?? 'localhost',
-    type: process.env.BALENA_DEVICE_TYPE ?? 'unknown'
+    type: constants.balenaDeviceType
   }
   public multiroom: MultiRoomConfig = {
-    master: process.env.SOUND_MULTIROOM_MASTER ?? this.device.ip,
-    forced: process.env.SOUND_MULTIROOM_MASTER ? true : false
+    master: constants.multiroom.master ?? this.device.ip,
+    forced: constants.multiroom.forced
   }
 
-  constructor(mode: string) {
-    this.setMode(<SoundModes>mode)
+  constructor() {
+    this.setMode(<SoundModes>constants.mode)
   }
 
   setMultiRoomMaster(master: string) {
@@ -43,12 +44,12 @@ export default class SoundConfig {
   }
 
   isMultiRoomEnabled(): boolean {
-    let mrModes: SoundModes[] = [ SoundModes.MULTI_ROOM, SoundModes.MULTI_ROOM_CLIENT ]
+    let mrModes: SoundModes[] = [SoundModes.MULTI_ROOM, SoundModes.MULTI_ROOM_CLIENT]
     return mrModes.includes(this.mode)
   }
 
   isMultiRoomServer(): boolean {
-    let mrModes: SoundModes[] = [ SoundModes.MULTI_ROOM ]
+    let mrModes: SoundModes[] = [SoundModes.MULTI_ROOM]
     return mrModes.includes(this.mode)
   }
 

@@ -11,7 +11,8 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
 
-# SOUND_MULTIROOM_LATENCY: compensate for speaker hardware sync issues
+# --- ENV VARS ---
+# SOUND_MULTIROOM_LATENCY: latency in milliseconds to compensate for speaker hardware sync issues
 LATENCY=${SOUND_MULTIROOM_LATENCY:+"--latency $SOUND_MULTIROOM_LATENCY"}
 
 echo "Starting multi-room client..."

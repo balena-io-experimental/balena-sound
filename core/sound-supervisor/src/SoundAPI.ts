@@ -6,6 +6,7 @@ import BalenaAudio from './audio-block'
 import { SoundModes } from './types'
 import { startBalenaService, stopBalenaService } from './utils'
 import * as asyncHandler from 'express-async-handler'
+import { constants } from './constants'
 
 export default class SoundAPI {
   private api: Application
@@ -74,7 +75,8 @@ export default class SoundAPI {
         config: this.config,
         audio: await this.audioBlock.getInfo(),
         sinks: stringify(await this.audioBlock.getSinks()),
-        volume: await this.audioBlock.getVolume()
+        volume: await this.audioBlock.getVolume(),
+        constants: constants
       })
     }))
     this.api.use((err: Error, _req, res, _next) => {
