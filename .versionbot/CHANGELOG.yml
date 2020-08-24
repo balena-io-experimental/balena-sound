@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'spotify: Environment variable to switch volume normalisation'
+      hash: bd335ca860eaf74ebf6c4fa2560b2cfe56e44acd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Connects-to: '#267'
+        connects-to: '#267'
+      author: Florian
+      nested: []
+  version: 2.4.10
+  date: 2020-08-22T14:16:30.690Z
+- commits:
     - subject: Fix snapcast bad signature error in rpi0 devices
       hash: 3a6000498db555adc1e6c174674ffe503ca70fbd
       body: ''
