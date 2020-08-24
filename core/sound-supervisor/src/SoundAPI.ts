@@ -31,7 +31,7 @@ export default class SoundAPI {
     }
 
     // Change config
-    // This might not always work because it currently relies on hardcoded sink|sinkInput indexes
+    // This won't work if there are USB or DAC sound cards because it currently relies on hardcoded sink|sinkInput indexes
     // sinkInput 0 usually refers to the "balena-sound.input to snapcast|balenaSound.output" loopback
     // sink 2 usually refers to "balenaSound.output" sink
     // sink 3 usually refers to "snapcast" sink
@@ -63,12 +63,20 @@ export default class SoundAPI {
       res.json({ mode: newMode, updated })
     })
 
-    // Audio block: use only for debugging, not ready for end user
+    // Audio block: use only for debugging/experimental, not ready for end user
     this.api.use('/secret', express.static(path.join(__dirname, 'ui')))
     this.api.get('/audio', asyncHandler(async (_req, res) => res.json(await this.audioBlock.getInfo())))
     this.api.get('/audio/volume', asyncHandler(async (_req, res) => res.json(await this.audioBlock.getVolume())))
     this.api.post('/audio/volume', asyncHandler(async (req, res) => res.json(await this.audioBlock.setVolume(req.body.volume))))
     this.api.get('/audio/sinks', asyncHandler(async (_req, res) => res.json(stringify(await this.audioBlock.getSinks()))))
+    this.api.get('/support', asyncHandler(async (_req, res) => {
+      res.json({
+        config: this.config,
+        audio: await this.audioBlock.getInfo(),
+        sinks: stringify(await this.audioBlock.getSinks()),
+        volume: await this.audioBlock.getVolume()
+      })
+    }))
     this.api.use((err: Error, _req, res, _next) => {
       res.status(500).json({ error: err.message })
     })

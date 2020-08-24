@@ -3,7 +3,6 @@ import BalenaAudio from './audio-block'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
 import { restartBalenaService } from './utils'
-import { SoundModes } from './types'
 
 // balenaSound core
 const config: SoundConfig = new SoundConfig(process.env.SOUND_MODE ?? 'MULTI_ROOM')
@@ -23,13 +22,21 @@ init()
 async function init() {
   await soundAPI.listen(3000)
   await audioBlock.listen()
-  fleetPublisher.publish('fleet-sync', { type: 'sync', origin: config.device.ip })
+
+  // For multi room, allow cote to establish connections before sending fleet-sync
+  if (config.isMultiRoomEnabled()) {
+    setTimeout(() => {
+      console.log('Joining the fleet, requesting master info with fleet-sync...')
+      fleetPublisher.publish('fleet-sync', { type: 'sync', origin: config.device.ip })
+    }, 3000)
+  }
 }
 
 // Event: "play"
 // On audio playback, set this server as the multiroom-master
+// We check balena-sound.input as it's the sink that receives all audio sources
 audioBlock.on('play', (sink: any) => {
-  if (sink.name === 'balena-sound.input' && config.mode === SoundModes.MULTI_ROOM) {
+  if (config.isMultiRoomServer() && sink.name === 'balena-sound.input') {
     console.log(`Playback started, announcing ${config.device.ip} as multi-room master!`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.device.ip })
   }
@@ -38,17 +45,17 @@ audioBlock.on('play', (sink: any) => {
 // Event: "fleet-update"
 // If the master server changed, reset multiroom-client service
 fleetSubscriber.on('fleet-update', async (data: any) => {
-  if (config.mode === SoundModes.MULTI_ROOM && config.multiroom.master !== data.master) {
+  if (config.isNewMultiRoomMaster(data.master)) {
     console.log(`Multi-room master has changed to ${data.master}, restarting snapcast-client...`)
-    await restartBalenaService('multiroom-client')
     config.setMultiRoomMaster(data.master)
+    await restartBalenaService('multiroom-client')
   }
 })
 
 // Event: "fleet-sync"
 // Whenever a device joins the network, re-announce current master
 fleetSubscriber.on('fleet-sync', (data: any) => {
-  if (config.mode === SoundModes.MULTI_ROOM && config.multiroom.master === config.device.ip && data.origin !== config.device.ip) {
+  if (config.isMultiRoomMaster() && data.origin !== config.device.ip) {
     console.log(`New multi-room device joined, syncing fleet...`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.multiroom.master })
   }
