@@ -3,6 +3,7 @@ function checkInt(s: string | undefined) : number | undefined {
 }
 
 export const constants = {
+  debug: process.env.SOUND_SUPERVISOR_DEBUG ? true : false,
   port: checkInt(process.env.SOUND_SUPERVISOR_PORT) ?? 3000,
   coteDelay: checkInt(process.env.SOUND_COTE_DELAY) ?? 5000,
   mode: process.env.SOUND_MODE ?? 'MULTI_ROOM',

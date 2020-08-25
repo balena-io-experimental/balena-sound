@@ -72,11 +72,16 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 
+# --- ENV VARS ---
+# SOUND_ENABLE_SOUNDCARD_INPUT: If an input source is detected, loop it as a plugin into balena-sound.input
+
 # Audio routing: route intermediate balena-sound input/output sinks
 echo "Setting audio routing rules. Note that this can be changed after startup."
 reset_sound_config
 route_input_sink "$MODE"
 route_output_sink
-route_input_source
+if [[ -n "$SOUND_ENABLE_SOUNDCARD_INPUT" ]]; then
+  route_input_source
+fi
 
 exec pulseaudio --file /etc/pulse/balena-sound.pa

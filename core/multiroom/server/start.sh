@@ -18,6 +18,11 @@ declare -A blacklisted=(
 
 if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" ]]; then
   echo "Multi-room server blacklisted for $BALENA_DEVICE_TYPE. Exiting..."
+
+  if [[ "$MODE" == "MULTI_ROOM" ]]; then
+    echo "Multi-room has been disabled on this device type due to performance constraints."
+    echo "You should use this device in 'MULTI_ROOM_CLIENT' mode if you have other devices running balenaSound, or 'STANDALONE' mode if this is your only device."
+  fi
   exit 0
 fi
 
