@@ -12,8 +12,8 @@ MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 
 # Multi-room server can't run properly in some platforms because of resource constraints, so we disable them
 declare -A blacklisted=(
-  ["raspberry"]=0
-  ["raspberrypi"]=1
+  ["raspberry-pi"]=0
+  ["raspberry-pi2"]=1
 )
 
 if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" ]]; then
