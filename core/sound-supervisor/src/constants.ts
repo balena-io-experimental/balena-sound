@@ -12,6 +12,6 @@ export const constants = {
     master: process.env.SOUND_MULTIROOM_MASTER,
     forced: process.env.SOUND_MULTIROOM_MASTER ? true : false
   },
-  volume: checkInt(process.env.SOUND_VOLUME) ?? 100
+  volume: checkInt(process.env.SOUND_VOLUME) ?? 75
 }
 

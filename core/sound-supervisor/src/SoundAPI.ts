@@ -51,6 +51,7 @@ export default class SoundAPI {
           case SoundModes.MULTI_ROOM_CLIENT:
             stopBalenaService('multiroom-server')
             startBalenaService('multiroom-client')
+            // TODO: stop plugin services, do same thing at startup
             break
           case SoundModes.STANDALONE:
             stopBalenaService('multiroom-server')

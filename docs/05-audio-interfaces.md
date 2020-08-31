@@ -1,21 +1,35 @@
-# DAC Configuration
+# Audio interfaces
 
-While most Raspberry Pi boards come with an onboard sound card, it's well known that the quality you can get from them is not the greatest. The Pi Foundation does an excellent job at keeping the cost of their boards down, but that comes with some compromises with audio being one of them. The [audio circuitry](https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/) does an OK job, but it's nothing stellar.
+If you want to upgrade the sound quality of your balenaSound devices, or if you are using a board that does not have onboard soundcard such as the Raspberry Pi Zero, you'll probably want to add an external soundcard. Generally these come in two flavours: USB soundcards or DAC boards. Both alternatives are widely supported in balenaSound.
 
-If you want to upgrade the sound quality of your balenaSound devices (or if you are using a board that does not have onboard sound card such as the Raspberry Pi Zero), you'll need to add a DAC board (Digital Audio Converter) to your project.
+To select which audio interface to use you can use the enviroment variable `SOUND_OUTPUT`. Read more about configuring environment variables [here](../customization)
+For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
-### Configure your device
-To get a DAC board to work with balenaSound, you will need to make a couple of changes to the device configuration in the balenaCloud dashboard. Click on the specific device within the application and select `Device configuration` in the left-side menu. Once you're there, do the following:
+## Onboard
 
-* Disable the on-board audio by editing the existing ```RESIN_HOST_CONFIG_dtparam``` variable to set `”audio=off”`.
+While most boards have built-in soundcards it's well known that the quality you can get from them is not the greatest. For the Raspberry Pi family for example, the Pi Foundation does an excellent job at keeping the cost of their boards down, but that comes with some compromises with audio being one of them. The [audio circuitry](https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/) does an OK job, but it's nothing stellar. Onboard audiocards don't require any configuration.
+
+
+## USB Soundcards
+
+USB soundcards are supported out of the box without any special configuration needed. Just make sure you power cycle your device after plugging in the soundcard and you should be good to go. If for any reason this doesn't work feel free to drop by our forums or GitHub page. (TODO: Support link).
+
+## DAC boards
+
+### Configuration
+
+To get a DAC board to work with balenaSound you will need to enable its corresponding Device Tree Overlay. Thankfully balenaCloud makes this very easy to do.
+
+In the balenaCloud dashboard:
+* Click on the specific device within the application and select `Device configuration` in the left-side menu.
 * Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see table below).
 * Cycle the power by unplugging your pi.
 
-![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/dac-vars.png)
+![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
 
 If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your application.
 
-### dtoverlay Values
+### dtoverlay values
 
 These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR](https://github.com/balenalabs/balena-sound/compare/) or [issue](https://github.com/balenalabs/balena-sound/issues/new) on our repository.
 
