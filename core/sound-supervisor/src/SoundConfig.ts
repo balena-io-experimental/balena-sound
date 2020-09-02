@@ -1,7 +1,7 @@
 import { getIPAddress } from './utils'
 import { SoundModes } from "./types"
 import { constants } from './constants'
-import { startBalenaService, stopBalenaService } from './utils'
+import { startBalenaService, stopBalenaService, restartBalenaService } from './utils'
 import BalenaAudio from './audio-block'
 
 interface MultiRoomConfig {
@@ -33,6 +33,7 @@ export default class SoundConfig {
   setMultiRoomMaster(master: string) {
     if (!this.multiroom.forced) {
       this.multiroom.master = master
+      restartBalenaService('multiroom-client')
     }
   }
 

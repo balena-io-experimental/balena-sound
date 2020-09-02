@@ -2,7 +2,6 @@ import * as cote from 'cote'
 import BalenaAudio from './audio-block'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
-import { restartBalenaService } from './utils'
 import { constants } from './constants'
 
 // balenaSound core
@@ -59,7 +58,6 @@ fleetSubscriber.on('fleet-update', async (data: any) => {
   if (config.isNewMultiRoomMaster(data.master)) {
     console.log(`Multi-room master has changed to ${data.master}, restarting snapcast-client...`)
     config.setMultiRoomMaster(data.master)
-    await restartBalenaService('multiroom-client')
   }
 })
 
