@@ -3,8 +3,6 @@ import * as express from 'express'
 import { Application } from 'express'
 import SoundConfig from './SoundConfig'
 import BalenaAudio from './audio-block'
-import { SoundModes } from './types'
-import { startBalenaService, stopBalenaService } from './utils'
 import * as asyncHandler from 'express-async-handler'
 import { constants } from './constants'
 
@@ -31,38 +29,10 @@ export default class SoundAPI {
       }
     }
 
-    // Change config
-    // This won't work if there are USB or DAC sound cards because it currently relies on hardcoded sink|sinkInput indexes
-    // sinkInput 0 usually refers to the "balena-sound.input to snapcast|balenaSound.output" loopback
-    // sink 2 usually refers to "balenaSound.output" sink
-    // sink 3 usually refers to "snapcast" sink
+    // Change mode
     this.api.post('/mode', (req, res) => {
-      let oldMode: SoundModes = this.config.mode
-      let newMode: SoundModes = this.config.setMode(req.body.mode)
-      let updated: boolean = oldMode !== newMode
-
-      if (updated) {
-        switch (newMode) {
-          case SoundModes.MULTI_ROOM:
-            startBalenaService('multiroom-server')
-            startBalenaService('multiroom-client')
-            this.audioBlock.moveSinkInput(0, 3)
-            break
-          case SoundModes.MULTI_ROOM_CLIENT:
-            stopBalenaService('multiroom-server')
-            startBalenaService('multiroom-client')
-            // TODO: stop plugin services, do same thing at startup
-            break
-          case SoundModes.STANDALONE:
-            stopBalenaService('multiroom-server')
-            stopBalenaService('multiroom-client')
-            this.audioBlock.moveSinkInput(0, 2)
-            break
-          default:
-            break
-        }
-      }
-      res.json({ mode: newMode, updated })
+      let updated: boolean = this.config.setMode(req.body.mode)
+      res.json({ mode: this.config.mode, updated })
     })
 
     // Audio block: use only for debugging/experimental, not ready for end user

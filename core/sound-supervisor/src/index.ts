@@ -9,6 +9,7 @@ import { constants } from './constants'
 const config: SoundConfig = new SoundConfig()
 const audioBlock: BalenaAudio = new BalenaAudio(`tcp:${config.device.ip}:4317`)
 const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
+config.bindAudioBlock(audioBlock)
 
 // Fleet communication
 let discoveryOptions: any = {
