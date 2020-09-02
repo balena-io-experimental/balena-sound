@@ -20,7 +20,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 * (optional) A download of this project of course
 * (optional) The [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 
-## One-click deploy
+## One-click deploy
 
 One-click deploy is the easiest way to get started with balenaSound as it allows you to deploy and configure the application with a single click and whithout the need of installing additional tools. Check out the `CLI deploy` instructions below if you are interested in an advanced alternative that enables you to achieve more complex deployments.
 

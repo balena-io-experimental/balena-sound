@@ -1,7 +1,7 @@
 # Usage
 
 After your device finishes downloading the application, you should be ready to go! 
-Before starting make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember we support multiple [audio interfaces](../audio-interfaces) if you are interested in improving the audio quality of your setup be sure to check it out.
+Before starting make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember we support multiple [audio interfaces](../docs/audio-interfaces) if you are interested in improving the audio quality of your setup be sure to check it out.
 
 To connect to your balenaSound device:
 * If using Bluetooth: search for your device on your phone or laptop and pair.
@@ -21,9 +21,9 @@ balenaSound supports multiple modes of operation described below:
 - Multi-room client mode
 - Standalone
 
-**Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](../device-support).
+**Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](../docs/device-support).
 
-### Multi-room mode
+### Multi-room mode
 
 Multi-room mode allows you to play perfectly synchronized audio on multiple devices, it turns balenaSound into a "Sonos-like" multi-room solution. It doesn't matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
 
