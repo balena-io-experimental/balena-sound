@@ -84,14 +84,23 @@ This setup allows us to decouple the multiroom feature from the `audio` block wh
 
 ## Plugins
 
-As described above, plugins are the services generating the audio to be streamed/played. Plugins are responsible for sending the audio into the `audio` block, particularily into `balena-sound.input` sink. There are two alternatives for how this can be acomplished:
-
-TODO
+As described above, plugins are the services generating the audio to be streamed/played. Plugins are responsible for sending the audio into the `audio` block, particularily into `balena-sound.input` sink. There are two alternatives for how this can be acomplished. A detailed explanation can be found [here](https://github.com/balenablocks/audio#usage), in our case:
 
 **PulseAudio backend**
+Most audio applications support using PulseAudio as an audio backend. This means the application was coded to allow sending audio directly to PulseAudio (and hence the `audio` block). This is usually configurable via a CLI option flag or configuration files. You should check your application's documentation and figure out if this is the case.
+
+If the application supports PulseAudio backend, the only configuration you need is to specify where the PulseAudio server can be located. This can be done by setting the `PULSE_SERVER` environment variable, we recommend doing it in the `Dockerfile`:
 
 ```
-# Audio block setup
+ENV PULSE_SERVER=tcp:localhost:4317
+```
+
+**ALSA bridge**
+If your application does not have built-in PulseAudio support you can create a bridge to it by using ALSA. This can't be one-lined so we wrote a little script that will do the work for you:
+
+```
 ENV PULSE_SERVER=tcp:localhost:4317
 RUN curl -sL https://raw.githubusercontent.com/balena-io-playground/audio-primitive/master/scripts/alsa-bridge/debian-setup.sh | sh
 ```
+
+Note that you still need to set the `PULSE_SERVER` variable.
