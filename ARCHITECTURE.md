@@ -1,9 +1,8 @@
 # Architecture
 
- Community contributions have been a staple of this open source project since it's inception. However, as balenaSound grew in features it also did in terms of complexity. It's currently a multi-container application with 4 core services and as many plugin services. This documentation section aims to provide an overview of how balenaSound is architectured with the intention of lowering the barrienr to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](docs/support#contact-us) and we'll gladly help you out.
+Community contributions have been a staple of this open source project since it's inception. However, as balenaSound grew in features it also did in terms of complexity. It's currently a multi-container application with 4 core services and as many plugin services. This documentation section aims to provide an overview of how balenaSound is architectured with the intention of lowering the barrienr to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](docs/06-support.md#contact-us) and we'll gladly help you out.
 
-
-## Overview
+## Overview
 
 ![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-overview.png)
 
@@ -11,7 +10,6 @@ balenaSound services can be divided in three groups:
 - Sound core: `sound-supervisor` and `audio`. 
 - Multiroom: `multiroom-server` and `multiroom-client`
 - Plugins: `spotify`, `airplay`, `bluetooth`, `upnp`
-
 
 ### Sound core
 
@@ -26,7 +24,7 @@ The `sound-supervisor` as it's name suggests, is the service that orchestrates a
 - **Multiroom events**: through the use of the [cotejs](https://github.com/dashersw/cote) library and interfacing with the `audio` block, the `sound-supervisor` ensures that all devices on the same local network agree on which is the `master` device. To achieve this, `sound-supervisor` services on different devices exchange event messages constantly.
 - **API**: it creates a REST API on port 3000. The API allows other services to access current balenaSound configuration. This allows us to update configuration dynamically and have services react to it accordingly. As a general rule of thumb, if we are interested in service's configuration being able to be dynamically updated, they should rely on configuration reported by `sound-supervisor` and not on environment variables. At this moment, all services support this behaviour but their configuration is mostly static, you set it at startup via environment variables and that's it. However, there are *experimental* endpoints in the API to update configuration values and all services already support it. There's even a *secret* UI that allows for some configuration changes at runtime, it's located at `http://<DEVICE_IP>:3000/secret`.
 
-### Multi-room
+### Multi-room
 
 Multi-room services provide multiroom capabilities to balenaSound.
 
@@ -67,7 +65,7 @@ Creation and configuration scripts for these virtual sinks are located at `core/
 ### Standalone
 ![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-standalone.png)
 
-Standalone mode is easy to understand. You just pipe ` balena-sound.input` to `balena-sound.output` and that's it. Audio coming in from any plugin will find it's way to the selected output. If this was the only mode we could simplify the setup and use a single sink. Having the two layers however is important for the next mode which is more complicated.
+Standalone mode is easy to understand. You just pipe ` balena-sound.input` to `balena-sound.output` and that's it. Audio coming in from any plugin will find it's way to the selected output. If this was the only mode, we could simplify the setup and use a single sink. Having the two layers however is important for the next mode which is more complicated.
 
 
 ### Multiroom
@@ -81,8 +79,7 @@ Snapcast client receives the audio from the server and sends it back into the `a
 
 This setup allows us to decouple the multiroom feature from the `audio` block while retaining it's advantages.
 
-
-## Plugins
+## Plugins
 
 As described above, plugins are the services generating the audio to be streamed/played. Plugins are responsible for sending the audio into the `audio` block, particularily into `balena-sound.input` sink. There are two alternatives for how this can be acomplished. A detailed explanation can be found [here](https://github.com/balenablocks/audio#usage), in our case:
 
@@ -104,3 +101,4 @@ RUN curl -sL https://raw.githubusercontent.com/balena-io-playground/audio-primit
 ```
 
 Note that you still need to set the `PULSE_SERVER` variable.
+}}}
