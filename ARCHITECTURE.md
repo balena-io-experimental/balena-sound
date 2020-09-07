@@ -93,7 +93,7 @@ ENV PULSE_SERVER=tcp:localhost:4317
 ```
 
 **ALSA bridge**
-If your application does not have built-in PulseAudio support you can create a bridge to it by using ALSA. This can't be one-lined so we wrote a little script that will do the work for you:
+If your application does not have built-in PulseAudio support, you can create a bridge to it by using ALSA. This can't be added in easily, so we wrote a little script that will do the work for you:
 
 ```
 ENV PULSE_SERVER=tcp:localhost:4317
