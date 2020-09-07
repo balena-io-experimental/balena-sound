@@ -112,4 +112,4 @@ Remove the `vc4-kms-v3d` dtoverlay setting from the `Device Configuration` secti
 
 ## Contact us
 
-If you have any questions regarding balenaSound, wether it's an issue not listed in the troubleshooting section, a request for a new feature or DAC, or simply if you want to discuss about the project, feel free to reach us at our [forums](https://forums.balena.io) or open an [issue](https://github.com/balenalabs/balena-sound/issues/new) on our GitHub repository. Thanks for trying out balenaSound!
+If you have any questions regarding balenaSound, whether it's an issue not listed in the troubleshooting section, a request for a new feature or DAC, or simply if you want to discuss about the project, feel free to reach us at our [forums](https://forums.balena.io) or open an [issue](https://github.com/balenalabs/balena-sound/issues/new) on our GitHub repository. Thanks for trying out balenaSound!
