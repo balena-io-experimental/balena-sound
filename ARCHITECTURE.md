@@ -40,7 +40,7 @@ Plugins are the audio sources that generate the audio to be streamed/played (e.g
 
 ## Audio routing
 
-Audio routing is the most cruicial part of balenaSound, it also changes significantly depending on what the current configuration is, with the biggest change being the mode of operation (multiroom vs standalone). There are two services controlling the audio routing:
+Audio routing is the most cruicial part of balenaSound, and it also changes significantly depending on what the current configuration is with the biggest change being the mode of operation (multi-room vs standalone). There are two services controlling the audio routing:
 - the `audio` block is the key one as it's the one actually routing audio, so we'll zoom into it in sections below.
 - `sound-supervisor` on the other hand, is responsible for changing the routing according to what the current mode is. It will modify how sinks are internally connected depending on the mode of operation.
 
