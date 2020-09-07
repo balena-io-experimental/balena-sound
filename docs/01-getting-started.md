@@ -8,7 +8,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 ## Hardware required
 ![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/hardware.jpeg)
 
-* Any device from our [supported devices list]((../device-support)). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
+* Any device from our [supported devices list](../docs/device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
 * An SD Card! We recommend the Sandisk Extreme Pro series. 8GB should be plenty enough for this project.
 * Power supply
 * 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.
@@ -17,7 +17,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 * Software to flash an SD card ([balenaEtcher](https://balena.io/etcher))
 * A free [balenaCloud](https://balena.io/cloud) account
-* (optional) A download of this project of course
+* (optional) A download of this project
 * (optional) The [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 
 ## One-click deploy
@@ -28,7 +28,7 @@ One-click deploy is the easiest way to get started with balenaSound as it allows
 
 Click this button to go straight to application creation, where balenaSound will be pre-loaded to your application:
 
-[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound)
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
 
 ### Provision your device
 
@@ -44,7 +44,9 @@ balenaSound application will start downloading as soon as your device appears in
 
 ## CLI deploy
 
-This is the traditional and more advanced approach for deploying applications to balena powered devices. Installing and setting up the balena CLI is definitely more involved than using the `Deploy with balena` button but it allows for more flexibility and customization when choosing what and when to deploy. For example, if you don't plan on using the Spotify integration you can edit the `docker-compose.yml` file and remove the Spotify service before deploying the application.
+This is the traditional and more advanced approach for deploying applications to balena powered devices. Installing and setting up the balena CLI is definitely more involved than using the `Deploy with balena` button but it allows for more flexibility and customization when choosing what and when to deploy. 
+
+For example, if you don't plan on using the Spotify integration you can edit the `docker-compose.yml` file and remove the Spotify service before deploying the application.
 
 
 ### Provision your device

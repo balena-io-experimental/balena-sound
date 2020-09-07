@@ -1,18 +1,19 @@
 # Audio interfaces
 
-If you want to upgrade the sound quality of your balenaSound devices, or if you are using a board that does not have onboard soundcard such as the Raspberry Pi Zero, you'll probably want to add an external soundcard. Generally these come in two flavours: USB soundcards or DAC boards. Both alternatives are widely supported in balenaSound.
+If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavours: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound. 
 
-To select which audio interface to use you can use the enviroment variable `SOUND_OUTPUT`. Read more about configuring environment variables [here](../customization)
-For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
+Checkout the [customization](../docs/customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
-## Onboard
+As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](../docs/support#contact-us) and we'll gladly help out.
+
+## Onboard
 
 While most boards have built-in soundcards it's well known that the quality you can get from them is not the greatest. For the Raspberry Pi family for example, the Pi Foundation does an excellent job at keeping the cost of their boards down, but that comes with some compromises with audio being one of them. The [audio circuitry](https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/) does an OK job, but it's nothing stellar. Onboard audiocards don't require any configuration.
 
 
-## USB Soundcards
+## USB Soundcards
 
-USB soundcards are supported out of the box without any special configuration needed. Just make sure you power cycle your device after plugging in the soundcard and you should be good to go. If for any reason this doesn't work feel free to drop by our forums or GitHub page. (TODO: Support link).
+USB soundcards are also supported without any special configuration needed. Just make sure you power cycle your device after plugging in the soundcard and you should be good to go. 
 
 ## DAC boards
 
@@ -31,7 +32,7 @@ If you're using multiple devices with multiple DACs for multi-room audio, you'll
 
 ### dtoverlay values
 
-These are the DACs that are known to work with balenaSound. If your DAC is not on the list let us know! It's usually very simple to add support for new DACs, feel free to open a [PR](https://github.com/balenalabs/balena-sound/compare/) or [issue](https://github.com/balenalabs/balena-sound/issues/new) on our repository.
+These are the DACs that are known to work with balenaSound. If your DAC is not on the list [let us know](../docs/support#contact-us), it's usually very simple to add support for new DACs:
 
 | DAC Name                      | BALENA_HOST_CONFIG_dtoverlay          | Working
 |-------------------------------|---------------------------------------|----------
