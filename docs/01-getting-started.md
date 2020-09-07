@@ -46,7 +46,7 @@ The balenaSound application will start downloading as soon as your device appear
 
 This is the traditional and more advanced approach for deploying applications to balena powered devices. Installing and setting up the balena CLI is definitely more involved than using the `Deploy with balena` button but it allows for more flexibility and customization when choosing what and when to deploy. 
 
-For example, if you don't plan on using the Spotify integration you can edit the `docker-compose.yml` file and remove the Spotify service before deploying the application.
+For example, if you don't plan on using the Spotify integration, you can edit the `docker-compose.yml` file and remove the Spotify service before deploying the application.
 
 
 ### Provision your device
