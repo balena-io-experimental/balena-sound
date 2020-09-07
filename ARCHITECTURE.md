@@ -36,7 +36,7 @@ Runs the client version of Snapcast. It needs to connect to a Snapcast server (c
 
 ### Plugins
 
-Plugins are the audio sources that generate the audio to be streamed/played. Refer to the plugins section below for pointers on how to add new plugins.
+Plugins are the audio sources that generate the audio to be streamed/played (e.g. Spotify). Refer to the plugins section below for pointers on how to add new plugins.
 
 ## Audio routing
 
