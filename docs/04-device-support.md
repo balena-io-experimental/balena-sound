@@ -24,7 +24,7 @@ balenaSound has been developed and tested to work on the following devices:
 
 ## Experimental
 
-Devices with experimental support **have been tested to work** though we have found compelling reasons for not including them as first class citizens of balenaSound. If you are shopping for parts we do not recommend you buy a device from this list. 
+Devices with experimental support **have been tested to work**, though we have found compelling reasons for not including them as first-class citizens of balenaSound. If you are shopping for parts, we do not recommend you buy a device from this list. 
 
 Some of the reasons we've flagged devices as experimental include:
 - device requires multiple extra hardware pieces (USB dongles, adapters, etc)
@@ -34,5 +34,4 @@ Some of the reasons we've flagged devices as experimental include:
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | NVIDIA Jetson Nano | ✔ | ✔ | ✔ | - Requires WiFi USB dongle (or ethernet cable)<br>- Requires Bluetooth USB dongle.<br>- No built-in audio support (see [this](https://github.com/balenablocks/audio/issues/35) bug). As a workaround, requires USB or DAC soundcard.|
 | BeagleBone Black | ✔ | ✔ | ✔ |  - Requires WiFi USB dongle (or ethernet cable)<br>- Requires Bluetooth USB dongle.<br>- Requires USB sound card<br>- Requires USB hub as it has a single USB port |
-
 
