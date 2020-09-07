@@ -13,7 +13,7 @@ balenaSound services can be divided in three groups:
 
 ### Sound core
 
-This is the heart of balenaSound, it contains the most important services: `sound-supervisor` and `audio`. 
+This is the heart of balenaSound as it contains the most important services: `sound-supervisor` and `audio`. 
 
 **audio**
 The `audio` block is a balena block that provides an easy way to work with audio applications in containerized environments such as balenaOS. You can read more about it [here](https://github.com/balenablocks/audio). In a nutshell, the `audio` block is the main "audio router". It connects to all audio sources and sinks and handles audio routing, which will change depending on the mode of operation (multi-room vs standalone), the output interface selected (onboard audio, HDMI, DAC, USB soundcard), etc. The `audio` block allows you to build complex audio applications such as balenaSound without having to deep dive into ALSA or PulseAudio configuration. One of the key features for balenaSound is that it allows us to define input and output audio layers and then do all the complex audio routing without knowing/caring about where the audio is being generated or where it should go to. The `audio routing` section belows covers this process in detail.
