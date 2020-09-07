@@ -40,7 +40,7 @@ Once your application has been created you'll need to add a device to it:
 1. Download the OS and flash it to your SD card with [balenaEtcher](https://balena.io/etcher)
 1. Power up your device and check it's online in the dashboard!
 
-balenaSound application will start downloading as soon as your device appears in the dashboard.
+The balenaSound application will start downloading as soon as your device appears in the dashboard.
 
 ## CLI deploy
 
@@ -63,4 +63,3 @@ For example, if you don't plan on using the Spotify integration you can edit the
 * Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 * Login with `balena login`
 * Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
-
