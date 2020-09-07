@@ -29,7 +29,7 @@ The `sound-supervisor` as it's name suggests, is the service that orchestrates a
 Multi-room services provide multiroom capabilities to balenaSound.
 
 **multiroom-server**
-This service runs a [Snapcast](https://github.com/badaix/snapcast) server which is responsible for broadcasting (and keeping it in sync) audio from the `audio` service into Snapcast clients. Clients can be running on the same device or on separate devices.
+This service runs a [Snapcast](https://github.com/badaix/snapcast) server which is responsible for broadcasting (and syncing) audio from the `audio` service into Snapcast clients. Clients can be running on the same device or on separate devices.
 
 **multiroom-client**
 Runs the client version of Snapcast. It needs to connect to a Snapcast server (can be a separate device) to receive audio packets. It will then forward the audio back into the `audio` service.
