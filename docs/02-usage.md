@@ -28,7 +28,7 @@ By default, most devices will start in multi-room mode. You can change that by s
 
 ### Multi-room mode
 
-Multi-room mode allows you to play perfectly synchronized audio on multiple devices, it turns balenaSound into a "Sonos-like" multi-room solution. It doesn't matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
+Multi-room mode allows you to play perfectly synchronized audio on multiple devices, it turns balenaSound into a "Sonos-like" multi-room solution. It doesn't matter whether you have 2 or 100 devices, you only need them to be part of the same local network.
 
 When in multi-room mode devices can take one of two roles: 
 - `master`: the device acting as the audio source
