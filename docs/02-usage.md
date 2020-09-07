@@ -34,7 +34,7 @@ When in multi-room mode devices can take one of two roles:
 - `master`: the device acting as the audio source
 - `client`: any number of devices playing back the audio being sent over by the `master`
 
-Designing a `master` device is easy and requires no configuration. Whenever you start streaming to any device in multi-room mode it will autoconfigure itself to be the `master` device and will broadcast a message to all other devices within your local network to get them in sync. Note that it can take a few seconds for the system to autoconfigure the first time you stream. 
+Designing a `master` device is easy and requires no configuration. Whenever you start streaming to any device in multi-room mode, it will autoconfigure itself to be the `master` device and will broadcast a message to all other devices within your local network to get them in sync. Note that it can take a few seconds for the system to autoconfigure the first time you stream. 
 You can always change the `master` by streaming to a different device.
 
 It's a good idea to use the most powerful device on your fleet as the designated `master` as it does take up more resources. For example, if your setup consists of a Raspberry Pi 4 and a couple of Raspberry Pi 2, then using the Pi 4 as the `master` is the better option.
