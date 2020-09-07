@@ -69,6 +69,6 @@ If your desired audio source is not supported feel free to [reach out](../docs/s
 
 ## Audio interfaces
 
-balenaSound supports all audio interfaces present on our [supported devices](../docs/device-support) be it 3.5mm audio jack, HDMI, I2C DAC's or USB soundcards. We rely on [balenaLabs' audio block](https://github.com/balenablocks/audio) to do the heavy lifting configuration required for this to work. 
+balenaSound supports all audio interfaces present on our [supported devices](../docs/device-support) be it 3.5mm audio jack, HDMI, I2C DAC's or USB soundcards. We rely on [balenaLabs' audio block](https://github.com/balenablocks/audio) to do the configuration required for this to work. 
 
 Some audio interfaces require special configuration, you can read more about this in the [audio interfaces](../docs/audio-interfaces) configuration section.
