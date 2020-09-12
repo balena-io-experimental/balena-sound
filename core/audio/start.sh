@@ -86,4 +86,9 @@ if [[ -n "$SOUND_ENABLE_SOUNDCARD_INPUT" ]]; then
   route_input_source
 fi
 
-exec pulseaudio --file /etc/pulse/balena-sound.pa
+exec pulseaudio \
+  --realtime=true \
+  --system=true \
+  --log-target=stderr \
+  --daemonize=false \
+  --file=/etc/pulse/balena-sound.pa
