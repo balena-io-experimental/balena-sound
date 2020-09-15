@@ -1,0 +1,31 @@
+{
+  "name": "sound-supervisor",
+  "version": "1.0.0",
+  "description": "Sound supervisor and fleet controller for balenaSound",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "clean": "rm -rf build",
+    "build": "npm run clean && tsc --project tsconfig.json && cp -R src/ui build/ui && cp -R src/audio-block build/audio-block",
+    "watch": "tsc --watch --project tsconfig.json",
+    "livepush": "nodemon --watch src -e js,ts,json --exec node -r ts-node/register/transpile-only src/index.ts"
+  },
+  "author": "Tomás Migone <tomas@balena.io",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@tmigone/pulseaudio": "^0.1.8",
+    "axios": "^0.19.2",
+    "cote": "^1.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "ts-retry-promise": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/cote": "^0.19.0",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}

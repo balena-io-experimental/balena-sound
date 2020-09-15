@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"allowJs": false,
+		"forceConsistentCasingInFileNames": true,
+		"module": "commonjs",
+		"noErrorTruncation": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"outDir": "build/",
+		"preserveConstEnums": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"target": "es2019"
+	},
+	"include": [
+		"./src/**.ts",
+		"./src/lib/**.ts",
+		"./**.ts",
+		"./typings/**.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
