@@ -1,4 +1,45 @@
 - commits:
+    - subject: 'balenaSound 3.0: use balena blocks'
+      hash: 61e50b3831c5065e06898fc17390572a893cc6d8
+      body: >
+        Refactor application to use audio and bluetooth balena blocks.
+
+
+        Notable changes:
+
+        - New plugin system for audio sources, easier to contribute.
+
+        - Uniform audio configuration and handling thanks to audio block
+        (volume, etc)
+
+        - Simultaneous audio source streaming
+
+        - USB soundcards supported out of the box
+
+        - Support for new boards: Intel NUC, Beaglebone Black, Jetson Nano
+
+        - Experimental: input via USB soundcard
+
+        - Experimental: secret UI to update config parameters
+
+
+        Co-author changelog:
+
+        - Spotify and UPnP plugins: AlexProgrammerDE
+
+        - Docs and landr: Andrew Nhem, Phil Wilson and Doron Behar
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+        Co-authored-by: Doron Behar <doron.behar@gmail.com>
+        co-authored-by: Doron Behar <doron.behar@gmail.com>
+      author: Tomás Migone
+      nested: []
+  version: 3.0.0
+  date: 2020-09-15T17:22:49.888Z
+- commits:
     - subject: 'spotify: Environment variable to switch volume normalisation'
       hash: bd335ca860eaf74ebf6c4fa2560b2cfe56e44acd
       body: ''
