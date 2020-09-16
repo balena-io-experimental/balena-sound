@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update logo dir in README
+      hash: fc9a34142561871f8ca128ba72fc90e137b3c3c6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+      nested: []
+  version: 3.0.1
+  date: 2020-09-16T19:43:28.568Z
+- commits:
     - subject: 'balenaSound 3.0: use balena blocks'
       hash: 61e50b3831c5065e06898fc17390572a893cc6d8
       body: >
