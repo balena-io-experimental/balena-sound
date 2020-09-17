@@ -6,7 +6,7 @@ RUN curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -v - 2>
 
 # Audio block setup
 ENV PULSE_SERVER=tcp:localhost:4317
-RUN curl -sL https://raw.githubusercontent.com/balena-io-playground/audio-primitive/master/scripts/alsa-bridge/debian-setup.sh | sh
+RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
 
 COPY start.sh /usr/src/
 

@@ -97,7 +97,7 @@ If your application does not have built-in PulseAudio support, you can create a 
 
 ```
 ENV PULSE_SERVER=tcp:localhost:4317
-RUN curl -sL https://raw.githubusercontent.com/balena-io-playground/audio-primitive/master/scripts/alsa-bridge/debian-setup.sh | sh
+RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
 ```
 
 Note that you still need to set the `PULSE_SERVER` variable.
