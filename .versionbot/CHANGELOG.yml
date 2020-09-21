@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'dac: add Hifiberry DAC2 HD'
+      hash: c2f2b7aa3347fe20ae571de6eafc016786c48d6f
+      body: ''
+      footer:
+        Connects-to: '#279'
+        connects-to: '#279'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.2
+  date: 2020-09-21T18:43:55.976Z
+- commits:
     - subject: 'meta: Use balenablocks images instead of balenaplayground'
       hash: dbc6f642518d4571c98df3ea59ae73a7df76c7ba
       body: ''
