@@ -1,6 +1,6 @@
 # Audio interfaces
 
-If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavours: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound. 
+If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavours: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound.
 
 Checkout the [customization](../docs/customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
@@ -10,10 +10,9 @@ As a general rule of thumb, onboard and USB soundcards should work out of the bo
 
 While most boards have built-in soundcards it's well known that the quality you can get from them is not the greatest. For the Raspberry Pi family for example, the Pi Foundation does an excellent job at keeping the cost of their boards down, but that comes with some compromises with audio being one of them. The [audio circuitry](https://hackaday.com/2018/07/13/behind-the-pin-how-the-raspberry-pi-gets-its-audio/) does an OK job, but it's nothing stellar. Onboard audiocards don't require any configuration.
 
-
 ## USB Soundcards
 
-USB soundcards are also supported without any special configuration needed. Just make sure you power cycle your device after plugging in the soundcard and you should be good to go. 
+USB soundcards are also supported without any special configuration needed. Just make sure you power cycle your device after plugging in the soundcard and you should be good to go.
 
 ## DAC boards
 
@@ -22,6 +21,7 @@ USB soundcards are also supported without any special configuration needed. Just
 To get a DAC board to work with balenaSound you will need to enable its corresponding Device Tree Overlay. Thankfully balenaCloud makes this very easy to do.
 
 In the balenaCloud dashboard:
+
 * Click on the specific device within the application and select `Device configuration` in the left-side menu.
 * Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see table below).
 * Cycle the power by unplugging your pi.
