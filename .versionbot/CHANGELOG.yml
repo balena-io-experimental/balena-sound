@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'Documentation: added clear links to help on the Getting Started page'
+      hash: 39688f703ed527018bbb21f58dd2c26312bda69c
+      body: ''
+      footer:
+        Connects-to: '#307'
+        connects-to: '#307'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Mark Chester <mark@chesterfamily.org>
+        signed-off-by: Mark Chester <mark@chesterfamily.org>
+      author: Mark Chester
+      nested: []
+  version: 3.1.5
+  date: 2020-09-25T18:53:20.081Z
+- commits:
     - subject: >-
         plugins: change restart policy to on-failure to avoid unnecessary
         restarts
