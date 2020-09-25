@@ -60,6 +60,7 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Hifiberry MiniAmp][24]       | hifiberry-dac                         | Yes
 | [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   | Yes
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac”, “i2s-mmap”          | Yes
+| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”, “i2s-mmap”          | Yes
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
@@ -88,3 +89,4 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [25]: https://uk.pi-supply.com/products/justboom-digi-hat
 [26]: https://www.adafruit.com/product/4037
 [27]: https://www.hifiberry.com/shop/boards/hifiberry-dac2-hd/
+[28]: https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp
