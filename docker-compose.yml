@@ -50,6 +50,7 @@ services:
 
   airplay:
     build: ./plugins/airplay
+    restart: on-failure
     network_mode: host
     privileged: true
     labels:
@@ -57,6 +58,7 @@ services:
 
   spotify:
     build: ./plugins/spotify
+    restart: on-failure
     privileged: true
     network_mode: host
     volumes:
@@ -64,6 +66,7 @@ services:
 
   upnp:
     build: ./plugins/upnp
+    restart: on-failure
     network_mode: host
     ports:
       - 49494:49494
