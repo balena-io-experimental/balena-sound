@@ -1,4 +1,21 @@
 - commits:
+    - subject: >-
+        plugins: change restart policy to on-failure to avoid unnecessary
+        restarts
+      hash: 36e0b08a532914affd9e680af2d4dbc84827c1ca
+      body: ''
+      footer:
+        Connects-to: '#303'
+        connects-to: '#303'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.4
+  date: 2020-09-25T15:27:09.678Z
+- commits:
     - subject: Open port 1705 for snapcast clients to control snapcast server.
       hash: a4902aa9a689e043636c66a81f94b009545a3e69
       body: ''
