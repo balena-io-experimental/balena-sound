@@ -30,6 +30,7 @@ services:
     restart: on-failure
     ports:
       - 1704:1704
+      - 1705:1705
     volumes:
       - snapcast:/var/cache/snapcast
 
