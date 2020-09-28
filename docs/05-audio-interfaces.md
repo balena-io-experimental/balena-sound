@@ -43,6 +43,7 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Justboom Digi HAT][25]       | justboom-digi                         | Yes
 | [Pisound][4]                  | pisound                               | Yes
 | [InnoMaker][8]                | allo-boss-dac-pcm512x-audio           | [Yes][9]
+| [Boss DAC v1.2][29]           | allo-boss-dac-pcm512x-audio           | Yes
 | [miniBoss DAC][10]            | allo-boss-dac-pcm512x-audio           | Yes
 | [PiFi Digi+][11]              | hifiberry-digi                        | Yes
 | [IQaudIO Pi-DAC+][13]         | iqaudio-dacplus                       | Yes
@@ -90,3 +91,4 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [26]: https://www.adafruit.com/product/4037
 [27]: https://www.hifiberry.com/shop/boards/hifiberry-dac2-hd/
 [28]: https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp
+[29]: https://allo.com/sparky/boss-dac.html
