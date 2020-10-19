@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'docs: add query params to deploy link'
+      hash: a4f796504c95e1a39409e71b4e05960db46246cc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Aaron Shaw <shawaj@gmail.com>
+        signed-off-by: Aaron Shaw <shawaj@gmail.com>
+      author: Aaron Shaw
+      nested: []
+  version: 3.1.7
+  date: 2020-10-01T12:51:10.309Z
+- commits:
     - subject: 'dac: add Adafruit mac98357'
       hash: fa62fccabafd19a7d4f8d9dd500b9d7850192444
       body: ''
