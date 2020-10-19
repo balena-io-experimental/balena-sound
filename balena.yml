@@ -1,0 +1,4 @@
+defaultDeviceType: 'raspberry-pi'
+applicationEnvironmentVariables:
+ - SOUND_VOLUME: 75
+ - SOUND_OUTPUT: 'AUTO'
