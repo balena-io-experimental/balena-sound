@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'dwb: add balena.yml file to explicitly set env vars'
+      hash: 7338e30ca83fba36d70b5a7c395ff0ece503ad61
+      body: ''
+      footer:
+        Connects-to: '#324'
+        connects-to: '#324'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.9
+  date: 2020-10-19T17:49:49.592Z
+- commits:
     - subject: 'dac: Add Boss DAC v1.2'
       hash: 66378b989bff918081e96dc9c5ef6249d835d751
       body: ''
