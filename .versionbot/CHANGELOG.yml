@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'dac: Add Boss DAC v1.2'
+      hash: 66378b989bff918081e96dc9c5ef6249d835d751
+      body: ''
+      footer:
+        Connects-to: '#305'
+        connects-to: '#305'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomasmigone@gmail.com>
+        signed-off-by: Tomás Migone <tomasmigone@gmail.com>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.8
+  date: 2020-10-19T15:43:59.833Z
+- commits:
     - subject: 'docs: add query params to deploy link'
       hash: a4f796504c95e1a39409e71b4e05960db46246cc
       body: ''
