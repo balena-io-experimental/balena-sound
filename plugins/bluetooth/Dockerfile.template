@@ -1,3 +1,6 @@
 FROM balenablocks/bluetooth:%%BALENA_MACHINE_NAME%%
 
-# TODO: update bluetooth block to allow disabling
+WORKDIR /usr/src
+
+COPY start.sh /usr/src/
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
