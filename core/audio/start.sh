@@ -72,11 +72,6 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 
-# --- ENV VARS ---
-# SOUND_ENABLE_SOUNDCARD_INPUT: If an input source is detected, loop it as a plugin into balena-sound.input
-# SOUND_OUTPUT: Select the default audio output device. Rename the env var for audio block naming. We use SOUND_ instead of AUDIO_ for consistent naming.
-AUDIO_OUTPUT="$SOUND_OUTPUT"
-
 # Audio routing: route intermediate balena-sound input/output sinks
 echo "Setting audio routing rules. Note that this can be changed after startup."
 reset_sound_config
