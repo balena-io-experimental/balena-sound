@@ -1,4 +1,21 @@
 - commits:
+    - subject: >-
+        env vars: fix docs about some block env vars. Add
+        SOUND_DISABLE_BLUETOOTH.
+      hash: d369079ae2b71da992503be172d5aed0198b650f
+      body: ''
+      footer:
+        Connects-to: '#316, #337'
+        connects-to: '#316, #337'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.10
+  date: 2020-10-28T17:49:29.856Z
+- commits:
     - subject: 'dwb: add balena.yml file to explicitly set env vars'
       hash: 7338e30ca83fba36d70b5a7c395ff0ece503ad61
       body: ''
