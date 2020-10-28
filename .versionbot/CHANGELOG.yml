@@ -1,4 +1,21 @@
 - commits:
+    - subject: 'spotify: fix password woes'
+      hash: f62fd91f7f928d68b8825206526de8530a04bc69
+      body: |
+        - Fixes bug in 3.0 where user/pass was not working
+        - Fixes bug where passwords with a space did not work
+      footer:
+        Connects-to: '#131'
+        connects-to: '#131'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.1.11
+  date: 2020-10-28T20:02:10.222Z
+- commits:
     - subject: >-
         env vars: fix docs about some block env vars. Add
         SOUND_DISABLE_BLUETOOTH.
