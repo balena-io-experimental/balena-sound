@@ -13,26 +13,30 @@ SOUND_SPOTIFY_BITRATE=${SOUND_SPOTIFY_BITRATE:-160}
 
 # SOUND_SPOTIFY_DISABLE_NORMALISATION: Disable volume normalisation
 if [[ -z "$SOUND_SPOTIFY_DISABLE_NORMALISATION" ]]; then
-  SPOTIFY_NORMALIZATION="--enable-normalisation"
-else
-  SPOTIFY_NORMALIZATION=""
+  set -- "$@" \
+    --enable-volume-normalisation
 fi
 
 # SOUND_SPOTIFY_USERNAME: Login username for Spotify
 # SOUND_SPOTIFY_PASSWORD: Login password for Spotify
 if [[ -n "$SOUND_SPOTIFY_USERNAME" ]] && [[ -n "$SOUND_SPOTIFY_PASSWORD" ]]; then
-  SPOTIFY_CREDENTIALS="--username \"$SOUND_SPOTIFY_USERNAME\" --password \"$SOUND_SPOTIFY_PASSWORD\""
+  set -- "$@" \
+    --username "$SOUND_SPOTIFY_USERNAME" \
+    --password "$SOUND_SPOTIFY_PASSWORD"
 fi
 
+# Start librespot
+# We use set/$@ because librespot for some reason does not like env vars and quote escapes
 echo "Starting Spotify plugin..."
 echo "Device name: $SOUND_DEVICE_NAME"
-[[ -n ${SPOTIFY_CREDENTIALS} ]] && echo "Using provided credentials for Spotify login."
+[[ -n "$SOUND_SPOTIFY_USERNAME" ]] && [[ -n "$SOUND_SPOTIFY_PASSWORD" ]] && echo "Using provided credentials for Spotify login."
+[[ -z "$SOUND_SPOTIFY_DISABLE_NORMALISATION" ]] && echo "Volume normalization enabled."
 
-# Start librespot
-exec /usr/bin/librespot \
+set -- /usr/bin/librespot \
   --name "$SOUND_DEVICE_NAME" \
   --bitrate "$SOUND_SPOTIFY_BITRATE" \
   --cache /var/cache/raspotify \
   --linear-volume \
-  "$SPOTIFY_NORMALISATION" \
-  "$SPOTIFY_CREDENTIALS"
+  "$@"
+
+exec "$@"
