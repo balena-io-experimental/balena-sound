@@ -1,4 +1,22 @@
 - commits:
+    - subject: 'multi-room: add snapweb to snapcast server'
+      hash: 7282d0e824a116877f4ffa1f34d02dc00b070219
+      body: |
+        This adds the simple web application snapweb to the snapcast server.
+        The application allows to set properties of snapcast (multiroom) client
+        such as volume
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: emmanuel.jannetti@gmail.com
+        signed-off-by: emmanuel.jannetti@gmail.com
+        Connects-to: '#319'
+        connects-to: '#319'
+      author: Emmanuel Jannetti
+      nested: []
+  version: 3.2.0
+  date: 2020-10-30T10:38:18.334Z
+- commits:
     - subject: 'spotify: fix password woes'
       hash: f62fd91f7f928d68b8825206526de8530a04bc69
       body: |
