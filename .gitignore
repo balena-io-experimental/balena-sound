@@ -5,3 +5,4 @@ landr-dist
 *.traineddata
 node_modules
 build
+core/multiroom/server/snapweb

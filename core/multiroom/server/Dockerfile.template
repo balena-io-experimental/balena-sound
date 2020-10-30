@@ -2,8 +2,11 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
 
 WORKDIR /usr/src
 
-RUN install_packages snapcast-server
+RUN install_packages snapcast-server git make npm
 COPY snapserver.conf /etc/snapserver.conf
 COPY start.sh .
+RUN git clone https://github.com/badaix/snapweb.git snapweb
+RUN npm install --global --no-save typescript
+RUN cd snapweb && make && mkdir -p /var/www && mv dist/* /var/www
 
 CMD [ "/bin/bash", "/usr/src/start.sh" ]
