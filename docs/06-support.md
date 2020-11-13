@@ -65,21 +65,21 @@ This is the official recommendation made by the Raspberry Pi Foundation. Adding 
 
 Using multi-room has proven to make this issue a lot more frequent and noticeable; most likely due to the increased resource usage that it requires.
 
-- If you are *not* using multi-room (you only have one device on your balenaSound fleet) you can disable it to aleviate the problem. Check our [docs](../docs/customization/#general) to find out how.
+- If you are *not* using multi-room (you only have one device on your balenaSound fleet) you can disable it to alleviate the problem. Check our [docs](../docs/customization/#general) to find out how.
 - If you are using multi-room consider changing the `master server` from which you stream to other devices to a Raspberry Pi 4. Raspberry Pi 3's can exhibit audio stuttering when working as `master server` but they work fine if you use them as `clients`.
 
 ##### Change Power Supply Unit (PSU)
 
-Bad quality power supply units are more likely to trigger this problem. Investing in a good power supply unit is always a good idea! 
+Bad quality power supply units are more likely to trigger this problem. Investing in a good power supply unit is always a good idea!
 We recommend using the [original Raspberry Pi power supply](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/) and if not possible at least one that conforms to the power requirements described in [here](https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md).
 
-Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the torough [investigation and testing](https://github.com/balenalabs/balena-sound/issues/62#issuecomment-605265537)!
+Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the thorough [investigation and testing](https://github.com/balenalabs/balena-sound/issues/62#issuecomment-605265537)!
 
 ##### Rolling back to balenaOS 2.38 / Reduce Bluetooth UART baud rate
 
-Raspberry Pi 3's before rev 1.3 have no HW flow control on the UART that controlls the Bluetooth modem. This causes occasional data loss which result in the audio stuttering problem described above. Reducing the UART baud rate to `460800` lessens the problem significantly when compared to the default value of `921600`. 
+Raspberry Pi 3's before rev 1.3 have no HW flow control on the UART that controls the Bluetooth modem. This causes occasional data loss which result in the audio stuttering problem described above. Reducing the UART baud rate to `460800` lessens the problem significantly when compared to the default value of `921600`.
 
-This however requires advanced knowledge and usage of balenaOS. So the advised change is to roll back to balenaOS version 2.38.0+rev1 which uses a default baud rate of `921600` but has other firmware conifiguration that avoids this problem. In order to roll back your balenaOS version you will need to re-flash your SD card and re-provision your device.
+This however requires advanced knowledge and usage of balenaOS. So the advised change is to roll back to balenaOS version 2.38.0+rev1 which uses a default baud rate of `921600` but has other firmware configuration that avoids this problem. In order to roll back your balenaOS version you will need to re-flash your SD card and re-provision your device.
 
 We are currently working on bringing back the configuration present in balenaOS 2.38 to the latest version so that the roll back is not necessary; you can keep track of it [here](https://github.com/balena-os/balena-raspberrypi/issues/476).
 
@@ -98,7 +98,7 @@ balenaSound uses many technologies to provide audio streaming capabilities. All 
 There are however workarounds that you might want to take if you are willing to sacrifice some features:
 
 - Airplay streaming has a built-in two-second delay. Using a different audio source will obviously yield better results.
-- If you are *not* using the multi-room feature you can disable it; multi-room adds the most of the perceived delay as it needs it to sync audio across devices. Check our [docs](../docs/customization/#general) to find out how to disable it. 
+- If you are *not* using the multi-room feature you can disable it; multi-room adds the most of the perceived delay as it needs it to sync audio across devices. Check our [docs](../docs/customization/#general) to find out how to disable it.
 
 ### Multiroom is not working
 
@@ -108,7 +108,7 @@ Streaming audio to a device works fine but other devices on the network don't sy
 
 #### Solution
 
-Multi-room is enabled by default in all device types. Ensure your device is properly configured. You can see the list of default modes of operation [here](../docs/device-support). 
+Multi-room is enabled by default in all device types. Ensure your device is properly configured. You can see the list of default modes of operation [here](../docs/device-support).
 
 If your device is properly configured and still can't get multi-room to work try power cycling the `master server` device. Devices might have missed the event broadcast where a device announces itself as a new `master server`, by rebooting it we force the device to send them again.
 

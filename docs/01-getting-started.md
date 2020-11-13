@@ -24,7 +24,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 ## One-click deploy
 
-One-click deploy is the easiest way to get started with balenaSound as it allows you to deploy and configure the application with a single click and whithout the need of installing additional tools. Check out the `CLI deploy` instructions below if you are interested in an advanced alternative that enables you to achieve more complex deployments.
+One-click deploy is the easiest way to get started with balenaSound as it allows you to deploy and configure the application with a single click and without the need of installing additional tools. Check out the `CLI deploy` instructions below if you are interested in an advanced alternative that enables you to achieve more complex deployments.
 
 ### Deploy with balena
 
@@ -46,7 +46,7 @@ The balenaSound application will start downloading as soon as your device appear
 
 ## CLI deploy
 
-This is the traditional and more advanced approach for deploying applications to balena powered devices. Installing and setting up the balena CLI is definitely more involved than using the `Deploy with balena` button, but it allows for more flexibility and customization when choosing what and when to deploy. 
+This is the traditional and more advanced approach for deploying applications to balena powered devices. Installing and setting up the balena CLI is definitely more involved than using the `Deploy with balena` button, but it allows for more flexibility and customization when choosing what and when to deploy.
 
 For example, if you don't plan on using the Spotify integration, you can edit the `docker-compose.yml` file and remove the Spotify service before deploying the application.
 
@@ -64,10 +64,10 @@ For example, if you don't plan on using the Spotify integration, you can edit th
 - Login with `balena login`
 - Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
 
-## Having troubles?
+## Having trouble?
 
 If you are running into issues getting your balenaSound application running, please try the following:
-1. Check the [support and troubleshooting guide](https://github.com/balenalabs/balena-sound/blob/master/docs/support) for common issues and how to resolve them.
+1. Check the [support and troubleshooting guide](../support) for common issues and how to resolve them.
 2. Post in the [balenaSound forum](https://forums.balena.io/c/balenalabs/balenasound/85) for help from our growing community.
 3. Create an issue on the [balenaSound GitHub project](https://github.com/balenalabs/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
 
