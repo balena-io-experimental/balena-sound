@@ -1,2 +1,2 @@
-sw_volume: 20
+sw_volume: $BALENA_MPD_INITIAL_SOUND_VOLUME
 state: stop
