@@ -71,3 +71,14 @@ services:
     network_mode: host
     ports:
       - 49494:49494
+
+  squeezelite:
+    build: ./plugins/squeezelite
+    restart: on-failure
+    privileged: true
+    network_mode: host
+
+  mpd:
+    build: ./plugins/mpd
+    restart: on-failure
+    network_mode: host

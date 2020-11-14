@@ -1,0 +1,15 @@
+FROM balenalib/raspberrypi3-debian:buster
+
+WORKDIR /usr/src/
+
+# Audio block setup
+ENV PULSE_SERVER=tcp:localhost:4317
+RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
+
+COPY start.sh .
+COPY squeezelite.sha1 .
+
+RUN curl -sL https://downloads.sourceforge.net/project/lmsclients/squeezelite/linux/squeezelite-1.9.7.1283-armv6hf.tar.gz > squeezelite.tar.gz
+RUN tar -xf squeezelite.tar.gz
+
+CMD [ "/bin/bash", "/usr/src/start.sh" ]
