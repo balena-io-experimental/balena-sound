@@ -2,7 +2,6 @@ version: '2'
 
 volumes:
   spotifycache:
-  snapcast:
 
 services:
 
@@ -14,8 +13,6 @@ services:
       io.balena.features.dbus: 1
     ports:
       - 4317:4317
-    volumes:
-      - snapcast:/var/cache/snapcast
 
   sound-supervisor:
     build: ./core/sound-supervisor
@@ -32,8 +29,6 @@ services:
       - 1704:1704
       - 1705:1705
       - 1780:1780
-    volumes:
-      - snapcast:/var/cache/snapcast
 
   multiroom-client:
     build: ./core/multiroom/client
