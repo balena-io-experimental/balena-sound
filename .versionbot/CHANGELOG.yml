@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add contract balena.yml and app logo (hub)
+      hash: 7a815002f52ccfb9d769641d9bd29d7eee55a965
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Chris Crocker-White <chriscw@balena.io>
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+      author: Chris Crocker-White
+      nested: []
+  version: 3.2.1
+  date: 2020-11-25T11:48:44.928Z
+- commits:
     - subject: 'multi-room: add snapweb to snapcast server'
       hash: 7282d0e824a116877f4ffa1f34d02dc00b070219
       body: |
