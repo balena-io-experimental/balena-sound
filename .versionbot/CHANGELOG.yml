@@ -1,4 +1,17 @@
 - commits:
+    - subject: Change deploy button to svg
+      hash: 24c6adddc00754adc721af78c84fbd73986c4d95
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+      nested: []
+  version: 3.3.0
+  date: 2020-11-27T09:23:59.769Z
+- commits:
     - subject: 'meta: fix up some docs typos'
       hash: f6244f43f133ff14198aa929974cfaa6729f0055
       body: ''
