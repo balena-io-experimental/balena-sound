@@ -70,10 +70,11 @@ Standalone mode is easy to understand. You just pipe ` balena-sound.input` to `b
 
 ### Multiroom
 ![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-multiroom.png)
+*Note that this image is currently outdated. FIFO file is no longer being used as of v3.4.0. Image update pending.*
 
 Multiroom feature relies on `snapcast` to broadcast the audio to multiple devices. Snapcast has two binaries working alonside, server and client.
 
-Snapcast server expects audio to be written into a FIFO file, so we create an additional sink (`snapcast` sink) that routes audio from `balena-sound.input` into said FIFO file. The server will then read the file and use TCP packets to broadcast audio to all clients that are connected to it, wether they run in the same device or others. Note that when writting into the FIFO file the audio is "exiting" the `audio` block and no longer under PulseAudio's control.
+Snapcast server can receive audio from an ALSA stream, so we create an additional sink (`snapcast` sink) that routes audio from `balena-sound.input` and configure snapcast to grab the audio from the sink monitor. The server will then use TCP packets to broadcast audio to all clients that are connected to it, wether they run in the same device or others. Note that the audio is "exiting" the `audio` block and no longer under PulseAudio's control.
 
 Snapcast client receives the audio from the server and sends it back into the `audio` block, in particular to `balena-sound.output` sink which will in turn send the audio to whatever output was selected by the user.
 
@@ -84,6 +85,7 @@ This setup allows us to decouple the multiroom feature from the `audio` block wh
 As described above, plugins are the services generating the audio to be streamed/played. Plugins are responsible for sending the audio into the `audio` block, particularily into `balena-sound.input` sink. There are two alternatives for how this can be acomplished. A detailed explanation can be found [here](https://github.com/balenablocks/audio#usage), in our case:
 
 **PulseAudio backend**
+
 Most audio applications support using PulseAudio as an audio backend. This means the application was coded to allow sending audio directly to PulseAudio (and hence the `audio` block). This is usually configurable via a CLI option flag or configuration files. You should check your application's documentation and figure out if this is the case.
 
 If the application supports PulseAudio backend, the only configuration you need is to specify where the PulseAudio server can be located. This can be done by setting the `PULSE_SERVER` environment variable, we recommend doing it in the `Dockerfile`:
@@ -93,6 +95,7 @@ ENV PULSE_SERVER=tcp:localhost:4317
 ```
 
 **ALSA bridge**
+
 If your application does not have built-in PulseAudio support, you can create a bridge to it by using ALSA. This can't be added in easily, so we wrote a little script that will do the work for you:
 
 ```

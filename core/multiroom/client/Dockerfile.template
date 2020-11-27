@@ -1,13 +1,15 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.12
+# Minimum snapcast version for ALSA stream source is v0.21
+# Currently Alpine 3.12 is pinned to snapcast v0.19 so we need to use Alpine edge
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:edge
+WORKDIR /usr/src
 
 RUN install_packages snapcast-client
 
 # Audio block setup
-RUN curl --silent https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/alpine-setup.sh | sh
 ENV PULSE_SERVER=tcp:audio:4317
 ENV PULSE_SINK=balena-sound.output
+RUN curl --silent https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/alpine-setup.sh | sh
 
-WORKDIR /usr/src
 COPY start.sh .
 
 CMD [ "/bin/bash", "/usr/src/start.sh" ]

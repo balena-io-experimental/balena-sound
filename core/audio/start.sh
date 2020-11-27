@@ -5,6 +5,14 @@ set -e
 CONFIG_TEMPLATE=/usr/src/balena-sound.pa
 CONFIG_FILE=/etc/pulse/balena-sound.pa
 
+# Set loopback module latency
+function set_loopback_latency() {
+  local LOOPBACK="$1"
+  local LATENCY="$2"
+  
+  sed -i "s/%$LOOPBACK%/$LATENCY/" "$CONFIG_FILE"
+}
+
 # Route "balena-sound.input" to the appropriate sink depending on selected mode
 # Either "snapcast" fifo sink or "balena-sound.output"
 function route_input_sink() {
@@ -72,11 +80,17 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 
+# Get latency values
+SOUND_INPUT_LATENCY=${SOUND_INPUT_LATENCY:-200}
+SOUND_OUPUT_LATENCY=${SOUND_OUTPUT_LATENCY:-200}
+
 # Audio routing: route intermediate balena-sound input/output sinks
 echo "Setting audio routing rules. Note that this can be changed after startup."
 reset_sound_config
 route_input_sink "$MODE"
 route_output_sink
+set_loopback_latency "INPUT_LATENCY" "$SOUND_INPUT_LATENCY"
+set_loopback_latency "OUTPUT_LATENCY" "$SOUND_OUPUT_LATENCY"
 if [[ -n "$SOUND_ENABLE_SOUNDCARD_INPUT" ]]; then
   route_input_source
 fi
