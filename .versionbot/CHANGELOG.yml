@@ -1,4 +1,15 @@
 - commits:
+    - subject: Replace Unicode double quotes with ASCII double quotes in reference docs
+      hash: b4298883cad25f59d9b5d9fe4b3c0ba29cbdc1af
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Paulo Castro
+      nested: []
+  version: 3.3.1
+  date: 2020-11-27T16:59:10.139Z
+- commits:
     - subject: Change deploy button to svg
       hash: 24c6adddc00754adc721af78c84fbd73986c4d95
       body: ''
