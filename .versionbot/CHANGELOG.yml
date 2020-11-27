@@ -1,4 +1,31 @@
 - commits:
+    - subject: 'multiroom: update snapcast to v0.22 and various improvements'
+      hash: d3312c2f97a93e4a94c73ab1986965f7f7f8930c
+      body: >
+        - Update snapcast to v0.22.0-r0
+
+        - Replace FIFO stream source with ALSA which significantly reduces CPU
+        and I/O usage (fixes #294)
+
+        - Add SOUND_INPUT_LATENCY and SOUND_OUTPUT_LATENCY env vars (also helps
+        with #294)
+
+        - Reduce multiroom-server image with multi stage builds for a slimmer
+        image
+
+        - Reduce verbose level for both multiroom services
+      footer:
+        Connects-to: '#294'
+        connects-to: '#294'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.4.0
+  date: 2020-11-27T19:37:19.895Z
+- commits:
     - subject: Replace Unicode double quotes with ASCII double quotes in reference docs
       hash: b4298883cad25f59d9b5d9fe4b3c0ba29cbdc1af
       body: ''
