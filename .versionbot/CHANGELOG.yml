@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'docs: Update multiroom image'
+      hash: 9b9a0dde1d8d66b7c22ffbf54068ae119af348f6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.4.1
+  date: 2020-11-30T18:08:20.552Z
+- commits:
     - subject: 'multiroom: update snapcast to v0.22 and various improvements'
       hash: d3312c2f97a93e4a94c73ab1986965f7f7f8930c
       body: >
