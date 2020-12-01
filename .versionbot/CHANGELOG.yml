@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'docs: Patch ALSA bridge install script'
+      hash: b85b466163620841a62f692f395b8490c5570f83
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.4.2
+  date: 2020-12-01T19:52:40.154Z
+- commits:
     - subject: 'docs: Update multiroom image'
       hash: 9b9a0dde1d8d66b7c22ffbf54068ae119af348f6
       body: ''
