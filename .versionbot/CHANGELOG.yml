@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'docs: add iqaudio and JustBoom boards'
+      hash: 9ac3380462fb7bac17a4878a6c916b14f271cc4d
+      body: |
+        Add more tested JustBoom and iqaudio boards
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Aaron Shaw <shawaj@gmail.com>
+        signed-off-by: Aaron Shaw <shawaj@gmail.com>
+      author: Aaron Shaw
+      nested: []
+  version: 3.4.3
+  date: 2020-12-21T01:13:18.958Z
+- commits:
     - subject: 'docs: Patch ALSA bridge install script'
       hash: b85b466163620841a62f692f395b8490c5570f83
       body: ''
