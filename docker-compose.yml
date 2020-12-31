@@ -66,3 +66,14 @@ services:
     network_mode: host
     ports:
       - 49494:49494
+
+  roon:
+    build: ./plugins/roon
+    restart: on-failure
+    network_mode: host
+    ports:
+      - 9003:9003
+      - 9100-9200:9100-9200
+    privileged: true
+    labels:
+      io.balena.features.dbus: 1
