@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'spotify: fix linear volume control issue'
+      hash: 21105d4664346f5e3a1e6260fe09da59ba8b5a5c
+      body: >
+        rasptify updated their librepsot debs to pull in the new changes in
+        librespot to move away from --linear-volume and to either
+        --mixer-linear-volume or --volume-ctrl linear. The latter seems to be
+        the preferred option judging by their latest docs update.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Connects-to: '#386'
+        connects-to: '#386'
+        Closes: '#386'
+        closes: '#386'
+        Signed-off-by: Aaron Shaw <aaron@balena.io>
+        signed-off-by: Aaron Shaw <aaron@balena.io>
+        Co-authored-by: wusala01 <nick.london94@gmail.com>
+        co-authored-by: wusala01 <nick.london94@gmail.com>
+      author: Aaron Shaw
+      nested: []
+  version: 3.4.4
+  date: 2020-12-31T16:55:50.168Z
+- commits:
     - subject: 'docs: add iqaudio and JustBoom boards'
       hash: 9ac3380462fb7bac17a4878a6c916b14f271cc4d
       body: |
