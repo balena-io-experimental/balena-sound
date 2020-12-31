@@ -36,7 +36,7 @@ set -- /usr/bin/librespot \
   --name "$SOUND_DEVICE_NAME" \
   --bitrate "$SOUND_SPOTIFY_BITRATE" \
   --cache /var/cache/raspotify \
-  --linear-volume \
+  --volume-ctrl linear \
   "$@"
 
 exec "$@"
