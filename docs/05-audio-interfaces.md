@@ -30,7 +30,7 @@ In the balenaCloud dashboard:
 
 Alternatively, you can set this configuration variable in the `Define DT overlays` section under the `Device configuration` menu item:
 
-![DAC Configuration Option 2](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars-2.png)
+![DAC Configuration Option 2](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars-2.png/)
 
 As per the above steps, after adding this power cycling your device will then pull in the new overlay.
 
