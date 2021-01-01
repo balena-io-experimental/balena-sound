@@ -1,4 +1,45 @@
 - commits:
+    - subject: 'docs: change to svg deploy with balena button'
+      hash: 3c341465bb403748b9bfdfd6e26221c0f273803d
+      body: |
+        change to svg logo
+      footer:
+        Closes: '#362'
+        closes: '#362'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Aaron Shaw <aaron@balena.io>
+        signed-off-by: Aaron Shaw <aaron@balena.io>
+      author: Aaron Shaw
+      nested: []
+    - subject: 'docs: add link to supported dacs'
+      hash: 36588938979480c360e54310702516bd12241a0b
+      body: |
+        add link to supported dacs
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Aaron Shaw <aaron@balena.io>
+        signed-off-by: Aaron Shaw <aaron@balena.io>
+      author: Aaron Shaw
+      nested: []
+    - subject: 'docs: add various dacs that have been tested'
+      hash: 99d2e7871ef6a168b554c35df684d4d2f926a12b
+      body: >
+        adds instructions for various dacs that have been tested to work with
+        balenaSound
+      footer:
+        Closes: '#345'
+        closes: '#345'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Aaron Shaw <aaron@balena.io>
+        signed-off-by: Aaron Shaw <aaron@balena.io>
+      author: Aaron Shaw
+      nested: []
+  version: 3.4.5
+  date: 2021-01-01T17:51:40.610Z
+- commits:
     - subject: 'spotify: fix linear volume control issue'
       hash: 21105d4664346f5e3a1e6260fe09da59ba8b5a5c
       body: >
