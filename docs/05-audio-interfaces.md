@@ -43,7 +43,8 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Justboom Amp HAT/Zero][30]   | justboom-dac                          | Yes
 | [Justboom Digi HAT/Zero][25]  | justboom-digi                         | Yes
 | [Pisound][4]                  | pisound                               | Yes
-| [InnoMaker][8]                | allo-boss-dac-pcm512x-audio           | [Yes][9]
+| [InnoMaker HiFi DAC HAT][8]   | allo-boss-dac-pcm512x-audio           | [Yes][9]
+| [InnoMaker HiFi Amp HAT][35]  | hifiberry-amp                         | [Yes][36]
 | [Boss DAC v1.2][29]           | allo-boss-dac-pcm512x-audio           | Yes
 | [miniBoss DAC][10]            | allo-boss-dac-pcm512x-audio           | Yes
 | [PiFi Digi+][11]              | hifiberry-digi                        | Yes
@@ -67,6 +68,8 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   | Yes
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac","i2s-mmap"           | Yes
 | [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap" | Yes
+| [RasPiAudio Audio+ DAC][37]  | hifiberry-dac                          | Yes[38]
+| [AUDIOPHONICS I-Sabre DAC ES9023][39]| hifiberry-dac                  | Yes[40]
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
@@ -102,3 +105,9 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [32]: http://www.thepilocator.com/Product/Info/iqaudio-pi-daczero-full-hd-audio-card-mmp
 [33]: https://shop.pimoroni.com/products/pi-digi?variant=33370425994
 [34]: https://www.raspberrypi.org/products/iqaudio-digiamp-plus/
+[35]: https://www.inno-maker.com/product/hifi-amp-hat/
+[36]: https://github.com/balenalabs/balena-sound/issues/385
+[37]: https://raspiaudio.com/produit/audio
+[38]: https://github.com/balenalabs/balena-sound/issues/355
+[39]: https://www.audiophonics.fr/fr/dac-et-interfaces-pour-raspberry-pi/audiophonics-i-sabre-dac-es9023-tcxo-raspberry-pi-a-b-20-i2s-p-9978.html
+[40]: https://github.com/balenalabs/balena-sound/issues/345

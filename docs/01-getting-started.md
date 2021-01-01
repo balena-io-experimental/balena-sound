@@ -30,7 +30,7 @@ One-click deploy is the easiest way to get started with balenaSound as it allows
 
 Click this button to go straight to application creation, where balenaSound will be pre-loaded to your application:
 
-[![deploy button](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
 
 ### Provision your device
 
