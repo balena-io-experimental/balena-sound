@@ -65,7 +65,7 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 | [Hifiberry Beocreate][22]     | hifiberry-dac                         | Yes
 | [Hifiberry DAC+ DSP][23]      | hifiberry-dac                         | Yes
 | [Hifiberry MiniAmp][24]       | hifiberry-dac                         | Yes
-| [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   | Yes
+| [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   | [Yes][41]
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac","i2s-mmap"           | Yes
 | [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap" | Yes
 | [RasPiAudio Audio+ DAC][37]  | hifiberry-dac                          | Yes[38]
@@ -111,3 +111,4 @@ These are the DACs that are known to work with balenaSound. If your DAC is not o
 [38]: https://github.com/balenalabs/balena-sound/issues/355
 [39]: https://www.audiophonics.fr/fr/dac-et-interfaces-pour-raspberry-pi/audiophonics-i-sabre-dac-es9023-tcxo-raspberry-pi-a-b-20-i2s-p-9978.html
 [40]: https://github.com/balenalabs/balena-sound/issues/345
+[41]: https://github.com/balenalabs/balena-sound/issues/377
