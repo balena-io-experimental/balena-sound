@@ -28,6 +28,12 @@ In the balenaCloud dashboard:
 
 ![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
 
+Alternatively, you can set this configuration variable in the `Define DT overlays` section under the `Device configuration` menu item:
+
+![DAC Configuration Option 2](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars-2.png)
+
+As per the above steps, after adding this power cycling your device will then pull in the new overlay.
+
 If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your application.
 
 ### dtoverlay values
