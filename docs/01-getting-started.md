@@ -13,7 +13,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 - Any device from our [supported devices list](../docs/device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
 - An SD Card! We recommend the Sandisk Extreme Pro series. 8GB should be plenty enough for this project.
 - Power supply
-- 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.
+- 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out, or a [USB/I2S DAC or Amp board](https://sound.balenalabs.io/docs/audio-interfaces/)
 
 ## Software required
 
