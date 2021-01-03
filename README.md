@@ -5,13 +5,12 @@
 ## Highlights
 
 - **Bluetooth, Airplay, Spotify Connect and UPnP**: Stream audio from your favourite music services or directly from your smartphone/computer using bluetooth or UPnP.
-- **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
+- **Multi-room synchronous playing**: Play perfectly synchronized audio on [multiple devices](https://sound.balenalabs.io/docs/device-support/) all over your place.
 - **Extended DAC support**: Upgrade your audio quality with one of our [supported DACs](https://sound.balenalabs.io/docs/audio-interfaces/#dac-boards).
-- **Multiple device support**: 
 
 ## Setup and configuration
 
-Running this project is as simple as deploying it to a balenaCloud application. You can do it in just one click by using the button below:
+Running this project is as simple as deploying it to a [balenaCloud](https://www.balena.io/cloud/) application. You can do it in just one click by using the button below:
 
 [![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
 
@@ -29,7 +28,7 @@ There are many commercial solutions out there that provide functionality similar
 
 balenaSound is an open source project that allows you to build your own DIY audio streaming platform without compromises. Why spend big money on hardware that might be deemed obsolete by the vendor as they see fit? With balenaSound you are in control, bring your old speakers back to life!
 
-This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
+This project is in active development so if you have any feature requests or issues please [submit them here](https://github.com/balenalabs/balena-sound/issues/new/choose) on GitHub. PRs are welcome, too.
 
 ## Getting Help
 
