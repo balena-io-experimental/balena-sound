@@ -66,3 +66,9 @@ services:
     network_mode: host
     ports:
       - 49494:49494
+
+  tidal:
+    build: ./plugins/tidal
+    restart: on-failure
+    privileged: true
+    network_mode: host
