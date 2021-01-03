@@ -6,7 +6,8 @@
 
 - **Bluetooth, Airplay, Spotify Connect and UPnP**: Stream audio from your favourite music services or directly from your smartphone/computer using bluetooth or UPnP.
 - **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
-- **Extended DAC support**: Upgrade your audio quality with one of our [supported DACs](https://sound.balenalabs.io/docs/audio-interfaces/#dac-boards)
+- **Extended DAC support**: Upgrade your audio quality with one of our [supported DACs](https://sound.balenalabs.io/docs/audio-interfaces/#dac-boards).
+- **Multiple device support**: 
 
 ## Setup and configuration
 
@@ -17,6 +18,8 @@ Running this project is as simple as deploying it to a balenaCloud application. 
 ## Documentation
 
 Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options and more!
+
+We currently support a [good range of devices](https://sound.balenalabs.io/docs/device-support/) and are always testing more. [Let us know](https://github.com/balenalabs/balena-sound/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) if there are any in particular you would like to see added (it helps a lot if they are already supported by [balenaOS](https://www.balena.io/os/)).
 
 ## Motivation
 
