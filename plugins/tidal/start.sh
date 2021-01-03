@@ -39,10 +39,10 @@ set -- /usr/ifi/ifi-tidal-release/bin/tidal_connect_application \
 			--codec-mpegh true \
 			--codec-mqa false \
 			--model-name "balenaSound Streamer" \
-			--disable-app-security false \
-			--disable-web-security false \
-			--enable-mqa-passthrough false \
-			--log-level 3
+                        --disable-app-security false \
+                        --disable-web-security false \
+                        --enable-mqa-passthrough false \
+                        --log-level 3
 			"$@"
 
 exec "$@"

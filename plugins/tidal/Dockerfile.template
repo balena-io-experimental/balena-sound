@@ -1,9 +1,12 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
 
-RUN install_packages git curl libportaudio2* libflac++6v5* libavahi-common3 libavahi-client3 \
-    && echo "deb http://archive.raspbian.org/raspbian stretch main" >> /etc/apt/sources.list \
+# Audio block setup
+ENV PULSE_SERVER=tcp:localhost:4317
+RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
+
+RUN echo "deb http://archive.raspbian.org/raspbian stretch main" >> /etc/apt/sources.list \
     && apt update \
-    && apt install libavformat57 \
+    && install_packages multiarch-support libavformat57 git libportaudio2* libflac++6v5* libavahi-common3 libavahi-client3 \
     && mkdir /usr/ifi \
     && cd /usr/ifi \
     && curl -k -O -L http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb \
@@ -14,10 +17,6 @@ RUN install_packages git curl libportaudio2* libflac++6v5* libavahi-common3 liba
     && chmod +x /usr/ifi/ifi-tidal-release/play \
     && chmod +x /usr/ifi/ifi-tidal-release/bin/tidal_connect_application \
     && chmod +x /usr/ifi/ifi-tidal-release/pa_devs/run.sh
-
-# Audio block setup
-ENV PULSE_SERVER=tcp:localhost:4317
-RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
 
 COPY start.sh /usr/src/
 
