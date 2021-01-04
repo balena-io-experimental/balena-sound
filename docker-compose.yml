@@ -72,3 +72,5 @@ services:
     restart: on-failure
     privileged: true
     network_mode: host
+    labels:
+      io.balena.features.dbus: 1
