@@ -1,4 +1,4 @@
-# See https://sound.balenalabs.io/docs/architecture for details
+# See https://sound.balenalabs.io/contributing/architecture/ for details
 
 # Create balena-sound sinks
 load-module module-null-sink sink_name=balena-sound.input
