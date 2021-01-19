@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add --hostID arg to Snapcast client startup
+      hash: 31e4ae725e41075f1d97d8c10ad5c8f6757cc1ec
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Mark Chester <mark@chesterfamily.org>
+        signed-off-by: Mark Chester <mark@chesterfamily.org>
+        Connects-to: '#332'
+        connects-to: '#332'
+      author: Mark Chester
+      nested: []
+  version: 3.4.7
+  date: 2021-01-19T18:59:07.932Z
+- commits:
     - subject: 'upnp: Set UUID to differentiate between instances'
       hash: ebc64a993457f4908c7ee2a9522f58eb772f276b
       body: |
