@@ -1,4 +1,23 @@
 - commits:
+    - subject: 'upnp: Set UUID to differentiate between instances'
+      hash: ebc64a993457f4908c7ee2a9522f58eb772f276b
+      body: |
+        gmrender uses a hard coded UUID if none is supplied.
+        This resulted in all upnp servers in balena-sound
+        using the same ID, and clients showing whichever
+        server last broadacast.
+      footer:
+        Connects-to: '#380'
+        connects-to: '#380'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: jody@gnome.org
+        signed-off-by: jody@gnome.org
+      author: Jody Goldberg
+      nested: []
+  version: 3.4.6
+  date: 2021-01-08T19:51:19.686Z
+- commits:
     - subject: 'docs: change to svg deploy with balena button'
       hash: 3c341465bb403748b9bfdfd6e26221c0f273803d
       body: |
