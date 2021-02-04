@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena.yml to adhere to new spec
+      hash: a4e65939bfbf3c869bf77cdb47d94dc2dbe4ba2d
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Stevche Radevski <stevche@balena.io>
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+      author: Stevche Radevski
+      nested: []
+  version: 3.5.0
+  date: 2021-02-01T17:37:07.416Z
+- commits:
     - subject: Add --hostID arg to Snapcast client startup
       hash: 31e4ae725e41075f1d97d8c10ad5c8f6757cc1ec
       body: ''
