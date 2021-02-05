@@ -1,4 +1,24 @@
 - commits:
+    - subject: >-
+        spotify: Add option to enable Spotify's audio cache and disable cache by
+        default
+      hash: 64122368ac2db1c25665e9477ce299b1a998be7c
+      body: >
+        This feature allows the user to enable Spotify's audio cache by setting
+        the SOUND_SPOTIFY_ENABLEE_CACHE environment variable. The cache is now
+        disabled by default to avoid full filesystem issues.
+      footer:
+        Connects-to: '#367'
+        connects-to: '#367'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Roddie Hasan <roddie@krweb.net>
+        signed-off-by: Roddie Hasan <roddie@krweb.net>
+      author: Roddie Hasan
+      nested: []
+  version: 3.5.1
+  date: 2021-02-04T21:26:35.886Z
+- commits:
     - subject: Update balena.yml to adhere to new spec
       hash: a4e65939bfbf3c869bf77cdb47d94dc2dbe4ba2d
       body: ''
