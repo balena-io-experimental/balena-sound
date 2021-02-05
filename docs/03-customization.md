@@ -15,7 +15,7 @@ You can read more about environment variables [here](https://www.balena.io/docs/
 
 ## General
 
-The following environment variables apply to balenaSound in general, modifying it's behavior across the board:
+The following environment variables apply to balenaSound in general, modifying its behavior across the board:
 
 | Environment variable | Description | Options | Default |
 | ------ | ------ | ------ | ------ |
@@ -42,9 +42,10 @@ The following environment variables control various aspects of each plugin behav
 
 | Environment variable | Description | Options | Defaults |
 | --- | --- | --- | --- |
-| SOUND_DISABLE_PLUGIN | Disable the selected plugin. Useful when you don't want to use a particular plugin. There is one variable per plugin: <br>- `SOUND_DISABLE_SPOTIFY`<br>- `SOUND_DISABLE_AIRPLAY`<br>- `SOUND_DISABLE_BLUETOOTH`<br>- `SOUND_DISABLE_UPNP` | Plugin will be disabled if the variable exists regardless of it's value. | --- |
-| SOUND_ENABLE_SOUNDCARD_INPUT | If your soundcard has inputs you can enable soundcard input by setting this variable. Sound coming in through the audio card will be treated as a new plugin/audio source.<br><br>This feature is still experimental! | Plugin will be enabled if the variable exists regardless of it's value. | --- |
+| SOUND_DISABLE_PLUGIN | Disable the selected plugin. Useful when you don't want to use a particular plugin. There is one variable per plugin: <br>- `SOUND_DISABLE_SPOTIFY`<br>- `SOUND_DISABLE_AIRPLAY`<br>- `SOUND_DISABLE_BLUETOOTH`<br>- `SOUND_DISABLE_UPNP` | Plugin will be disabled if the variable exists regardless of its value. | --- |
+| SOUND_ENABLE_SOUNDCARD_INPUT | If your soundcard has inputs you can enable soundcard input by setting this variable. Sound coming in through the audio card will be treated as a new plugin/audio source.<br><br>This feature is still experimental! | Plugin will be enabled if the variable exists regardless of its value. | --- |
 | SOUND_SPOTIFY_USERNAME | Your Spotify login username. Required to use Spotify Connect over the internet. | --- | --- |
 | SOUND_SPOTIFY_PASSWORD | Your Spotify login password. Required to use Spotify Connect over the internet. | --- | --- |
-| SOUND_SPOTIFY_DISABLE_NORMALISATION | Disable volume normalization in Spotify. | Disabled if the variable exists regardless of it's value. | --- |
+| SOUND_SPOTIFY_DISABLE_NORMALISATION | Disable volume normalization in Spotify. | Disabled if the variable exists regardless of its value. | --- |
+| SOUND_SPOTIFY_ENABLE_CACHE | Enable the audio cache in Spotify. Note that over time the cache can take up large amounts of disk space. | Enabled if the variable exists regardless of its value. | --- |
 | SOUND_SPOTIFY_BITRATE | Spotify playback bitrate. | Bitrate in kbps: `90`, `160` or `320` | 160 |
