@@ -85,7 +85,7 @@ SOUND_INPUT_LATENCY=${SOUND_INPUT_LATENCY:-200}
 SOUND_OUPUT_LATENCY=${SOUND_OUTPUT_LATENCY:-200}
 
 # Audio routing: route intermediate balena-sound input/output sinks
-echo "Setting audio routing rules. Note that this can be changed after startup."
+echo "Setting audio routing rules..."
 reset_sound_config
 route_input_sink "$MODE"
 route_output_sink

@@ -16,6 +16,7 @@ SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
 LATENCY=${SOUND_MULTIROOM_LATENCY:+"--latency $SOUND_MULTIROOM_LATENCY"}
 
 echo "Starting multi-room client..."
+echo "$(snapclient --version | head -n 1)"
 echo "Mode: $MODE"
 echo "Target snapcast server: $SNAPSERVER"
 
@@ -29,9 +30,6 @@ fi
 
 # Start snapclient
 if [[ "$MODE" == "MULTI_ROOM" || "$MODE" == "MULTI_ROOM_CLIENT" ]]; then
-  # Start snapclient and filter out those pesky chunk logs
-  # grep filter can be removed when we get snapcast v0.20
-  # see: https://github.com/badaix/snapcast/issues/559#issuecomment-615874719
   /usr/bin/snapclient --host $SNAPSERVER $LATENCY --hostID $SNAPCAST_CLIENT_ID --logfilter *:notice
 else
   echo "Multi-room client disabled. Exiting..."

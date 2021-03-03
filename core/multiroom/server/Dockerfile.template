@@ -8,9 +8,9 @@ RUN git clone https://github.com/badaix/snapweb.git snapweb
 RUN npm install --global --no-save typescript
 RUN cd snapweb && make
 
-# Minimum snapcast version for ALSA stream source is v0.21
-# Currently Alpine 3.12 is pinned to snapcast v0.19 so we need to use Alpine edge
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:edge
+# TODO: don't rely on bullseye repository pinning because it could change with no warning
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bullseye
+
 WORKDIR /usr/src
 
 # Install snapweb
@@ -18,13 +18,13 @@ RUN mkdir -p /var/www
 COPY --from=web-builder /usr/src/snapweb/dist/* /var/www/
 
 # Install snapcast
-RUN install_packages snapcast-server
+RUN install_packages snapserver
 COPY snapserver.conf /etc/snapserver.conf
 COPY start.sh .
 
 # Audio block setup
 ENV PULSE_SERVER=tcp:audio:4317
 ENV PULSE_SOURCE=snapcast.monitor
-RUN curl --silent https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/alpine-setup.sh| sh
+RUN curl --silent https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh| sh
 
 CMD [ "/bin/bash", "/usr/src/start.sh" ]
