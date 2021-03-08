@@ -1,4 +1,22 @@
 - commits:
+    - subject: 'multiroom: fix snapcast version'
+      hash: eef82e73a67a3e46d8901042ffc42fca64284549
+      body: |
+        Latest snapcast release on alpine edge is not working properly.
+        Going back to debian to get snapcast v0.23.
+        This increases container size considerably though :/
+      footer:
+        Connects-to: '#423'
+        connects-to: '#423'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.5.2
+  date: 2021-03-08T13:07:31.390Z
+- commits:
     - subject: >-
         spotify: Add option to enable Spotify's audio cache and disable cache by
         default
