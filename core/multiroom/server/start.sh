@@ -28,6 +28,7 @@ fi
 
 # Start snapserver
 echo "Starting multi-room server..."
+echo "$(snapserver --version | head -n 1)"
 echo "Mode: $MODE"
 
 if [[ "$MODE" == "MULTI_ROOM" ]]; then
