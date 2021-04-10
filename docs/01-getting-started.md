@@ -62,8 +62,25 @@ For example, if you don't plan on using the Spotify integration, you can edit th
 
 - Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - Login with `balena login`
-- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
+- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step. 
 
+## Upgrade
+
+### Upgrading via CLI
+
+To deploy bug fixes or new features to your balenaSound application, the process is the same as a deployment: 
+
+- Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
+- Login with `balena login`
+- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application during the provision step above. 
+
+> **Note:** If you receive the message "Application is ambiguous" during the push, then you will need to specify your balenaCloud username along with the `<appName>`, ie. `balena push <username>/<appName>`
+
+### Upgrading via one-click
+
+To update your application via one-click deploy just click the Deploy with balena button below. Make sure you select your already existing balenaSound application so you don't create a new one!
+
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
 ## Having trouble?
 
 If you are running into issues getting your balenaSound application running, please try the following:
