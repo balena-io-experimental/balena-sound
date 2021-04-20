@@ -48,4 +48,4 @@ The following environment variables control various aspects of each plugin behav
 | SOUND_SPOTIFY_PASSWORD | Your Spotify login password. Required to use Spotify Connect over the internet. | --- | --- |
 | SOUND_SPOTIFY_DISABLE_NORMALISATION | Disable volume normalization in Spotify. | Disabled if the variable exists regardless of its value. | --- |
 | SOUND_SPOTIFY_ENABLE_CACHE | Enable the audio cache in Spotify. Note that over time the cache can take up large amounts of disk space. | Enabled if the variable exists regardless of its value. | --- |
-| SOUND_SPOTIFY_BITRATE | Spotify playback bitrate. | Bitrate in kbps: `90`, `160` or `320` | 160 |
+| SOUND_SPOTIFY_BITRATE | Spotify playback bitrate. | Bitrate in kbps: `96`, `160` or `320` | 160 |
