@@ -95,4 +95,9 @@ if [[ -n "$SOUND_ENABLE_SOUNDCARD_INPUT" ]]; then
   route_input_source
 fi
 
+# openFleets: configure hostname
+curl -X PATCH --header "Content-Type:application/json" \
+    --data '{"network": {"hostname": "balena"}}' \
+    "$BALENA_SUPERVISOR_ADDRESS/v1/device/host-config?apikey=$BALENA_SUPERVISOR_API_KEY"
+
 exec pulseaudio --file /etc/pulse/balena-sound.pa

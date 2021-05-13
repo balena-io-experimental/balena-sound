@@ -11,6 +11,7 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
+      io.balena.features.supervisor-api: 1
     ports:
       - 4317:4317
 
