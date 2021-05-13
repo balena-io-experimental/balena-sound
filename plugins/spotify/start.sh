@@ -25,12 +25,19 @@ if [[ -n "$SOUND_SPOTIFY_USERNAME" ]] && [[ -n "$SOUND_SPOTIFY_PASSWORD" ]]; the
     --password "$SOUND_SPOTIFY_PASSWORD"
 fi
 
+# SOUND_SPOTIFY_DISABLE_CACHE: Disable Spotify audio cache
+if [[ -z "$SOUND_SPOTIFY_ENABLE_CACHE" ]]; then
+  set -- "$@" \
+    --disable-audio-cache
+fi
+
 # Start librespot
 # We use set/$@ because librespot for some reason does not like env vars and quote escapes
 echo "Starting Spotify plugin..."
 echo "Device name: $SOUND_DEVICE_NAME"
 [[ -n "$SOUND_SPOTIFY_USERNAME" ]] && [[ -n "$SOUND_SPOTIFY_PASSWORD" ]] && echo "Using provided credentials for Spotify login."
 [[ -z "$SOUND_SPOTIFY_DISABLE_NORMALISATION" ]] && echo "Volume normalization enabled."
+[[ -z "$SOUND_SPOTIFY_ENABLE_CACHE" ]] && echo "Spotify audio cache disabled."
 
 set -- /usr/bin/librespot \
   --name "$SOUND_DEVICE_NAME" \
