@@ -7,9 +7,12 @@ fleetcta: Sounds good
 post-provisioning: >-
   ## Usage instructions
 
-  Once your device joins the fleet you'll need to allow some time for it to download the application. When it's done you should see balenaSound pop up on your bluetooth, Airplay and Spotify Connect streaming services.
+  Once your device joins the fleet you'll need to allow some time for it to
+  download the application. When it's done you should see balenaSound pop up on
+  your bluetooth, Airplay and Spotify Connect streaming services.
 
-  For detailed instructions on how to use balenaSound check out [this](https://sound.balenalabs.io/docs/usage) guide.
+  For detailed instructions on how to use balenaSound check out
+  [this](https://sound.balenalabs.io/docs/usage) guide.
 assets:
   repository:
     type: blob.asset
@@ -32,4 +35,4 @@ data:
     - raspberrypi4-64
     - fincm3
     - intel-nuc
-version: 3.5.2
+version: 3.5.3
