@@ -1,0 +1,28 @@
+FROM balenalib/raspberrypi4-64-debian:latest
+
+ENV ROON_DATAROOT /var/RoonBridge
+ENV ROON_ID_DIR /var/RoonBridge
+# ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+
+RUN install_packages curl ffmpeg lbzip2
+
+# RUN cat /proc/cpuinfo
+# RUN uname -m
+# RUN uname -p
+# RUN uname -i
+
+# Audio block setup
+ENV PULSE_SERVER=tcp:localhost:4317
+RUN curl -sL https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | bash -s y
+
+WORKDIR /opt/RoonBridge
+ADD roonbridge-installer-linuxarmv8.sh /opt/RoonBridge
+RUN chmod +x roonbridge-installer-linuxarmv8.sh && ./roonbridge-installer-linuxarmv8.sh
+
+# Pull directly from roon server - failing currently due to mismatched arch
+# RUN curl -O http://download.roonlabs.com/builds/roonbridge-installer-linuxarmv8.sh &&\
+#    chmod +x roonbridge-installer-linuxarmv8.sh &&\
+#    ./roonbridge-installer-linuxarmv8.sh
+
+# VOLUME [ "/opt/RoonBridge" ]
+ENTRYPOINT /opt/RoonBridge/start.sh
