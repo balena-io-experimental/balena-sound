@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'docs: expand DAC docs'
+      hash: f9b8cb04fb4deac9fc84b5bb4eb201df1699f42b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+        Co-authored-by: Andrew Nhem <andrewnhem@users.noreply.github.com>
+        co-authored-by: Andrew Nhem <andrewnhem@users.noreply.github.com>
+      author: Tomás Migone
+      nested: []
+  version: 3.5.4
+  date: 2021-05-24T16:09:56.919Z
+- commits:
     - subject: 'hub: add open fleets metadata'
       hash: 3482c113754b2f6ea72c6b6c589dc7252a7adeca
       body: ''
