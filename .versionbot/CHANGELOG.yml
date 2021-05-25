@@ -1,4 +1,33 @@
 - commits:
+    - subject: 'plugins: revamp plugins'
+      hash: bee55fa4df039905987bccee57e2d306adf14216
+      body: |
+        - Install bluetooth, airplay and spotify by default
+        - Add installable plugins
+      footer:
+        Closes: '#412'
+        closes: '#412'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'docs: Clarify SOUND_DISABLE_PLUGIN'
+      hash: 994586966b0a980db3c531ade3fe0de9ccb7fbd6
+      body: ''
+      footer:
+        Closes: '#445'
+        closes: '#445'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.5.5
+  date: 2021-05-25T13:07:23.690Z
+- commits:
     - subject: 'docs: expand DAC docs'
       hash: f9b8cb04fb4deac9fc84b5bb4eb201df1699f42b
       body: ''
