@@ -1,12 +1,12 @@
 ![logo](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/docs/images/balenaSound-logo.png)
 
-**Starter project enabling you to add multi-room audio streaming via Bluetooth, Airplay or Spotify Connect to any old speakers or Hi-Fi using just a Raspberry Pi.**
+**Starter project enabling you to add multi-room audio streaming via Bluetooth, Airplay, Spotify Connect and others to any old speakers or Hi-Fi using just a Raspberry Pi.**
 
 ## Highlights
 
-- **Bluetooth, Airplay, Spotify Connect and UPnP**: Stream audio from your favourite music services or directly from your smartphone/computer using bluetooth or UPnP.
+- **Audio source plugins**: Stream audio from your favourite music services: Bluetooth, Airplay, Spotify Connect, UPnP and more!
 - **Multi-room synchronous playing**: Play perfectly synchronized audio on multiple devices all over your place.
-- **Extended DAC support**: Upgrade your audio quality with one of our [supported DACs](https://sound.balenalabs.io/docs/audio-interfaces/#dac-boards)
+- **Extended DAC support**: Upgrade your audio quality with one of our supported DACs
 
 ## Setup and configuration
 

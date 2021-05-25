@@ -1,0 +1,39 @@
+# Plugins
+
+Plugins are the sources from where you can stream audio to your device. balenaSound comes with a set of plugins installed by default and the possibility of adding some extra ones with a bit of tinkering. We are always on the lookout for adding new plugins so keep an eye out!
+
+**Why not include all plugins by default?**
+We want to avoid deploying all installable plugins by default because of (a) increased build time, (b) increased deploy time, (c) impact on device performance. Given that most users typically don't use more than one or two plugins it seems reasonable to limit defaults to the most popular ones to prevent users paying the cost of having many plugins that will never be used.
+
+## Default
+
+The following plugins ship with balenaSound out of the box:
+- Spotify Connect
+- Bluetooth
+- AirPlay
+- Soundcard input (Requires setting `SOUND_ENABLE_SOUNDCARD_INPUT`, see [details](../docs/customization#plugins))
+
+Default plugins can be disabled at runtime via environment variables. For more details see [here](../docs/customization#plugins).
+
+## Installable
+
+The following plugins are available to be added to your balenaSound installation: 
+
+- UPnP: Universal Plug and Play
+- (Work in progress) Tidal Connect: See [PR #399](https://github.com/balenalabs/balena-sound/pull/399)
+- (Work in progress) Roon Bridge: See [PR #388](https://github.com/balenalabs/balena-sound/pull/388)
+
+Installing these plugins is a more involved process than just deploying the off the shelf version of balenaSound. You'll need to edit the contents of the `docker-compose.yml` file before deploying the application. This means that you won't be able to deploy using the "Deploy with balena" button; you either need to use the [CLI to deploy](https://sound.balenalabs.io/docs/getting-started#cli-deploy) or use "Deploy with balena" with a forked version of the project. If you don't feel comfortable performing these steps or need some help along the way hit us up at our [forums](https://forums.balena.io) and we'll gladly help you out.
+
+### UPnP
+
+To install UPnP plugin add the following to the `sevices` section on your `docker-compose.yml` file:
+
+```
+  upnp:
+    build: ./plugins/upnp
+    restart: on-failure
+    network_mode: host
+    ports:
+      - 49494:49494
+```

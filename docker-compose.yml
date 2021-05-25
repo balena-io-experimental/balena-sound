@@ -6,6 +6,8 @@ volumes:
 services:
 
   # Core services
+  # -- Required for a fully featured installation of balenaSound
+  # -- Mutiroom services can be removed if not using multiroom mode
   audio:
     build: ./core/audio
     privileged: true
@@ -36,6 +38,8 @@ services:
     restart: on-failure
 
   # Plugins
+  # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
+  # -- Remove unwanted plugins as needed
   bluetooth:
     build: ./plugins/bluetooth
     restart: on-failure
@@ -60,10 +64,3 @@ services:
     network_mode: host
     volumes:
       - spotifycache:/var/cache/raspotify
-
-  upnp:
-    build: ./plugins/upnp
-    restart: on-failure
-    network_mode: host
-    ports:
-      - 49494:49494
