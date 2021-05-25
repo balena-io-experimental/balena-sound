@@ -15,6 +15,7 @@
   "dependencies": {
     "@tmigone/pulseaudio": "^0.1.8",
     "axios": "^0.19.2",
+    "balena-sdk": "^15.39.1",
     "cote": "^1.0.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",

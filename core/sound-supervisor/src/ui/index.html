@@ -1,112 +1,237 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .slidecontainer {
-      width: 100%;
-    }
-
-    .slider {
-      -webkit-appearance: none;
-      width: 100%;
-      max-width: 500px;
-      height: 25px;
-      background: #d3d3d3;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-    }
-
-    .slider:hover {
-      opacity: 1;
-    }
-
-    .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 25px;
-      height: 25px;
-      background: #4CAF50;
-      cursor: pointer;
-    }
-
-    .slider::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      background: #4CAF50;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>balenaSound</title>
+  <link rel="shortcut icon" href="logo.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <h1>balenaSound</h1>
-  <p>Congratulations, you found the secret UI!</p>
-  <p>Stuff here is experimental, might not work and it's likely it will change and/or be removed.</p>
-  <h2>Mode selection</h2>
-  <p>Choose the desired mode:</p>
-  <select name="mode" id="mode">
-    <option value="MULTI_ROOM">Multiroom (default)</option>
-    <option value="MULTI_ROOM_CLIENT">Multiroom client only</option>
-    <option value="STANDALONE">Standalone</option>
-  </select>
-  <h2>Volume Control</h2>
-  <p>Drag the slider to change device volume</p>
-
-  <div class="slidecontainer">
-    <p>Current volume: <span id="demo"></span></p>
-    <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+  <!-- Header -->
+  <div class="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img style="width: 2.5rem; height: auto;" src="balena.png"></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item navbar-brand">
+              <a class="nav-link active" href="https://github.com/balenalabs/balena-sound" style="color: white">
+                <i class="fa fa-github" style="font-size: 150%"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 
+    <!-- Main body -->
+    <section class="jumbotron text-center" style="background-color: white;">
+      <div class="container">
+        <img src="balena-sound.png" class="img-fluid img-max">
+        <p class="lead text-muted">Welcome to the control panel of your balenaSound device</p>
+
+          <div class="container">
+            <div class="row" style="padding-top: 1rem;">
+
+              <div class="col-sm-6">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Device volume</h5>
+                    <p class="card-text">Set the device output volume. Current value: <span id="volume-text">50</span>%</p>
+                    <input type="range" min="0" max="100" value="50" class="form-range" id="volume-slider">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Mode selection  <span class="badge badge-pill badge-warning" style="font-size: 10px;vertical-align: middle;">Restarts application</span></h5>
+                    <p class="card-text">Set the mode of operation. See our <a href='https://sound.balenalabs.io/docs/usage#modes-of-operation' target='__blank'>docs</a> for details.</p>
+                    <div class="btn-group">
+                      <button id="set-mode" type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Multiroom
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" id="set-mode-mr">Multiroom</a>
+                        <a class="dropdown-item" href="#" id="set-mode-mrc">Multiroom client only</a>
+                        <a class="dropdown-item" href="#" id="set-mode-standalone">Standalone</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row" style="padding-top: 1rem;">
+
+              <div class="col-sm-6">
+                <div class="card text-center h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">DAC device tree overlay  <span class="badge badge-pill badge-danger" style="font-size: 10px;vertical-align: middle;">Reboots device</span></h5>
+                    <p class="card-text">(Requires internet) Set a custom dtoverlay. See our <a href='https://sound.balenalabs.io/docs/audio-interfaces#dac-boards' target='__blank'>docs</a> for a list of supported DACs and their DT overlay values.</p>
+                    <div class="input-group mb-3">
+                      <input id="dtoverlay" type="text" class="form-control" placeholder="BALENA_HOST_CONFIG_dtoverlay" aria-label="BALENA_HOST_CONFIG_dtoverlay" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-danger" type="button" onclick="setDTOverlay()" data-toggle="modal" data-target="#shutdownModal">Apply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="card text-center h-100" style="background-color: rgba(252, 196, 4, 0.1);">
+                  <div class="card-body">
+                    <h5 class="card-title">Device management</h5>
+                    <p class="card-text">Restart, reboot or shutdown your device.</p>
+                    <button type="button" class="btn btn-outline-warning" onclick="deviceAction('restart')">Restart services</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="deviceAction('reboot')" data-toggle="modal" data-target="#shutdownModal">Reboot</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="deviceAction('shutdown')" data-toggle="modal" data-target="#shutdownModal">Shutdown</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="shutdownModal" tabindex="-1" role="dialog" aria-labelledby="shutdownModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="shutdownModalLabel">Device management</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              The device is shutting down. <br>If rebooting please wait a few moments for the device to come back up before refreshing this page.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <p>an open source project by
+        <a href="https://www.balena.io/" > <img style="width: 6rem; height: auto;" src="./footer-logo.svg"> </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script>
     // Volume stuff
-    var slider = document.getElementById("myRange")
-    var output = document.getElementById("demo")
+    var volumeSlider = document.getElementById("volume-slider")
+    var volumeText = document.getElementById("volume-text")
     var modeSelect = document.getElementById("mode")
-    output.innerHTML = slider.value
+    volumeText.innerHTML = volumeSlider.value
 
-    slider.oninput = async function () {
-      output.innerHTML = this.value
-      await fetch('/audio/volume', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ volume: this.value })
-      })
-    }
-
-    modeSelect.onchange = async function () {
-      await fetch('/mode', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ mode: modeSelect.value })
-      })
+    volumeSlider.oninput = async function () {
+      volumeText.innerHTML = this.value
+      setOnApi('/audio/volume', 'volume', this.value)
     }
 
     init()
     async function init() {
-      let response = await fetch('/audio/volume')
-      if (response.ok) {
-        let volume = await response.json()
-        output.innerHTML = volume
-        slider.value = volume
+      let volume = await getAPI('/audio/volume')
+      if (volume) {
+        volumeText.innerHTML = volume
+        volumeSlider.value = volume
       }
-
-      response = await fetch('/mode')
-      if (response.ok) {
-        let modeValue = await response.text()
-        modeSelect.value = modeValue
+      
+      let mode = await getAPI('/mode')
+      if (mode) {
+        switch (mode) {
+          case 'MULTI_ROOM':
+            $('#set-mode').text('Multiroom')
+            break;
+          case 'MULTI_ROOM_CLIENT':
+            $('#set-mode').text('Multiroom client only')
+            break;
+          case 'STANDALONE':
+            $('#set-mode').text('Standalone')
+            break;
+        }
       }
     }
-  </script>
 
+    $('#set-mode-mr').on('click', function(event) {
+      event.preventDefault();
+      postAPI('/mode', 'mode', 'MULTI_ROOM')
+      $('#set-mode').text("Multiroom")
+    });
+
+    $('#set-mode-mrc').on('click', function(event) {
+      event.preventDefault();
+      postAPI('/mode', 'mode', 'MULTI_ROOM_CLIENT')
+      $('#set-mode').text("Multiroom client only")
+    });
+
+    $('#set-mode-standalone').on('click', function(event) {
+      event.preventDefault();
+      postAPI('/mode', 'mode', 'STANDALONE')
+      $('#set-mode').text("Standalone")
+    });
+
+    function deviceAction (action, key, value) {
+      postAPI('/device/' + action, key, value)
+    }
+
+    function setDTOverlay () {
+      const value = $('#dtoverlay').val()
+      deviceAction('dtoverlay', 'dtoverlay', value)
+    }
+
+    async function getAPI (path) {
+      let response = await fetch(path)
+      if (response.ok) {
+        const contentType = response.headers.get("content-type")
+        if (contentType.includes('application/json')) {
+          return await response.json() 
+        } else {
+          return await response.text()
+        }
+      }
+    }
+
+    async function postAPI (path, key, value) {
+      let body = {}
+      if (key) {
+        body[key] = value
+      }
+
+      return await fetch(path, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      })
+    }
+  </script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
