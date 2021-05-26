@@ -50,18 +50,18 @@ services:
     labels:
       io.balena.features.dbus: 1
 
-  # airplay:
-  #   build: ./plugins/airplay
-  #   restart: on-failure
-  #   network_mode: host
-  #   privileged: true
-  #   labels:
-  #     io.balena.features.dbus: 1
+  airplay:
+    build: ./plugins/airplay
+    restart: on-failure
+    network_mode: host
+    privileged: true
+    labels:
+      io.balena.features.dbus: 1
 
-  # spotify:
-  #   build: ./plugins/spotify
-  #   restart: on-failure
-  #   privileged: true
-  #   network_mode: host
-  #   volumes:
-  #     - spotifycache:/var/cache/raspotify
+  spotify:
+    build: ./plugins/spotify
+    restart: on-failure
+    privileged: true
+    network_mode: host
+    volumes:
+      - spotifycache:/var/cache/raspotify

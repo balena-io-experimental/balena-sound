@@ -55,6 +55,7 @@ export default class SoundAPI {
     this.api.post('/device/dtoverlay', asyncHandler(async (req, res) => {
       const { dtoverlay } = req.body
       try {
+        console.log(`Applying BALENA_HOST_CONFIG_dtoverlay=${dtoverlay}...`)
         await this.sdk.models.device.configVar.set(process.env.BALENA_DEVICE_UUID!, 'BALENA_HOST_CONFIG_dtoverlay', dtoverlay) // BALENA_DEVICE_UUID is always present in balenaOS
         res.json({ status: 'OK' })
       } catch (error) {

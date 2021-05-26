@@ -52,7 +52,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-6">
+              <!-- <div class="col-sm-6">
                 <div class="card text-center h-100">
                   <div class="card-body">
                     <h5 class="card-title">Mode selection  <span class="badge badge-pill badge-warning" style="font-size: 10px;vertical-align: middle;">Restarts application</span></h5>
@@ -69,11 +69,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
-
-            </div>
-
-            <div class="row" style="padding-top: 1rem;">
+              </div> -->
 
               <div class="col-sm-6">
                 <div class="card text-center h-100">
@@ -90,11 +86,18 @@
                 </div>
               </div>
 
-              <div class="col-sm-6">
+            </div>
+
+            <div class="row" style="padding-top: 1rem;">
+
+
+
+              <div class="col-sm-8 offset-sm-2">
                 <div class="card text-center h-100" style="background-color: rgba(252, 196, 4, 0.1);">
                   <div class="card-body">
                     <h5 class="card-title">Device management</h5>
                     <p class="card-text">Restart, reboot or shutdown your device.</p>
+                    <button type="button" class="btn btn-outline-info" onclick="window.location.href = 'support'">Support logs</button>
                     <button type="button" class="btn btn-outline-warning" onclick="deviceAction('restart')">Restart services</button>
                     <button type="button" class="btn btn-outline-danger" onclick="deviceAction('reboot')" data-toggle="modal" data-target="#shutdownModal">Reboot</button>
                     <button type="button" class="btn btn-outline-danger" onclick="deviceAction('shutdown')" data-toggle="modal" data-target="#shutdownModal">Shutdown</button>
@@ -147,15 +150,23 @@
     var modeSelect = document.getElementById("mode")
     volumeText.innerHTML = volumeSlider.value
 
+    var volumeUpdateOngoing = false
     volumeSlider.oninput = async function () {
       volumeText.innerHTML = this.value
-      setOnApi('/audio/volume', 'volume', this.value)
+
+      // Debounce slider
+      var $this = $(this)
+      clearTimeout($this.data('timeout'))
+      $this.data('timeout', setTimeout(async function(){
+        await postAPI('/audio/volume', 'volume', $this.val())
+      }, 250))
+
     }
 
     init()
     async function init() {
       let volume = await getAPI('/audio/volume')
-      if (volume) {
+      if (typeof volume === 'number') {
         volumeText.innerHTML = volume
         volumeSlider.value = volume
       }
