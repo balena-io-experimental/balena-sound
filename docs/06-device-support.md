@@ -16,7 +16,7 @@ balenaSound has been developed and tested to work on the following devices:
 
 **Notes**
 
-[1]: We recommend using a DAC or USB sound card for these device types. See [audio interfaces](../docs/audio-interfaces) for more details.
+[1]: We recommend using a DAC or USB sound card for these device types. See [audio interfaces](../docs/05-audio-interfaces.md) for more details.
 
 [2]: Multi-room `master` functionality is disabled on Raspberry Pi 1 and 2 family devices due to performance constraints. They can however function in multi-room client mode in conjunction with another device that supports multi-room mode. Read more about modes of operation [here](../docs/usage#modes-of-operation).
 
