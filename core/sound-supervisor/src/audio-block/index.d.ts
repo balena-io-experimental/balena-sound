@@ -9,6 +9,7 @@ export default class BalenaAudio extends PAClient {
     subToEvents: boolean;
     name: string;
     defaultSink: string;
+    connected: boolean;
     constructor(address?: string, subToEvents?: boolean, name?: string);
     listen(): Promise<BalenaAudioInfo>;
     connectWithRetry(): Promise<AuthInfo>;

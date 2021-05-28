@@ -17,6 +17,7 @@ class BalenaAudio extends pulseaudio_1.default {
         this.address = address;
         this.subToEvents = subToEvents;
         this.name = name;
+        this.connected = false;
     }
     listen() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -47,8 +48,10 @@ class BalenaAudio extends pulseaudio_1.default {
     connectWithRetry() {
         return __awaiter(this, void 0, void 0, function* () {
             return yield ts_retry_promise_1.retry(() => __awaiter(this, void 0, void 0, function* () {
-                return yield this.connect();
-            }), { retries: 'INFINITELY', delay: 5000, backoff: 'LINEAR', timeout: 10 * 60 * 1000, logger: (msg) => { console.log(`Error connecting to audio block - ${msg}`); } });
+                const authInfo = yield this.connect();
+                this.connected = true;
+                return authInfo;
+            }), { retries: 'INFINITELY', delay: 1000, backoff: 'LINEAR', timeout: 10 * 60 * 1000, logger: (msg) => { console.log(`Error connecting to audio block - ${msg}`); } });
         });
     }
     getInfo() {

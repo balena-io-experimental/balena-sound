@@ -1,4 +1,4 @@
-FROM balenablocks/audio:%%BALENA_MACHINE_NAME%%
+FROM balenablocks/audio
 
 WORKDIR /usr/src
 COPY . .

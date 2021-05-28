@@ -12,7 +12,7 @@ export function defaultMode(): SoundModes {
 
 export const constants = {
   debug: process.env.SOUND_SUPERVISOR_DEBUG ? true : false,
-  port: checkInt(process.env.SOUND_SUPERVISOR_PORT) ?? 3000,
+  port: checkInt(process.env.SOUND_SUPERVISOR_PORT) ?? 80,
   coteDelay: checkInt(process.env.SOUND_COTE_DELAY) ?? 5000,
   mode: (<SoundModes>process.env.SOUND_MODE) ?? defaultMode(),
   balenaDeviceType: deviceType,

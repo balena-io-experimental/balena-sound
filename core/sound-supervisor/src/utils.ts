@@ -24,7 +24,6 @@ export function restartBalenaService(service: string): Promise<AxiosResponse<any
 
 export function startBalenaService(service: string): Promise<AxiosResponse<any>> {
   return executeBalenaServiceAction(service, 'start')
-
 }
 
 export function stopBalenaService(service: string): Promise<AxiosResponse<any>> {
@@ -39,4 +38,16 @@ function executeBalenaServiceAction (service: string, action: string): Promise<A
     console.log(error.message)
     return Promise.reject(error.message)
   }
+}
+
+export function rebootDevice ():Promise<AxiosResponse<any>> {
+  return axios.post(`${process.env.BALENA_SUPERVISOR_ADDRESS}/v1/reboot?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`)
+}
+
+export function shutdownDevice ():Promise<AxiosResponse<any>> {
+  return axios.post(`${process.env.BALENA_SUPERVISOR_ADDRESS}/v1/shutdown?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`)
+}
+
+export function restartDevice ():Promise<AxiosResponse<any>> {
+  return axios.post(`${process.env.BALENA_SUPERVISOR_ADDRESS}/v1/restart?apikey=${process.env.BALENA_SUPERVISOR_API_KEY}`, { appId: process.env.BALENA_APP_ID})
 }

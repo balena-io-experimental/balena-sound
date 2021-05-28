@@ -2,7 +2,7 @@
 set -e
 
 # Wait for sound supervisor to start
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):3000"
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }')"
 while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
 
 # Get mode and snapserver from sound supervisor

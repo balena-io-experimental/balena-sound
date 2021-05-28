@@ -21,8 +21,9 @@ services:
     build: ./core/sound-supervisor
     network_mode: host
     ports:
-      - 3000:3000
+      - 80:80
     labels:
+      io.balena.features.balena-api: '1'
       io.balena.features.supervisor-api: 1
 
   multiroom-server:
@@ -36,6 +37,17 @@ services:
   multiroom-client:
     build: ./core/multiroom/client
     restart: on-failure
+
+  logging:
+    image: balenablocks/log2screen
+    privileged: true
+    restart: always
+    network_mode: host
+    environment:
+      - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
+    labels:
+      io.balena.features.dbus: 1
+      io.balena.features.supervisor-api: 1
 
   # Plugins
   # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
