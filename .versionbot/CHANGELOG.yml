@@ -1,4 +1,53 @@
 - commits:
+    - subject: Add logging service
+      hash: b976df6558b0ff2fb0bf111e2e7f498e980778b6
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: Use updated block naming
+      hash: ef474a864a2d9a2dd815c4500475196d30e0857b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: Multiple changes
+      hash: 39efd57f29156c8ecdadeb83bc0c14726249f3f0
+      body: |
+        - Use UUID instead of hostname for plugin broadcast names
+        - open fleet adjustments
+      footer:
+        Closes: '#449'
+        closes: '#449'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'ui: Implement basic version of local UI for open fleets'
+      hash: a0d8c874f8efbc308d2098e834404a495fef0b44
+      body: ''
+      footer:
+        Closes: '#451'
+        closes: '#451'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.0
+  date: 2021-05-27T20:53:25.501Z
+- commits:
     - subject: 'plugins: revamp plugins'
       hash: bee55fa4df039905987bccee57e2d306adf14216
       body: |
