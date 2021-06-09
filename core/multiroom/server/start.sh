@@ -27,11 +27,8 @@ if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" ]]; then
 fi
 
 # Start snapserver
-echo "Starting multi-room server..."
-echo "$(snapserver --version | head -n 1)"
-echo "Mode: $MODE"
-
 if [[ "$MODE" == "MULTI_ROOM" ]]; then
+  echo "Starting multi-room server..."
   /usr/bin/snapserver
 else
   echo "Multi-room server disabled. Exiting..."

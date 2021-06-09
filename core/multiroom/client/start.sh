@@ -17,9 +17,8 @@ SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
 LATENCY=${SOUND_MULTIROOM_LATENCY:+"--latency $SOUND_MULTIROOM_LATENCY"}
 
 echo "Starting multi-room client..."
-echo "$(snapclient --version | head -n 1)"
-echo "Mode: $MODE"
-echo "Target snapcast server: $SNAPSERVER"
+echo "- balenaSound mode: $MODE"
+echo "- Target snapcast server: $SNAPSERVER"
 
 # Set the snapcast device name for https://github.com/balenalabs/balena-sound/issues/332
 if [[ -z $SOUND_DEVICE_NAME ]]; then
@@ -31,7 +30,7 @@ fi
 
 # Start snapclient
 if [[ "$MODE" == "MULTI_ROOM" || "$MODE" == "MULTI_ROOM_CLIENT" ]]; then
-  /usr/bin/snapclient --host $SNAPSERVER $LATENCY --hostID $SNAPCAST_CLIENT_ID --logfilter *:notice
+  /usr/bin/snapclient --player pulse --host $SNAPSERVER $LATENCY --hostID $SNAPCAST_CLIENT_ID --logfilter *:error
 else
   echo "Multi-room client disabled. Exiting..."
   exit 0
