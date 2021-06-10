@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove unneeded ports from sound supervisor service
+      hash: bbf8110f60cbf6dae37f914e4ab9e3e14ac030ad
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.1
+  date: 2021-06-09T19:26:41.040Z
+- commits:
     - subject: Add logging service
       hash: b976df6558b0ff2fb0bf111e2e7f498e980778b6
       body: ''
