@@ -41,4 +41,4 @@ data:
     - raspberrypi4-64
     - fincm3
     - intel-nuc
-version: 3.6.0
+version: 3.6.1

@@ -20,8 +20,6 @@ services:
   sound-supervisor:
     build: ./core/sound-supervisor
     network_mode: host
-    ports:
-      - 80:80
     labels:
       io.balena.features.balena-api: '1'
       io.balena.features.supervisor-api: 1
