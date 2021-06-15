@@ -31,10 +31,8 @@ export default class SoundConfig {
   }
 
   setMultiRoomMaster(master: string) {
-    if (!this.multiroom.forced) {
-      this.multiroom.master = master
-      restartBalenaService('multiroom-client')
-    }
+    this.multiroom.master = master
+    restartBalenaService('multiroom-client')
   }
 
   // TODO: Fix bug - This won't work if there are USB or DAC sound cards because it currently relies on hardcoded sink|sinkInput indexes

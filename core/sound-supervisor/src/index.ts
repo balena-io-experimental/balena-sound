@@ -3,7 +3,6 @@ import BalenaAudio from './audio-block'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
 import { constants } from './constants'
-import { resolve } from 'path'
 
 // balenaSound core
 const config: SoundConfig = new SoundConfig()
@@ -44,14 +43,14 @@ async function init() {
 // Event: "play"
 // Source: audio block
 // On audio playback, set this server as the multiroom-master
-// We check balena-sound.input as it's the sink that receives all audio sources
+// We check the input sink that receives all audio sources
 audioBlock.on('play', (sink: any) => {
   if (constants.debug) {
     console.log(`[event] Audio block: play`)
     console.log(sink)
   }
 
-  if (config.isMultiRoomServer() && sink.name === 'balena-sound.input') {
+  if (config.isMultiRoomServer() && sink.name === constants.inputSink) {
     console.log(`Playback started, announcing ${config.device.ip} as multi-room master!`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.device.ip })
   }
@@ -66,7 +65,7 @@ fleetSubscriber.on('fleet-update', async (data: any) => {
     console.log(data)
   }
 
-  if (config.isNewMultiRoomMaster(data.master)) {
+  if (config.isNewMultiRoomMaster(data.master) && !config.multiroom.forced && !constants.multiroom.disallowUpdates) {
     console.log(`Multi-room master has changed to ${data.master}, restarting snapcast-client...`)
     config.setMultiRoomMaster(data.master)
   }
