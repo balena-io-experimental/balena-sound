@@ -18,7 +18,8 @@ export const constants = {
   balenaDeviceType: deviceType,
   multiroom: {
     master: process.env.SOUND_MULTIROOM_MASTER,
-    forced: process.env.SOUND_MULTIROOM_MASTER ? true : false
+    forced: process.env.SOUND_MULTIROOM_MASTER ? true : false,
+    pollInterval: (checkInt(process.env.SOUND_MULTIROOM_POLL_INTERVAL) ?? 60) * 1000
   },
   volume: checkInt(process.env.SOUND_VOLUME) ?? 75
 }

@@ -36,6 +36,7 @@ These options only have an effect on multi-room behavior:
 | ---                     | ---                                                                                                                                                        | ---                                                   | ---     |
 | SOUND_MULTIROOM_MASTER  | Force multi-room to use the specified IP address as the multi-room `master` device. This can't be changed unless the variable is removed.                  | An IPv4 formatted IP address. Example: `192.168.1.10` | ---     |
 | SOUND_MULTIROOM_LATENCY | Set multi-room client latency. Usually used to compensate for latency that speaker hardware might introduce (some Hi-Fi systems add a noticeable latency). | Time in milliseconds. Example: `300`                  | ---     |
+| SOUND_MULTIROOM_POLL_INTERVAL | Set how often multi-room devices sync up across the fleet. | Time in seconds. Example: `120`                                                    | `60` |
 
 ## Plugins
 
