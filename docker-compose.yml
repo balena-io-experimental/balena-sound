@@ -18,7 +18,9 @@ services:
       - 4317:4317
 
   sound-supervisor:
-    build: ./core/sound-supervisor
+    build: 
+      context: .
+      dockerfile: ./core/sound-supervisor/Dockerfile.template
     network_mode: host
     labels:
       io.balena.features.balena-api: '1'
