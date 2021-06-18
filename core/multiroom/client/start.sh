@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
 # Wait for sound supervisor to start
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }')"
-while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start at $SOUND_SUPERVISOR"; done
 
 # Get mode and snapserver from sound supervisor
 # mode: default to MULTI_ROOM

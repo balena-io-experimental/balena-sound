@@ -71,13 +71,13 @@ function reset_sound_config() {
   cp "$CONFIG_TEMPLATE" "$CONFIG_FILE"
 }
 
+SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
 # Wait for sound supervisor to start
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }')"
-while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start"; done
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start at $SOUND_SUPERVISOR"; done
 
 # Get mode from sound supervisor. 
 # mode: default to MULTI_ROOM
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }')"
 MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
 
 # Get latency values

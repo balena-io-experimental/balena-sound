@@ -16,7 +16,9 @@ echo "Device name: $SOUND_DEVICE_NAME"
 # shairport-sync will fail silently if audioblock is not ready when it starts up
 # See: https://github.com/mikebrady/shairport-sync/issues/1054
 # Remove when above issue is addressed
-while [[ "$(curl --silent --head --output /dev/null --write-out '%{http_code}' --max-time 2000 'http://localhost/ping')" != "200" ]]; do sleep 5; echo "Waiting for audioblock to start..."; done
+SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for audioblock to start..."; done
 
 # Start AirPlay
 exec shairport-sync \
