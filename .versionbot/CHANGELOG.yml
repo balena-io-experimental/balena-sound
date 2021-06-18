@@ -1,4 +1,34 @@
 - commits:
+    - subject: Put definition of SOUND_SUPERVISOR_PORT on separate line in bash scripts
+      hash: c9ea97cf03f32c76b3a81940de054a64d632bb77
+      body: ''
+      footer:
+        Connects-to: '#461'
+        connects-to: '#461'
+        Change-type: patch
+        change-type: patch
+      author: Philip A
+      nested: []
+    - subject: Use SOUND_SUPERVISOR_PORT in container start scripts
+      hash: 3d267ca69f01dd11b19f621a08f96e71b88a1a17
+      body: >
+        This patch make container start scripts consider the environment
+        variable SOUND_SUPERVISOR_PORT.
+
+        Otherwise the services adress requests to wrong default port, if sound
+        supervisor web port is changed by above configuration variable.
+
+        This change affects audio, airplay, multi-room and docs.
+      footer:
+        Connects-to: '#461'
+        connects-to: '#461'
+        Change-type: patch
+        change-type: patch
+      author: Philip A
+      nested: []
+  version: 3.6.2
+  date: 2021-06-14T19:25:45.911Z
+- commits:
     - subject: Remove unneeded ports from sound supervisor service
       hash: bbf8110f60cbf6dae37f914e4ab9e3e14ac030ad
       body: ''
