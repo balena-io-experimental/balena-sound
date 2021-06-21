@@ -1,14 +1,8 @@
-# TODO: don't rely on bullseye repository pinning because it could change with no warning
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bullseye
-
+FROM balenablocks/multiroom:rpi
 WORKDIR /usr/src
 
-RUN install_packages snapclient
-
-# Audio block setup
 ENV PULSE_SERVER=tcp:audio:4317
 ENV PULSE_SINK=balena-sound.output
-RUN curl --silent https://raw.githubusercontent.com/balenablocks/audio/master/scripts/alsa-bridge/debian-setup.sh | sh
 
 COPY start.sh .
 
