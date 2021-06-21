@@ -1,4 +1,44 @@
 - commits:
+    - subject: 'multiroom: allow disabling multiroom master updates'
+      hash: 9d02cd37f1012ade59e5b083c249ceb5a8cebb9a
+      body: ''
+      footer:
+        Closes: '#288'
+        closes: '#288'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'multiroom: add periodic fleet sync'
+      hash: c38d223a95d0842e60d8f723f70c26bf75f19923
+      body: ''
+      footer:
+        Closes: '#466, #274'
+        closes: '#466, #274'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'multiroom: use multiroom blocks'
+      hash: 437442663f95e859e64fd351ce70d3e70cde78bb
+      body: |
+        This reduces image size from 350MB to 35MB!
+      footer:
+        Closes: '#414, #425'
+        closes: '#414, #425'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.3
+  date: 2021-06-18T13:37:31.242Z
+- commits:
     - subject: Put definition of SOUND_SUPERVISOR_PORT on separate line in bash scripts
       hash: c9ea97cf03f32c76b3a81940de054a64d632bb77
       body: ''
