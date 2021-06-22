@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'multiroom: unpin client image'
+      hash: 7ac41a7264fa46d4ebe79c83ad52db3ad4ba8c25
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.5
+  date: 2021-06-22T14:18:51.880Z
+- commits:
     - subject: Expose project version on sound API
       hash: b4e16b1a965f1f01865af8a9b0544a7fd83a39d0
       body: ''
