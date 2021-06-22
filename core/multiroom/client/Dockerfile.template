@@ -1,4 +1,4 @@
-FROM balenablocks/multiroom:rpi
+FROM balenablocks/multiroom
 WORKDIR /usr/src
 
 ENV PULSE_SERVER=tcp:audio:4317
