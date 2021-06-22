@@ -1,21 +1,23 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-node:12 as build
 
 WORKDIR /usr/src
-COPY package*.json ./
+COPY core/sound-supervisor/package*.json ./
 RUN npm install
 
 #dev-cmd-live=npm run livepush
 
-COPY src ./src
-COPY tsconfig.json .
+COPY core/sound-supervisor/src ./src
+COPY core/sound-supervisor/tsconfig.json .
 RUN npm run build
+COPY VERSION .
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:12
 
 WORKDIR /usr/src
 
-COPY package*.json ./
+COPY core/sound-supervisor/package*.json ./
 COPY --from=build /usr/src/build ./build
+COPY VERSION .
 
 RUN npm install --production
 
