@@ -3,12 +3,18 @@ import BalenaAudio from './audio-block'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
 import { constants } from './constants'
+import { getSdk } from 'balena-sdk'
 
 // balenaSound core
 const config: SoundConfig = new SoundConfig()
 const audioBlock: BalenaAudio = new BalenaAudio(`tcp:${config.device.ip}:4317`)
 const soundAPI: SoundAPI = new SoundAPI(config, audioBlock)
 config.bindAudioBlock(audioBlock)
+
+// init balenaCloud sdk
+const sdk = getSdk({ apiUrl: 'https://api.balena-cloud.com/' })
+sdk.auth.logout()
+sdk.auth.loginWithToken(process.env.BALENA_API_KEY!) // Asserted by io.balena.features.balena-api: '1'
 
 // Fleet communication
 let discoveryOptions: any = {
@@ -44,7 +50,7 @@ async function init() {
 // Source: audio block
 // On audio playback, set this server as the multiroom-master
 // We check the input sink that receives all audio sources
-audioBlock.on('play', (sink: any) => {
+audioBlock.on('play', async (sink: any) => {
   if (constants.debug) {
     console.log(`[event] Audio block: play`)
     console.log(sink)
@@ -54,6 +60,14 @@ audioBlock.on('play', (sink: any) => {
     console.log(`Playback started, announcing ${config.device.ip} as multi-room master!`)
     fleetPublisher.publish('fleet-update', { type: 'master', master: config.device.ip })
   }
+
+  // Temporary usage tracking for balenaHub metrics
+  try {
+    await sdk.models.device.tags.set(process.env.BALENA_DEVICE_UUID!, 'metrics:play', '') // BALENA_DEVICE_UUID is always present in balenaOS
+  } catch (error) {
+    console.log(error.message)
+  }
+
 })
 
 // Event: "fleet-update"
