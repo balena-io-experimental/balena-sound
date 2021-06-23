@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'hub: temporarily track usage'
+      hash: aabc7636f8d6ebc25cbb9f95acb0742580be17d7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.6
+  date: 2021-06-23T14:06:31.807Z
+- commits:
     - subject: 'multiroom: unpin client image'
       hash: 7ac41a7264fa46d4ebe79c83ad52db3ad4ba8c25
       body: ''
