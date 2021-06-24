@@ -30,7 +30,7 @@ fi
 
 # Start snapclient
 if [[ "$MODE" == "MULTI_ROOM" || "$MODE" == "MULTI_ROOM_CLIENT" ]]; then
-  /usr/bin/snapclient --player pulse --host $SNAPSERVER $LATENCY --hostID $SNAPCAST_CLIENT_ID --logfilter *:error
+  /usr/bin/snapclient --host $SNAPSERVER $LATENCY --hostID $SNAPCAST_CLIENT_ID --logfilter *:error
 else
   echo "Multi-room client disabled. Exiting..."
   exit 0
