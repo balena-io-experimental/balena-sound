@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'meta: remove CODEOWNERS file'
+      hash: d6c052158bbeddacc2a13c005ac2ac7554ff3c7a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.8
+  date: 2021-06-30T15:27:57.283Z
+- commits:
     - subject: 'multiroom: use alsa backend on client'
       hash: cce724d9afa54ad18fb8307f541ad7f5d4086e35
       body: |
