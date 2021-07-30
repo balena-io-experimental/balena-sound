@@ -69,6 +69,13 @@ services:
     labels:
       io.balena.features.dbus: 1
 
+  upnp:
+    build: ./plugins/upnp
+    restart: on-failure
+    network_mode: host
+    ports:
+      - 49494:49494
+
   spotify:
     build: ./plugins/spotify
     restart: on-failure
