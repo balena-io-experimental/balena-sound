@@ -1,23 +1,23 @@
 # Customization
 
-Some features of balenaSound can be configured by using environment variables. Depending on how you set them they will apply to all your devices, a specific device or a specific service. Regardless of what you want, they can be set using the balena dashboard:
+Some features of balenaSound can be configured by using variables. Depending on how you set them they will apply to all your devices, a specific device or a specific service. Regardless of what you want, they can be set using the balena dashboard:
 
-| Environment variable type | Scope | Instructions |
+| Variable type | Scope | Instructions |
 | ------ | ------ | ------ |
-| Fleet-wide environment variable | all devices, all services | navigate to dashboard -> your app -> Environment variables |
-| Fleet-wide service variable | all devices, specific service | navigate to dashboard -> your app -> Service variables |
-| Device environment variable | specific device, all services | navigate to dashboard -> your app -> your device -> Device variables |
-| Device service variable | specific device, specific service | navigate to dashboard -> your app -> your device -> Device service variables |
+| Fleet-wide variable | all devices, all services | navigate to dashboard -> your fleet -> `Variables` -> Select `All services` |
+| Fleet-wide service variable | all devices, specific service | navigate to dashboard -> your fleet -> `Variables` -> Select target service |
+| Device variable | specific device, all services | navigate to dashboard -> your fleet -> your device -> `Device variables` -> Select `All services` |
+| Device service variable | specific device, specific service | navigate to dashboard -> your fleet -> your device -> Select `All services` -> Select target service |
 
 ![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/env-vars.png)
 
-You can read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
+You can read more about variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
 
 ## General
 
-The following environment variables apply to balenaSound in general, modifying its behavior across the board:
+The following variables apply to balenaSound in general, modifying its behavior across the board:
 
-| Environment variable | Description | Options | Default |
+| Variable | Description | Options | Default |
 | ------ | ------ | ------ | ------ |
 | SOUND_MODE | Select which mode of operation a device should use. For a detailed explanation see [here](../docs/usage#modes-of-operation).| `MULTI_ROOM`, `MULTI_ROOM_CLIENT`, `STANDALONE` | `MULTI_ROOM`, except for cases listed [here](../docs/device-support). |
 | SOUND_VOLUME | Output volume level at startup. | 0 - 100, integer value without the `%` symbol. | 75 |
@@ -32,18 +32,18 @@ The following environment variables apply to balenaSound in general, modifying i
 
 These options only have an effect on multi-room behavior:
 
-| Environment variable    | Description                                                                                                                                                | Options                                               | Default |
-| ---                     | ---                                                                                                                                                        | ---                                                   | ---     |
-| SOUND_MULTIROOM_MASTER  | Force multi-room to use the specified IP address as the multi-room `master` device. This can't be changed unless the variable is removed.                  | An IPv4 formatted IP address. Example: `192.168.1.10` | ---     |
-| SOUND_MULTIROOM_LATENCY | Set multi-room client latency. Usually used to compensate for latency that speaker hardware might introduce (some Hi-Fi systems add a noticeable latency). | Time in milliseconds. Example: `300`                  | ---     |
-| SOUND_MULTIROOM_POLL_INTERVAL | Set how often multi-room devices sync up across the fleet. | Time in seconds. Example: `120`                                                    | `60` |
-| SOUND_MULTIROOM_DISALLOW_UPDATES | Prevent a device to update it's multi-room `master` based on fleet activity. | Boolean. `true` / `false`                                                    | `false` |
+| Variable | Description | Options | Default |
+| --- | --- | --- | --- |
+| SOUND_MULTIROOM_MASTER  | Force multi-room to use the specified IP address as the multi-room `master` device. This can't be changed unless the variable is removed. | An IPv4 formatted IP address. Example: `192.168.1.10` | --- |
+| SOUND_MULTIROOM_LATENCY | Set multi-room client latency. Usually used to compensate for latency that speaker hardware might introduce (some Hi-Fi systems add a noticeable latency). | Time in milliseconds. Example: `300` | --- |
+| SOUND_MULTIROOM_POLL_INTERVAL | Set how often multi-room devices sync up across the fleet. | Time in seconds. Example: `120` | `60` |
+| SOUND_MULTIROOM_DISALLOW_UPDATES | Prevent a device to update it's multi-room `master` based on fleet activity. | Boolean. `true` / `false` | `false` |
 
 ## Plugins
 
-The following environment variables control various aspects of each plugin behavior:
+The following variables control various aspects of each plugin behavior:
 
-| Environment variable | Description | Options | Defaults |
+| Variable | Description | Options | Defaults |
 | --- | --- | --- | --- |
 | SOUND_DISABLE_< PLUGIN > where `<PLUGIN>` is the plugin name. See description. | Disable the selected plugin. Useful when you don't want to use a particular plugin. There is one variable per plugin: <br>- `SOUND_DISABLE_SPOTIFY`<br>- `SOUND_DISABLE_AIRPLAY`<br>- `SOUND_DISABLE_BLUETOOTH` | Plugin will be disabled if the variable exists regardless of its value. | --- |
 | SOUND_ENABLE_SOUNDCARD_INPUT | If your soundcard has inputs you can enable soundcard input by setting this variable. Sound coming in through the audio card will be treated as a new plugin/audio source.<br><br>This feature is still experimental! | Plugin will be enabled if the variable exists regardless of its value. | --- |

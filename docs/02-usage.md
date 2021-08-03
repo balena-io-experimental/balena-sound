@@ -1,8 +1,8 @@
 # Usage
 
-After your device finishes downloading the application, you should be ready to go!
+After your device finishes downloading the app, you should be ready to go!
 
-Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](../docs/audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup-- be sure to check it out.
+Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](../docs/audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup -- be sure to check it out!
 
 To connect to your balenaSound device:
 
@@ -36,20 +36,20 @@ When in multi-room mode devices can take one of two roles:
 * `master`: the device acting as the audio source
 * `client`: any number of devices playing back the audio being sent over by the `master`
 
-Designing a `master` device is easy and requires no configuration. Whenever you start streaming to any device in multi-room mode, it will autoconfigure itself to be the `master` device and will broadcast a message to all other devices within your local network to get them in sync. Note that it can take a few seconds for the system to autoconfigure the first time you stream.
+Designing a `master` device is easy and requires no configuration. Whenever you start streaming to any device in multi-room mode, it will auto-configure itself to be the `master` device and will broadcast a message to all other devices within your local network to get them in sync. Note that it can take a few seconds for the system to auto-configure the first time you stream.
 You can always change the `master` by streaming to a different device.
 
-It's a good idea to use the most powerful device on your fleet as the designated `master` as it does take up more resources. For example, if your setup consists of a Raspberry Pi 4 and a couple of Raspberry Pi 2, then using the Pi 4 as the `master` is the better option.
+It's a good idea to use the most powerful device on your fleet as the designated `master` as it does take up more resources. For example, if your setup consists of a Raspberry Pi 4 and a couple of Raspberry Pi 2, then using the Pi 4 as the `master` is the superior option.
 
 ### Multi-room client mode
 
-When a device is in multi-room client mode it can only be used as a multi-room `client`. The only audio the device will play is audio coming from a `master` device, so you'll need at least another device in your application.
+When a device is in multi-room client mode it can only be used as a multi-room `client`. The only audio the device will play is audio coming from a `master` device, so you'll need at least another device in your fleet.
 
 This mode is great for performance constrained devices as plugin services (Spotify, AirPlay, etc) won't be running and consuming CPU cycles. It's also a great choice if you usually stream to the same `master` device and don't want to have every device show up when pairing bluetooth for example.
 
 ### Standalone
 
-Standalone is the original balenaSound mode (pre version 2.0). In this mode your device won't run any of the multi-room services, it will run independently and won't be aware of other devices in your network/application.
+Standalone is the original balenaSound mode (pre version 2.0). In this mode your device won't run any of the multi-room services, it will run independently and won't be aware of other devices in your network.
 
 Use this mode when you have only one device in your fleet, or if you want to have multiple independent devices.
 

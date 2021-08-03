@@ -10,9 +10,11 @@
 
 ## Setup and configuration
 
-Running this project is as simple as deploying it to a balenaCloud application. You can do it in just one click by using the button below:
+Running this app is as simple as deploying it to a balenaCloud fleet. You can do it in just one click by using the button below:
 
 [![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
+
+If you don't want to create a balenaCloud account you can deploy the app directly from [balenaHub](https://hub.balena.io/balenalabs/balenasound).
 
 ## Documentation
 

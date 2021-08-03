@@ -13,7 +13,7 @@ The following plugins ship with balenaSound out of the box:
 - AirPlay
 - Soundcard input (Requires setting `SOUND_ENABLE_SOUNDCARD_INPUT`, see [details](../docs/customization#plugins))
 
-Default plugins can be disabled at runtime via environment variables. For more details see [here](../docs/customization#plugins).
+Default plugins can be disabled at runtime via variables. For more details see [here](../docs/customization#plugins).
 
 ## Installable
 
@@ -23,7 +23,7 @@ The following plugins are available to be added to your balenaSound installation
 - (Work in progress) Tidal Connect: See [PR #399](https://github.com/balenalabs/balena-sound/pull/399)
 - (Work in progress) Roon Bridge: See [PR #388](https://github.com/balenalabs/balena-sound/pull/388)
 
-Installing these plugins is a more involved process than just deploying the off the shelf version of balenaSound. You'll need to edit the contents of the `docker-compose.yml` file before deploying the application. This means that you won't be able to deploy using the "Deploy with balena" button; you either need to use the [CLI to deploy](https://sound.balenalabs.io/docs/getting-started#cli-deploy) or use "Deploy with balena" with a forked version of the project. If you don't feel comfortable performing these steps or need some help along the way hit us up at our [forums](https://forums.balena.io) and we'll gladly help you out.
+Installing these plugins is a more involved process than just deploying the off the shelf version of balenaSound. You'll need to edit the contents of the `docker-compose.yml` file before deploying the app. This means that you won't be able to deploy using the "Deploy with balena" button; you either need to use the [CLI to deploy](https://sound.balenalabs.io/docs/getting-started#cli-deploy) or use "Deploy with balena" with your own forked version of the project. If you don't feel comfortable performing these steps or need some help along the way hit us up at our [forums](https://forums.balena.io) and we'll gladly help you out.
 
 ### UPnP
 
