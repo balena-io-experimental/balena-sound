@@ -1,4 +1,17 @@
 - commits:
+    - subject: Format Post-provisioning markdown
+      hash: f2180c467ab3356e7dec8828edaeb324fff015af
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+      nested: []
+  version: 3.6.9
+  date: 2021-09-06T12:50:50.979Z
+- commits:
     - subject: 'meta: remove CODEOWNERS file'
       hash: d6c052158bbeddacc2a13c005ac2ac7554ff3c7a
       body: ''
