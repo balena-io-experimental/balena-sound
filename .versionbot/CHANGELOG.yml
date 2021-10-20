@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'sound-supervisor: update dependency to fix build'
+      hash: f29008d7530da81d33d6728ede93eaa733b7b44f
+      body: ''
+      footer:
+        Closes: '#502'
+        closes: '#502'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.10
+  date: 2021-10-20T13:27:14.272Z
+- commits:
     - subject: Format Post-provisioning markdown
       hash: f2180c467ab3356e7dec8828edaeb324fff015af
       body: ''
