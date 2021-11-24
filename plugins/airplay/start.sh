@@ -17,7 +17,7 @@ echo "Device name: $SOUND_DEVICE_NAME"
 # See: https://github.com/mikebrady/shairport-sync/issues/1054
 # Remove when above issue is addressed
 SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
+SOUND_SUPERVISOR="http://localhost:$SOUND_SUPERVISOR_PORT"
 while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for audioblock to start..."; done
 
 # Start AirPlay
