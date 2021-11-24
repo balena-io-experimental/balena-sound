@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'airplay: fix connection bug with airplay'
+      hash: e4e5f8c0a1ec82ccaa2ac4e4fada889c96c50416
+      body: ''
+      footer:
+        Closes: '#463, #501, #497, #379, #489, #483'
+        closes: '#463, #501, #497, #379, #489, #483'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.11
+  date: 2021-11-24T14:43:15.553Z
+- commits:
     - subject: 'sound-supervisor: update dependency to fix build'
       hash: f29008d7530da81d33d6728ede93eaa733b7b44f
       body: ''
