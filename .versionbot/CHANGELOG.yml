@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'meta: replace balena/build CI with balena-ci GitHub action'
+      hash: d2869bfe9a2455b79cdc8a0a7508a8ec4be8afa3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.12
+  date: 2021-11-24T19:15:36.561Z
+- commits:
     - subject: 'airplay: fix connection bug with airplay'
       hash: e4e5f8c0a1ec82ccaa2ac4e4fada889c96c50416
       body: ''
