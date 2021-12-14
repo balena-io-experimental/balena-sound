@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'landr: rebuild landr page'
+      hash: b5e7ecad33930278bf399ad400da7abcfc4b9830
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.14
+  date: 2021-12-14T13:20:08.187Z
+- commits:
     - subject: 'landr: refresh site'
       hash: 8329b5f0bfa62a62eaba384af2a7161793190fb0
       body: ''
