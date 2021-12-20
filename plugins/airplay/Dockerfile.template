@@ -1,10 +1,15 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
+FROM mikebrady/shairport-sync:3.3.8 as shairport
+WORKDIR /usr/src
 
 ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
-ENV PULSE_SERVER=tcp:localhost:4317
 
-RUN install_packages shairport-sync
+# shairport-sync docker image doesn't include pulseaudio support so we use ALSA bridge
+# Replace 'apk add alsa-plugins-pulse' with ALSA bridge script when this issue is closed: https://github.com/balenablocks/audio/issues/82
+ENV PULSE_SERVER=tcp:localhost:4317
+RUN apk add alsa-plugins-pulse
 
 COPY start.sh /usr/src/
 
-CMD [ "/bin/bash", "/usr/src/start.sh" ]
+# shairport-sync image entrypoint starts dbus and avahi daemons that we don't need
+ENTRYPOINT []
+CMD [ "/bin/ash", "/usr/src/start.sh" ]
