@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'docs: clarify spotify premium requirement'
+      hash: fb7529c8eba5a3eef64b42c8148682cf324674c3
+      body: ''
+      footer:
+        Close: '#524'
+        close: '#524'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.15
+  date: 2021-12-21T17:05:27.178Z
+- commits:
     - subject: 'landr: rebuild landr page'
       hash: b5e7ecad33930278bf399ad400da7abcfc4b9830
       body: ''
