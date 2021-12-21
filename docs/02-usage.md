@@ -59,7 +59,7 @@ balenaSound has been re-designed to easily allow integration with audio streamin
 
 | Plugin | Library/Project |
 | ------ | ------ |
-| Spotify | [raspotify](https://github.com/dtcooper/raspotify/) Spotify Connect only works with Spotify Premium accounts. If you have a Spotify Premium account, you can stream locally without any configuration. If you want to use Spotify Connect over the internet, you'll need to provide your Spotify credentials. See [customization](../docs/customization#plugins) section for details. |
+| Spotify | [raspotify](https://github.com/dtcooper/raspotify/) Spotify Connect only works with Spotify Premium accounts. Zeroconf authentication via your phone/device Spotify client is supported as well as providing user and password, see [customization](../docs/customization#plugins) section for details. |
 | AirPlay | [shairport-sync](https://github.com/mikebrady/shairport-sync/) |
 | UPnP | [gmrenderer-resurrect](https://github.com/hzeller/gmrender-resurrect) |
 | Bluetooth | balena [bluetooth](https://github.com/balenablocks/bluetooth/) and [audio](https://github.com/balenablocks/audio) blocks |
