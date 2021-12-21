@@ -1,4 +1,19 @@
 - commits:
+    - subject: Upgrade sound-supervisor to node 14
+      hash: ba6b0d4f59eb76321b051b76838896e95f2521d2
+      body: ''
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+        Connects-to: '#522'
+        connects-to: '#522'
+      author: Flynn Joffray
+      nested: []
+  version: 3.6.16
+  date: 2021-12-21T20:25:29.506Z
+- commits:
     - subject: 'docs: clarify spotify premium requirement'
       hash: fb7529c8eba5a3eef64b42c8148682cf324674c3
       body: ''
