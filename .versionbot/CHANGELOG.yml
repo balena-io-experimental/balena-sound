@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'docs: clarify spotify over the internet'
+      hash: 5ffbc2fbd98173d0b51b023544aae2f64fb48236
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.17
+  date: 2021-12-23T18:56:52.438Z
+- commits:
     - subject: Upgrade sound-supervisor to node 14
       hash: ba6b0d4f59eb76321b051b76838896e95f2521d2
       body: ''
