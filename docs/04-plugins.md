@@ -15,6 +15,14 @@ The following plugins ship with balenaSound out of the box:
 
 Default plugins can be disabled at runtime via environment variables. For more details see [here](../docs/customization#plugins).
 
+### Spotify
+
+Spotify Connect requires a premium account. There is two methods of authentication:
+- zeroconf: most Spotify clients on smartphones, computers and smart tvs will automatically connect to balenaSound and pass on credentials without the need for manual authentication.
+- manual: providing user and password via variables, see [customization](../docs/customization#plugins) section for details.
+
+Manual authentication will let you stream audio over the internet from a client that is on a different network than the balenaSound device. This is useful if your balenaSound device is on a separate WiFi network that's harder to reach (e.g. a backyard network).
+
 ## Installable
 
 The following plugins are available to be added to your balenaSound installation: 
