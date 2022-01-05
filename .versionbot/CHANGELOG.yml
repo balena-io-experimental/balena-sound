@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'ci: remove balena build check'
+      hash: 321d9572d25d40fb64fea76344b137071b1b0223
+      body: |
+        Replaced by deploy-to-balena github action
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.19
+  date: 2022-01-05T15:53:01.067Z
+- commits:
     - subject: 'ci: use new deploy to balena action'
       hash: b51e90b6b4a1e78570a02da9b0edafa942b413cd
       body: ''
