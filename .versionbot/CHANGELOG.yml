@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'ci: use new deploy to balena action'
+      hash: b51e90b6b4a1e78570a02da9b0edafa942b413cd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.18
+  date: 2022-01-05T15:11:47.456Z
+- commits:
     - subject: 'docs: clarify spotify over the internet'
       hash: 5ffbc2fbd98173d0b51b023544aae2f64fb48236
       body: ''
