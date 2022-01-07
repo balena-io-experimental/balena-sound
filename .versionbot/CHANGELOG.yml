@@ -1,4 +1,58 @@
 - commits:
+    - subject: 'log2screen: remove block'
+      hash: 74fa54da1f43607de546f5baf3d39fa16f149d5e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'spotify: replace base image with our own prebuilt'
+      hash: a874027b4c47aea4f1b36f1a8b7b41e26cef57cd
+      body: |
+        - Allows easier version control of librespot binary
+        - Reduces image size ~200MB (340MB down to 140MB)
+      footer:
+        Closes: '#518'
+        closes: '#518'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'sound-supervisor: use node base image for production stage'
+      hash: cbf7b48d31eed2366abd0097568ef492d095dbbb
+      body: |
+        - Reduce image size by ~75MB (225MB down to 150MB)
+      footer:
+        Closes: '#520, #513'
+        closes: '#520, #513'
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: 'airplay: use shairport-sync base image'
+      hash: 9c934fa40b71dbfa7306aa0d833c5b7cb3844601
+      body: |
+        - Allows easier control of shairport-sync version
+        - Reduces image size ~200MB (240MB down to 40MB)
+      footer:
+        Closes: '#519'
+        closes: '#519'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.7.0
+  date: 2022-01-07T14:49:23.284Z
+- commits:
     - subject: 'ci: remove balena build check'
       hash: 321d9572d25d40fb64fea76344b137071b1b0223
       body: |
