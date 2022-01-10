@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'audio: update to latest audio block running PA v15'
+      hash: 7994635e194378a6ce98cd40e301673a07cbfd71
+      body: ''
+      footer:
+        Closes: '#527, #300'
+        closes: '#527, #300'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.0
+  date: 2022-01-10T14:07:49.272Z
+- commits:
     - subject: 'log2screen: remove block'
       hash: 74fa54da1f43607de546f5baf3d39fa16f149d5e
       body: ''
