@@ -1,5 +1,5 @@
 import * as cote from 'cote'
-import BalenaAudio from './audio-block'
+import BalenaAudio from 'balena-audio'
 import SoundAPI from './SoundAPI'
 import SoundConfig from './SoundConfig'
 import { constants } from './constants'
