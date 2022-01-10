@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'supervisor: use balena-audio lib'
+      hash: 9915c4dafd33d323b23445a1f9bbf44d9d4d1fef
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.1
+  date: 2022-01-10T16:03:17.927Z
+- commits:
     - subject: 'audio: update to latest audio block running PA v15'
       hash: 7994635e194378a6ce98cd40e301673a07cbfd71
       body: ''
