@@ -2,7 +2,7 @@ import { getIPAddress } from './utils'
 import { SoundModes } from "./types"
 import { constants } from './constants'
 import { startBalenaService, stopBalenaService, restartBalenaService } from './utils'
-import BalenaAudio from './audio-block'
+import BalenaAudio from 'balena-audio'
 
 interface MultiRoomConfig {
   master: String,
