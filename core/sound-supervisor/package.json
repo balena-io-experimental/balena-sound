@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node build/index.js",
     "clean": "rm -rf build",
-    "build": "npm run clean && tsc --project tsconfig.json && cp -R src/ui build/ui && cp -R src/audio-block build/audio-block",
+    "build": "npm run clean && tsc --project tsconfig.json && cp -R src/ui build/ui",
     "watch": "tsc --watch --project tsconfig.json",
     "livepush": "nodemon --watch src -e js,ts,json --exec node -r ts-node/register/transpile-only src/index.ts"
   },
