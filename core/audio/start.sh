@@ -3,7 +3,7 @@ set -e
 
 # PulseAudio configuration files for balena-sound
 CONFIG_TEMPLATE=/usr/src/balena-sound.pa
-CONFIG_FILE=/etc/pulse/balena-sound.pa
+CONFIG_FILE=/etc/pulse/default.pa.d/01-balenasound.pa
 
 # Set loopback module latency
 function set_loopback_latency() {
@@ -100,4 +100,4 @@ curl -sX PATCH --header "Content-Type:application/json" \
     --data '{"network": {"hostname": "balena"}}' \
     "$BALENA_SUPERVISOR_ADDRESS/v1/device/host-config?apikey=$BALENA_SUPERVISOR_API_KEY"
 
-exec pulseaudio --file /etc/pulse/balena-sound.pa
+exec pulseaudio
