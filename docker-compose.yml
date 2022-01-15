@@ -13,7 +13,6 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
-      io.balena.features.supervisor-api: 1
     ports:
       - 4317:4317
 
@@ -65,3 +64,12 @@ services:
     network_mode: host
     volumes:
       - spotifycache:/var/cache/raspotify
+
+  # https://github.com/balenablocks/hostname
+  hostname:
+    image: balenablocks/hostname:latest
+    restart: no
+    labels:
+      io.balena.features.supervisor-api: 1
+    environment:
+      SET_HOSTNAME: balena
