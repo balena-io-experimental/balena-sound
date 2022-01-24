@@ -1,14 +1,10 @@
 #!/bin/bash
 set -e
 
-SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
-# Wait for sound supervisor to start
-while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start at $SOUND_SUPERVISOR"; done
-
-# Get mode from sound supervisor. 
-# mode: default to MULTI_ROOM
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
+if [[ -n "$SOUND_MULTIROOM_DISABLE" ]]; then
+  echo "Multi-room is disabled, exiting..."
+  exit 0
+fi
 
 # Multi-room server can't run properly in some platforms because of resource constraints, so we disable them
 declare -A blacklisted=(
@@ -17,20 +13,10 @@ declare -A blacklisted=(
 )
 
 if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" ]]; then
-  echo "Multi-room server blacklisted for $BALENA_DEVICE_TYPE. Exiting..."
-
-  if [[ "$MODE" == "MULTI_ROOM" ]]; then
-    echo "Multi-room has been disabled on this device type due to performance constraints."
-    echo "You should use this device in 'MULTI_ROOM_CLIENT' mode if you have other devices running balenaSound, or 'STANDALONE' mode if this is your only device."
-  fi
+  echo "Multi-room server is disabled on $BALENA_DEVICE_TYPE device type due to performance constraints. Exiting..."
   exit 0
 fi
 
 # Start snapserver
-if [[ "$MODE" == "MULTI_ROOM" ]]; then
-  echo "Starting multi-room server..."
-  /usr/bin/snapserver
-else
-  echo "Multi-room server disabled. Exiting..."
-  exit 0
-fi
+echo "Starting multi-room server..."
+/usr/bin/snapserver

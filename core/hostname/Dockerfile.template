@@ -1,1 +1,2 @@
+# hadolint ignore=DL3006
 FROM bh.cr/g_tomas_migone1/hostname-%%BALENA_ARCH%%

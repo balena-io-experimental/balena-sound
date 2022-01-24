@@ -2,14 +2,17 @@ FROM balenalib/%%BALENA_ARCH%%-node:14 as build
 
 WORKDIR /usr/src
 COPY core/sound-supervisor/package*.json ./
-RUN npm install
+RUN sed -i 's/\"prepare\":.*/\"prepare\": \"echo 1\",/g' /usr/src/package.json
+RUN npm ci
 
-#dev-cmd-live=npm run livepush
+#dev-cmd-live=DEBUG=main* npm run livepush
 
 COPY core/sound-supervisor/src ./src
+COPY core/sound-supervisor/typings ./typings
 COPY core/sound-supervisor/tsconfig.json .
-RUN npm run build
 COPY VERSION .
+
+RUN npm run build && npm ci --production
 
 FROM node:14-alpine3.14
 
@@ -17,8 +20,7 @@ WORKDIR /usr/src
 
 COPY core/sound-supervisor/package*.json ./
 COPY --from=build /usr/src/build ./build
+COPY --from=build /usr/src/node_modules ./node_modules
 COPY VERSION .
-
-RUN npm install --production
 
 CMD [ "npm", "start" ]

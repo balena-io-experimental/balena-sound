@@ -52,25 +52,6 @@
                 </div>
               </div>
 
-              <!-- <div class="col-sm-6">
-                <div class="card text-center h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Mode selection  <span class="badge badge-pill badge-warning" style="font-size: 10px;vertical-align: middle;">Restarts application</span></h5>
-                    <p class="card-text">Set the mode of operation. See our <a href='https://sound.balenalabs.io/docs/usage#modes-of-operation' target='__blank'>docs</a> for details.</p>
-                    <div class="btn-group">
-                      <button id="set-mode" type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Multiroom
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" id="set-mode-mr">Multiroom</a>
-                        <a class="dropdown-item" href="#" id="set-mode-mrc">Multiroom client only</a>
-                        <a class="dropdown-item" href="#" id="set-mode-standalone">Standalone</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-
               <div class="col-sm-6">
                 <div class="card text-center h-100">
                   <div class="card-body">
@@ -147,7 +128,6 @@
     // Volume stuff
     var volumeSlider = document.getElementById("volume-slider")
     var volumeText = document.getElementById("volume-text")
-    var modeSelect = document.getElementById("mode")
     volumeText.innerHTML = volumeSlider.value
 
     var volumeUpdateOngoing = false
@@ -170,40 +150,7 @@
         volumeText.innerHTML = volume
         volumeSlider.value = volume
       }
-      
-      let mode = await getAPI('/mode')
-      if (mode) {
-        switch (mode) {
-          case 'MULTI_ROOM':
-            $('#set-mode').text('Multiroom')
-            break;
-          case 'MULTI_ROOM_CLIENT':
-            $('#set-mode').text('Multiroom client only')
-            break;
-          case 'STANDALONE':
-            $('#set-mode').text('Standalone')
-            break;
-        }
-      }
     }
-
-    $('#set-mode-mr').on('click', function(event) {
-      event.preventDefault();
-      postAPI('/mode', 'mode', 'MULTI_ROOM')
-      $('#set-mode').text("Multiroom")
-    });
-
-    $('#set-mode-mrc').on('click', function(event) {
-      event.preventDefault();
-      postAPI('/mode', 'mode', 'MULTI_ROOM_CLIENT')
-      $('#set-mode').text("Multiroom client only")
-    });
-
-    $('#set-mode-standalone').on('click', function(event) {
-      event.preventDefault();
-      postAPI('/mode', 'mode', 'STANDALONE')
-      $('#set-mode').text("Standalone")
-    });
 
     function deviceAction (action, key, value) {
       postAPI('/device/' + action, key, value)

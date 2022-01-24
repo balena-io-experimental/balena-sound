@@ -1,5 +1,0 @@
-export enum SoundModes {
-  MULTI_ROOM = 'MULTI_ROOM',
-  MULTI_ROOM_CLIENT = 'MULTI_ROOM_CLIENT',
-  STANDALONE = "STANDALONE"
-}
