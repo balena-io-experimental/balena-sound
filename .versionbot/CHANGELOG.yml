@@ -1,4 +1,21 @@
 - commits:
+    - subject: "audio: fix no sound bug"
+      hash: 0240cc6f0a3d5a32dcbccfc2820f21e3e7fd51cb
+      body: |
+        Fix bug introduced by upgrading PulseAudio to v15
+      footer:
+        Closes: "#542, #543, #544, #545"
+        closes: "#542, #543, #544, #545"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.4
+  title: "audio: fix no sound bug"
+  date: 2022-02-03T14:49:59.834Z
+- commits:
     - subject: Set hostname with balenablocks/hostname
       hash: c9e481b48e3f8e3dc7204f5710278b2183412dc7
       body: ""
