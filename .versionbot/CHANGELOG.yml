@@ -1,4 +1,20 @@
 - commits:
+    - subject: "landr: rebuild docs site"
+      hash: 468228942ea60bf104604e38c802c66ed9d368d8
+      body: ""
+      footer:
+        Closes: "#550"
+        closes: "#550"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.5
+  title: "'landr: rebuild docs site'"
+  date: 2022-02-09T13:28:11.758Z
+- commits:
     - subject: "audio: fix no sound bug"
       hash: 0240cc6f0a3d5a32dcbccfc2820f21e3e7fd51cb
       body: |
