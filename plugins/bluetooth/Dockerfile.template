@@ -1,4 +1,4 @@
-FROM balenablocks/bluetooth
+FROM bh.cr/balenablocks/bluetooth-%%BALENA_ARCH%%
 
 WORKDIR /usr/src
 
