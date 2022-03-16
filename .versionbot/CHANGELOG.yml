@@ -1,4 +1,16 @@
 - commits:
+    - subject: add anniversary meet-up details to README
+      hash: b32d05e31aee3841dc39ce1d4e50259c2db015ad
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: iayanpahwa
+      nested: []
+  version: 3.8.6
+  title: "'add anniversary meet-up details to README'"
+  date: 2022-03-16T10:10:08.551Z
+- commits:
     - subject: "landr: rebuild docs site"
       hash: 468228942ea60bf104604e38c802c66ed9d368d8
       body: ""
