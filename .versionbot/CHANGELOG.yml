@@ -1,4 +1,16 @@
 - commits:
+    - subject: update meet-up event page URL
+      hash: b328c51534f39ba7c3b2777602ad46d10e416dd2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: iayanpahwa
+      nested: []
+  version: 3.8.9
+  title: "'update meet-up event page URL'"
+  date: 2022-03-21T10:27:13.584Z
+- commits:
     - subject: Add redirect for balena-sound website.
       hash: c665ba91125502594845ae587941c4a64ed2b119
       body: ""
