@@ -1,7 +1,7 @@
 🔊🥳🎉 Inviting all balenaSound users, community members and contributors to join us for a virtual meet-up and celebrate the project's 3rd anniversary! Register below 👇🏻
 
-[![Anniversary Meetup](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/meetup.png)](https://www.eventbrite.com/e/balensound-anniversary-meet-up-tickets-296582766037)
-*Event link: https://www.eventbrite.com/e/balensound-anniversary-meet-up-tickets-296582766037*
+[![Anniversary Meetup](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/meetup.png)](https://sound.balenalabs.io/meetup)
+*Event link: https://sound.balenalabs.io/meetup*
 
 
 ---
