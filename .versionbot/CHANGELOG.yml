@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add redirect for balena-sound website.
+      hash: c665ba91125502594845ae587941c4a64ed2b119
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+      author: Carlo Miguel F. Cruz
+      nested: []
+  version: 3.8.8
+  title: "'Add redirect for balena-sound website.'"
+  date: 2022-03-21T02:26:12.341Z
+- commits:
     - subject: "readme: add event link and emojis"
       hash: a00190cd8bc78b3f721c5a3a4055b45d7aae0d27
       body: ""
