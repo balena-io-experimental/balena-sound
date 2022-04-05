@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use balenaHub proxy registry for blocks
+      hash: 2325cc6f0f062c6beaf4743d5b67fbd78c5698eb
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.9.0
+  title: "'Use balenaHub proxy registry for blocks'"
+  date: 2022-04-05T18:17:08.150Z
+- commits:
     - subject: update meet-up event page URL
       hash: b328c51534f39ba7c3b2777602ad46d10e416dd2
       body: ""
