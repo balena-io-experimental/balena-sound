@@ -5,14 +5,14 @@
 
 balenaSound has been developed and tested to work on the following devices:
 
-| Device Type  |  Default mode | Standalone mode (`STANDALONE`) | Multi-room mode (`MULTI_ROOM`) | Multi-room client mode (`MULTI_ROOM_CLIENT`) |
+| Device Type  |  Standalone mode (`STANDALONE`) | Multi-room mode (`MULTI_ROOM`) | Multi-room client mode (`MULTI_ROOM_CLIENT`) |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Raspberry Pi (v1 / Zero / Zero W)<sup>1</sup> | `STANDALONE` | ✔ | ✘ <sup>2</sup> | ✔ |
-| Raspberry Pi 2 | `STANDALONE` | ✔ | ✘ <sup>2</sup> | ✔ |
-| Raspberry Pi 3 <sup>3</sup> | `MULTI_ROOM` | ✔ | ✔ <sup>4</sup> | ✔ |
-| Raspberry Pi 4 <sup>3</sup> | `MULTI_ROOM` | ✔ | ✔ | ✔ |
-| Intel NUC | `MULTI_ROOM` | ✔ | ✔ | ✔ |
-| balenaFin<sup>1</sup> | `MULTI_ROOM` | ✔ | ✔ | ✔ |
+| Raspberry Pi (v1 / Zero / Zero W)<sup>1</sup> | ✔ | ✘ <sup>2</sup> | ✔ |
+| Raspberry Pi 2 | ✔ | ✘ <sup>2</sup> | ✔ |
+| Raspberry Pi 3 <sup>3</sup> | ✔ | ✔ <sup>4</sup> | ✔ |
+| Raspberry Pi 4 <sup>3</sup> | ✔ | ✔ | ✔ |
+| Intel NUC | ✔ | ✔ | ✔ |
+| balenaFin<sup>1</sup> | ✔ | ✔ | ✔ |
 
 **Notes**
 

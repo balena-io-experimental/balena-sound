@@ -14,6 +14,7 @@ export default {
 			: false,
 		clientServiceName:
 			process.env.SOUND_MULTIROOM_CLIENT_SERVICE_NAME ?? 'multiroom-client',
+		disable: process.env.SOUND_MULTIROOM_DISABLE ? true : false,
 	},
 	initVolume: checkInt(process.env.SOUND_VOLUME) ?? 75,
 	pulseAudio: {

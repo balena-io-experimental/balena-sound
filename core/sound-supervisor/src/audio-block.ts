@@ -48,3 +48,37 @@ export async function upgradeToMultiRoom() {
 		logAudio(`Multiroom loopback module already loaded!`);
 	}
 }
+export async function downgradeToStandalone() {
+	const moduleList = await AudioBlock.getModuleList();
+	const standaloneLoopback = moduleList.find(
+		(m) =>
+			m.argument.includes(`sink=${constants.pulseAudio.outputSink}`) &&
+			m.argument.includes(`source=${constants.pulseAudio.inputSink}`),
+	);
+	const multiroomLoopback = moduleList.find(
+		(m) =>
+			m.argument.includes(`sink=${constants.pulseAudio.outputSink}`) &&
+			m.argument.includes(`source=${constants.pulseAudio.multiroomSink}`),
+	);
+
+	if (multiroomLoopback !== undefined) {
+		logAudio(
+			`Unloading multiroom loopback module - ${multiroomLoopback.name}:${multiroomLoopback.argument}.`,
+		);
+		await AudioBlock.unloadModule(multiroomLoopback.index);
+	} else {
+		logAudio(`Multiroom loopback module already unloaded!`);
+	}
+
+	if (standaloneLoopback === undefined) {
+		logAudio(
+			`Loading standalone loopback module - module-loopback:source=${constants.pulseAudio.inputSink}.monitor sink=${constants.pulseAudio.outputSink}.`,
+		);
+		await AudioBlock.loadModule(
+			'module-loopback',
+			`source=${constants.pulseAudio.inputSink}.monitor sink=${constants.pulseAudio.outputSink}`,
+		);
+	} else {
+		logAudio(`Standalone loopback module already loaded!`);
+	}
+}

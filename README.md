@@ -30,7 +30,7 @@ Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installa
 
 ![concept](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/sound.png)
 
-There are many commercial solutions out there that provide functionality similar to balenaSound. Most of them though come with a premium price tag and are riddled with privacy concerns.
+There are many commercial solutions out there that provide functionality similar to balenaSound, most of them though come with a premium price tag or a proprietary codebase.
 
 balenaSound is an open source project that allows you to build your own DIY audio streaming platform without compromises. Why spend big money on hardware that might be deemed obsolete by the vendor as they see fit? With balenaSound you are in control, bring your old speakers back to life!
 
