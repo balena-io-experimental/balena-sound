@@ -5,9 +5,9 @@ load-module module-null-sink sink_name=balena-sound.input
 load-module module-null-sink sink_name=balena-sound.output
 load-module module-null-sink sink_name=multi-room.input
 
+# Defaults
+set-default-sink balena-sound.input
+
 # Routes
 load-module module-loopback latency_msec=%INPUT_LATENCY% source=balena-sound.input.monitor sink=balena-sound.output
 load-module module-loopback latency_msec=%OUTPUT_LATENCY% source=balena-sound.output.monitor %OUTPUT_SINK%
-
-# Defaults
-set-default-sink balena-sound.input
