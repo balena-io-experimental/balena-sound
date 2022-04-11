@@ -69,26 +69,22 @@ AudioBlock.on('play', async (sink) => {
 FleetComms.on('fleet-update', async (data: FleetUpdate) => {
 	logEvent(`fleet-update ${JSON.stringify(data)}`);
 
-	if (
-		MultiRoom.enabled &&
-		MultiRoom.isNewMaster(data.master) &&
-		!MultiRoom.forced &&
-		!MultiRoom.disallowUpdates
-	) {
+	if (MultiRoom.enabled && !MultiRoom.forced && !MultiRoom.disallowUpdates) {
 		// Blacklisted devices --> upgrade to multiroom (client only)
 		if (!BalenaDevice.isMultiRoomCapable) {
 			log('Upgrading to multi-room client mode...');
 			await upgradeToMultiRoom();
 		}
-
-		logEvent(
-			`Multi-room master has changed to ${data.master}, restarting snapcast-client...`,
-		);
-		MultiRoom.setMaster(data.master);
-		BalenaService.restart(
-			BalenaDevice.appId,
-			constants.multiroom.clientServiceName,
-		);
+		if (MultiRoom.isNewMaster(data.master)) {
+			logEvent(
+				`Multi-room master has changed to ${data.master}, restarting snapcast-client...`,
+			);
+			MultiRoom.setMaster(data.master);
+			BalenaService.restart(
+				BalenaDevice.appId,
+				constants.multiroom.clientServiceName,
+			);
+		}
 	}
 });
 
