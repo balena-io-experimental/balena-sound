@@ -29,6 +29,7 @@ const multiroom = {
 	master: MultiRoom.master,
 	forced: MultiRoom.forced,
 	disallowUpdates: MultiRoom.disallowUpdates,
+	getMaster: MultiRoom.getMaster(),
 };
 
 const router = Router();

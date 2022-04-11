@@ -14,6 +14,14 @@ class MultiRoom {
 	setMaster(master: string) {
 		this.master = master;
 	}
+
+	getMaster() {
+		if (BalenaDevice.isMultiRoomCapable) {
+			return this.master;
+		}
+
+		return BalenaDevice.ip !== this.master ? this.master : '';
+	}
 }
 
 export default new MultiRoom();

@@ -6,23 +6,26 @@ if [[ -n "$SOUND_MULTIROOM_DISABLE" ]]; then
   exit 0
 fi
 
+# Get snapserver address from sound-supervisor
+# Blacklisted devices can only run snapclient
+SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
+SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
+while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; echo "Waiting for sound supervisor to start at $SOUND_SUPERVISOR"; done
+
+SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/device/multiroom" || true)
+
 # Multi-room server can't run properly in some platforms because of resource constraints, so we disable them
+# These devices can run in client mode, so we allow that
 declare -A blacklisted=(
   ["raspberry-pi"]=0
   ["raspberry-pi2"]=1
 )
 
-if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" ]]; then
+if [[ -n "${blacklisted[$BALENA_DEVICE_TYPE]}" && -z "$SNAPSERVER" ]]; then
   echo "Multi-room server is disabled on $BALENA_DEVICE_TYPE device type due to performance constraints. Exiting..."
   exit 0
 fi
 
-# Get mode and snapserver from sound-supervisor.
-# If sound-supervisor is not running default to multiroom-server (local) as it will be overriden regardless once sound-supervisor starts.
-# TODO: consider adding back the wait on sound-supervisor as multiroom won't work regardless if it doesn't start.
-SOUND_SUPERVISOR_PORT=${SOUND_SUPERVISOR_PORT:-80}
-SOUND_SUPERVISOR="$(ip route | awk '/default / { print $3 }'):$SOUND_SUPERVISOR_PORT"
-SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/device/multiroom" || true)
 SNAPSERVER=${SNAPSERVER:-"multiroom-server"}
 SNAPSERVER_PORT="1704"
 

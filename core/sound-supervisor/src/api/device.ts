@@ -47,6 +47,6 @@ router.route('/dtoverlay').post(
 	}),
 );
 
-router.route('/multiroom').get((_req, res) => res.send(MultiRoom.master));
+router.route('/multiroom').get((_req, res) => res.send(MultiRoom.getMaster()));
 
 export default router;

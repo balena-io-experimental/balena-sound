@@ -28,7 +28,8 @@ async function init() {
 	FleetComms.startHeartbeat(constants.multiroom.pollInterval);
 
 	if (!MultiRoom.enabled) {
-		log('Multiroom is disabled, skipping upgrade...');
+		log('Multiroom is disabled, skipping upgrade attempt...');
+		await downgradeToStandalone();
 		return;
 	}
 
@@ -45,7 +46,6 @@ async function init() {
 // When playback starts on a device announce itself as the new master server
 AudioBlock.on('play', async (sink) => {
 	logEvent(`play ${JSON.stringify(BigIntParse(sink))}`);
-	console.log('ahsdhashdhasdhashdhads');
 
 	if (MultiRoom.enabled && sink.name === constants.pulseAudio.inputSink) {
 		if (BalenaDevice.isMultiRoomCapable) {
