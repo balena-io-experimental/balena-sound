@@ -1,4 +1,3 @@
-🔊🥳🎉 Inviting all balenaSound users, community members and contributors to join us for a virtual meet-up and celebrate the project's 3rd anniversary! Register below 👇🏻
 ![logo](https://raw.githubusercontent.com/balena-io-projects/balena-sound/master/docs/images/balenaSound-logo.png)
 
 **Starter project enabling you to add multi-room audio streaming via Bluetooth, Airplay, Spotify Connect and others to any old speakers or Hi-Fi using just a Raspberry Pi.**
