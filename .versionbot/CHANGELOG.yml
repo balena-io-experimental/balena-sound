@@ -1,4 +1,16 @@
 - commits:
+    - subject: Removing meetup banner now that event has ended.
+      hash: e949ae9c72bd22b3bb9a3e0b734d8edb850dd9bd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: andrew
+      nested: []
+  version: 3.9.1
+  title: "'Removing meetup banner now that event has ended.'"
+  date: 2022-04-28T22:12:02.954Z
+- commits:
     - subject: Use balenaHub proxy registry for blocks
       hash: 2325cc6f0f062c6beaf4743d5b67fbd78c5698eb
       body: ""
