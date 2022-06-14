@@ -1,4 +1,16 @@
 - commits:
+    - subject: Deleting remainder of banner...
+      hash: 47b9dcfb8071d62a394dce07386e39886f920099
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: andrew
+      nested: []
+  version: 3.9.2
+  title: "'FIX docs links'"
+  date: 2022-06-14T14:43:08.677Z
+- commits:
     - subject: Removing meetup banner now that event has ended.
       hash: e949ae9c72bd22b3bb9a3e0b734d8edb850dd9bd
       body: ""
