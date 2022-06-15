@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update 05-audio-interfaces.md
+      hash: ff3e336cfa929557633fff6caa2af967e6a8b52f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+      author: Ramiro González Maciel
+      nested: []
+  version: 3.9.3
+  title: "'Fix links from ../docs  to ./'"
+  date: 2022-06-15T18:56:27.854Z
+- commits:
     - subject: Deleting remainder of banner...
       hash: 47b9dcfb8071d62a394dce07386e39886f920099
       body: ""
