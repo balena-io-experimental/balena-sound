@@ -84,7 +84,7 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 | [Hifiberry MiniAmp][24]       | hifiberry-dac                         |
 | [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   |
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac","i2s-mmap"           |
-| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap" |
+| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap"|
 | [RasPiAudio Audio+ DAC][37]  | hifiberry-dac                          | 
 | [AUDIOPHONICS I-Sabre DAC ES9023][39]| hifiberry-dac                  |
 
