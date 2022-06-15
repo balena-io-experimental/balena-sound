@@ -2,9 +2,9 @@
 
 If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavors: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound.
 
-Checkout the [customization](../docs/customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
+Checkout the [customization](../customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
-As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](../docs/support#contact-us) and we'll gladly help out.
+As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](./support#contact-us) and we'll gladly help out.
 
 ## Onboard
 
@@ -84,7 +84,7 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 | [Hifiberry MiniAmp][24]       | hifiberry-dac                         |
 | [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   |
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac","i2s-mmap"           |
-| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap" |
+| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap"|
 | [RasPiAudio Audio+ DAC][37]  | hifiberry-dac                          | 
 | [AUDIOPHONICS I-Sabre DAC ES9023][39]| hifiberry-dac                  |
 
