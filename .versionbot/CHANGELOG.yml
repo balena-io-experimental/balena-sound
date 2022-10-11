@@ -1,4 +1,15 @@
 - commits:
+    - subject: Switch from balenaCI to flowzone
+      hash: 96415ca7f1126f803dba8acc38ffca70849f68d1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 3.9.4
+  title: ""
+  date: 2022-10-10T18:21:26.202Z
+- commits:
     - subject: Update 05-audio-interfaces.md
       hash: ff3e336cfa929557633fff6caa2af967e6a8b52f
       body: ""
