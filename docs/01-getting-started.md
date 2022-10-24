@@ -30,7 +30,7 @@ One-click deploy is the easiest way to get started with balenaSound as it allows
 
 Click this button to go straight to application creation, where balenaSound will be pre-loaded to your application:
 
-[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sound&defaultDeviceType=raspberry-pi)
 
 ### Provision your device
 
@@ -62,12 +62,12 @@ For example, if you don't plan on using the Spotify integration, you can edit th
 
 - Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - Login with `balena login`
-- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
+- Download this [project](https://github.com/balena-labs-projects/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
 
 ## Having trouble?
 
 If you are running into issues getting your balenaSound application running, please try the following:
 1. Check the [support and troubleshooting guide](../support) for common issues and how to resolve them.
 2. Post in the [balenaSound forum](https://forums.balena.io/c/balenalabs/balenasound/85) for help from our growing community.
-3. Create an issue on the [balenaSound GitHub project](https://github.com/balenalabs/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
+3. Create an issue on the [balenaSound GitHub project](https://github.com/balena-labs-projects/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
 
