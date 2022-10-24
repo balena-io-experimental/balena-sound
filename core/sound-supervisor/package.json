@@ -8,24 +8,32 @@
     "clean": "rm -rf build",
     "build": "npm run clean && tsc --project tsconfig.json && cp -R src/ui build/ui",
     "watch": "tsc --watch --project tsconfig.json",
-    "livepush": "nodemon --watch src -e js,ts,json --exec node -r ts-node/register/transpile-only src/index.ts"
+    "livepush": "nodemon --watch src -e js,ts,json --exec node -r ts-node/register/transpile-only src/index.ts",
+    "lint": "balena-lint src",
+    "lint-fix": "balena-lint --fix src",
+    "prepare": "cd ../.. && husky install",
+    "pre-commit": "lint-staged"
   },
   "author": "Tomás Migone <tomas@balena.io",
   "license": "Apache-2.0",
   "dependencies": {
-    "@tmigone/pulseaudio": "^0.1.8",
     "axios": "^0.24.0",
-    "balena-audio": "0.0.2",
+    "balena-audio": "^1.0.1",
     "balena-sdk": "^15.39.1",
     "cote": "^1.0.0",
     "express": "^4.17.1",
     "express-async-handler": "~1.1.4",
-    "ts-retry-promise": "^0.5.0"
+    "express-ping": "^1.4.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@balena/lint": "^6.2.0",
     "@types/cote": "^0.19.0",
+    "@types/debug": "^4.1.7",
     "@types/express": "^4.17.7",
-    "@types/node": "^14.0.27",
+    "@types/node": "^14.18.9",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
     "nodemon": "^2.0.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"

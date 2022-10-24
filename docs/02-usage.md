@@ -19,17 +19,15 @@ Let the music play!
 
 balenaSound supports multiple modes of operation described below:
 
-* Multi-room mode
-* Multi-room client mode
+* Multi-room
+* Multi-room client
 * Standalone
 
-By default, most devices will start in multi-room mode. You can change that by setting an environment variable, check out the [customization](../docs/customization#general) section to learn how.
+As of v4.0.0 devices will start in standalone mode by default and automatically upgrade to multi-room if the device architecture [supports](../docs/device-support#recommended) it. This behavior can be disabled using the environment variable `SOUND_MULTIROOM_PREVENT_UPGRADE`, check out the [customization](../docs/customization#general) section to learn how.
 
-**Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](../docs/device-support#recommended).
+**Multi-room**
 
-### Multi-room mode
-
-Multi-room mode allows you to play perfectly synchronized audio on multiple devices, it turns balenaSound into a "Sonos-like" multi-room solution. It doesn't matter whether you have 2 or 100 devices, you only need them to be part of the same local network.
+Multi-room mode allows you to play synchronized audio on multiple devices, it turns balenaSound into a "Sonos-like" multi room capable solution. It doesn't matter whether you have 2 or 100 devices, you only need them to be part of the same local network.
 
 When in multi-room mode devices can take one of two roles:
 
@@ -41,7 +39,7 @@ You can always change the `master` by streaming to a different device.
 
 It's a good idea to use the most powerful device on your fleet as the designated `master` as it does take up more resources. For example, if your setup consists of a Raspberry Pi 4 and a couple of Raspberry Pi 2, then using the Pi 4 as the `master` is the better option.
 
-### Multi-room client mode
+**Multi-room client**
 
 When a device is in multi-room client mode it can only be used as a multi-room `client`. The only audio the device will play is audio coming from a `master` device, so you'll need at least another device in your application.
 
