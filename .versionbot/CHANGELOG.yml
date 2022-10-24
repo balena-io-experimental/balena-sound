@@ -1,4 +1,17 @@
 - commits:
+    - subject: Changing references from balenalabs to balena-labs-projects
+      hash: 5439c4ed3f985bafd9d5939c930aacb90155d6c3
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+  version: 3.9.5
+  title: ""
+  date: 2022-10-24T20:46:23.586Z
+- commits:
     - subject: Switch from balenaCI to flowzone
       hash: 96415ca7f1126f803dba8acc38ffca70849f68d1
       body: ""
@@ -527,8 +540,8 @@
     - subject: Use SOUND_SUPERVISOR_PORT in container start scripts
       hash: 3d267ca69f01dd11b19f621a08f96e71b88a1a17
       body: >
-        This patch make container start scripts consider the environment
-        variable SOUND_SUPERVISOR_PORT.
+        This patch make container start scripts consider the environment variable
+        SOUND_SUPERVISOR_PORT.
 
         Otherwise the services adress requests to wrong default port, if sound supervisor web port is changed by above configuration variable.
 
@@ -1241,8 +1254,7 @@
     - subject: Adding clarification between config vars and env vars for users
       hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
       body: >
-        Clarifying and citing resources for env var usage in balenaSound so
-        users
+        Clarifying and citing resources for env var usage in balenaSound so users
 
         don't try to add env vars to config vars.
       footer:
@@ -2188,8 +2200,8 @@
       author: Tim
       subject: Update for Multi Container use
       body: >-
-        Suggestion additional info for people who might want to combine this in
-        an app with other playground apps.
+        Suggestion additional info for people who might want to combine this in an
+        app with other playground apps.
 
         Labels is something that's not always clear for beginners.
     - hash: eefcca025309f2b53651b57fb76fb41a0a2221ed
