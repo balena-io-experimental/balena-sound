@@ -23,7 +23,7 @@ balenaSound supports multiple modes of operation described below:
 * Multi-room client mode
 * Standalone
 
-By default, most devices will start in multi-room mode. You can change that by setting an environment variable, check out the [customization](../docs/customization#general) section to learn how.
+By default, most devices will start in multi-room mode. You can change that by setting an environment variable, check out the [customization](../customization#general) section to learn how.
 
 **Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](../docs/device-support#recommended).
 
