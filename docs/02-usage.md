@@ -2,7 +2,7 @@
 
 After your device finishes downloading the application, you should be ready to go!
 
-Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](../docs/audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup-- be sure to check it out.
+Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](./05-audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup-- be sure to check it out.
 
 To connect to your balenaSound device:
 
