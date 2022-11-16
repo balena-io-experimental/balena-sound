@@ -10,7 +10,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 ![hardware](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/hardware.jpeg)
 
-- Any device from our [supported devices list](../docs/device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
+- Any device from our [supported devices list](./device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
 - An SD Card! We recommend the Sandisk Extreme Pro series. 8GB should be plenty enough for this project.
 - Power supply
 - 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.

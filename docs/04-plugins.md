@@ -11,15 +11,15 @@ The following plugins ship with balenaSound out of the box:
 - Spotify Connect
 - Bluetooth
 - AirPlay
-- Soundcard input (Requires setting `SOUND_ENABLE_SOUNDCARD_INPUT`, see [details](../docs/customization#plugins))
+- Soundcard input (Requires setting `SOUND_ENABLE_SOUNDCARD_INPUT`, see [details](./customization#plugins))
 
-Default plugins can be disabled at runtime via environment variables. For more details see [here](../docs/customization#plugins).
+Default plugins can be disabled at runtime via environment variables. For more details see [here](./customization#plugins).
 
 ### Spotify
 
 Spotify Connect requires a premium account. There is two methods of authentication:
 - zeroconf: most Spotify clients on smartphones, computers and smart tvs will automatically connect to balenaSound and pass on credentials without the need for manual authentication.
-- manual: providing user and password via variables, see [customization](../docs/customization#plugins) section for details.
+- manual: providing user and password via variables, see [customization](./customization#plugins) section for details.
 
 Manual authentication will let you stream audio over the internet from a client that is on a different network than the balenaSound device. This is useful if your balenaSound device is on a separate WiFi network that's harder to reach (e.g. a backyard network).
 
