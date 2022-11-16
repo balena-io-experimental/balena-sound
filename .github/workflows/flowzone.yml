@@ -10,5 +10,7 @@ on:
 jobs:
   flowzone:
     name: Flowzone
-    uses: product-os/flowzone/.github/workflows/flowzone.yml@master
+    uses: product-os/flowzone/.github/workflows/flowzone.yml@add-website-type
     secrets: inherit
+    with:
+      cloudflare_website: "hardware-process"
