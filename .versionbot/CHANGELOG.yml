@@ -1,4 +1,18 @@
 - commits:
+    - subject: changing balenablocks urls and flowzone CI
+      hash: ec21ca9dcd5da43fbab2559bea165b7ceeb6b1cc
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 3.9.6
+  title: ""
+  date: 2022-11-16T19:41:23.909Z
+- commits:
     - subject: Changing references from balenalabs to balena-labs-projects
       hash: 5439c4ed3f985bafd9d5939c930aacb90155d6c3
       body: ""
