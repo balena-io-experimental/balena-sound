@@ -35,5 +35,5 @@ Some of the reasons we've flagged devices as experimental include:
 
 | Device Type  | Standalone mode (`STANDALONE`) | Multi-room mode (`MULTI_ROOM`) | Multi-room client mode (`MULTI_ROOM_CLIENT`) | Comments |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| NVIDIA Jetson Nano | ✔ | ✔ | ✔ | - Requires WiFi USB dongle (or ethernet cable)<br>- Requires Bluetooth USB dongle.<br>- No built-in audio support (see [this](https://github.com/balenablocks/audio/issues/35) bug). As a workaround, requires USB or DAC soundcard.|
-| BeagleBone Black | ✔ | ✔ | ✔ |  - Requires WiFi USB dongle (or ethernet cable)<br>- Requires Bluetooth USB dongle.<br>- Requires USB sound card<br>- Requires USB hub as it has a single USB port |
+| NVIDIA Jetson Nano | ✔ | ✔ | ✔ | - Requires WiFi USB dongle (or ethernet cable)- Requires Bluetooth USB dongle.- No built-in audio support (see [this](https://github.com/balenablocks/audio/issues/35) bug). As a workaround, requires USB or DAC soundcard.|
+| BeagleBone Black | ✔ | ✔ | ✔ |  - Requires WiFi USB dongle (or ethernet cable)- Requires Bluetooth USB dongle.- Requires USB sound card- Requires USB hub as it has a single USB port |
