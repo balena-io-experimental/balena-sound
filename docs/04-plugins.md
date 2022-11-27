@@ -15,13 +15,21 @@ The following plugins ship with balenaSound out of the box:
 
 Default plugins can be disabled at runtime via environment variables. For more details see [here](../docs/customization#plugins).
 
+### Spotify
+
+Spotify Connect requires a premium account. There is two methods of authentication:
+- zeroconf: most Spotify clients on smartphones, computers and smart tvs will automatically connect to balenaSound and pass on credentials without the need for manual authentication.
+- manual: providing user and password via variables, see [customization](../docs/customization#plugins) section for details.
+
+Manual authentication will let you stream audio over the internet from a client that is on a different network than the balenaSound device. This is useful if your balenaSound device is on a separate WiFi network that's harder to reach (e.g. a backyard network).
+
 ## Installable
 
 The following plugins are available to be added to your balenaSound installation: 
 
 - UPnP: Universal Plug and Play
-- (Work in progress) Tidal Connect: See [PR #399](https://github.com/balenalabs/balena-sound/pull/399)
-- (Work in progress) Roon Bridge: See [PR #388](https://github.com/balenalabs/balena-sound/pull/388)
+- (Work in progress) Tidal Connect: See [PR #399](https://github.com/balena-labs-projects/balena-sound/pull/399)
+- (Work in progress) Roon Bridge: See [PR #388](https://github.com/balena-labs-projects/balena-sound/pull/388)
 
 Installing these plugins is a more involved process than just deploying the off the shelf version of balenaSound. You'll need to edit the contents of the `docker-compose.yml` file before deploying the application. This means that you won't be able to deploy using the "Deploy with balena" button; you either need to use the [CLI to deploy](https://sound.balenalabs.io/docs/getting-started#cli-deploy) or use "Deploy with balena" with a forked version of the project. If you don't feel comfortable performing these steps or need some help along the way hit us up at our [forums](https://forums.balena.io) and we'll gladly help you out.
 

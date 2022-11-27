@@ -2,9 +2,9 @@
 
 If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavors: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound.
 
-Checkout the [customization](../docs/customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
+Checkout the [customization](../customization#general) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
-As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](../docs/support#contact-us) and we'll gladly help out.
+As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](./support#contact-us) and we'll gladly help out.
 
 ## Onboard
 
@@ -28,7 +28,7 @@ Latest versions of balenaOS already ship with drivers for most, if not all, of t
 - [Untested DACs](#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with balenaSound (most likely because no balena team member has one). 
 - [Unsupported DACs](#Unsupported-DACs): DACs that probably need additional drivers that aren't currently available in balenaOS.
 
-A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/balenalabs/balena-sound/issues/439) GitHub issue and we'll take a look for you.
+A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/balena-labs-projects/balena-sound/issues/439) GitHub issue and we'll take a look for you.
 
 
 ### Configuration
@@ -84,7 +84,7 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 | [Hifiberry MiniAmp][24]       | hifiberry-dac                         |
 | [Hifiberry DAC2 HD][27]       | hifiberry-dacplushd                   |
 | [Adafruit I2S Audio Bonnet][26]| "hifiberry-dac","i2s-mmap"           |
-| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap" |
+| [Adafruit MAX98357 I2S Class-D Mono Amp][28]| "hifiberry-dac”,"i2s-mmap"|
 | [RasPiAudio Audio+ DAC][37]  | hifiberry-dac                          | 
 | [AUDIOPHONICS I-Sabre DAC ES9023][39]| hifiberry-dac                  |
 
@@ -96,7 +96,7 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 [6]: https://www.hifiberry.com/products/dacplus/
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
 [8]: http://www.inno-maker.com/product/hifi-dac-hat/
-[9]: https://github.com/balenalabs/balena-sound/pull/98
+[9]: https://github.com/balena-labs-projects/balena-sound/pull/98
 [10]: https://allo.com/sparky/miniboss-rpi-zero.html
 [11]: http://www.kumantech.com/kuman-sc07-raspberry-pi-hifi-digi-digital-sound-card-i2s-spdif-optical-fiber-for-raspberry-pi-3-2-model-b-b-sc07_p0041.html
 [12]: https://shop.pimoroni.com/collections/pirate-audio
@@ -123,18 +123,18 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 [33]: https://shop.pimoroni.com/products/pi-digi?variant=33370425994
 [34]: https://www.raspberrypi.org/products/iqaudio-digiamp-plus/
 [35]: https://www.inno-maker.com/product/hifi-amp-hat/
-[36]: https://github.com/balenalabs/balena-sound/issues/385
+[36]: https://github.com/balena-labs-projects/balena-sound/issues/385
 [37]: https://raspiaudio.com/produit/audio
-[38]: https://github.com/balenalabs/balena-sound/issues/355
+[38]: https://github.com/balena-labs-projects/balena-sound/issues/355
 [39]: https://www.audiophonics.fr/fr/dac-et-interfaces-pour-raspberry-pi/audiophonics-i-sabre-dac-es9023-tcxo-raspberry-pi-a-b-20-i2s-p-9978.html
-[40]: https://github.com/balenalabs/balena-sound/issues/345
+[40]: https://github.com/balena-labs-projects/balena-sound/issues/345
 
 ### Untested DACs
 
-An up to date list of untested DACs can be found in [this](https://github.com/balenalabs/balena-sound/issues/439) GitHub issue. If you have one of these DACs and want to help us test it, please post on our [forums](https://forums.balena.io/) and we'll get back to you with instructions. Hopefully, with your assistance, new DACs can be graduated into the supported category!
+An up to date list of untested DACs can be found in [this](https://github.com/balena-labs-projects/balena-sound/issues/439) GitHub issue. If you have one of these DACs and want to help us test it, please post on our [forums](https://forums.balena.io/) and we'll get back to you with instructions. Hopefully, with your assistance, new DACs can be graduated into the supported category!
 
 **Note:** Please **do not** create new GitHub issues for untested DACs unless you've been instructed to do so by our forums support agents.
 
 ### Unsupported DACs
 
-An up to date list of unsupported DACs can be found in [this](https://github.com/balenalabs/balena-sound/issues/439) GitHub issue. Unsupported DACs can be made to work with balenaSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with balenaSound developers.
+An up to date list of unsupported DACs can be found in [this](https://github.com/balena-labs-projects/balena-sound/issues/439) GitHub issue. Unsupported DACs can be made to work with balenaSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with balenaSound developers.

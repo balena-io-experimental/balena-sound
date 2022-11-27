@@ -2,7 +2,7 @@
 
 After your device finishes downloading the application, you should be ready to go!
 
-Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](../docs/audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup-- be sure to check it out.
+Before starting, make sure to connect the audio output of your device to your Hi-Fi or speaker system. Remember that we support multiple [audio interfaces](./05-audio-interfaces). This is helpful if you're interested in improving the audio quality of your setup-- be sure to check it out.
 
 To connect to your balenaSound device:
 
@@ -23,9 +23,9 @@ balenaSound supports multiple modes of operation described below:
 * Multi-room client mode
 * Standalone
 
-By default, most devices will start in multi-room mode. You can change that by setting an environment variable, check out the [customization](../docs/customization#general) section to learn how.
+By default, most devices will start in multi-room mode. You can change that by setting an environment variable, check out the [customization](./03-customization.md#general) section to learn how.
 
-**Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](../docs/device-support#recommended).
+**Note:** Multi-room mode is the default mode for most (but not all!) device types. You can read more about default modes [here](./06-device-support#recommended).
 
 ### Multi-room mode
 
@@ -59,16 +59,16 @@ balenaSound has been re-designed to easily allow integration with audio streamin
 
 | Plugin | Library/Project |
 | ------ | ------ |
-| Spotify | [raspotify](https://github.com/dtcooper/raspotify/) Spotify Connect only works with Spotify Premium accounts. If you have a Spotify Premium account, you can stream locally without any configuration. If you want to use Spotify Connect over the internet, you'll need to provide your Spotify credentials. See [customization](../docs/customization#plugins) section for details. |
+| Spotify | [raspotify](https://github.com/dtcooper/raspotify/) Spotify Connect only works with Spotify Premium accounts. Zeroconf authentication via your phone/device Spotify client is supported as well as providing user and password, see [customization](./03-customization#plugins) section for details. |
 | AirPlay | [shairport-sync](https://github.com/mikebrady/shairport-sync/) |
 | UPnP | [gmrenderer-resurrect](https://github.com/hzeller/gmrender-resurrect) |
 | Bluetooth | balena [bluetooth](https://github.com/balenablocks/bluetooth/) and [audio](https://github.com/balenablocks/audio) blocks |
-| Soundcard input | Experimental support through the balena [audio](https://github.com/balenablocks/audio) block. Check the [customization](../docs/customization#plugins) section to learn how to enable it. |
+| Soundcard input | Experimental support through the balena [audio](https://github.com/balenablocks/audio) block. Check the [customization](./03-customization#plugins) section to learn how to enable it. |
 
-If your desired audio source is not supported feel free to [reach out](../docs/support#contact-us) and leave us a comment. We've also considerably simplified the process of adding new plugins, so [PR's are welcome](../../contributing) too (be be sure to check out our balenaSound [architecture](../../contributing/architecture) guide)!
+If your desired audio source is not supported feel free to [reach out](./07-support#contact-us) and leave us a comment. We've also considerably simplified the process of adding new plugins, so [PR's are welcome](../../contributing) too (be be sure to check out our balenaSound [architecture](../../contributing/architecture) guide)!
 
 ## Audio interfaces
 
-balenaSound supports all audio interfaces present on our [supported devices](../docs/device-support) be it 3.5mm audio jack, HDMI, I2C DAC's or USB soundcards. We rely on [balenaLabs' audio block](https://github.com/balenablocks/audio) to do the configuration required for this to work.
+balenaSound supports all audio interfaces present on our [supported devices](./06-device-support) be it 3.5mm audio jack, HDMI, I2C DAC's or USB soundcards. We rely on [balenaLabs' audio block](https://github.com/balenablocks/audio) to do the configuration required for this to work.
 
-Some audio interfaces require special configuration, you can read more about this in the [audio interfaces](../docs/audio-interfaces) configuration section.
+Some audio interfaces require special configuration, you can read more about this in the [audio interfaces](./05-audio-interfaces) configuration section.

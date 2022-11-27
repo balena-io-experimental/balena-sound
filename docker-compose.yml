@@ -13,15 +13,14 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
-      io.balena.features.supervisor-api: 1
     ports:
       - 4317:4317
 
   sound-supervisor:
-    build: ./core/sound-supervisor
+    build: 
+      context: .
+      dockerfile: ./core/sound-supervisor/Dockerfile.template
     network_mode: host
-    ports:
-      - 80:80
     labels:
       io.balena.features.balena-api: '1'
       io.balena.features.supervisor-api: 1
@@ -37,17 +36,6 @@ services:
   multiroom-client:
     build: ./core/multiroom/client
     restart: on-failure
-
-  logging:
-    image: balenablocks/log2screen
-    privileged: true
-    restart: always
-    network_mode: host
-    environment:
-      - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
-    labels:
-      io.balena.features.dbus: 1
-      io.balena.features.supervisor-api: 1
 
   # Plugins
   # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
@@ -76,3 +64,12 @@ services:
     network_mode: host
     volumes:
       - spotifycache:/var/cache/raspotify
+
+  # https://github.com/balenablocks/hostname
+  hostname:
+    build: ./core/hostname
+    restart: no
+    labels:
+      io.balena.features.supervisor-api: 1
+    environment:
+      SET_HOSTNAME: balena
