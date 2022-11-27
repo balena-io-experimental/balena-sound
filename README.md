@@ -35,7 +35,3 @@ If you're having any problem, please [raise an issue](https://github.com/balena-
 ## Contributing
 
 Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://sound.balenalabs.io/contributing). Hope to see you around!
-
-## License
-
-balenaSound is free software, and may be redistributed under the terms specified in the [license](https://github.com/balena-labs-projects/balena-sound/blob/master/LICENSE).
