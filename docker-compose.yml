@@ -6,21 +6,23 @@ volumes:
 services:
 
   # Core services
+  # -- Required for a fully featured installation of balenaSound
+  # -- Mutiroom services can be removed if not using multiroom mode
   audio:
     build: ./core/audio
     privileged: true
     labels:
       io.balena.features.dbus: 1
-      io.balena.features.supervisor-api: 1
     ports:
       - 4317:4317
 
   sound-supervisor:
-    build: ./core/sound-supervisor
+    build: 
+      context: .
+      dockerfile: ./core/sound-supervisor/Dockerfile.template
     network_mode: host
-    ports:
-      - 3000:3000
     labels:
+      io.balena.features.balena-api: '1'
       io.balena.features.supervisor-api: 1
 
   multiroom-server:
@@ -36,6 +38,8 @@ services:
     restart: on-failure
 
   # Plugins
+  # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
+  # -- Remove unwanted plugins as needed
   bluetooth:
     build: ./plugins/bluetooth
     restart: on-failure
@@ -61,9 +65,11 @@ services:
     volumes:
       - spotifycache:/var/cache/raspotify
 
-  upnp:
-    build: ./plugins/upnp
-    restart: on-failure
-    network_mode: host
-    ports:
-      - 49494:49494
+  # https://github.com/balenablocks/hostname
+  hostname:
+    build: ./core/hostname
+    restart: no
+    labels:
+      io.balena.features.supervisor-api: 1
+    environment:
+      SET_HOSTNAME: balena

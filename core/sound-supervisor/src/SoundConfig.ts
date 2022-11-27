@@ -2,7 +2,7 @@ import { getIPAddress } from './utils'
 import { SoundModes } from "./types"
 import { constants } from './constants'
 import { startBalenaService, stopBalenaService, restartBalenaService } from './utils'
-import BalenaAudio from './audio-block'
+import BalenaAudio from 'balena-audio'
 
 interface MultiRoomConfig {
   master: String,
@@ -31,10 +31,8 @@ export default class SoundConfig {
   }
 
   setMultiRoomMaster(master: string) {
-    if (!this.multiroom.forced) {
-      this.multiroom.master = master
-      restartBalenaService('multiroom-client')
-    }
+    this.multiroom.master = master
+    restartBalenaService('multiroom-client')
   }
 
   // TODO: Fix bug - This won't work if there are USB or DAC sound cards because it currently relies on hardcoded sink|sinkInput indexes

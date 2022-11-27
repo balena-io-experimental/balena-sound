@@ -1,0 +1,1 @@
+FROM bh.cr/g_tomas_migone1/hostname-%%BALENA_ARCH%%
