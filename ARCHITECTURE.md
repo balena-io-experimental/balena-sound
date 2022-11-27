@@ -4,7 +4,7 @@ Community contributions have been a staple of this open source project since its
 
 ## Overview
 
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-overview.png)
+![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-overview.png)
 
 balenaSound services can be divided in three groups:
 - Sound core: `sound-supervisor` and `audio`. 
@@ -63,13 +63,13 @@ Creation and configuration scripts for these virtual sinks are located at `core/
 `balena-sound.output` on the other hand is the output audio multiplexer/mixer. This one is pretty useful in scenarios where there are multiple soundcards available (onboard, DAC, USB, etc). `balena-sound.output` is always wired to whatever the desired soundcard sink is. So even if we dynamically change the output selection, sending audio to `balena-sound.output` will always result in audio going to the current selection. Again, this is useful to route audio internally without worrying about user selection at runtime.
 
 ### Standalone
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-standalone.png)
+![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-standalone.png)
 
 Standalone mode is easy to understand. You just pipe ` balena-sound.input` to `balena-sound.output` and that's it. Audio coming in from any plugin will find it's way to the selected output. If this was the only mode, we could simplify the setup and use a single sink. Having the two layers however is important for the next mode which is more complicated.
 
 
 ### Multiroom
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/arch-multiroom.png)
+![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-multiroom.png)
 
 Multiroom feature relies on `snapcast` to broadcast the audio to multiple devices. Snapcast has two binaries working alonside, server and client.
 

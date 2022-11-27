@@ -12,11 +12,11 @@
 
 Running this project is as simple as deploying it to a balenaCloud application. You can do it in just one click by using the button below:
 
-[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
+[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sound&defaultDeviceType=raspberry-pi)
 
 ## Documentation
 
-Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options and more!
+Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options, and more!
 
 ## Motivation
 
@@ -30,12 +30,8 @@ This project is in active development so if you have any feature requests or iss
 
 ## Getting Help
 
-If you're having any problem, please [raise an issue](https://github.com/balenalabs/balena-sound/issues/new) on GitHub and we will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/balena-labs-projects/balena-sound/issues/new) on GitHub and we will be happy to help.
 
 ## Contributing
 
 Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://sound.balenalabs.io/contributing). Hope to see you around!
-
-## License
-
-balenaSound is free software, and may be redistributed under the terms specified in the [license](https://github.com/balenalabs/balena-sound/blob/master/LICENSE).

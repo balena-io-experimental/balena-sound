@@ -10,7 +10,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 ![hardware](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/hardware.jpeg)
 
-- Any device from our [supported devices list](../docs/device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
+- Any device from our [supported devices list](/docs/device-support#recommended). For the best experience, we recommend using a Raspberry Pi 3B+ or 4B.
 - An SD Card! We recommend the Sandisk Extreme Pro series. 8GB should be plenty enough for this project.
 - Power supply
 - 3.5mm audio cable to the input on your speakers/Hi-Fi (usually 3.5mm or RCA). Alternatively you can use the HDMI port to get digital audio out.
@@ -30,7 +30,7 @@ One-click deploy is the easiest way to get started with balenaSound as it allows
 
 Click this button to go straight to application creation, where balenaSound will be pre-loaded to your application:
 
-[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sound&defaultDeviceType=raspberry-pi)
 
 ### Provision your device
 
@@ -62,12 +62,29 @@ For example, if you don't plan on using the Spotify integration, you can edit th
 
 - Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
 - Login with `balena login`
-- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
+- Download this [project](https://github.com/balena-labs-projects/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application in the first step.
 
+## Upgrade
+
+### Upgrading via CLI
+
+To deploy bug fixes or new features to your balenaSound application, the process is the same as a deployment: 
+
+- Install the [balena CLI tools](https://github.com/balena-io/balena-cli/blob/master/INSTALL.md)
+- Login with `balena login`
+- Download this [project](https://github.com/balenalabs/balena-sound/) and from the project directory run `balena push <appName>` where `<appName>` is the name you gave your balenaCloud application during the provision step above. 
+
+> **Note:** If you receive the message "Application is ambiguous" during the push, then you will need to specify your balenaCloud username along with the `<appName>`, ie. `balena push <username>/<appName>`
+
+### Upgrading via one-click
+
+To update your application via one-click deploy just click the Deploy with balena button below. Make sure you select your already existing balenaSound application so you don't create a new one!
+
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound&defaultDeviceType=raspberry-pi)
 ## Having trouble?
 
 If you are running into issues getting your balenaSound application running, please try the following:
 1. Check the [support and troubleshooting guide](../support) for common issues and how to resolve them.
 2. Post in the [balenaSound forum](https://forums.balena.io/c/balenalabs/balenasound/85) for help from our growing community.
-3. Create an issue on the [balenaSound GitHub project](https://github.com/balenalabs/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
+3. Create an issue on the [balenaSound GitHub project](https://github.com/balena-labs-projects/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
 
