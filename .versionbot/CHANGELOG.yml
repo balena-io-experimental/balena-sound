@@ -1,4 +1,45 @@
 - commits:
+    - subject: "renamathon: rename application to fleet/app"
+      hash: cad5246598638d46eda1b1ba27cf575399e06ee2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "docs: Add upgrade instructions to docs"
+      hash: 5a0bd2c8c04191839d705381a88c38d1ce5e84dc
+      body: ""
+      footer:
+        Connects-to: "#434"
+        connects-to: "#434"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Roddie Hasan <roddie@krweb.net>
+        signed-off-by: Roddie Hasan <roddie@krweb.net>
+      author: Roddie Hasan
+      nested: []
+    - subject: "upnp: Use gmrender-resurrect in place of gmrender"
+      hash: 78b9cc58a1f1000f9eb635c12b6fd32192a05e0c
+      body: |
+        Ubuntu packages
+            https://github.com/hzeller/gmrender-resurrect
+        an updated more stable fork of gmrender
+      footer:
+        Connects-to: "#342"
+        connects-to: "#342"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: jody@gnome.org
+        signed-off-by: jody@gnome.org
+      author: Jody Goldberg
+      nested: []
+  version: 3.9.7
+  title: ""
+  date: 2022-11-27T20:04:23.676Z
+- commits:
     - subject: changing balenablocks urls and flowzone CI
       hash: ec21ca9dcd5da43fbab2559bea165b7ceeb6b1cc
       body: ""
