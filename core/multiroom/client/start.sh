@@ -20,7 +20,7 @@ echo "Starting multi-room client..."
 echo "- balenaSound mode: $MODE"
 echo "- Target snapcast server: $SNAPSERVER"
 
-# Set the snapcast device name for https://github.com/balenalabs/balena-sound/issues/332
+# Set the snapcast device name for https://github.com/balena-labs-projects/balena-sound/issues/332
 if [[ -z $SOUND_DEVICE_NAME ]]; then
     SNAPCAST_CLIENT_ID=$BALENA_DEVICE_UUID
 else

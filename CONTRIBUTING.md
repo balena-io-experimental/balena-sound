@@ -91,7 +91,7 @@ Pull requests are the only way of pushing your code to the `master` branch. When
 
 ### PR approval
 The PR will only be able to be merged only after:
-- It has been approved at least by one [codeowner](https://github.com/balenalabs/balena-sound/blob/master/.github/CODEOWNERS)
+- It has been approved at least by one [codeowner](https://github.com/balena-labs-projects/balena-sound/blob/master/.github/CODEOWNERS)
 - All the checks and tests carried out by our CI are passed
 
 

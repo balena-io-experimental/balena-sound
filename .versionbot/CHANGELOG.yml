@@ -1,7 +1,441 @@
 - commits:
-    - subject: 'meta: remove CODEOWNERS file'
+    - subject: changing balenablocks urls and flowzone CI
+      hash: ec21ca9dcd5da43fbab2559bea165b7ceeb6b1cc
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 3.9.6
+  title: ""
+  date: 2022-11-16T19:41:23.909Z
+- commits:
+    - subject: Changing references from balenalabs to balena-labs-projects
+      hash: 5439c4ed3f985bafd9d5939c930aacb90155d6c3
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+  version: 3.9.5
+  title: ""
+  date: 2022-10-24T20:46:23.586Z
+- commits:
+    - subject: Switch from balenaCI to flowzone
+      hash: 96415ca7f1126f803dba8acc38ffca70849f68d1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 3.9.4
+  title: ""
+  date: 2022-10-10T18:21:26.202Z
+- commits:
+    - subject: Update 05-audio-interfaces.md
+      hash: ff3e336cfa929557633fff6caa2af967e6a8b52f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+      author: Ramiro González Maciel
+      nested: []
+  version: 3.9.3
+  title: "'Fix links from ../docs  to ./'"
+  date: 2022-06-15T18:56:27.854Z
+- commits:
+    - subject: Deleting remainder of banner...
+      hash: 47b9dcfb8071d62a394dce07386e39886f920099
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: andrew
+      nested: []
+  version: 3.9.2
+  title: "'FIX docs links'"
+  date: 2022-06-14T14:43:08.677Z
+- commits:
+    - subject: Removing meetup banner now that event has ended.
+      hash: e949ae9c72bd22b3bb9a3e0b734d8edb850dd9bd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: andrew
+      nested: []
+  version: 3.9.1
+  title: "'Removing meetup banner now that event has ended.'"
+  date: 2022-04-28T22:12:02.954Z
+- commits:
+    - subject: Use balenaHub proxy registry for blocks
+      hash: 2325cc6f0f062c6beaf4743d5b67fbd78c5698eb
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.9.0
+  title: "'Use balenaHub proxy registry for blocks'"
+  date: 2022-04-05T18:17:08.150Z
+- commits:
+    - subject: update meet-up event page URL
+      hash: b328c51534f39ba7c3b2777602ad46d10e416dd2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: iayanpahwa
+      nested: []
+  version: 3.8.9
+  title: "'update meet-up event page URL'"
+  date: 2022-03-21T10:27:13.584Z
+- commits:
+    - subject: Add redirect for balena-sound website.
+      hash: c665ba91125502594845ae587941c4a64ed2b119
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+      author: Carlo Miguel F. Cruz
+      nested: []
+  version: 3.8.8
+  title: "'Add redirect for balena-sound website.'"
+  date: 2022-03-21T02:26:12.341Z
+- commits:
+    - subject: "readme: add event link and emojis"
+      hash: a00190cd8bc78b3f721c5a3a4055b45d7aae0d27
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.7
+  title: "'readme: add event link and emojis'"
+  date: 2022-03-16T12:35:11.074Z
+- commits:
+    - subject: add anniversary meet-up details to README
+      hash: b32d05e31aee3841dc39ce1d4e50259c2db015ad
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: iayanpahwa
+      nested: []
+  version: 3.8.6
+  title: "'add anniversary meet-up details to README'"
+  date: 2022-03-16T10:10:08.551Z
+- commits:
+    - subject: "landr: rebuild docs site"
+      hash: 468228942ea60bf104604e38c802c66ed9d368d8
+      body: ""
+      footer:
+        Closes: "#550"
+        closes: "#550"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.5
+  title: "'landr: rebuild docs site'"
+  date: 2022-02-09T13:28:11.758Z
+- commits:
+    - subject: "audio: fix no sound bug"
+      hash: 0240cc6f0a3d5a32dcbccfc2820f21e3e7fd51cb
+      body: |
+        Fix bug introduced by upgrading PulseAudio to v15
+      footer:
+        Closes: "#542, #543, #544, #545"
+        closes: "#542, #543, #544, #545"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.4
+  title: "audio: fix no sound bug"
+  date: 2022-02-03T14:49:59.834Z
+- commits:
+    - subject: Set hostname with balenablocks/hostname
+      hash: c9e481b48e3f8e3dc7204f5710278b2183412dc7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: mikynov
+      nested: []
+  version: 3.8.3
+  title: "patch: Set hostname with balenablocks/hostname"
+  date: 2022-01-27T20:07:09.924Z
+- commits:
+    - subject: "supervisor: fix audio dependencies"
+      hash: a4c45c44bb96020772daef83060822791a280df7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.2
+  date: 2022-01-10T16:26:10.370Z
+- commits:
+    - subject: "supervisor: use balena-audio lib"
+      hash: 9915c4dafd33d323b23445a1f9bbf44d9d4d1fef
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.1
+  date: 2022-01-10T16:03:17.927Z
+- commits:
+    - subject: "audio: update to latest audio block running PA v15"
+      hash: 7994635e194378a6ce98cd40e301673a07cbfd71
+      body: ""
+      footer:
+        Closes: "#527, #300"
+        closes: "#527, #300"
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.8.0
+  date: 2022-01-10T14:07:49.272Z
+- commits:
+    - subject: "log2screen: remove block"
+      hash: 74fa54da1f43607de546f5baf3d39fa16f149d5e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "spotify: replace base image with our own prebuilt"
+      hash: a874027b4c47aea4f1b36f1a8b7b41e26cef57cd
+      body: |
+        - Allows easier version control of librespot binary
+        - Reduces image size ~200MB (340MB down to 140MB)
+      footer:
+        Closes: "#518"
+        closes: "#518"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "sound-supervisor: use node base image for production stage"
+      hash: cbf7b48d31eed2366abd0097568ef492d095dbbb
+      body: |
+        - Reduce image size by ~75MB (225MB down to 150MB)
+      footer:
+        Closes: "#520, #513"
+        closes: "#520, #513"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "airplay: use shairport-sync base image"
+      hash: 9c934fa40b71dbfa7306aa0d833c5b7cb3844601
+      body: |
+        - Allows easier control of shairport-sync version
+        - Reduces image size ~200MB (240MB down to 40MB)
+      footer:
+        Closes: "#519"
+        closes: "#519"
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.7.0
+  date: 2022-01-07T14:49:23.284Z
+- commits:
+    - subject: "ci: remove balena build check"
+      hash: 321d9572d25d40fb64fea76344b137071b1b0223
+      body: |
+        Replaced by deploy-to-balena github action
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.19
+  date: 2022-01-05T15:53:01.067Z
+- commits:
+    - subject: "ci: use new deploy to balena action"
+      hash: b51e90b6b4a1e78570a02da9b0edafa942b413cd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.18
+  date: 2022-01-05T15:11:47.456Z
+- commits:
+    - subject: "docs: clarify spotify over the internet"
+      hash: 5ffbc2fbd98173d0b51b023544aae2f64fb48236
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.17
+  date: 2021-12-23T18:56:52.438Z
+- commits:
+    - subject: Upgrade sound-supervisor to node 14
+      hash: ba6b0d4f59eb76321b051b76838896e95f2521d2
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+        Connects-to: "#522"
+        connects-to: "#522"
+      author: Flynn Joffray
+      nested: []
+  version: 3.6.16
+  date: 2021-12-21T20:25:29.506Z
+- commits:
+    - subject: "docs: clarify spotify premium requirement"
+      hash: fb7529c8eba5a3eef64b42c8148682cf324674c3
+      body: ""
+      footer:
+        Close: "#524"
+        close: "#524"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.15
+  date: 2021-12-21T17:05:27.178Z
+- commits:
+    - subject: "landr: rebuild landr page"
+      hash: b5e7ecad33930278bf399ad400da7abcfc4b9830
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.14
+  date: 2021-12-14T13:20:08.187Z
+- commits:
+    - subject: "landr: refresh site"
+      hash: 8329b5f0bfa62a62eaba384af2a7161793190fb0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.13
+  date: 2021-12-13T14:42:16.794Z
+- commits:
+    - subject: "meta: replace balena/build CI with balena-ci GitHub action"
+      hash: d2869bfe9a2455b79cdc8a0a7508a8ec4be8afa3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.12
+  date: 2021-11-24T19:15:36.561Z
+- commits:
+    - subject: "airplay: fix connection bug with airplay"
+      hash: e4e5f8c0a1ec82ccaa2ac4e4fada889c96c50416
+      body: ""
+      footer:
+        Closes: "#463, #501, #497, #379, #489, #483"
+        closes: "#463, #501, #497, #379, #489, #483"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.11
+  date: 2021-11-24T14:43:15.553Z
+- commits:
+    - subject: "sound-supervisor: update dependency to fix build"
+      hash: f29008d7530da81d33d6728ede93eaa733b7b44f
+      body: ""
+      footer:
+        Closes: "#502"
+        closes: "#502"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+  version: 3.6.10
+  date: 2021-10-20T13:27:14.272Z
+- commits:
+    - subject: Format Post-provisioning markdown
+      hash: f2180c467ab3356e7dec8828edaeb324fff015af
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Amit Solanki <amit@balena.io>
+        signed-off-by: Amit Solanki <amit@balena.io>
+      author: Amit Solanki
+      nested: []
+  version: 3.6.9
+  date: 2021-09-06T12:50:50.979Z
+- commits:
+    - subject: "meta: remove CODEOWNERS file"
       hash: d6c052158bbeddacc2a13c005ac2ac7554ff3c7a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -12,7 +446,7 @@
   version: 3.6.8
   date: 2021-06-30T15:27:57.283Z
 - commits:
-    - subject: 'multiroom: use alsa backend on client'
+    - subject: "multiroom: use alsa backend on client"
       hash: cce724d9afa54ad18fb8307f541ad7f5d4086e35
       body: |
         Pulse backend is not working reliably, use alsa instead.
@@ -26,9 +460,9 @@
   version: 3.6.7
   date: 2021-06-24T18:41:11.531Z
 - commits:
-    - subject: 'hub: temporarily track usage'
+    - subject: "hub: temporarily track usage"
       hash: aabc7636f8d6ebc25cbb9f95acb0742580be17d7
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -39,9 +473,9 @@
   version: 3.6.6
   date: 2021-06-23T14:06:31.807Z
 - commits:
-    - subject: 'multiroom: unpin client image'
+    - subject: "multiroom: unpin client image"
       hash: 7ac41a7264fa46d4ebe79c83ad52db3ad4ba8c25
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -54,10 +488,10 @@
 - commits:
     - subject: Expose project version on sound API
       hash: b4e16b1a965f1f01865af8a9b0544a7fd83a39d0
-      body: ''
+      body: ""
       footer:
-        Closes: '#460'
-        closes: '#460'
+        Closes: "#460"
+        closes: "#460"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -67,37 +501,37 @@
   version: 3.6.4
   date: 2021-06-21T16:11:10.419Z
 - commits:
-    - subject: 'multiroom: allow disabling multiroom master updates'
+    - subject: "multiroom: allow disabling multiroom master updates"
       hash: 9d02cd37f1012ade59e5b083c249ceb5a8cebb9a
-      body: ''
+      body: ""
       footer:
-        Closes: '#288'
-        closes: '#288'
+        Closes: "#288"
+        closes: "#288"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
         signed-off-by: Tomás Migone <tomas@balena.io>
       author: Tomás Migone
       nested: []
-    - subject: 'multiroom: add periodic fleet sync'
+    - subject: "multiroom: add periodic fleet sync"
       hash: c38d223a95d0842e60d8f723f70c26bf75f19923
-      body: ''
+      body: ""
       footer:
-        Closes: '#466, #274'
-        closes: '#466, #274'
+        Closes: "#466, #274"
+        closes: "#466, #274"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
         signed-off-by: Tomás Migone <tomas@balena.io>
       author: Tomás Migone
       nested: []
-    - subject: 'multiroom: use multiroom blocks'
+    - subject: "multiroom: use multiroom blocks"
       hash: 437442663f95e859e64fd351ce70d3e70cde78bb
       body: |
         This reduces image size from 350MB to 35MB!
       footer:
-        Closes: '#414, #425'
-        closes: '#414, #425'
+        Closes: "#414, #425"
+        closes: "#414, #425"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -109,10 +543,10 @@
 - commits:
     - subject: Put definition of SOUND_SUPERVISOR_PORT on separate line in bash scripts
       hash: c9ea97cf03f32c76b3a81940de054a64d632bb77
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#461'
-        connects-to: '#461'
+        Connects-to: "#461"
+        connects-to: "#461"
         Change-type: patch
         change-type: patch
       author: Philip A
@@ -120,16 +554,15 @@
     - subject: Use SOUND_SUPERVISOR_PORT in container start scripts
       hash: 3d267ca69f01dd11b19f621a08f96e71b88a1a17
       body: >
-        This patch make container start scripts consider the environment
-        variable SOUND_SUPERVISOR_PORT.
+        This patch make container start scripts consider the environment variable
+        SOUND_SUPERVISOR_PORT.
 
-        Otherwise the services adress requests to wrong default port, if sound
-        supervisor web port is changed by above configuration variable.
+        Otherwise the services adress requests to wrong default port, if sound supervisor web port is changed by above configuration variable.
 
         This change affects audio, airplay, multi-room and docs.
       footer:
-        Connects-to: '#461'
-        connects-to: '#461'
+        Connects-to: "#461"
+        connects-to: "#461"
         Change-type: patch
         change-type: patch
       author: Philip A
@@ -139,7 +572,7 @@
 - commits:
     - subject: Remove unneeded ports from sound supervisor service
       hash: bbf8110f60cbf6dae37f914e4ab9e3e14ac030ad
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -152,7 +585,7 @@
 - commits:
     - subject: Add logging service
       hash: b976df6558b0ff2fb0bf111e2e7f498e980778b6
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -162,7 +595,7 @@
       nested: []
     - subject: Use updated block naming
       hash: ef474a864a2d9a2dd815c4500475196d30e0857b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -176,20 +609,20 @@
         - Use UUID instead of hostname for plugin broadcast names
         - open fleet adjustments
       footer:
-        Closes: '#449'
-        closes: '#449'
+        Closes: "#449"
+        closes: "#449"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
         signed-off-by: Tomás Migone <tomas@balena.io>
       author: Tomás Migone
       nested: []
-    - subject: 'ui: Implement basic version of local UI for open fleets'
+    - subject: "ui: Implement basic version of local UI for open fleets"
       hash: a0d8c874f8efbc308d2098e834404a495fef0b44
-      body: ''
+      body: ""
       footer:
-        Closes: '#451'
-        closes: '#451'
+        Closes: "#451"
+        closes: "#451"
         Change-type: minor
         change-type: minor
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -199,26 +632,26 @@
   version: 3.6.0
   date: 2021-05-27T20:53:25.501Z
 - commits:
-    - subject: 'plugins: revamp plugins'
+    - subject: "plugins: revamp plugins"
       hash: bee55fa4df039905987bccee57e2d306adf14216
       body: |
         - Install bluetooth, airplay and spotify by default
         - Add installable plugins
       footer:
-        Closes: '#412'
-        closes: '#412'
+        Closes: "#412"
+        closes: "#412"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
         signed-off-by: Tomás Migone <tomas@balena.io>
       author: Tomás Migone
       nested: []
-    - subject: 'docs: Clarify SOUND_DISABLE_PLUGIN'
+    - subject: "docs: Clarify SOUND_DISABLE_PLUGIN"
       hash: 994586966b0a980db3c531ade3fe0de9ccb7fbd6
-      body: ''
+      body: ""
       footer:
-        Closes: '#445'
-        closes: '#445'
+        Closes: "#445"
+        closes: "#445"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -228,9 +661,9 @@
   version: 3.5.5
   date: 2021-05-25T13:07:23.690Z
 - commits:
-    - subject: 'docs: expand DAC docs'
+    - subject: "docs: expand DAC docs"
       hash: f9b8cb04fb4deac9fc84b5bb4eb201df1699f42b
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -243,9 +676,9 @@
   version: 3.5.4
   date: 2021-05-24T16:09:56.919Z
 - commits:
-    - subject: 'hub: add open fleets metadata'
+    - subject: "hub: add open fleets metadata"
       hash: 3482c113754b2f6ea72c6b6c589dc7252a7adeca
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -256,15 +689,15 @@
   version: 3.5.3
   date: 2021-05-13T13:45:50.669Z
 - commits:
-    - subject: 'multiroom: fix snapcast version'
+    - subject: "multiroom: fix snapcast version"
       hash: eef82e73a67a3e46d8901042ffc42fca64284549
       body: |
         Latest snapcast release on alpine edge is not working properly.
         Going back to debian to get snapcast v0.23.
         This increases container size considerably though :/
       footer:
-        Connects-to: '#423'
-        connects-to: '#423'
+        Connects-to: "#423"
+        connects-to: "#423"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -274,17 +707,16 @@
   version: 3.5.2
   date: 2021-03-08T13:07:31.390Z
 - commits:
-    - subject: >-
-        spotify: Add option to enable Spotify's audio cache and disable cache by
-        default
+    - subject: "spotify: Add option to enable Spotify's audio cache and disable cache
+        by default"
       hash: 64122368ac2db1c25665e9477ce299b1a998be7c
       body: >
         This feature allows the user to enable Spotify's audio cache by setting
         the SOUND_SPOTIFY_ENABLEE_CACHE environment variable. The cache is now
         disabled by default to avoid full filesystem issues.
       footer:
-        Connects-to: '#367'
-        connects-to: '#367'
+        Connects-to: "#367"
+        connects-to: "#367"
         Change-type: patch
         change-type: patch
         Signed-off-by: Roddie Hasan <roddie@krweb.net>
@@ -296,7 +728,7 @@
 - commits:
     - subject: Update balena.yml to adhere to new spec
       hash: a4e65939bfbf3c869bf77cdb47d94dc2dbe4ba2d
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -309,20 +741,20 @@
 - commits:
     - subject: Add --hostID arg to Snapcast client startup
       hash: 31e4ae725e41075f1d97d8c10ad5c8f6757cc1ec
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
         Signed-off-by: Mark Chester <mark@chesterfamily.org>
         signed-off-by: Mark Chester <mark@chesterfamily.org>
-        Connects-to: '#332'
-        connects-to: '#332'
+        Connects-to: "#332"
+        connects-to: "#332"
       author: Mark Chester
       nested: []
   version: 3.4.7
   date: 2021-01-19T18:59:07.932Z
 - commits:
-    - subject: 'upnp: Set UUID to differentiate between instances'
+    - subject: "upnp: Set UUID to differentiate between instances"
       hash: ebc64a993457f4908c7ee2a9522f58eb772f276b
       body: |
         gmrender uses a hard coded UUID if none is supplied.
@@ -330,8 +762,8 @@
         using the same ID, and clients showing whichever
         server last broadacast.
       footer:
-        Connects-to: '#380'
-        connects-to: '#380'
+        Connects-to: "#380"
+        connects-to: "#380"
         Change-type: patch
         change-type: patch
         Signed-off-by: jody@gnome.org
@@ -341,20 +773,20 @@
   version: 3.4.6
   date: 2021-01-08T19:51:19.686Z
 - commits:
-    - subject: 'docs: change to svg deploy with balena button'
+    - subject: "docs: change to svg deploy with balena button"
       hash: 3c341465bb403748b9bfdfd6e26221c0f273803d
       body: |
         change to svg logo
       footer:
-        Closes: '#362'
-        closes: '#362'
+        Closes: "#362"
+        closes: "#362"
         Change-type: patch
         change-type: patch
         Signed-off-by: Aaron Shaw <aaron@balena.io>
         signed-off-by: Aaron Shaw <aaron@balena.io>
       author: Aaron Shaw
       nested: []
-    - subject: 'docs: add link to supported dacs'
+    - subject: "docs: add link to supported dacs"
       hash: 36588938979480c360e54310702516bd12241a0b
       body: |
         add link to supported dacs
@@ -365,14 +797,14 @@
         signed-off-by: Aaron Shaw <aaron@balena.io>
       author: Aaron Shaw
       nested: []
-    - subject: 'docs: add various dacs that have been tested'
+    - subject: "docs: add various dacs that have been tested"
       hash: 99d2e7871ef6a168b554c35df684d4d2f926a12b
       body: >
         adds instructions for various dacs that have been tested to work with
         balenaSound
       footer:
-        Closes: '#345'
-        closes: '#345'
+        Closes: "#345"
+        closes: "#345"
         Change-type: patch
         change-type: patch
         Signed-off-by: Aaron Shaw <aaron@balena.io>
@@ -382,7 +814,7 @@
   version: 3.4.5
   date: 2021-01-01T17:51:40.610Z
 - commits:
-    - subject: 'spotify: fix linear volume control issue'
+    - subject: "spotify: fix linear volume control issue"
       hash: 21105d4664346f5e3a1e6260fe09da59ba8b5a5c
       body: >
         rasptify updated their librepsot debs to pull in the new changes in
@@ -392,10 +824,10 @@
       footer:
         Change-type: patch
         change-type: patch
-        Connects-to: '#386'
-        connects-to: '#386'
-        Closes: '#386'
-        closes: '#386'
+        Connects-to: "#386"
+        connects-to: "#386"
+        Closes: "#386"
+        closes: "#386"
         Signed-off-by: Aaron Shaw <aaron@balena.io>
         signed-off-by: Aaron Shaw <aaron@balena.io>
         Co-authored-by: wusala01 <nick.london94@gmail.com>
@@ -405,7 +837,7 @@
   version: 3.4.4
   date: 2020-12-31T16:55:50.168Z
 - commits:
-    - subject: 'docs: add iqaudio and JustBoom boards'
+    - subject: "docs: add iqaudio and JustBoom boards"
       hash: 9ac3380462fb7bac17a4878a6c916b14f271cc4d
       body: |
         Add more tested JustBoom and iqaudio boards
@@ -419,9 +851,9 @@
   version: 3.4.3
   date: 2020-12-21T01:13:18.958Z
 - commits:
-    - subject: 'docs: Patch ALSA bridge install script'
+    - subject: "docs: Patch ALSA bridge install script"
       hash: b85b466163620841a62f692f395b8490c5570f83
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -432,9 +864,9 @@
   version: 3.4.2
   date: 2020-12-01T19:52:40.154Z
 - commits:
-    - subject: 'docs: Update multiroom image'
+    - subject: "docs: Update multiroom image"
       hash: 9b9a0dde1d8d66b7c22ffbf54068ae119af348f6
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -445,24 +877,21 @@
   version: 3.4.1
   date: 2020-11-30T18:08:20.552Z
 - commits:
-    - subject: 'multiroom: update snapcast to v0.22 and various improvements'
+    - subject: "multiroom: update snapcast to v0.22 and various improvements"
       hash: d3312c2f97a93e4a94c73ab1986965f7f7f8930c
       body: >
         - Update snapcast to v0.22.0-r0
 
-        - Replace FIFO stream source with ALSA which significantly reduces CPU
-        and I/O usage (fixes #294)
+        - Replace FIFO stream source with ALSA which significantly reduces CPU and I/O usage (fixes #294)
 
-        - Add SOUND_INPUT_LATENCY and SOUND_OUTPUT_LATENCY env vars (also helps
-        with #294)
+        - Add SOUND_INPUT_LATENCY and SOUND_OUTPUT_LATENCY env vars (also helps with #294)
 
-        - Reduce multiroom-server image with multi stage builds for a slimmer
-        image
+        - Reduce multiroom-server image with multi stage builds for a slimmer image
 
         - Reduce verbose level for both multiroom services
       footer:
-        Connects-to: '#294'
-        connects-to: '#294'
+        Connects-to: "#294"
+        connects-to: "#294"
         Change-type: minor
         change-type: minor
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -474,7 +903,7 @@
 - commits:
     - subject: Replace Unicode double quotes with ASCII double quotes in reference docs
       hash: b4298883cad25f59d9b5d9fe4b3c0ba29cbdc1af
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -485,7 +914,7 @@
 - commits:
     - subject: Change deploy button to svg
       hash: 24c6adddc00754adc721af78c84fbd73986c4d95
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -496,9 +925,9 @@
   version: 3.3.0
   date: 2020-11-27T09:23:59.769Z
 - commits:
-    - subject: 'meta: fix up some docs typos'
+    - subject: "meta: fix up some docs typos"
       hash: f6244f43f133ff14198aa929974cfaa6729f0055
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -511,7 +940,7 @@
 - commits:
     - subject: Add contract balena.yml and app logo (hub)
       hash: 7a815002f52ccfb9d769641d9bd29d7eee55a965
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -522,7 +951,7 @@
   version: 3.2.1
   date: 2020-11-25T11:48:44.928Z
 - commits:
-    - subject: 'multi-room: add snapweb to snapcast server'
+    - subject: "multi-room: add snapweb to snapcast server"
       hash: 7282d0e824a116877f4ffa1f34d02dc00b070219
       body: |
         This adds the simple web application snapweb to the snapcast server.
@@ -533,21 +962,21 @@
         change-type: minor
         Signed-off-by: emmanuel.jannetti@gmail.com
         signed-off-by: emmanuel.jannetti@gmail.com
-        Connects-to: '#319'
-        connects-to: '#319'
+        Connects-to: "#319"
+        connects-to: "#319"
       author: Emmanuel Jannetti
       nested: []
   version: 3.2.0
   date: 2020-10-30T10:38:18.334Z
 - commits:
-    - subject: 'spotify: fix password woes'
+    - subject: "spotify: fix password woes"
       hash: f62fd91f7f928d68b8825206526de8530a04bc69
       body: |
         - Fixes bug in 3.0 where user/pass was not working
         - Fixes bug where passwords with a space did not work
       footer:
-        Connects-to: '#131'
-        connects-to: '#131'
+        Connects-to: "#131"
+        connects-to: "#131"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -557,14 +986,13 @@
   version: 3.1.11
   date: 2020-10-28T20:02:10.222Z
 - commits:
-    - subject: >-
-        env vars: fix docs about some block env vars. Add
-        SOUND_DISABLE_BLUETOOTH.
+    - subject: "env vars: fix docs about some block env vars. Add
+        SOUND_DISABLE_BLUETOOTH."
       hash: d369079ae2b71da992503be172d5aed0198b650f
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#316, #337'
-        connects-to: '#316, #337'
+        Connects-to: "#316, #337"
+        connects-to: "#316, #337"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -574,12 +1002,12 @@
   version: 3.1.10
   date: 2020-10-28T17:49:29.856Z
 - commits:
-    - subject: 'dwb: add balena.yml file to explicitly set env vars'
+    - subject: "dwb: add balena.yml file to explicitly set env vars"
       hash: 7338e30ca83fba36d70b5a7c395ff0ece503ad61
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#324'
-        connects-to: '#324'
+        Connects-to: "#324"
+        connects-to: "#324"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -589,12 +1017,12 @@
   version: 3.1.9
   date: 2020-10-19T17:49:49.592Z
 - commits:
-    - subject: 'dac: Add Boss DAC v1.2'
+    - subject: "dac: Add Boss DAC v1.2"
       hash: 66378b989bff918081e96dc9c5ef6249d835d751
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#305'
-        connects-to: '#305'
+        Connects-to: "#305"
+        connects-to: "#305"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomasmigone@gmail.com>
@@ -604,9 +1032,9 @@
   version: 3.1.8
   date: 2020-10-19T15:43:59.833Z
 - commits:
-    - subject: 'docs: add query params to deploy link'
+    - subject: "docs: add query params to deploy link"
       hash: a4f796504c95e1a39409e71b4e05960db46246cc
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -617,9 +1045,9 @@
   version: 3.1.7
   date: 2020-10-01T12:51:10.309Z
 - commits:
-    - subject: 'dac: add Adafruit mac98357'
+    - subject: "dac: add Adafruit mac98357"
       hash: fa62fccabafd19a7d4f8d9dd500b9d7850192444
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -630,12 +1058,12 @@
   version: 3.1.6
   date: 2020-09-25T20:23:05.306Z
 - commits:
-    - subject: 'Documentation: added clear links to help on the Getting Started page'
+    - subject: "Documentation: added clear links to help on the Getting Started page"
       hash: 39688f703ed527018bbb21f58dd2c26312bda69c
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#307'
-        connects-to: '#307'
+        Connects-to: "#307"
+        connects-to: "#307"
         Change-type: patch
         change-type: patch
         Signed-off-by: Mark Chester <mark@chesterfamily.org>
@@ -645,14 +1073,13 @@
   version: 3.1.5
   date: 2020-09-25T18:53:20.081Z
 - commits:
-    - subject: >-
-        plugins: change restart policy to on-failure to avoid unnecessary
-        restarts
+    - subject: "plugins: change restart policy to on-failure to avoid unnecessary
+        restarts"
       hash: 36e0b08a532914affd9e680af2d4dbc84827c1ca
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#303'
-        connects-to: '#303'
+        Connects-to: "#303"
+        connects-to: "#303"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -664,7 +1091,7 @@
 - commits:
     - subject: Open port 1705 for snapcast clients to control snapcast server.
       hash: a4902aa9a689e043636c66a81f94b009545a3e69
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -674,7 +1101,7 @@
       nested: []
     - subject: Minor documentation tweaks
       hash: 6b338e0acb4b8dbd6881171323246137b2f05f8a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -685,12 +1112,12 @@
   version: 3.1.3
   date: 2020-09-23T01:51:29.785Z
 - commits:
-    - subject: 'dac: add Hifiberry DAC2 HD'
+    - subject: "dac: add Hifiberry DAC2 HD"
       hash: c2f2b7aa3347fe20ae571de6eafc016786c48d6f
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#279'
-        connects-to: '#279'
+        Connects-to: "#279"
+        connects-to: "#279"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -700,9 +1127,9 @@
   version: 3.1.2
   date: 2020-09-21T18:43:55.976Z
 - commits:
-    - subject: 'meta: Use balenablocks images instead of balenaplayground'
+    - subject: "meta: Use balenablocks images instead of balenaplayground"
       hash: dbc6f642518d4571c98df3ea59ae73a7df76c7ba
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -715,7 +1142,7 @@
 - commits:
     - subject: Update link in docs section of README
       hash: 248d7da67f6288fdd9694b5a0c109c5027f288c8
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -728,7 +1155,7 @@
 - commits:
     - subject: Update logo dir in README
       hash: fc9a34142561871f8ca128ba72fc90e137b3c3c6
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -739,7 +1166,7 @@
   version: 3.0.1
   date: 2020-09-16T19:43:28.568Z
 - commits:
-    - subject: 'balenaSound 3.0: use balena blocks'
+    - subject: "balenaSound 3.0: use balena blocks"
       hash: 61e50b3831c5065e06898fc17390572a893cc6d8
       body: >
         Refactor application to use audio and bluetooth balena blocks.
@@ -749,8 +1176,7 @@
 
         - New plugin system for audio sources, easier to contribute.
 
-        - Uniform audio configuration and handling thanks to audio block
-        (volume, etc)
+        - Uniform audio configuration and handling thanks to audio block (volume, etc)
 
         - Simultaneous audio source streaming
 
@@ -780,14 +1206,14 @@
   version: 3.0.0
   date: 2020-09-15T17:22:49.888Z
 - commits:
-    - subject: 'spotify: Environment variable to switch volume normalisation'
+    - subject: "spotify: Environment variable to switch volume normalisation"
       hash: bd335ca860eaf74ebf6c4fa2560b2cfe56e44acd
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
-        Connects-to: '#267'
-        connects-to: '#267'
+        Connects-to: "#267"
+        connects-to: "#267"
       author: Florian
       nested: []
   version: 2.4.10
@@ -795,10 +1221,10 @@
 - commits:
     - subject: Fix snapcast bad signature error in rpi0 devices
       hash: 3a6000498db555adc1e6c174674ffe503ca70fbd
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#255'
-        connects-to: '#255'
+        Connects-to: "#255"
+        connects-to: "#255"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -808,7 +1234,7 @@
   version: 2.4.9
   date: 2020-07-23T15:59:49.647Z
 - commits:
-    - subject: 'multiroom: use alpine based containers'
+    - subject: "multiroom: use alpine based containers"
       hash: a81f6f7d75d0d37b14927ea7b23bc29e80231d7c
       body: |
         - Reduce container size to 81MB (~60% smaller)
@@ -842,8 +1268,7 @@
     - subject: Adding clarification between config vars and env vars for users
       hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
       body: >
-        Clarifying and citing resources for env var usage in balenaSound so
-        users
+        Clarifying and citing resources for env var usage in balenaSound so users
 
         don't try to add env vars to config vars.
       footer:
@@ -858,7 +1283,7 @@
 - commits:
     - subject: Fix rpi1/rpi2 bug with multiroom server
       hash: b9356e7af85e4ee1c7ecbdf97eaa60da9b122123
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -869,12 +1294,12 @@
   version: 2.4.5
   date: 2020-07-21T17:51:29.530Z
 - commits:
-    - subject: 'multi-room: disable feature for raspberrypi2 fam'
+    - subject: "multi-room: disable feature for raspberrypi2 fam"
       hash: 6eebb0b756588d5c260d28ade9851c85e6c219e3
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#220'
-        connects-to: '#220'
+        Connects-to: "#220"
+        connects-to: "#220"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -899,7 +1324,7 @@
   version: 2.4.3
   date: 2020-07-13T17:54:02.882Z
 - commits:
-    - subject: 'docs: add troubleshooting case'
+    - subject: "docs: add troubleshooting case"
       hash: d56f2a8c37cb6e1f707329c34c2e1035c975e351
       body: |
         No audio on Pi3 with balenaOS 64bits.
@@ -909,12 +1334,12 @@
         Signed-off-by: Tomás Migone <tomas@balena.io>
         signed-off-by: Tomás Migone <tomas@balena.io>
       author: Tomás Migone
-    - subject: 'docs: Update device support citations so they don''t look as links'
+    - subject: "docs: Update device support citations so they don't look as links"
       hash: b6ae9c7792b733dfa5eec9f0fdb4500bd34e902f
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#209'
-        connects-to: '#209'
+        Connects-to: "#209"
+        connects-to: "#209"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -923,12 +1348,12 @@
   version: 2.4.2
   date: 2020-06-23T18:23:06.274Z
 - commits:
-    - subject: 'snapcast-client: Fix bug where snapcast client is not starting'
+    - subject: "snapcast-client: Fix bug where snapcast client is not starting"
       hash: 43d58e3194b8bab560aea81bb3cb3fb18e43faba
-      body: ''
+      body: ""
       footer:
-        Connects-to: '#211'
-        connects-to: '#211'
+        Connects-to: "#211"
+        connects-to: "#211"
         Change-type: patch
         change-type: patch
         Signed-off-by: Tomás Migone <tomas@balena.io>
@@ -937,7 +1362,7 @@
   version: 2.4.1
   date: 2020-06-08T13:12:16.325Z
 - commits:
-    - subject: 'multi-room: add latency optional parameter to snapclient'
+    - subject: "multi-room: add latency optional parameter to snapclient"
       hash: 0f4dddb0fd480ed47385c7552dc852df948def29
       body: |
         Used to compensate for different hardware processing times in speakers.
@@ -953,7 +1378,7 @@
 - commits:
     - subject: Add UPnP
       hash: 55983b0e844aead4bc09efa4dc758ae1c821921c
-      body: ''
+      body: ""
       footer:
         Change-type: minor
         change-type: minor
@@ -963,9 +1388,9 @@
   version: 2.3.0
   date: 2020-06-03T11:11:51.987Z
 - commits:
-    - subject: 'docs: add delay reduction troubleshooting for bluetooth-audio'
+    - subject: "docs: add delay reduction troubleshooting for bluetooth-audio"
       hash: b584534e0ae08de098324a080c50d179d2999390
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -977,7 +1402,7 @@
 - commits:
     - subject: Contribution link patch
       hash: 138fbfbcfff085cf6aa5e6af9a13912dcb51f94e
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -987,7 +1412,7 @@
 - commits:
     - subject: Minor documentation updates
       hash: f02f032d9d8c603f2fcc9376b15a3e325b0974e0
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1010,7 +1435,7 @@
 - commits:
     - subject: Put back one-click deploy button on main README file.
       hash: d4f5ff1e038b670505d9d969cad7890fd7c74433
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1022,7 +1447,7 @@
 - commits:
     - subject: Refactor documentation to adapt repo to Landr
       hash: c2d1a2b4be6cf424c2ae7ceb1416a35499614b5a
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1036,7 +1461,7 @@
 - commits:
     - subject: Add parsable CHANGELOG
       hash: 1c4202eb891275109edb1365bd6fae14ac28f8ee
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -1131,7 +1556,7 @@
       author: matthewcroughan
       footers:
         change-type: patch
-      subject: 'add -M to amixer to fix volume mapping issues #117'
+      subject: "add -M to amixer to fix volume mapping issues #117"
       body: null
 - version: 2.1.3
   date: 2020-04-08T10:55:33.000Z
@@ -1187,7 +1612,11 @@
         change-type: patch
         signed-off-by: Stef Kors <stef@balena.io>
       subject: Readme should show where setup commands are run
-      body: "Users are often confused when steps happen on the device and which steps should be run from their personal computer. This edit should make that distinction more clear.\r\n\r"
+      body: "Users are often confused when steps happen on the device and which steps
+        should be run from their personal computer. This edit should make that
+        distinction more clear.\r
+
+        \r"
 - version: 2.0.9
   date: 2020-04-01T18:11:30.000Z
   commits:
@@ -1224,7 +1653,7 @@
       footers:
         change-type: patch
         signed-off-by: Chris Crocker-White <chriscw@balena.io>
-      subject: 'Remove mplayer, use WAV notification sounds'
+      subject: Remove mplayer, use WAV notification sounds
       body: null
     - hash: a7861c7a9e2211b20ccdcf0ed2adc5a5c8bf50c7
       author: Chris Crocker-White
@@ -1276,8 +1705,7 @@
       footers:
         change-type: patch
       subject: Update DAC_configuration.md
-      body: >-
-        Works fine using the optical cable with the Hifiberry Digi clone PiFi
+      body: Works fine using the optical cable with the Hifiberry Digi clone PiFi
         Digi+ using the hifiberry-digi overlay.
 - version: 2.0.1
   date: 2020-02-14T16:07:51.000Z
@@ -1287,7 +1715,7 @@
       footers:
         change-type: patch
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: 'dac: Add dtoverlay for miniBoss DAC'
+      subject: "dac: Add dtoverlay for miniBoss DAC"
       body: null
 - version: 2.0.0
   date: 2020-02-12T15:04:19.000Z
@@ -1297,12 +1725,11 @@
       footers:
         change-type: major
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: 'multi-room: Add multi-room feature'
+      subject: "multi-room: Add multi-room feature"
       body: >-
         This feature adds multi-room audio streaming to balenaSound.
 
-        No breaking changes were made, but considering this a major version bump
-        since it's a big feature and all services were affected.
+        No breaking changes were made, but considering this a major version bump since it's a big feature and all services were affected.
 
         New services added:
 
@@ -1312,8 +1739,7 @@
 
         - fleet-supervisor
 
-        - By default, all audio services now stream to a fifo pipe file instead
-        of alsa backend.
+        - By default, all audio services now stream to a fifo pipe file instead of alsa backend.
 
         - Multi-room can be disabled via env var DISABLE_MULTI_ROOM.
 - version: 1.3.10
@@ -1387,14 +1813,13 @@
       author: Alex
       footers:
         change-type: patch
-        connects-to: '#58'
+        connects-to: "#58"
       subject: Add name differentiation
       body: null
     - hash: 8b5bf05afe29993e4c1a9c4fe34544da309f2b05
       author: AlexProgrammerDE
-      subject: >-
-        Merge branch 'master' of https://github.com/balenalabs/balena-sound into
-        patch-2
+      subject: Merge branch 'master' of https://github.com/balenalabs/balena-sound
+        into patch-2
       body: null
     - hash: 6ea5d724e4d3c07112aaa4d878df4299f2296fe4
       author: Chris Crocker-White
@@ -1407,7 +1832,7 @@
       author: Alex
       footers:
         change-type: patch
-        connects-to: '#90'
+        connects-to: "#90"
       subject: Fix spotify password error if it has spaces
       body: null
     - hash: ea5e9e9d415d007134d3ec81419e81d68c3e6676
@@ -1438,7 +1863,7 @@
       footers:
         change-type: patch
         signed-off-by: Matthew McGinn <matthew@balena.io>
-      subject: 'meta: Update codeowners to HHR team'
+      subject: "meta: Update codeowners to HHR team"
       body: null
 - version: 1.3.2
   date: 2020-01-07T17:15:00.000Z
@@ -1448,7 +1873,7 @@
       footers:
         change-type: patch
         signed-off-by: Heds Simons <heds@balena.io>
-      subject: 'readme: Clarify Spotify only works with Premium account'
+      subject: "readme: Clarify Spotify only works with Premium account"
       body: null
 - version: 1.3.1
   date: 2020-01-07T11:59:28.000Z
@@ -1467,7 +1892,7 @@
       author: Alex
       footers:
         change-type: minor
-        connects-to: '#73'
+        connects-to: "#73"
       subject: Add Spotify login
       body: null
 - version: 1.2.0
@@ -1487,7 +1912,7 @@
     - hash: a15dfdab9bc262b4cc45ae4332ccc1158312030b
       author: Alex
       footers:
-        connects-to: '#22'
+        connects-to: "#22"
         change-type: minor
       subject: Add code for gpio control with udev and some other things
       body: null
@@ -1516,8 +1941,7 @@
       footers:
         change-type: patch
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: >-
-        Remove multicontainer instructions from readme since MC is now default
+      subject: Remove multicontainer instructions from readme since MC is now default
         for this project.
       body: null
     - hash: 9e802486d0be6cbdc4d66559a68feaef81240d41
@@ -1525,9 +1949,8 @@
       footers:
         change-type: patch
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: >-
-        blueetooth-audio: Remove supervisor api label since it's no longer
-        needed.
+      subject: "blueetooth-audio: Remove supervisor api label since it's no longer
+        needed."
       body: null
 - version: 1.1.1
   date: 2019-11-20T18:28:06.000Z
@@ -1546,10 +1969,9 @@
       footers:
         change-type: minor
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: 'bluetooth: Reconnect automatically to last known device'
-      body: >-
-        At boot time, bluetooth-audio will attempt to reconnect to the last
-        known device
+      subject: "bluetooth: Reconnect automatically to last known device"
+      body: At boot time, bluetooth-audio will attempt to reconnect to the last known
+        device
     - hash: 19da93acc969a438e65146b73fc92d7a90fce454
       author: Tomás Migone
       subject: Merge branch 'master' into 21-add-bluetooth-reconnection
@@ -1560,7 +1982,7 @@
     - hash: ad823c2181446653a19d916f77a760b90e061740
       author: Tomás Migone
       footers:
-        connects-to: '#20'
+        connects-to: "#20"
         change-type: major
         signed-off-by: Tomás Migone <tomas@balena.io>
       subject: Add pin code support (Legacy pairing mode)
@@ -1592,12 +2014,11 @@
       footers:
         change-type: minor
         signed-off-by: Tomás Migone <tomas@balena.io>
-      subject: 'PIN code, only allow numeric and 6 digits. Updated README.md.'
+      subject: PIN code, only allow numeric and 6 digits. Updated README.md.
       body: null
     - hash: 2a1afe3ee9f0ba087f48f95b1f876e7c448b897f
       author: Tomás Migone
-      subject: >-
-        Merge branch '20-add-pin-code' of
+      subject: Merge branch '20-add-pin-code' of
         github.com:balena-io-projects/balena-sound into 20-add-pin-code
       body: null
     - hash: 74ffce4e0da815aabce9685ad9d13358041862ad
@@ -1611,7 +2032,7 @@
       author: AlexProgrammerDE
       footers:
         change-type: minor
-      subject: 'Make raspotify start more clear, add default output volume and add cache'
+      subject: Make raspotify start more clear, add default output volume and add cache
       body: null
 - version: 0.4.5
   date: 2019-11-04T17:49:57.000Z
@@ -1621,7 +2042,7 @@
       footers:
         change-type: patch
         signed-off-by: Matthew McGinn <matthew@balena.io>
-      subject: 'meta: add tmigone as a codeowner'
+      subject: "meta: add tmigone as a codeowner"
       body: null
 - version: 0.4.4
   date: 2019-10-11T09:56:30.000Z
@@ -1715,7 +2136,7 @@
       footers:
         change-type: minor
         signed-off-by: Chris Crocker-White <chriscw@balena.io>
-      subject: 'Add volume configuration options, fixes #28'
+      subject: "Add volume configuration options, fixes #28"
       body: null
 - version: 0.1.0
   date: 2019-10-02T10:40:27.000Z
@@ -1725,7 +2146,7 @@
       footers:
         change-type: minor
         signed-off-by: Chris Crocker-White <chriscw@balena.io>
-      subject: 'Add support for Pi 4 fixes #25'
+      subject: "Add support for Pi 4 fixes #25"
       body: null
 - version: 0.0.11
   date: 2019-08-01T20:20:53.000Z
@@ -1733,7 +2154,10 @@
     - hash: ffcf7ddfbe9f0a14d75e8110a3890903e30ee10e
       author: pwt
       subject: Change base image to Debian Stretch instead of Buster
-      body: "Fixes https://github.com/balena-io-projects/balena-sound/issues/15\r\nThe use of Buster instead of Stretch breaks balena-sound. This reverts back to Stretch until the Buster issues can be worked out."
+      body: "Fixes https://github.com/balena-io-projects/balena-sound/issues/15\r
+
+        The use of Buster instead of Stretch breaks balena-sound. This
+        reverts back to Stretch until the Buster issues can be worked out."
     - hash: 441e91aaad83a8a0222bec75766ce8ba372b32c4
       author: pwt
       footers:
@@ -1742,11 +2166,10 @@
       body: >-
         Fixes https://github.com/balena-io-projects/balena-sound/issues/15
 
-        The use of Buster instead of Stretch breaks balena-sound. This reverts
-        back to Stretch until the Buster issues can be worked out.
+        The use of Buster instead of Stretch breaks balena-sound. This reverts back to Stretch until the Buster issues can be worked out.
     - hash: 808a7e01ac44bdc349a2339dfa133e5def3fd03a
       author: pwt
-      subject: 'Merge branch ''master'' of https://github.com/pwt/balena-sound'
+      subject: Merge branch 'master' of https://github.com/pwt/balena-sound
       body: null
 - version: 0.0.10
   date: 2019-07-24T16:59:38.000Z
@@ -1791,8 +2214,8 @@
       author: Tim
       subject: Update for Multi Container use
       body: >-
-        Suggestion additional info for people who might want to combine this in
-        an app with other playground apps.
+        Suggestion additional info for people who might want to combine this in an
+        app with other playground apps.
 
         Labels is something that's not always clear for beginners.
     - hash: eefcca025309f2b53651b57fb76fb41a0a2221ed
@@ -1829,9 +2252,8 @@
         change-type: patch
         signed-off-by: Robert Vojta <robert@balena.io>
       subject: Remove unnecessary action
-      body: >-
-        Services are auto restarted on the device by the supervisor when
-        variables are modified on the balenaCloud dashboard.
+      body: Services are auto restarted on the device by the supervisor when variables
+        are modified on the balenaCloud dashboard.
 - version: 0.0.5
   date: 2019-07-05T12:40:45.000Z
   commits:
@@ -1885,9 +2307,8 @@
         change-type: patch
         signed-off-by: Robert Vojta <robert@balena.io>
       subject: Use printf instead of echo
-      body: >-
-        printf is recommended for new applications. /bin/bash doesn’t work on
-        all systems.
+      body: printf is recommended for new applications. /bin/bash doesn’t work on all
+        systems.
     - hash: e8c8c962c9b5c10dfed711fa752a8ca57d51f4ec
       author: Robert Vojta
       footers:

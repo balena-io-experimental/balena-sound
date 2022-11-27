@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-node:12 as build
+FROM balenalib/%%BALENA_ARCH%%-node:14 as build
 
 WORKDIR /usr/src
 COPY core/sound-supervisor/package*.json ./
@@ -11,7 +11,7 @@ COPY core/sound-supervisor/tsconfig.json .
 RUN npm run build
 COPY VERSION .
 
-FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:12
+FROM node:14-alpine3.14
 
 WORKDIR /usr/src
 
