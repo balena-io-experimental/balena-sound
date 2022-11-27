@@ -22,7 +22,7 @@ balenaSound supports a wide variety of DACs, but in an ever-growing market, chan
 1) the required kernel driver must be available in balenaOS 
 2) adequate testing must be performed with balenaSound
 
-Latest versions of balenaOS already ship with drivers for most, if not all, of the DACs available. The testing story, however, is different. It's not possible for us to test all of them individually as it would take an incredible amount of resources. For this reason, we rely on community contributions to help catalogue existing DACs into three categories:
+Latest versions of balenaOS already ships with drivers for most, if not all, of the DACs available. The testing story, however, is different. It's not possible for us to test all of them individually as it would take an incredible amount of resources. For this reason, we rely on community contributions to help catalogue existing DACs into three categories:
 
 - [Supported DACs](#Supported-DACs): battle-tested, known to work with balenaSound.
 - [Untested DACs](#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with balenaSound (most likely because no balena team member has one). 
@@ -37,13 +37,13 @@ To get a DAC board to work with balenaSound you will need to enable its correspo
 
 In the balenaCloud dashboard:
 
-* Click on the specific device within the application and select `Device configuration` in the left-side menu.
+* Click on the specific device within your fleet and select `Configuration` in the left-side menu.
 * Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see tables below in each DAC category subsection).
-* Cycle the power by unplugging your pi.
+* Cycle the power by unplugging your device.
 
 ![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
 
-If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your application.
+If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your fleet.
 
 
 ### Supported DACs

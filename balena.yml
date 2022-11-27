@@ -6,18 +6,6 @@ description: >-
 fleetcta: Sounds good
 post-provisioning: >-
   ## Usage instructions
-
-
-  **Application download**
-
-  Once you power up your device you'll need to allow some time for it to download the application, this typically takes 5-10 minutes but it can take more depending on your internet connection and what device you are using.
-
-
-  **Usage**
-
-  When the download is completed the application will start. You should see a balenaSound broadcasted as a speaker on your bluetooth, Airplay and Spotify Connect streaming services. You can also access http://balena or http://balena.local to access balenaSound's control panel.
-
-  For detailed instructions on how to use balenaSound check out [this](https://sound.balenalabs.io/docs/usage) guide.
 assets:
   repository:
     type: blob.asset
