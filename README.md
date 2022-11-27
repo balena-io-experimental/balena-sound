@@ -16,7 +16,7 @@ Running this project is as simple as deploying it to a balenaCloud application. 
 
 ## Documentation
 
-Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options and more!
+Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options, and more!
 
 ## Motivation
 
