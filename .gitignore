@@ -6,3 +6,4 @@ landr-dist
 node_modules
 build
 core/multiroom/server/snapweb
+labs-docs-builder

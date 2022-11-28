@@ -18,7 +18,7 @@ If you don't want to create a balenaCloud account you can deploy the app directl
 
 ## Documentation
 
-Head over to our [docs](https://sound.balenalabs.io/docs/) for detailed installation and usage instructions, customization options, and more!
+Head over to our [docs](https://balena-labs-projects.github.io/balena-sound/) for detailed installation and usage instructions, customization options, and more!
 
 ## Motivation
 
@@ -33,7 +33,3 @@ This project is in active development so if you have any feature requests or iss
 ## Getting Help
 
 If you're having any problem, please [raise an issue](https://github.com/balena-labs-projects/balena-sound/issues/new) on GitHub and we will be happy to help.
-
-## Contributing
-
-Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://sound.balenalabs.io/contributing). Hope to see you around!
