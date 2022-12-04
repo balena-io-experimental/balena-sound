@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-node:12.22.9
+FROM balenalib/%%BALENA_MACHINE_NAME%%-node:16.18.1
 
 
 RUN install_packages wget bzip2
