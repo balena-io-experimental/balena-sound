@@ -1,4 +1,76 @@
 - commits:
+    - subject: Fix docker build issue due to forgetting the volume
+      hash: 491934b9a676de06bbe731d3f799c8a9cd9d9bb5
+      body: ""
+      footer:
+        Change-Type: minor
+        change-type: minor
+        Signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+        signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+      author: lewis
+      nested: []
+    - subject: Implement support for the headless PlexAmp client
+      hash: fe4c788c7ceeab40269ade86e03ea8aeb6938528
+      body: |
+        Added a container build for the headless PlexAmp client, this will allow
+        a user to use the plex app on a mobile device to cast music from their
+        media server to their Balena Sound device.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+        signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+      author: lewis
+      nested: []
+    - subject: Fix docker build issue due to forgetting the volume
+      hash: 508c0aa0b45bc383c0d5d18e0f1560d1acc5b78f
+      body: ""
+      footer:
+        Change-Type: minor
+        change-type: minor
+        Signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+        signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+      author: lewis
+      nested: []
+    - subject: Implement support for the headless PlexAmp client
+      hash: b1ed857c158106d981badb6f69261fc3440eacbd
+      body: |
+        Added a container build for the headless PlexAmp client, this will allow
+        a user to use the plex app on a mobile device to cast music from their
+        media server to their Balena Sound device.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+        signed-off-by: Lewis L. Foster <lewis@sniff122.tech>
+      author: lewis
+      nested: []
+    - subject: "renamathon: rename application to fleet/app"
+      hash: cad5246598638d46eda1b1ba27cf575399e06ee2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "docs: Add upgrade instructions to docs"
+      hash: 5a0bd2c8c04191839d705381a88c38d1ce5e84dc
+      body: ""
+      footer:
+        Connects-to: "#434"
+        connects-to: "#434"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Roddie Hasan <roddie@krweb.net>
+        signed-off-by: Roddie Hasan <roddie@krweb.net>
+      author: Roddie Hasan
+      nested: []
+  version: 3.10.0
+  title: ""
+  date: 2022-12-05T19:47:54.038Z
+- commits:
     - subject: changing balenablocks urls and flowzone CI
       hash: ec21ca9dcd5da43fbab2559bea165b7ceeb6b1cc
       body: ""
