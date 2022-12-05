@@ -1,10 +1,10 @@
-if [[ -d "/root/.local/share/Plexamp/Settings" ]]; then
+if [[ -f "/root/.local/share/Plexamp/Settings/%40Plexamp%3Auser%3Atoken" ]]; then
     echo "Plexamp appears to be already configured, skipping..."
     exit 1
 fi
 
 echo "When prompted, enter your claim token from https://plex.tv/claim"
-echo "Plexamp will start after entering, simply press control+c and restart the plex service to continue."
+echo "Plexamp should exit after entering your claim token and player name, if it doesnt press control+c. After exiting, you can restart this container and exit the terminal."
 
 cd /opt/plexamp/plexamp/
 
