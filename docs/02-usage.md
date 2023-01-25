@@ -45,7 +45,7 @@ It's a good idea to use the most powerful device on your fleet as the designated
 
 When a device is in multi-room client mode it can only be used as a multi-room `client`. The only audio the device will play is audio coming from a `master` device, so you'll need at least another device in your fleet.
 
-This mode is great for performance constrained devices as plugin services (Spotify, AirPlay, etc) won't be running and consuming CPU cycles. It's also a great choice if you usually stream to the same `master` device and don't want to have every device show up when pairing bluetooth for example.
+This mode is great for performance constrained devices as plugin services (Spotify, AirPlay2, etc) won't be running and consuming CPU cycles. It's also a great choice if you usually stream to the same `master` device and don't want to have every device show up when pairing bluetooth for example.
 
 ### Standalone
 
@@ -60,7 +60,7 @@ balenaSound has been re-designed to easily allow integration with audio streamin
 | Plugin          | Library/Project                                                                                                                                                                                                                                                                                 |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Spotify         | [raspotify](https://github.com/dtcooper/raspotify/) Spotify Connect only works with Spotify Premium accounts. Zeroconf authentication via your phone/device Spotify client is supported as well as providing user and password, see [customization](customization#plugins) section for details. |
-| AirPlay         | [shairport-sync](https://github.com/mikebrady/shairport-sync/)                                                                                                                                                                                                                                  |
+| AirPlay2        | [shairport-sync](https://github.com/mikebrady/shairport-sync/)                                                                                                                                                                                                                                  |
 | UPnP            | [gmrenderer-resurrect](https://github.com/hzeller/gmrender-resurrect)                                                                                                                                                                                                                           |
 | Bluetooth       | balena [bluetooth](https://github.com/balenablocks/bluetooth/) and [audio](https://github.com/balenablocks/audio) blocks                                                                                                                                                                        |
 | Soundcard input | Experimental support through the balena [audio](https://github.com/balenablocks/audio) block. Check the [customization](customization#plugins) section to learn how to enable it.                                                                                                               |
