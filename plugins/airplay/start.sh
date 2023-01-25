@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/usr/bin/env sh
 
 if [[ -n "$SOUND_DISABLE_AIRPLAY" ]]; then
   echo "Airplay is disabled, exiting..."
@@ -13,8 +13,8 @@ echo "Starting AirPlay plugin..."
 echo "Device name: $SOUND_DEVICE_NAME"
 
 # Start AirPlay
+echo "Starting Shairport Sync"
 exec shairport-sync \
-  --use-stderr \
   --name "$SOUND_DEVICE_NAME" \
   --output alsa \
   -- -d pulse \
