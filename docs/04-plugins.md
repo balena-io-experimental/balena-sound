@@ -11,7 +11,7 @@ The following plugins ship with balenaSound out of the box:
 
 - Spotify Connect
 - Bluetooth
-- AirPlay
+- AirPlay2
 - Soundcard input (Requires setting `SOUND_ENABLE_SOUNDCARD_INPUT`, see [details](customization#plugins))
 
 Default plugins can be disabled at runtime via variables. For more details see [here](customization#plugins).
