@@ -56,14 +56,6 @@ services:
     labels:
       io.balena.features.dbus: 1
 
-  spotify:
-    build: ./plugins/spotify
-    restart: on-failure
-    privileged: true
-    network_mode: host
-    volumes:
-      - spotifycache:/var/cache/raspotify
-
   # https://github.com/balenablocks/hostname
   hostname:
     build: ./core/hostname
