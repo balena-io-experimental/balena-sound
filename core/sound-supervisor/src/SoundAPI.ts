@@ -69,6 +69,18 @@ export default class SoundAPI {
         res.json({ error: error })
       }
     }))
+    this.api.post('/device/hdmiignore', asyncHandler(async (req, res) => {
+      const { hdmiAudio } = req.body
+      try {
+        console.log(`Applying BALENA_HOST_CONFIG_hdmi_ignore_edid_audio=${hdmiAudio}...`) // Set 1 or 0
+        // Remove the `vc4-kms-v3d` dtoverlay setting from the `Device Configuration` section of your device.
+        await this.sdk.models.device.configVar.set(process.env.BALENA_DEVICE_UUID!, 'BALENA_HOST_CONFIG_hdmi_ignore_edid_audio', hdmiAudio) // BALENA_DEVICE_UUID is always present in balenaOS
+        res.json({ status: 'OK' })
+      } catch (error) {
+        console.log(error)
+        res.json({ error: error })
+      }
+    }))
 
     // Support endpoint -- Gathers information for troubleshooting
     this.api.get('/support', asyncHandler(async (_req, res) => {
