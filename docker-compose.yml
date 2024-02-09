@@ -61,8 +61,7 @@ services:
   mpd:
     build: ./plugins/mpd
     restart: on-failure
-    ports:
-     - 6600:6600
+    network_mode: host
     privileged: true
     labels:
       io.balena.features.dbus: 1
