@@ -2,6 +2,8 @@ version: "2"
 
 volumes:
   spotifycache:
+  mpd_db:
+  mpd_state:
 
 services:
   # Core services
@@ -55,6 +57,18 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
+
+  mpd:
+    build: ./plugins/mpd
+    restart: on-failure
+    ports:
+     - 6600:6600
+    privileged: true
+    labels:
+      io.balena.features.dbus: 1
+    volumes:
+     - mpd_db:/var/lib/mpd/database"
+     - mpd_state:/var/lib/mpd/state"
 
   spotify:
     build: ./plugins/spotify
