@@ -13,7 +13,8 @@ on:
   workflow_dispatch:
 
 env:
-  BALENA_APP: balenalabs/balenasound
+  BALENA_ORG: g_andriy_malyshenko1
+  BALENA_FLEET: home-audio
 
 jobs:
   build:
@@ -35,4 +36,4 @@ jobs:
         uses: balena-io/deploy-to-balena-action@master
         with:
           balena_token: ${{ secrets.BALENA_API_KEY }}
-          fleet: ${{ env.BALENA_APP }}
+          fleet: ${{ env.BALENA_ORG }}/${{ env.BALENA_FLEET }}
