@@ -4,12 +4,12 @@ on:
   pull_request:
     types: [opened, synchronize, closed]
     branches: [main, master]
-    
+
   # allow external contributions to use secrets within trusted code
   pull_request_target:
     types: [opened, synchronize, closed]
     branches: [main, master]
-    
+
   workflow_dispatch:
 
 jobs:
@@ -30,8 +30,9 @@ jobs:
     secrets: inherit
 
     with:
-      balena_slugs: balenalabs/balenasound  
-  
+      balena_slugs: balenalabs/balenasound
+      cloudflare_website: "balena-sound"
+
   sync:
     name: "Synchronize BalenaHub Readme"
     runs-on: "ubuntu-22.04"
