@@ -30,8 +30,8 @@ Manual authentication will let you stream audio over the internet from a client 
 The following plugins are available to be added to your balenaSound installation:
 
 - UPnP: Universal Plug and Play
-- (Work in progress) Tidal Connect: See [PR #399](https://github.com/balena-labs-projects/balena-sound/pull/399)
-- (Work in progress) Roon Bridge: See [PR #388](https://github.com/balena-labs-projects/balena-sound/pull/388)
+- (Work in progress) Tidal Connect: See [PR #399](https://github.com/balena-io-experimental/balena-sound/pull/399)
+- (Work in progress) Roon Bridge: See [PR #388](https://github.com/balena-io-experimental/balena-sound/pull/388)
 
 Installing these plugins is a more involved process than just deploying the off the shelf version of balenaSound. You'll need to edit the contents of the `docker-compose.yml` file before deploying the app. This means that you won't be able to deploy using the "Deploy with balena" button; you either need to use the [CLI to deploy](https://balena-labs-projects.github.io/balena-sound/getting-started#cli-deploy) or use "Deploy with balena" with your own forked version of the project. If you don't feel comfortable performing these steps or need some help along the way hit us up at our [forums](https://forums.balena.io) and we'll gladly help you out.
 

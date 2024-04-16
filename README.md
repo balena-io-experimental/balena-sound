@@ -12,7 +12,7 @@
 
 Running this app is as simple as deploying it to a balenaCloud fleet. You can do it in just one click by using the button below:
 
-[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sound&defaultDeviceType=raspberry-pi)
+[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-experimental/balena-sound&defaultDeviceType=raspberry-pi)
 
 ## Documentation
 
@@ -30,4 +30,4 @@ This project is in active development so if you have any feature requests or iss
 
 ## Getting Help
 
-If you're having any problem, please [raise an issue](https://github.com/balena-labs-projects/balena-sound/issues/new) on GitHub and we will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/balena-io-experimental/balena-sound/issues/new) on GitHub and we will be happy to help.
