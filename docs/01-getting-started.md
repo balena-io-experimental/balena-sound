@@ -1,14 +1,11 @@
----
+----
 slug: /
+----
 
-sidebar_position: 1
-title: Getting Started
-breadcrumbs: false
----
+# Getting started
 
 # ![logo](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/balenaSound-logo.png)
 
-# Getting started
 
 Getting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) fleet; no additional configuration is required (unless you're using a DAC HAT).
 We've outlined the installation steps below. If you want a step-by-step tutorial on how to get balenaSound up and running, feel free to check these blog posts:
