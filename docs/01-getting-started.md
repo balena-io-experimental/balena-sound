@@ -1,14 +1,6 @@
----
-slug: /
+# Getting Started
 
-sidebar_position: 1
-title: Getting Started
-breadcrumbs: false
----
-
-# ![logo](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/balenaSound-logo.png)
-
-# Getting started
+![logo](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/balenaSound-logo.png)
 
 Getting started with balenaSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) fleet; no additional configuration is required (unless you're using a DAC HAT).
 We've outlined the installation steps below. If you want a step-by-step tutorial on how to get balenaSound up and running, feel free to check these blog posts:
@@ -40,7 +32,7 @@ One-click deploy is the easiest way to get started with balenaSound as it allows
 
 Click this button to go straight to balenaCloud fleet creation, where balenaSound app will be pre-loaded:
 
-[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sound&defaultDeviceType=raspberry-pi)
+[![balena deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-experimental/balena-sound&defaultDeviceType=raspberry-pi)
 
 ### Provision your device
 
@@ -98,4 +90,4 @@ If you are running into issues getting your balenaSound app running, please try 
 
 1. Check the [support and troubleshooting guide](support) for common issues and how to resolve them.
 2. Post in the [balenaSound forum](https://forums.balena.io/c/balenalabs/balenasound/85) for help from our growing community.
-3. Create an issue on the [balenaSound GitHub project](https://github.com/balena-labs-projects/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.
+3. Create an issue on the [balenaSound GitHub project](https://github.com/balena-io-experimental/balena-sound/issues/new/choose) if you find your issue may be a problem with balenaSound.

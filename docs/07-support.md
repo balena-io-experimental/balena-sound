@@ -73,7 +73,7 @@ Using multi-room has proven to make this issue a lot more frequent and noticeabl
 Bad quality power supply units are more likely to trigger this problem. Investing in a good power supply unit is always a good idea!
 We recommend using the [original Raspberry Pi power supply](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/) and if not possible at least one that conforms to the power requirements described in [here](https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md).
 
-Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the thorough [investigation and testing](https://github.com/balena-labs-projects/balena-sound/issues/62#issuecomment-605265537)!
+Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the thorough [investigation and testing](https://github.com/balena-io-experimental/balena-sound/issues/62#issuecomment-605265537)!
 
 ##### Rolling back to balenaOS 2.38 / Reduce Bluetooth UART baud rate
 
@@ -116,7 +116,7 @@ If your device is properly configured and still can't get multi-room to work try
 
 #### Description
 
-HDMI audio output is currently not working as intended on Raspberry Pi 4. See this [issue](https://github.com/balena-labs-projects/balena-sound/issues/79) for details.
+HDMI audio output is currently not working as intended on Raspberry Pi 4. See this [issue](https://github.com/balena-io-experimental/balena-sound/issues/79) for details.
 
 #### Workaround
 
@@ -130,7 +130,7 @@ No audio coming out from either the audio jack or HDMI when using balenaOS 64 bi
 
 For details see:
 
-- https://github.com/balena-labs-projects/balena-sound/issues/82
+- https://github.com/balena-io-experimental/balena-sound/issues/82
 - https://github.com/balena-io/balena-supervisor/issues/1245
 
 #### Workaround

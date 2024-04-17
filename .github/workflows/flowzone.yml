@@ -1,14 +1,15 @@
-
 name: Flowzone
 
 on:
   pull_request:
     types: [opened, synchronize, closed]
     branches: [main, master]
+
   # allow external contributions to use secrets within trusted code
   pull_request_target:
     types: [opened, synchronize, closed]
     branches: [main, master]
+
   workflow_dispatch:
 
 jobs:
@@ -30,13 +31,21 @@ jobs:
 
     with:
       balena_slugs: balenalabs/balenasound
-    
-  update-balena-yml:
-    name: Update balena.yml
-    uses: balena-io-experimental/balena.yml-action@main
-    with:
-      # Synchronise the GitHub README with the Balena Hub README
-      sync_readme: true
-      # If pushing a tag to deploy, use the same tag as the version number to display on Balena Hub
-      sync_tag: false
+      cloudflare_website: "balena-sound"
+
+  sync:
+    name: "Synchronize BalenaHub Readme"
+    runs-on: "ubuntu-22.04"
+    needs: [flowzone]
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Update balena.yml
+        uses: balena-io-experimental/balena.yml-action@main
+        with:
+          # Synchronise the GitHub README with the Balena Hub README
+          sync_readme: true
+          # If pushing a tag to deploy, use the same tag as the version number to display on Balena Hub
+          sync_tag: false
 

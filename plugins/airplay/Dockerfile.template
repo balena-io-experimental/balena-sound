@@ -8,8 +8,8 @@ SHELL ["/bin/sh", "-eo", "pipefail", "-c"]
 
 # shairport-sync docker image doesn't include pulseaudio support so we use ALSA bridge
 ENV PULSE_SERVER=tcp:localhost:4317
-RUN apk add --no-cache supervisor curl~=7 && \
-  curl -skL https://raw.githubusercontent.com/balena-labs-projects/audio/master/scripts/alsa-bridge/alpine-setup.sh | sh \
+RUN apk update && apk add --no-cache supervisor curl~=7 && \
+  curl -skL https://raw.githubusercontent.com/balena-io-experimental/audio/master/scripts/alsa-bridge/alpine-setup.sh | sh \
   && apk del curl
 
 COPY start.sh /usr/src/
