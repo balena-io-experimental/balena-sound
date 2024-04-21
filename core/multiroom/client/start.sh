@@ -9,8 +9,13 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 # Get mode and snapserver from sound supervisor
 # mode: default to MULTI_ROOM
 # snapserver: default to multiroom-server (local)
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
-SNAPSERVER=$(curl --silent "$SOUND_SUPERVISOR/multiroom/master" || true)
+MODE=$(curl -f --silent "$SOUND_SUPERVISOR/mode" || echo 'MULTI_ROOM')
+
+SNAPSERVER=$(curl -f --silent "$SOUND_SUPERVISOR/multiroom/master" || echo 'localhost')
+# Make sure localhost is not used, but the default route instead
+if [[ "$SNAPSERVER" == "localhost" ]]; then
+  SNAPSERVER=$(ip route | awk '/default / { print $3 }')
+fi
 
 # --- ENV VARS ---
 # SOUND_MULTIROOM_LATENCY: latency in milliseconds to compensate for speaker hardware sync issues

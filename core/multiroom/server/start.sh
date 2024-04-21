@@ -8,7 +8,7 @@ while ! curl --silent --output /dev/null "$SOUND_SUPERVISOR/ping"; do sleep 5; e
 
 # Get mode from sound supervisor. 
 # mode: default to MULTI_ROOM
-MODE=$(curl --silent "$SOUND_SUPERVISOR/mode" || true)
+MODE=$(curl -f --silent "$SOUND_SUPERVISOR/mode" || echo 'MULTI_ROOM')
 
 # Multi-room server can't run properly in some platforms because of resource constraints, so we disable them
 declare -A blacklisted=(
