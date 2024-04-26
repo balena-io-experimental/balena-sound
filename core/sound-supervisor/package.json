@@ -10,7 +10,7 @@
     "watch": "tsc --watch --project tsconfig.json",
     "livepush": "nodemon --watch src -e js,ts,json --exec node -r ts-node/register/transpile-only src/index.ts"
   },
-  "author": "Tomás Migone <tomas@balena.io",
+  "author": "Tomás Migone <tomas@balena.io>",
   "license": "Apache-2.0",
   "dependencies": {
     "@tmigone/pulseaudio": "^0.1.8",
