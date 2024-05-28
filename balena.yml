@@ -1,8 +1,8 @@
 name: balenaSound
 type: sw.application
 description: >-
-  Build a single or multi-room streamer for an existing audio device
-  using a Raspberry Pi! Supports Bluetooth, Airplay2 and Spotify Connect
+  Build a single or multi-room streamer for an existing audio device using a
+  Raspberry Pi! Supports Bluetooth, Airplay2 and Spotify Connect
 fleetcta: Sounds good
 post-provisioning: >-
   ## Usage instructions
@@ -10,12 +10,12 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/balena-labs-projects/balena-sound'
+      url: 'https://github.com/balena-io-experimental/balena-sound'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/logo.png
+        https://raw.githubusercontent.com/balena-io-experimental/balena-sound/master/logo.png
 data:
   applicationEnvironmentVariables:
     - SOUND_VOLUME: 75
@@ -28,4 +28,4 @@ data:
     - raspberrypi4-64
     - fincm3
     - intel-nuc
-version: 3.9.6
+version: 3.10.0

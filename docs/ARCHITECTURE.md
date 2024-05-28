@@ -1,10 +1,10 @@
 # Architecture
 
-Community contributions have been a staple of this open source project since its inception. However, as balenaSound grew in features it also grew in terms of complexity. It's currently a multi-container app with four core services and as many plugin services. This documentation section aims to provide an overview of balenaSound's architecture, with the intention of lowering the barrier to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](../docs/support#contact-us) and we'll gladly help.
+Community contributions have been a staple of this open source project since its inception. However, as balenaSound grew in features it also grew in terms of complexity. It's currently a multi-container app with four core services and as many plugin services. This documentation section aims to provide an overview of balenaSound's architecture, with the intention of lowering the barrier to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](support#contact-us) and we'll gladly help.
 
 ## Overview
 
-![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-overview.png)
+![](https://raw.githubusercontent.com/balena-io-experimental/balena-sound/master/docs/images/arch-overview.png)
 
 balenaSound services can be divided in three groups:
 
@@ -67,13 +67,13 @@ Creation and configuration scripts for these virtual sinks are located at `core/
 
 ### Standalone
 
-![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-standalone.png)
+![](https://raw.githubusercontent.com/balena-io-experimental/balena-sound/master/docs/images/arch-standalone.png)
 
 Standalone mode is easy to understand. You just pipe ` balena-sound.input` to `balena-sound.output` and that's it. Audio coming in from any plugin will find it's way to the selected output. If this was the only mode, we could simplify the setup and use a single sink. Having the two layers however is important for the multiroom mode which is more complicated.
 
 ### Multiroom
 
-![](https://raw.githubusercontent.com/balena-labs-projects/balena-sound/master/docs/images/arch-multiroom.png)
+![](https://raw.githubusercontent.com/balena-io-experimental/balena-sound/master/docs/images/arch-multiroom.png)
 
 Multiroom feature relies on `snapcast` to broadcast the audio to multiple devices. Snapcast has two binaries working alongside: server and client.
 

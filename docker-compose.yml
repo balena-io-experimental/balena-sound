@@ -37,7 +37,7 @@ services:
     restart: on-failure
 
   # Plugins
-  # -- Additional plugins can be added. See https://balena-labs-projects.github.io/balena-sound/plugins.
+  # -- Additional plugins can be added. See https://balena-sound.pages.dev/plugins
   # -- Remove unwanted plugins as needed
   bluetooth:
     build: ./plugins/bluetooth
