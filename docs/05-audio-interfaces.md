@@ -41,7 +41,7 @@ In the balenaCloud dashboard:
 - Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`, and where necessary `BALENA_HOST_CONFIG_gpio`. The value of this will depend on your DAC board (see tables below in each DAC category subsection).
 - Cycle the power by unplugging your device.
 
-![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
+![DAC Configuration](https://github.com/theoisadoor/balena-sound/blob/theoisadoor-patch-1/docs/images/dac-vars.png)
 
 If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your fleet.
 
