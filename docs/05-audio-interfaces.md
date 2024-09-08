@@ -38,10 +38,10 @@ To get a DAC board to work with balenaSound you will need to enable its correspo
 In the balenaCloud dashboard:
 
 - Click on the specific device within your fleet and select `Configuration` in the left-side menu.
-- Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see tables below in each DAC category subsection).
+- Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`, and where necessary `BALENA_HOST_CONFIG_gpio`. The value of this will depend on your DAC board (see tables below in each DAC category subsection).
 - Cycle the power by unplugging your device.
 
-![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
+![DAC Configuration](https://github.com/theoisadoor/balena-sound/blob/db9517aa1c356c503f3fff95dfed19f31d1576fb/docs/images/dac-vars.png)
 
 If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your fleet.
 
@@ -49,42 +49,42 @@ If you're using multiple devices with multiple DACs for multi-room audio, you'll
 
 These are the DACs that are known to work with balenaSound. If you have trouble setting one up, please reach us at our [forums](https://forums.balena.io/) where we'll gladly help you troubleshoot the issue. Please **do not** create new GitHub issues for supported DACs unless you've been instructed to do so by our forums support agents.
 
-| DAC Name                                     | BALENA_HOST_CONFIG_dtoverlay |
-| -------------------------------------------- | ---------------------------- |
-| [Suptronics X400][1]                         | iqaudio-dacplus              |
-| [Pimoroni Pirate Audio][12]                  | hifiberry-dac                |
-| [Pimoroni pHAT DAC][2]                       | hifiberry-dac                |
-| [Justboom DAC HAT/Zero][3]                   | justboom-dac                 |
-| [Justboom Amp HAT/Zero][30]                  | justboom-dac                 |
-| [Justboom Digi HAT/Zero][25]                 | justboom-digi                |
-| [Pisound][4]                                 | pisound                      |
-| [InnoMaker HiFi DAC HAT][8]                  | allo-boss-dac-pcm512x-audio  |
-| [InnoMaker HiFi Amp HAT][35]                 | hifiberry-amp                |
-| [Boss DAC v1.2][29]                          | allo-boss-dac-pcm512x-audio  |
-| [miniBoss DAC][10]                           | allo-boss-dac-pcm512x-audio  |
-| [PiFi Digi+][11]                             | hifiberry-digi               |
-| [IQaudIO Pi-DAC+][13]                        | iqaudio-dacplus              |
-| [IQaudIO Pi-DAC Pro][31]                     | iqaudio-dacplus              |
-| [IQaudIO Pi-DACZero][32]                     | iqaudio-dacplus              |
-| [IQaudIO Pi-Digi+][33]                       | iqaudio-digi-wm8804-audio    |
-| [IQaudIO Pi-DigiAMP+][34]                    | iqaudio-dacplus,unmute_amp   |
-| [Hifiberry Amp2][14]                         | hifiberry-dacplus            |
-| [Hifiberry DAC+][6]                          | hifiberry-dacplus            |
-| [Hifiberry DAC+ Light][15]                   | hifiberry-dac                |
-| [Hifiberry DAC+ Standard][16]                | hifiberry-dacplus            |
-| [Hifiberry DAC+ Pro][17]                     | hifiberry-dacplus            |
-| [Hifiberry DAC Zero][18]                     | hifiberry-dac                |
-| [Hifiberry Amp+][19]                         | hifiberry-amp                |
-| [Hifiberry Digi][20]                         | hifiberry-digi               |
-| [Hifiberry Digi+][21]                        | hifiberry-digi               |
-| [Hifiberry Beocreate][22]                    | hifiberry-dac                |
-| [Hifiberry DAC+ DSP][23]                     | hifiberry-dac                |
-| [Hifiberry MiniAmp][24]                      | hifiberry-dac                |
-| [Hifiberry DAC2 HD][27]                      | hifiberry-dacplushd          |
-| [Adafruit I2S Audio Bonnet][26]              | "hifiberry-dac","i2s-mmap"   |
-| [Adafruit MAX98357 I2S Class-D Mono Amp][28] | "hifiberry-dac”,"i2s-mmap"   |
-| [RasPiAudio Audio+ DAC][37]                  | hifiberry-dac                |
-| [AUDIOPHONICS I-Sabre DAC ES9023][39]        | hifiberry-dac                |
+| DAC Name                                     | BALENA_HOST_CONFIG_dtoverlay | BALENA_HOST_CONFIG_gpio |
+| -------------------------------------------- | ---------------------------- | ----------------------- |
+| [Suptronics X400][1]                         | iqaudio-dacplus              |                         |
+| [Pimoroni Pirate Audio][12]                  | hifiberry-dac                | 25=op,dh                |
+| [Pimoroni pHAT DAC][2]                       | hifiberry-dac                |                         |
+| [Justboom DAC HAT/Zero][3]                   | justboom-dac                 |                         |
+| [Justboom Amp HAT/Zero][30]                  | justboom-dac                 |                         |
+| [Justboom Digi HAT/Zero][25]                 | justboom-digi                |                         |
+| [Pisound][4]                                 | pisound                      |                         |
+| [InnoMaker HiFi DAC HAT][8]                  | allo-boss-dac-pcm512x-audio  |                         |
+| [InnoMaker HiFi Amp HAT][35]                 | hifiberry-amp                |                         |
+| [Boss DAC v1.2][29]                          | allo-boss-dac-pcm512x-audio  |                         |
+| [miniBoss DAC][10]                           | allo-boss-dac-pcm512x-audio  |                         |
+| [PiFi Digi+][11]                             | hifiberry-digi               |                         |
+| [IQaudIO Pi-DAC+][13]                        | iqaudio-dacplus              |                         |
+| [IQaudIO Pi-DAC Pro][31]                     | iqaudio-dacplus              |                         |
+| [IQaudIO Pi-DACZero][32]                     | iqaudio-dacplus              |                         |
+| [IQaudIO Pi-Digi+][33]                       | iqaudio-digi-wm8804-audio    |                         |
+| [IQaudIO Pi-DigiAMP+][34]                    | iqaudio-dacplus,unmute_amp   |                         |
+| [Hifiberry Amp2][14]                         | hifiberry-dacplus            |                         |
+| [Hifiberry DAC+][6]                          | hifiberry-dacplus            |                         |
+| [Hifiberry DAC+ Light][15]                   | hifiberry-dac                |                         |
+| [Hifiberry DAC+ Standard][16]                | hifiberry-dacplus            |                         |
+| [Hifiberry DAC+ Pro][17]                     | hifiberry-dacplus            |                         |
+| [Hifiberry DAC Zero][18]                     | hifiberry-dac                |                         |
+| [Hifiberry Amp+][19]                         | hifiberry-amp                |                         |
+| [Hifiberry Digi][20]                         | hifiberry-digi               |                         |
+| [Hifiberry Digi+][21]                        | hifiberry-digi               |                         |
+| [Hifiberry Beocreate][22]                    | hifiberry-dac                |                         |
+| [Hifiberry DAC+ DSP][23]                     | hifiberry-dac                |                         |
+| [Hifiberry MiniAmp][24]                      | hifiberry-dac                |                         |
+| [Hifiberry DAC2 HD][27]                      | hifiberry-dacplushd          |                         |
+| [Adafruit I2S Audio Bonnet][26]              | "hifiberry-dac","i2s-mmap"   |                         |
+| [Adafruit MAX98357 I2S Class-D Mono Amp][28] | "hifiberry-dac”,"i2s-mmap"   |                         |
+| [RasPiAudio Audio+ DAC][37]                  | hifiberry-dac                |                         |
+| [AUDIOPHONICS I-Sabre DAC ES9023][39]        | hifiberry-dac                |                         |
 
 [1]: http://www.suptronics.com/Xseries/x400.html
 [2]: https://shop.pimoroni.com/products/phat-dac
