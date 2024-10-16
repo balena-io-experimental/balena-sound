@@ -1,4 +1,64 @@
 - commits:
+    - subject: "patch: Add Docusaurus-builder docs to balena-sound"
+      hash: f58df614030f28ad6fab2093c90f04910e7fa470
+      body: ""
+      footer:
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+    - subject: "patch: Add Flowzone back"
+      hash: c47a1aed470b1f95c593ffdcea72ff4677b06abb
+      body: ""
+      footer:
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+    - subject: "sound-supervisor: Switch to a balenalib base image"
+      hash: 3bf0a6ced40a1d4212b80b5bceef1acdfd29ae53
+      body: ""
+      footer:
+        Signed-off-by: Alan Boris <alan@balena.io>
+        signed-off-by: Alan Boris <alan@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Alan Boris
+      nested: []
+    - subject: Allow manual deploys to balena via GH Workflow
+      hash: 6fdf4a931f91f23ec4fdd72b4f954f70673ec462
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: maggie0002
+      nested: []
+    - subject: "renamathon: rename application to fleet/app"
+      hash: cad5246598638d46eda1b1ba27cf575399e06ee2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Tomás Migone <tomas@balena.io>
+        signed-off-by: Tomás Migone <tomas@balena.io>
+      author: Tomás Migone
+      nested: []
+    - subject: "docs: Add upgrade instructions to docs"
+      hash: 5a0bd2c8c04191839d705381a88c38d1ce5e84dc
+      body: ""
+      footer:
+        Connects-to: "#434"
+        connects-to: "#434"
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Roddie Hasan <roddie@krweb.net>
+        signed-off-by: Roddie Hasan <roddie@krweb.net>
+      author: Roddie Hasan
+      nested: []
+  version: 3.10.0
+  title: ""
+  date: 2024-04-17T12:41:07.907Z
+- commits:
     - subject: changing balenablocks urls and flowzone CI
       hash: ec21ca9dcd5da43fbab2559bea165b7ceeb6b1cc
       body: ""
@@ -554,10 +614,11 @@
     - subject: Use SOUND_SUPERVISOR_PORT in container start scripts
       hash: 3d267ca69f01dd11b19f621a08f96e71b88a1a17
       body: >
-        This patch make container start scripts consider the environment variable
-        SOUND_SUPERVISOR_PORT.
+        This patch make container start scripts consider the environment
+        variable SOUND_SUPERVISOR_PORT.
 
-        Otherwise the services adress requests to wrong default port, if sound supervisor web port is changed by above configuration variable.
+        Otherwise the services adress requests to wrong default port, if sound
+        supervisor web port is changed by above configuration variable.
 
         This change affects audio, airplay, multi-room and docs.
       footer:
@@ -882,11 +943,14 @@
       body: >
         - Update snapcast to v0.22.0-r0
 
-        - Replace FIFO stream source with ALSA which significantly reduces CPU and I/O usage (fixes #294)
+        - Replace FIFO stream source with ALSA which significantly reduces CPU
+        and I/O usage (fixes #294)
 
-        - Add SOUND_INPUT_LATENCY and SOUND_OUTPUT_LATENCY env vars (also helps with #294)
+        - Add SOUND_INPUT_LATENCY and SOUND_OUTPUT_LATENCY env vars (also helps
+        with #294)
 
-        - Reduce multiroom-server image with multi stage builds for a slimmer image
+        - Reduce multiroom-server image with multi stage builds for a slimmer
+        image
 
         - Reduce verbose level for both multiroom services
       footer:
@@ -1176,7 +1240,8 @@
 
         - New plugin system for audio sources, easier to contribute.
 
-        - Uniform audio configuration and handling thanks to audio block (volume, etc)
+        - Uniform audio configuration and handling thanks to audio block
+        (volume, etc)
 
         - Simultaneous audio source streaming
 
@@ -1268,7 +1333,8 @@
     - subject: Adding clarification between config vars and env vars for users
       hash: 94f129c48a4178a4d4246c990488fa56c7d6d8e7
       body: >
-        Clarifying and citing resources for env var usage in balenaSound so users
+        Clarifying and citing resources for env var usage in balenaSound so
+        users
 
         don't try to add env vars to config vars.
       footer:
@@ -1729,7 +1795,8 @@
       body: >-
         This feature adds multi-room audio streaming to balenaSound.
 
-        No breaking changes were made, but considering this a major version bump since it's a big feature and all services were affected.
+        No breaking changes were made, but considering this a major version bump
+        since it's a big feature and all services were affected.
 
         New services added:
 
@@ -1739,7 +1806,8 @@
 
         - fleet-supervisor
 
-        - By default, all audio services now stream to a fifo pipe file instead of alsa backend.
+        - By default, all audio services now stream to a fifo pipe file instead
+        of alsa backend.
 
         - Multi-room can be disabled via env var DISABLE_MULTI_ROOM.
 - version: 1.3.10
@@ -2156,8 +2224,8 @@
       subject: Change base image to Debian Stretch instead of Buster
       body: "Fixes https://github.com/balena-io-projects/balena-sound/issues/15\r
 
-        The use of Buster instead of Stretch breaks balena-sound. This
-        reverts back to Stretch until the Buster issues can be worked out."
+        The use of Buster instead of Stretch breaks balena-sound. This reverts
+        back to Stretch until the Buster issues can be worked out."
     - hash: 441e91aaad83a8a0222bec75766ce8ba372b32c4
       author: pwt
       footers:
@@ -2166,7 +2234,8 @@
       body: >-
         Fixes https://github.com/balena-io-projects/balena-sound/issues/15
 
-        The use of Buster instead of Stretch breaks balena-sound. This reverts back to Stretch until the Buster issues can be worked out.
+        The use of Buster instead of Stretch breaks balena-sound. This reverts
+        back to Stretch until the Buster issues can be worked out.
     - hash: 808a7e01ac44bdc349a2339dfa133e5def3fd03a
       author: pwt
       subject: Merge branch 'master' of https://github.com/pwt/balena-sound
@@ -2214,8 +2283,8 @@
       author: Tim
       subject: Update for Multi Container use
       body: >-
-        Suggestion additional info for people who might want to combine this in an
-        app with other playground apps.
+        Suggestion additional info for people who might want to combine this in
+        an app with other playground apps.
 
         Labels is something that's not always clear for beginners.
     - hash: eefcca025309f2b53651b57fb76fb41a0a2221ed

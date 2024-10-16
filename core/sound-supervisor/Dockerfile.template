@@ -11,7 +11,7 @@ COPY core/sound-supervisor/tsconfig.json .
 RUN npm run build
 COPY VERSION .
 
-FROM node:14-alpine3.14
+FROM balenalib/%%BALENA_ARCH%%-alpine-node:14
 
 WORKDIR /usr/src
 
