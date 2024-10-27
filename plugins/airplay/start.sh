@@ -20,7 +20,7 @@ if [[ -n "$SOUND_AIRPLAY_LATENCY_OFFSET" ]]; then
     # Use sed to replace the value in the specified line
     sed -i "s|//[[:space:]]*audio_backend_latency_offset_in_seconds[[:space:]]*=.*;|	audio_backend_latency_offset_in_seconds = $SOUND_AIRPLAY_LATENCY_OFFSET;|" "$file"
 
-    echo "Updated audio_backend_latency_offset_in_seconds to $LATENCY_OFFSET in $file"
+    echo "Updated audio_backend_latency_offset_in_seconds to $SOUND_AIRPLAY_LATENCY_OFFSET in $file"
 fi
 
 
