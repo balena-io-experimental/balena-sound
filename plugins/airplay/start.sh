@@ -5,7 +5,6 @@ if [[ -n "$SOUND_DISABLE_AIRPLAY" ]]; then
   exit 0
 fi
 
-
 # --- ENV VARS ---
 # SOUND_DEVICE_NAME: Set the device broadcast name for AirPlay
 SOUND_DEVICE_NAME=${SOUND_DEVICE_NAME:-"balenaSound AirPlay $(echo "$BALENA_DEVICE_UUID" | cut -c -4)"}
