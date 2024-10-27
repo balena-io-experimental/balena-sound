@@ -51,3 +51,12 @@ The following variables control various aspects of each plugin behavior:
 | SOUND_SPOTIFY_DISABLE_NORMALISATION                                            | Disable volume normalization in Spotify.                                                                                                                                                                                        | Disabled if the variable exists regardless of its value.                | ---      |
 | SOUND_SPOTIFY_ENABLE_CACHE                                                     | Enable the audio cache in Spotify. Note that over time the cache can take up large amounts of disk space.                                                                                                                       | Enabled if the variable exists regardless of its value.                 | ---      |
 | SOUND_SPOTIFY_BITRATE                                                          | Spotify playback bitrate.                                                                                                                                                                                                       | Bitrate in kbps: `96`, `160` or `320`                                   | 160      |
+
+## AirPlay
+
+AirPlay is based on [Shairport Sync](https://github.com/mikebrady/shairport-sync).
+It supports various options that override [options provided by Shairport](https://github.com/mikebrady/shairport-sync/blob/master/scripts/shairport-sync.conf)
+
+| Variable                        | Description                                                                                                                                                                         | Options                                                          | Defaults |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------- |
+| SOUND_AIRPLAY_LATENCY_OFFSET    | This is added to the latency requested by the player to delay or advance the output by a fixed amount. Latency adjustments should be small, not more than about ± 250 milliseconds. | Time in seconds. Example: `0.250`. Negative values are supported | 0        |
