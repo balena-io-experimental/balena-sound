@@ -1,12 +1,12 @@
 # Architecture
 
-Community contributions have been a staple of this open source project since its inception. However, as balenaSound grew in features it also grew in terms of complexity. It's currently a multi-container app with four core services and as many plugin services. This documentation section aims to provide an overview of balenaSound's architecture, with the intention of lowering the barrier to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](support#contact-us) and we'll gladly help.
+Community contributions have been a staple of this open source project since its inception. However, as IoTSound grew in features it also grew in terms of complexity. It's currently a multi-container app with four core services and as many plugin services. This documentation section aims to provide an overview of IoTSound's architecture, with the intention of lowering the barrier to entry for folks out there wanting to contribute. If you are interested in contributing and after reading this guide you still have questions please [reach out](support#contact-us) and we'll gladly help.
 
 ## Overview
 
 ![](https://raw.githubusercontent.com/balena-io-experimental/balena-sound/master/docs/images/arch-overview.png)
 
-balenaSound services can be divided in three groups:
+IoTSound services can be divided in three groups:
 
 - Sound core: `sound-supervisor` and `audio`.
 - Multiroom: `multiroom-server` and `multiroom-client`
@@ -14,20 +14,20 @@ balenaSound services can be divided in three groups:
 
 ### Sound core
 
-This is the heart of balenaSound as it contains the most important services: `sound-supervisor` and `audio`.
+This is the heart of IoTSound as it contains the most important services: `sound-supervisor` and `audio`.
 
 **audio**
-The `audio` block is a [balena block](https://www.balena.io/blog/introducing-balenablocks-jumpstart-your-iot-app-development/) that provides an easy way to work with audio in containerized environments such as balenaOS. You can read more about it [here](https://github.com/balenablocks/audio). In a nutshell, the `audio` block is the main "audio router". It connects to all audio sources and sinks and handles audio routing, which will change depending on the mode of operation (multi-room vs standalone), the output interface selected (onboard audio, HDMI, DAC, USB soundcard), etc. The `audio` block allows you to build complex audio apps such as balenaSound without having to dive deep into ALSA or PulseAudio configuration. One of the key features for balenaSound is that it allows us to define input and output audio layers and then perform all the complex audio routing without knowing/caring about where the audio is being generated or where it should go to. The `audio routing` section below covers this process in detail.
+The `audio` block is a [balena block](https://www.balena.io/blog/introducing-balenablocks-jumpstart-your-iot-app-development/) that provides an easy way to work with audio in containerized environments such as balenaOS. You can read more about it [here](https://github.com/balenablocks/audio). In a nutshell, the `audio` block is the main "audio router". It connects to all audio sources and sinks and handles audio routing, which will change depending on the mode of operation (multi-room vs standalone), the output interface selected (onboard audio, HDMI, DAC, USB soundcard), etc. The `audio` block allows you to build complex audio apps such as IoTSound without having to dive deep into ALSA or PulseAudio configuration. One of the key features for IoTSound is that it allows us to define input and output audio layers and then perform all the complex audio routing without knowing/caring about where the audio is being generated or where it should go to. The `audio routing` section belows covers this process in detail.
 
 **sound-supervisor**
 The `sound-supervisor`, as its name suggests, is the service that orchestrates all the others. It's not really involved in the audio routing but it does a few key things that enable the other services to be simpler. Here are some of the most important features of the `sound-supervisor`:
 
 - **Multi-room events**: through the use of the [cotejs](https://github.com/dashersw/cote) library and interfacing with the `audio` block, the `sound-supervisor` ensures that all devices on the same local network agree on which is the `master` device. To achieve this, `sound-supervisor` services on different devices exchange event messages constantly.
-- **API**: creates a REST API on port 80. The API allows other services to access the current balenaSound configuration, which allows us to update the configuration dynamically and have services react accordingly. As a general rule of thumb, if we are interested in a service's configuration being able to be dynamically updated, the service should rely on configuration reported by `sound-supervisor` and not on environment variables. At this moment, all of the services support this behavior but their configuration is mostly static: you set it at startup via environment variables and that's it. However, there are _experimental_ endpoints in the API to update configuration values and all of the services support it already. There's even a _secret_ UI that allows for some configuration changes at runtime, it's located at `http://<DEVICE_IP>`.
+- **API**: creates a REST API on port 80. The API allows other services to access the current IoTSound configuration, which allows us to update the configuration dynamically and have services react accordingly. As a general rule of thumb, if we are interested in a service's configuration being able to be dynamically updated, the service should rely on configuration reported by `sound-supervisor` and not on environment variables. At this moment, all of the services support this behavior but their configuration is mostly static: you set it at startup via environment variables and that's it. However, there are _experimental_ endpoints in the API to update configuration values and all of the services support it already. There's even a _secret_ UI that allows for some configuration changes at runtime, it's located at `http://<DEVICE_IP>`.
 
 ### Multi-room
 
-Multi-room services provide multiroom capabilities to balenaSound.
+Multi-room services provide multiroom capabilities to IoTSound.
 
 **multiroom-server**
 This service runs a [Snapcast](https://github.com/badaix/snapcast) server which is responsible for broadcasting (and syncing) audio from the `audio` service into Snapcast clients. Clients can be running on the same device or on separate devices.
@@ -41,7 +41,7 @@ Plugins are the audio sources that generate the audio to be streamed/played (e.g
 
 ## Audio routing
 
-Audio routing is the most crucial part of balenaSound, and it also changes significantly depending on what the current configuration is, with the biggest change being the mode of operation (multi-room vs standalone). There are two services controlling audio routing:
+Audio routing is the most crucial part of IoTSound, and it also changes significantly depending on what the current configuration is, with the biggest change being the mode of operation (multi-room vs standalone). There are two services controlling audio routing:
 
 - the `audio` block is the key one as it's the one actually routing audio so we'll zoom into it in sections below.
 - `sound-supervisor` on the other hand, is responsible for changing the routing according to what the current mode is. It will modify how sinks are internally connected depending on the mode of operation.
@@ -52,7 +52,7 @@ Audio routing is the most crucial part of balenaSound, and it also changes signi
 
 One of the advantages of using the `audio` block is that, since it's based on PulseAudio, we can use all the audio processing tools and tricks that are widely available, in this particular case `virtual sinks`. PulseAudio clients can send audio to sinks; usually audio soundcards have a sink that represents them, so sending audio to the audio jack sink will result in that audio coming out of the audio jack. Virtual sinks are virtual nodes that can be used to route audio in and out of them.
 
-For balenaSound we use two virtual sinks in order to simplify how audio is being routed:
+For IoTSound we use two virtual sinks in order to simplify how audio is being routed:
 
 - balena-sound.input
 - balena-sound.output
@@ -60,7 +60,7 @@ For balenaSound we use two virtual sinks in order to simplify how audio is being
 Creation and configuration scripts for these virtual sinks are located at `core/audio/balena-sound.pa` and `core/audio/start.sh`.
 
 **balena-sound.input**
-`balena-sound.input` acts as an input audio multiplexer/mixer. It's the default sink on balenaSound, so all plugins that send audio to the `audio` block will send it to this sink by default. This allows us to route audio internally without worrying where it came from: any audio generated by a plugin will pass through the `balena-sound.input` sink, so by controlling where it sends it's audio we are effectively controlling all plugins at the same time.
+`balena-sound.input` acts as an input audio multiplexer/mixer. It's the default sink on IoTSound, so all plugins that send audio to the `audio` block will send it to this sink by default. This allows us to route audio internally without worrying where it came from: any audio generated by a plugin will pass through the `balena-sound.input` sink, so by controlling where it sends it's audio we are effectively controlling all plugins at the same time.
 
 **balena-sound.output**
 `balena-sound.output` on the other hand is the output audio multiplexer/mixer. This one is pretty useful in scenarios where there are multiple soundcards available (onboard, DAC, USB, etc). `balena-sound.output` is always wired to whatever the desired soundcard sink is. So even if we dynamically change the output selection, sending audio to `balena-sound.output` will always result in audio going to the current selection. Again, this is useful to route audio internally without worrying about user selection at runtime.

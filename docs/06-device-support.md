@@ -2,7 +2,7 @@
 
 ## Recommended
 
-balenaSound has been developed and tested to work on the following devices:
+IoTSound has been developed and tested to work on the following devices:
 
 | Device Type                                   | Default mode | Standalone mode (`STANDALONE`) | Multi-room mode (`MULTI_ROOM`) | Multi-room client mode (`MULTI_ROOM_CLIENT`) |
 | --------------------------------------------- | ------------ | ------------------------------ | ------------------------------ | -------------------------------------------- |
@@ -17,15 +17,15 @@ balenaSound has been developed and tested to work on the following devices:
 
 [1]: We recommend using a DAC or USB sound card for these device types. See [audio interfaces](audio-interfaces) for more details.
 
-[2]: Multi-room `master` functionality is disabled on Raspberry Pi 1 and 2 family devices due to performance constraints. They can however function in multi-room client mode in conjunction with another device that supports multi-room mode. Read more about modes of operation [here](https://balena-sound.pages.dev/usage#modes-of-operation).
+[2]: Multi-room `master` functionality is disabled on Raspberry Pi 1 and 2 family devices due to performance constraints. They can however function in multi-room client mode in conjunction with another device that supports multi-room mode. Read more about modes of operation [here](https://iotsound.pages.dev/iotsound/usage#modes-of-operation).
 
-[3]: There is a known issue where on the 64 bit version of balenaOS no output is coming through the audio jack/hdmi. See troubleshooting section [here](https://balena-sound.pages.dev/support#troubleshooting) (Scroll down to `No audio when using balenaOS 64 bit on Raspberry Pi 3's`)
+[3]: There is a known issue where on the 64 bit version of balenaOS no output is coming through the audio jack/hdmi. See troubleshooting section [here](https://iotsound.pages.dev/iotsound/support#troubleshooting) (Scroll down to `No audio when using balenaOS 64 bit on Raspberry Pi 3's`)
 
-[4]: There is a [known issue](https://github.com/raspberrypi/linux/issues/1444) with all variants of the Raspberry Pi 3 where Bluetooth and WiFi interfere with each other. This will only impact the performance of balenaSound if you use a **Pi 3 as the master server to do multi-room bluetooth streaming**, resulting in stuttering audio (Airplay and Spotify Connect will work fine, as well as all streaming methods with multi-room disabled). In this cases we recommend the use of a Raspberry Pi 4 as the `master` server or a Pi 3 with a bluetooth dongle.
+[4]: There is a [known issue](https://github.com/raspberrypi/linux/issues/1444) with all variants of the Raspberry Pi 3 where Bluetooth and WiFi interfere with each other. This will only impact the performance of IoTSound if you use a **Pi 3 as the master server to do multi-room bluetooth streaming**, resulting in stuttering audio (Airplay and Spotify Connect will work fine, as well as all streaming methods with multi-room disabled). In this cases we recommend the use of a Raspberry Pi 4 as the `master` server or a Pi 3 with a bluetooth dongle.
 
 ## Experimental
 
-Devices with experimental support **have been tested to work**, though we have found compelling reasons for not including them as first-class citizens of balenaSound. If you are shopping for parts, we do not recommend you buy a device from this list.
+Devices with experimental support **have been tested to work**, though we have found compelling reasons for not including them as first-class citizens of IoTSound. If you are shopping for parts, we do not recommend you buy a device from this list.
 
 Some of the reasons we've flagged devices as experimental include:
 
