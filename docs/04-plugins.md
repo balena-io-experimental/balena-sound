@@ -37,7 +37,7 @@ Installing these plugins is a more involved process than just deploying the off 
 
 ### UPnP
 
-To install UPnP plugin add the following to the `sevices` section on your `docker-compose.yml` file:
+To install UPnP plugin add the following to the `services` section on your `docker-compose.yml` file:
 
 ```
   upnp:
