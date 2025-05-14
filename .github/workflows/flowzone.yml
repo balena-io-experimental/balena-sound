@@ -4,13 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, closed]
     branches: [main, master]
-
   # allow external contributions to use secrets within trusted code
   pull_request_target:
     types: [opened, synchronize, closed]
     branches: [main, master]
-
-  workflow_dispatch:
 
 jobs:
   flowzone:
@@ -28,7 +25,7 @@ jobs:
 
     # Workflows in the same org or enterprise can use the inherit keyword to implicitly pass secrets
     secrets: inherit
-
+    
     with:
       balena_slugs: balenalabs/balenasound
       cloudflare_website: "balena-sound"
