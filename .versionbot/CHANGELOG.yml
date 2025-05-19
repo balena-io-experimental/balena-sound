@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix typos
+      hash: 21745b71da450ad5e946b8afeeb1fdb56d7fa16f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 3.10.1
+  title: ""
+  date: 2025-05-19T23:36:06.272Z
+- commits:
     - subject: "patch: Add Docusaurus-builder docs to balena-sound"
       hash: f58df614030f28ad6fab2093c90f04910e7fa470
       body: ""
