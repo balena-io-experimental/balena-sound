@@ -30,7 +30,6 @@ jobs:
     secrets: inherit
 
     with:
-      balena_slugs: balenalabs/balenasound
       cloudflare_website: "balena-sound"
 
   sync:
