@@ -1,0 +1,46 @@
+# Site settings
+title: "balenaSound"
+description: "Build a single or multi-room streamer for an existing audio device. Supports Bluetooth, Airplay and Spotify Connect"
+baseurl: "/balena-sound"
+url: "https://iotsound.github.io"
+
+# Theme
+remote_theme: just-the-docs/just-the-docs
+
+# Repository
+repository: "iotsound/balena-sound"
+
+# Logo
+logo: "logo.png"
+
+# Search
+search_enabled: true
+
+# Extract titles from content
+titles_from_headings:
+  enabled: true
+  strip_title: false
+  collections: true
+
+# Footer
+footer_content: "Distributed under the <a href=\"https://github.com/iotsound/balena-sound/blob/master/LICENSE\">Apache 2.0 license.</a>"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Heading anchors
+heading_anchors: true
+
+# Color scheme
+color_scheme: light
+
+# Navigation
+nav_sort: case_sensitive
+nav_external_links:
+  - title: "GitHub Repository"
+    url: "https://github.com/iotsound/balena-sound"
+    hide_icon: false
+  - title: "Deploy to balenaCloud"
+    url: "https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/iotsound/balena-sound"
+    hide_icon: false
