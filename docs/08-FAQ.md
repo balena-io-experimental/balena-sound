@@ -1,3 +1,5 @@
+# FAQ
+
 ## Why balenaSound?
 We wanted to create an open source alternative to existing audio streaming commercial products that was not tied to a vendor or platform. balenaSound is the product of that. balenaSound is free, secure and fully customizable! You can pick the features that suit you and leave those that don't behind, resting assured that your device will keep on working no matter what.
 
