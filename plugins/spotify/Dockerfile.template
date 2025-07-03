@@ -1,7 +1,8 @@
-FROM andrewn/librespot:0.4.2-pulseaudio
+FROM giof71/librespot
 
 ENV PULSE_SERVER=tcp:localhost:4317
 
 COPY start.sh /usr/src/
 
+ENTRYPOINT []
 CMD [ "/bin/bash", "/usr/src/start.sh" ]
