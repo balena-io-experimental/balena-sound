@@ -1,4 +1,16 @@
 - commits:
+    - subject: "minor: Generate docs with Jekyll"
+      hash: 71791fff28405d3bf9c789fbe97a929666566835
+      body: ""
+      footer:
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+  version: 3.11.0
+  title: ""
+  date: 2025-07-03T17:03:23.117Z
+- commits:
     - subject: Fix typos
       hash: 21745b71da450ad5e946b8afeeb1fdb56d7fa16f
       body: ""
