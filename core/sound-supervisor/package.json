@@ -1,7 +1,7 @@
 {
   "name": "sound-supervisor",
   "version": "1.0.1",
-  "description": "Sound supervisor and fleet controller for balenaSound",
+  "description": "Sound supervisor and fleet controller for IoTSound",
   "main": "build/index.js",
   "scripts": {
     "start": "node build/index.js",

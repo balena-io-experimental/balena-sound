@@ -1,4 +1,4 @@
-name: balenaSound
+name: IoTSound
 type: sw.application
 description: >-
   Build a single or multi-room streamer for an existing audio device using a
