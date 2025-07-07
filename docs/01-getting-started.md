@@ -1,7 +1,5 @@
 # Getting Started
 
-![logo](https://raw.githubusercontent.com/iotsound/iotsound/master/docs/images/balenaSound-logo.png)
-
 Getting started with IoTSound is as simple as deploying it to a [balenaCloud](https://balena.io/cloud) fleet; no additional configuration is required (unless you're using a DAC HAT).
 We've outlined the installation steps below. If you want a step-by-step tutorial on how to get IoTSound up and running, feel free to check these blog posts:
 

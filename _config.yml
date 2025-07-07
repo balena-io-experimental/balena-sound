@@ -1,5 +1,5 @@
 # Site settings
-title: "balenaSound"
+title: "IotSound"
 description: "Build a single or multi-room streamer for an existing audio device. Supports Bluetooth, Airplay and Spotify Connect"
 baseurl: "/balena-sound"
 url: "https://iotsound.github.io"

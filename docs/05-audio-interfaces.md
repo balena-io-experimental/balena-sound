@@ -94,7 +94,7 @@ These are the DACs that are known to work with IoTSound.
 [6]: https://www.hifiberry.com/products/dacplus/
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
 [8]: http://www.inno-maker.com/product/hifi-dac-hat/
-[9]: https://github.com/balena-io-experimental/iotsound/pull/98
+[9]: https://github.com/iotsound/iotsound/pull/98
 [10]: https://allo.com/sparky/miniboss-rpi-zero.html
 [11]: http://www.kumantech.com/kuman-sc07-raspberry-pi-hifi-digi-digital-sound-card-i2s-spdif-optical-fiber-for-raspberry-pi-3-2-model-b-b-sc07_p0041.html
 [12]: https://shop.pimoroni.com/collections/pirate-audio
@@ -121,18 +121,18 @@ These are the DACs that are known to work with IoTSound.
 [33]: https://shop.pimoroni.com/products/pi-digi?variant=33370425994
 [34]: https://www.raspberrypi.org/products/iqaudio-digiamp-plus/
 [35]: https://www.inno-maker.com/product/hifi-amp-hat/
-[36]: https://github.com/balena-io-experimental/iotsound/issues/385
+[36]: https://github.com/iotsound/iotsound/issues/385
 [37]: https://raspiaudio.com/produit/audio
-[38]: https://github.com/balena-io-experimental/iotsound/issues/355
+[38]: https://github.com/iotsound/iotsound/issues/355
 [39]: https://www.audiophonics.fr/fr/dac-et-interfaces-pour-raspberry-pi/audiophonics-i-sabre-dac-es9023-tcxo-raspberry-pi-a-b-20-i2s-p-9978.html
-[40]: https://github.com/balena-io-experimental/iotsound/issues/345
+[40]: https://github.com/iotsound/iotsound/issues/345
 
 ### Untested DACs
 
-An up to date list of untested DACs can be found in [this](https://github.com/balena-io-experimental/iotsound/issues/439) GitHub issue. 
+An up to date list of untested DACs can be found in [this](https://github.com/iotsound/iotsound/issues/439) GitHub issue. 
 
 **Note:** Please **do not** create new GitHub issues for untested DACs unless you've been instructed to do so by our maintainers.
 
 ### Unsupported DACs
 
-An up to date list of unsupported DACs can be found in [this](https://github.com/balena-io-experimental/iotsound/issues/439) GitHub issue. Unsupported DACs can be made to work with IoTSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with IoTSound developers.
+An up to date list of unsupported DACs can be found in [this](https://github.com/iotsound/iotsound/issues/439) GitHub issue. Unsupported DACs can be made to work with IoTSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with IoTSound developers.
