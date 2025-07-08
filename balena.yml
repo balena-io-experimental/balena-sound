@@ -10,12 +10,12 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/iotsound/balena-sound'
+      url: 'https://github.com/iotsound/iotsound'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/iotsound/balena-sound/master/logo.png
+        https://raw.githubusercontent.com/iotsound/iotsound/master/logo.png
 data:
   applicationEnvironmentVariables:
     - SOUND_VOLUME: 75

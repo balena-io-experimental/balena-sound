@@ -18,7 +18,7 @@ nav_order: 1
 
 Running this app is as simple as deploying it to a balenaCloud fleet. You can do it in just one click by using the button below:
 
-[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/iotsound/balena-sound&defaultDeviceType=raspberry-pi)
+[![deploy button](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/iotsound/iotsound&defaultDeviceType=raspberry-pi)
 
 ## Documentation
 
@@ -26,7 +26,7 @@ Head over to our [docs](docs/) for detailed installation and usage instructions,
 
 ## Motivation
 
-![concept](https://raw.githubusercontent.com/iotsound/balena-sound/master/docs/images/sound.png)
+![concept](https://raw.githubusercontent.com/iotsound/iotsound/master/docs/images/sound.png)
 
 There are many commercial solutions out there that provide functionality similar to IoTSound. Most of them though come with a premium price tag and are riddled with privacy concerns.
 
@@ -36,4 +36,4 @@ This project is in active development so if you have any feature requests or iss
 
 ## Getting Help
 
-If you're having any problem, please [raise an issue](https://github.com/iotsound/balena-sound/issues/new) on GitHub and we will be happy to help.
+If you're having any problem, please [raise an issue](https://github.com/iotsound/iotsound/issues/new) on GitHub and we will be happy to help.
