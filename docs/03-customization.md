@@ -1,6 +1,6 @@
 # Customization
 
-Some features of balenaSound can be configured by using variables. Depending on how you set them they will apply to all your devices, a specific device or a specific service. Regardless of what you want, they can be set using the balena dashboard:
+Some features of IoTSound can be configured by using variables. Depending on how you set them they will apply to all your devices, a specific device or a specific service. Regardless of what you want, they can be set using the balena dashboard:
 
 | Variable type               | Scope                             | Instructions                                                                                         |
 | --------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -9,13 +9,13 @@ Some features of balenaSound can be configured by using variables. Depending on 
 | Device variable             | specific device, all services     | navigate to dashboard -> your fleet -> your device -> `Device variables` -> Select `All services`    |
 | Device service variable     | specific device, specific service | navigate to dashboard -> your fleet -> your device -> Select `All services` -> Select target service |
 
-![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/env-vars.png)
+![Setting the device name](https://raw.githubusercontent.com/iotsound/iotsound/master/docs/images/env-vars.png)
 
 You can read more about variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
 
 ## General
 
-The following variables apply to balenaSound in general, modifying its behavior across the board:
+The following variables apply to IoTSound in general, modifying its behavior across the board:
 
 | Variable                                  | Description                                                                                                                                                                                 | Options                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Default                                                                                                                                         |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |

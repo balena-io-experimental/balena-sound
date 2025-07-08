@@ -5,7 +5,7 @@ volumes:
 
 services:
   # Core services
-  # -- Required for a fully featured installation of balenaSound
+  # -- Required for a fully featured installation of IoTSound
   # -- Mutiroom services can be removed if not using multiroom mode
   audio:
     build: ./core/audio
@@ -37,7 +37,7 @@ services:
     restart: on-failure
 
   # Plugins
-  # -- Additional plugins can be added. See https://balena-sound.pages.dev/plugins
+  # -- Additional plugins can be added.
   # -- Remove unwanted plugins as needed
   bluetooth:
     build: ./plugins/bluetooth

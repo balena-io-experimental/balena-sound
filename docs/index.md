@@ -1,10 +1,10 @@
 # Documentation
 
-Welcome to the balenaSound documentation. Here you'll find detailed guides and information about setting up and using balenaSound.
+Welcome to the IoTSound documentation. Here you'll find detailed guides and information about setting up and using IoTSound.
 
 ## Getting Started
 
-If you're new to balenaSound, start with our [Getting Started](01-getting-started.md) guide.
+If you're new to IoTSound, start with our [Getting Started](01-getting-started.md) guide.
 
 ## Documentation Index
 

@@ -1,10 +1,10 @@
 # Audio interfaces
 
-If you want to upgrade the sound quality of your balenaSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavors: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound.
+If you want to upgrade the sound quality of your IoTSound devices, or if your board has no onboard soundcard, you'll probably want to add an external soundcard. Generally these come in two flavors: **USB soundcards** or **DAC boards**. Both alternatives are widely supported in balenaSound.
 
-Checkout the [customization](https://balena-sound.pages.dev/customization) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
+Check out the [customization](https://iotsound.github.io//customization) section to learn how to select which audio interface to use. For a detailed and up to date list of what interfaces are supported on each device check out the audio block [documentation](https://github.com/balenablocks/audio#supported-devices) section.
 
-As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. If for any reason you can't get your soundcard to work, feel free to [contact us](https://balena-sound.pages.dev/support#contact-us) and we'll gladly help out.
+As a general rule of thumb, onboard and USB soundcards should work out of the box without any configuration, and DACs usually require setting a `dtoverlay`. Read on to learn more about the alternatives. 
 
 ## Onboard
 
@@ -18,22 +18,22 @@ USB soundcards are also supported without any special configuration needed. Just
 
 ### Overview
 
-balenaSound supports a wide variety of DACs, but in an ever-growing market, chances are your particular DAC might not work with the project just yet. Broadly speaking, it's a two step process in order for a DAC to be officially supported:
+IoTSound supports a wide variety of DACs, but in an ever-growing market, chances are your particular DAC might not work with the project just yet. Broadly speaking, it's a two step process in order for a DAC to be officially supported:
 
 1. the required kernel driver must be available in balenaOS
-2. adequate testing must be performed with balenaSound
+2. adequate testing must be performed with IoTSound
 
 Latest versions of balenaOS already ships with drivers for most, if not all, of the DACs available. The testing story, however, is different. It's not possible for us to test all of them individually as it would take an incredible amount of resources. For this reason, we rely on community contributions to help catalogue existing DACs into three categories:
 
-- [Supported DACs](https://balena-sound.pages.dev/audio-interfaces#Supported-DACs): battle-tested, known to work with balenaSound.
-- [Untested DACs](https://balena-sound.pages.dev/audio-interfaces#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with balenaSound (most likely because no balena team member has one).
-- [Unsupported DACs](https://balena-sound.pages.dev/audio-interfaces#Unsupported-DACs): DACs that probably need additional drivers that aren't currently available in balenaOS.
+- [Supported DACs](https://iotsound.github.io//audio-interfaces#Supported-DACs): battle-tested, known to work with IoTSound.
+- [Untested DACs](https://iotsound.github.io//audio-interfaces#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with IoTSound.
+- [Unsupported DACs](https://iotsound.github.io//audio-interfaces#Unsupported-DACs): DACs that probably need additional drivers that aren't currently available in balenaOS.
 
-A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/balena-labs-projects/balena-sound/issues/439) GitHub issue and we'll take a look for you.
+A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/balena-labs-projects/iotsound/issues/439) GitHub issue.
 
 ### Configuration
 
-To get a DAC board to work with balenaSound you will need to enable its corresponding Device Tree Overlay. Thankfully balenaCloud makes this very easy to do.
+To get a DAC board to work with IoTSound you will need to enable its corresponding Device Tree Overlay. Thankfully balenaCloud makes this very easy to do.
 
 In the balenaCloud dashboard:
 
@@ -41,13 +41,13 @@ In the balenaCloud dashboard:
 - Add an additional custom configuration variable called `BALENA_HOST_CONFIG_dtoverlay`. The value of this will depend on your DAC board (see tables below in each DAC category subsection).
 - Cycle the power by unplugging your device.
 
-![DAC Configuration](https://raw.githubusercontent.com/balenalabs/balena-sound/master/docs/images/dac-vars.png)
+![DAC Configuration](https://raw.githubusercontent.com/balenalabs/iotsound/master/docs/images/dac-vars.png)
 
 If you're using multiple devices with multiple DACs for multi-room audio, you'll want to do this process per unique device that is using a DAC. Do not set this variable fleet-wide as it will affect every device within your fleet.
 
 ### Supported DACs
 
-These are the DACs that are known to work with balenaSound. If you have trouble setting one up, please reach us at our [forums](https://forums.balena.io/) where we'll gladly help you troubleshoot the issue. Please **do not** create new GitHub issues for supported DACs unless you've been instructed to do so by our forums support agents.
+These are the DACs that are known to work with IoTSound.
 
 | DAC Name                                     | BALENA_HOST_CONFIG_dtoverlay |
 | -------------------------------------------- | ---------------------------- |
@@ -94,7 +94,7 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 [6]: https://www.hifiberry.com/products/dacplus/
 [7]: https://forums.balena.io/t/no-sound-from-dac/61343/5
 [8]: http://www.inno-maker.com/product/hifi-dac-hat/
-[9]: https://github.com/balena-io-experimental/balena-sound/pull/98
+[9]: https://github.com/iotsound/iotsound/pull/98
 [10]: https://allo.com/sparky/miniboss-rpi-zero.html
 [11]: http://www.kumantech.com/kuman-sc07-raspberry-pi-hifi-digi-digital-sound-card-i2s-spdif-optical-fiber-for-raspberry-pi-3-2-model-b-b-sc07_p0041.html
 [12]: https://shop.pimoroni.com/collections/pirate-audio
@@ -121,18 +121,18 @@ These are the DACs that are known to work with balenaSound. If you have trouble 
 [33]: https://shop.pimoroni.com/products/pi-digi?variant=33370425994
 [34]: https://www.raspberrypi.org/products/iqaudio-digiamp-plus/
 [35]: https://www.inno-maker.com/product/hifi-amp-hat/
-[36]: https://github.com/balena-io-experimental/balena-sound/issues/385
+[36]: https://github.com/iotsound/iotsound/issues/385
 [37]: https://raspiaudio.com/produit/audio
-[38]: https://github.com/balena-io-experimental/balena-sound/issues/355
+[38]: https://github.com/iotsound/iotsound/issues/355
 [39]: https://www.audiophonics.fr/fr/dac-et-interfaces-pour-raspberry-pi/audiophonics-i-sabre-dac-es9023-tcxo-raspberry-pi-a-b-20-i2s-p-9978.html
-[40]: https://github.com/balena-io-experimental/balena-sound/issues/345
+[40]: https://github.com/iotsound/iotsound/issues/345
 
 ### Untested DACs
 
-An up to date list of untested DACs can be found in [this](https://github.com/balena-io-experimental/balena-sound/issues/439) GitHub issue. If you have one of these DACs and want to help us test it, please post on our [forums](https://forums.balena.io/) and we'll get back to you with instructions. Hopefully, with your assistance, new DACs can be graduated into the supported category!
+An up to date list of untested DACs can be found in [this](https://github.com/iotsound/iotsound/issues/439) GitHub issue. 
 
-**Note:** Please **do not** create new GitHub issues for untested DACs unless you've been instructed to do so by our forums support agents.
+**Note:** Please **do not** create new GitHub issues for untested DACs unless you've been instructed to do so by our maintainers.
 
 ### Unsupported DACs
 
-An up to date list of unsupported DACs can be found in [this](https://github.com/balena-io-experimental/balena-sound/issues/439) GitHub issue. Unsupported DACs can be made to work with balenaSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with balenaSound developers.
+An up to date list of unsupported DACs can be found in [this](https://github.com/iotsound/iotsound/issues/439) GitHub issue. Unsupported DACs can be made to work with IoTSound but often will require further investigation and patching balenaOS, so they are best avoided. Please **do** create a new GitHub issue if you are working on adding support or testing an unsupported DAC as that will facilitate discussion with IoTSound developers.

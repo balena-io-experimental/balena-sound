@@ -2,7 +2,7 @@
 
 ## Troubleshooting
 
-This section provides troubleshooting guidance for a few common pitfalls users have faced when deploying balenaSound.
+This section provides troubleshooting guidance for a few common pitfalls users have faced when deploying IoTSound.
 
 ### No audio
 
@@ -17,13 +17,13 @@ Ensure that:
 - You correctly plugged an audio or HDMI cable to your device
 - You are connected to the device and streaming audio to it via any of the supported alternatives
 
-If you are using a DAC, make sure your DAC is on the supported list [here](audio-interfaces#dac-boards) and that you applied the required configuration changes. If your DAC is not on the list, please let us know by opening an [issue](https://github.com/balena-labs-projects/balena-sound/issues/new). We will work with you to find the correct configuration and add the DAC to the supported list.
+If you are using a DAC, make sure your DAC is on the supported list [here](audio-interfaces#dac-boards) and that you applied the required configuration changes. If your DAC is not on the list, please let us know by opening an [issue](https://github.com/iotsound/iotsound/issues/new). 
 
 ### Audio cuts or is very stuttery
 
 #### Description
 
-When streaming audio via bluetooth to a Raspberry Pi 3 B/B+ that is running balenaSound, you experience the following:
+When streaming audio via bluetooth to a Raspberry Pi 3 B/B+ that is running IoTSound, you experience the following:
 
 - Audio output has intermittent cuts every few seconds. This can be anything from once every few seconds to multiple bursts per second.
 - The service logs show one of the following errors:
@@ -57,7 +57,7 @@ At the moment there is no "official" solution to this problem. The following wor
 
 ##### Use a USB Bluetooth dongle
 
-This is the official recommendation made by the Raspberry Pi Foundation. Adding a USB Bluetooth dongle to your board removes the interference problems happening at the onboard WiFi/BT chip. balenaSound will automatically detect the bluetooth dongle and configure itself to use it in place of the board's bluetooth.
+This is the official recommendation made by the Raspberry Pi Foundation. Adding a USB Bluetooth dongle to your board removes the interference problems happening at the onboard WiFi/BT chip. IoTSound will automatically detect the bluetooth dongle and configure itself to use it in place of the board's bluetooth.
 
 [This](https://www.amazon.com/TP-Link-Bluetooth-Receiver-Controllers-UB400/dp/B07V1SZCY6/ref=sr_1_7) dongle has been tested to work for this, but any dongle really should work.
 
@@ -65,7 +65,7 @@ This is the official recommendation made by the Raspberry Pi Foundation. Adding 
 
 Using multi-room has proven to make this issue a lot more frequent and noticeable; most likely due to the increased resource usage that it requires.
 
-- If you are _not_ using multi-room (you only have one device on your balenaSound fleet) you can disable it to alleviate the problem. Check our [docs](customization/#general) to find out how.
+- If you are _not_ using multi-room (you only have one device on your IoTSound fleet) you can disable it to alleviate the problem. Check our [docs](customization/#general) to find out how.
 - If you are using multi-room consider changing the `master server` from which you stream to other devices to a Raspberry Pi 4. Raspberry Pi 3's can exhibit audio stuttering when working as `master server` but they work fine if you use them as `clients`.
 
 ##### Change Power Supply Unit (PSU)
@@ -73,7 +73,7 @@ Using multi-room has proven to make this issue a lot more frequent and noticeabl
 Bad quality power supply units are more likely to trigger this problem. Investing in a good power supply unit is always a good idea!
 We recommend using the [original Raspberry Pi power supply](https://www.raspberrypi.org/products/raspberry-pi-universal-power-supply/) and if not possible at least one that conforms to the power requirements described in [here](https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md).
 
-Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the thorough [investigation and testing](https://github.com/balena-io-experimental/balena-sound/issues/62#issuecomment-605265537)!
+Thank you [@MatthewCroughan](https://github.com/MatthewCroughan) for the thorough [investigation and testing](https://github.com/iotsound/iotsound/issues/62#issuecomment-605265537)!
 
 ##### Rolling back to balenaOS 2.38 / Reduce Bluetooth UART baud rate
 
@@ -91,7 +91,7 @@ When playing audio from any source it takes a few seconds for it to start/stop p
 
 #### Explanation
 
-balenaSound uses many technologies to provide audio streaming capabilities. All these layers of software introduce a small amount of delay that in the end add up to something that can be noticeable. We understand that this means that balenaSound is not suitable for certain applications (streaming audio from video sources for instance) but we believe this is an acceptable tradeoff for all the cool features we offer.
+IoTSound uses many technologies to provide audio streaming capabilities. All these layers of software introduce a small amount of delay that in the end add up to something that can be noticeable. We understand that this means that IoTSound is not suitable for certain applications (streaming audio from video sources for instance) but we believe this is an acceptable tradeoff for all the cool features we offer.
 
 #### Workarounds
 
@@ -116,7 +116,7 @@ If your device is properly configured and still can't get multi-room to work try
 
 #### Description
 
-HDMI audio output is currently not working as intended on Raspberry Pi 4. See this [issue](https://github.com/balena-io-experimental/balena-sound/issues/79) for details.
+HDMI audio output is currently not working as intended on Raspberry Pi 4. See this [issue](https://github.com/iotsound/iotsound/issues/79) for details.
 
 #### Workaround
 
@@ -130,7 +130,7 @@ No audio coming out from either the audio jack or HDMI when using balenaOS 64 bi
 
 For details see:
 
-- https://github.com/balena-io-experimental/balena-sound/issues/82
+- https://github.com/iotsound/iotsound/issues/82
 - https://github.com/balena-io/balena-supervisor/issues/1245
 
 #### Workaround
@@ -139,4 +139,4 @@ Remove the `vc4-kms-v3d` dtoverlay setting from the `Device Configuration` secti
 
 ## Contact us
 
-If you have any questions regarding balenaSound, whether it's an issue not listed in the troubleshooting section, a request for a new feature or DAC, or simply if you want to discuss about the project, feel free to reach us at our [forums](https://forums.balena.io) or open an [issue](https://github.com/balena-labs-projects/balena-sound/issues/new) on our GitHub repository. Thanks for trying out balenaSound!
+If you have any questions regarding IoTSound, whether it's an issue not listed in the troubleshooting section, a request for a new feature or DAC, or simply if you want to discuss about the project, feel free to open an [issue](https://github.com/iotsound/iotsound/issues/new) on our GitHub repository. Thanks for trying out IoTSound!

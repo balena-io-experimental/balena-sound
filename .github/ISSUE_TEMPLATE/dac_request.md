@@ -6,7 +6,7 @@ labels: DAC
 assignees: ""
 ---
 
-**Note: please read the [DAC section](https://balena-sound.pages.dev/audio-interfaces#dac-boards) on our official documentation site before proceeding.**
+**Note: please read the [DAC section](https://iotsound.github.io/docs/05-audio-interfaces.html#dac-boards) on our official documentation site before proceeding.**
 
 **Do** open an issue if you:
 
