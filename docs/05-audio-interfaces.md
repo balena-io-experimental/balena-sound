@@ -25,11 +25,11 @@ IoTSound supports a wide variety of DACs, but in an ever-growing market, chances
 
 Latest versions of balenaOS already ships with drivers for most, if not all, of the DACs available. The testing story, however, is different. It's not possible for us to test all of them individually as it would take an incredible amount of resources. For this reason, we rely on community contributions to help catalogue existing DACs into three categories:
 
-- [Supported DACs](https://iotsound.github.io//audio-interfaces#Supported-DACs): battle-tested, known to work with IoTSound.
-- [Untested DACs](https://iotsound.github.io//audio-interfaces#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with IoTSound.
-- [Unsupported DACs](https://iotsound.github.io//audio-interfaces#Unsupported-DACs): DACs that probably need additional drivers that aren't currently available in balenaOS.
+- [Supported DACs](https://iotsound.github.io/iotsound/audio-interfaces#Supported-DACs): battle-tested, known to work with IoTSound.
+- [Untested DACs](https://iotsound.github.io/iotsound/audio-interfaces#Untested-DACs): DACs whose drivers are included in balenaOS but haven't been tested with IoTSound.
+- [Unsupported DACs](https://iotsound.github.io/iotsound/audio-interfaces#Unsupported-DACs): DACs that probably need additional drivers that aren't currently available in balenaOS.
 
-A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/balena-labs-projects/iotsound/issues/439) GitHub issue.
+A curated list for all three categories can be found in the sections below. If you don't find your DAC anywhere, please add a comment to [this](https://github.com/iotsound/iotsound/issues/439) GitHub issue.
 
 ### Configuration
 

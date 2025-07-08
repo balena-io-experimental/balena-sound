@@ -1,7 +1,7 @@
 # Site settings
 title: "IotSound"
 description: "Build a single or multi-room streamer for an existing audio device. Supports Bluetooth, Airplay and Spotify Connect"
-baseurl: "/"
+baseurl: "/iotsound"
 url: "https://iotsound.github.io"
 
 # Theme

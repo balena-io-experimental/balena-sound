@@ -24,7 +24,7 @@ We've outlined the installation steps below. If you want a step-by-step tutorial
 
 ## One-click deploy
 
-One-click deploy is the easiest way to get started with balenaSound as it allows you to deploy and configure the app with a single click and without the need of installing additional tools. Check out the `CLI deploy` instructions below if you are interested in an advanced alternative that enables you to achieve more complex deployments.
+One-click deploy is the easiest way to get started with IoTSound as it allows you to deploy and configure the app with a single click and without the need of installing additional tools. Check out the `CLI deploy` instructions below if you are interested in an advanced alternative that enables you to achieve more complex deployments.
 
 ### Deploy with balena
 
@@ -84,7 +84,7 @@ To update your application via one-click deploy just click the Deploy with balen
 
 ## Having trouble?
 
-If you are running into issues getting your balenaSound app running, please try the following:
+If you are running into issues getting your IoTSound app running, please try the following:
 
-1. Check the [support and troubleshooting guide](support) for common issues and how to resolve them.
-2. Create an issue on the [IoTSound GitHub project](https://github.com/iotsound/iotsound/issues/new/choose) if you find your issue may be a problem with balenaSound.
+1. Check the [support and troubleshooting guide](https://iotsound.github.io/iotsound/docs/07-support.html) for common issues and how to resolve them.
+2. Create an issue on the [IoTSound GitHub project](https://github.com/iotsound/iotsound/issues/new/choose) if you find your issue may be a problem with IoTSound.
