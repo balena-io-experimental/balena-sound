@@ -1,4 +1,4 @@
-# See https://github.com/iotsound/balena-sound/blob/master/docs/ARCHITECTURE.md for details
+# See https://github.com/iotsound/iotsound/blob/master/docs/ARCHITECTURE.md for details
 
 # Create balena-sound sinks
 load-module module-null-sink sink_name=balena-sound.input
