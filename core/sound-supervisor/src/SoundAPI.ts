@@ -9,7 +9,7 @@ import { restartDevice, rebootDevice, shutdownDevice } from './utils'
 import { getSdk, BalenaSDK } from 'balena-sdk'
 import * as fs from 'fs'
 
-let VERSION = = '1.0.1';
+let VERSION = '1.0.1';
 try {
   VERSION = fs.readFileSync('VERSION', 'utf8').trim();
 } catch (err) {
